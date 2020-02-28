@@ -1,0 +1,32 @@
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\Weing\source\repos\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.exe
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.xml
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.pdb
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.exe
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.pdb
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\bin\Debug\WindowsApp1.xml
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.ChartList.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.ReadSingleShareValue.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.XMLReader.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.ServiceCheckWeekDay.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.ScanWebForWKN.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.SaveWebpageAsHTML.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.ReadTodaysSharePrice.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.Form7.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.RotateImageExamples.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.ReadHistoricFromAriva.resources
