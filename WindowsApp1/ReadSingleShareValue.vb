@@ -23,9 +23,13 @@ Public Class ReadSingleShareValue
         L_SharePrice.Text = "--"
         L_SharePrice.Text = Read_FinanzNachrichten(T_WKN.Text)
     End Sub
-    'Private Sub ReadBoerse_Click(sender As Object, e As EventArgs) Handles ReadFinanzNachrichten.Click
-    '    
-    'End Sub
+
+    Private Sub ReadIng_Click(sender As Object, e As EventArgs) Handles ReadIng.Click
+        L_SharePrice.Text = "--"
+        L_SharePrice.Text = Read_Ing(T_WKN.Text)
+
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim GoogleText As String
         '    Dim Von As String

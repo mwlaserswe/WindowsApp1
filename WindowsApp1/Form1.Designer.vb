@@ -30,6 +30,8 @@ Partial Class Form1
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GgggToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReadFromWEBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReadHistoricFromARIVAdeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScanWebForWKNToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveWebPageAsHTMLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,8 +69,16 @@ Partial Class Form1
         Me.C_LaserWeek = New System.Windows.Forms.Button()
         Me.C_LastMonth = New System.Windows.Forms.Button()
         Me.C_LastYear = New System.Windows.Forms.Button()
-        Me.ReadFromWEBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReadHistoricFromARIVAdeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.C_WriteChartFile = New System.Windows.Forms.Button()
+        Me.C_BuySell = New System.Windows.Forms.Button()
+        Me.Analyse1 = New System.Windows.Forms.RadioButton()
+        Me.Analyse2 = New System.Windows.Forms.RadioButton()
+        Me.Analyse3 = New System.Windows.Forms.RadioButton()
+        Me.Analyse4 = New System.Windows.Forms.RadioButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.C_Investhopping = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Ch_FitY = New System.Windows.Forms.CheckBox()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -77,7 +87,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1499, 128)
+        Me.Label1.Location = New System.Drawing.Point(1700, 67)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 25)
         Me.Label1.TabIndex = 1
@@ -87,9 +97,9 @@ Partial Class Form1
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 25
-        Me.ListBox1.Location = New System.Drawing.Point(1073, 12)
+        Me.ListBox1.Location = New System.Drawing.Point(1353, 18)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(488, 79)
+        Me.ListBox1.Size = New System.Drawing.Size(226, 229)
         Me.ListBox1.TabIndex = 2
         '
         'PicChart
@@ -118,33 +128,46 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1758, 42)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1848, 48)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 36)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 44)
         Me.MenuToolStripMenuItem.Text = "Display Chart"
         '
         'GgggToolStripMenuItem
         '
         Me.GgggToolStripMenuItem.Name = "GgggToolStripMenuItem"
-        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 36)
+        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 44)
         Me.GgggToolStripMenuItem.Text = "Chart List"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 36)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 44)
         Me.ToolStripMenuItem1.Text = "ReadTodaysSharePrice"
+        '
+        'ReadFromWEBToolStripMenuItem
+        '
+        Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
+        Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
+        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 44)
+        Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
+        '
+        'ReadHistoricFromARIVAdeToolStripMenuItem
+        '
+        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Name = "ReadHistoricFromARIVAdeToolStripMenuItem"
+        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Size = New System.Drawing.Size(446, 44)
+        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Text = "Read historic from ARIVA.de"
         '
         'WebToolStripMenuItem
         '
         Me.WebToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanWebForWKNToolStripMenuItem, Me.SaveWebPageAsHTMLToolStripMenuItem, Me.ReadSingleShareValueToolStripMenuItem, Me.ReadXMLToolStripMenuItem, Me.GridViewTestToolStripMenuItem, Me.TransformToolStripMenuItem})
         Me.WebToolStripMenuItem.Name = "WebToolStripMenuItem"
-        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 36)
+        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 44)
         Me.WebToolStripMenuItem.Text = "Web / Test"
         '
         'ScanWebForWKNToolStripMenuItem
@@ -187,7 +210,7 @@ Partial Class Form1
         '
         Me.ServiceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckWeekdayToolStripMenuItem})
         Me.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem"
-        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
+        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 44)
         Me.ServiceToolStripMenuItem.Text = "Service"
         '
         'CheckWeekdayToolStripMenuItem
@@ -205,9 +228,9 @@ Partial Class Form1
         '
         'RefreshDataGrid
         '
-        Me.RefreshDataGrid.Location = New System.Drawing.Point(925, 84)
+        Me.RefreshDataGrid.Location = New System.Drawing.Point(943, 53)
         Me.RefreshDataGrid.Name = "RefreshDataGrid"
-        Me.RefreshDataGrid.Size = New System.Drawing.Size(75, 39)
+        Me.RefreshDataGrid.Size = New System.Drawing.Size(111, 39)
         Me.RefreshDataGrid.TabIndex = 11
         Me.RefreshDataGrid.Text = "Refresh"
         Me.RefreshDataGrid.UseVisualStyleBackColor = True
@@ -421,24 +444,118 @@ Partial Class Form1
         Me.C_LastYear.Text = "Last Year"
         Me.C_LastYear.UseVisualStyleBackColor = True
         '
-        'ReadFromWEBToolStripMenuItem
+        'C_WriteChartFile
         '
-        Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
-        Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
-        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 38)
-        Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
+        Me.C_WriteChartFile.Location = New System.Drawing.Point(1140, 189)
+        Me.C_WriteChartFile.Name = "C_WriteChartFile"
+        Me.C_WriteChartFile.Size = New System.Drawing.Size(181, 53)
+        Me.C_WriteChartFile.TabIndex = 38
+        Me.C_WriteChartFile.Text = "Write Chart File"
+        Me.C_WriteChartFile.UseVisualStyleBackColor = True
         '
-        'ReadHistoricFromARIVAdeToolStripMenuItem
+        'C_BuySell
         '
-        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Name = "ReadHistoricFromARIVAdeToolStripMenuItem"
-        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Size = New System.Drawing.Size(446, 44)
-        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Text = "Read historic from ARIVA.de"
+        Me.C_BuySell.Location = New System.Drawing.Point(943, 98)
+        Me.C_BuySell.Name = "C_BuySell"
+        Me.C_BuySell.Size = New System.Drawing.Size(144, 55)
+        Me.C_BuySell.TabIndex = 39
+        Me.C_BuySell.Text = "Buy or Sell ?"
+        Me.C_BuySell.UseVisualStyleBackColor = True
+        '
+        'Analyse1
+        '
+        Me.Analyse1.AutoSize = True
+        Me.Analyse1.Location = New System.Drawing.Point(1665, 383)
+        Me.Analyse1.Name = "Analyse1"
+        Me.Analyse1.Size = New System.Drawing.Size(138, 29)
+        Me.Analyse1.TabIndex = 40
+        Me.Analyse1.TabStop = True
+        Me.Analyse1.Text = "Analyse 1"
+        Me.Analyse1.UseVisualStyleBackColor = True
+        '
+        'Analyse2
+        '
+        Me.Analyse2.AutoSize = True
+        Me.Analyse2.Location = New System.Drawing.Point(1665, 428)
+        Me.Analyse2.Name = "Analyse2"
+        Me.Analyse2.Size = New System.Drawing.Size(138, 29)
+        Me.Analyse2.TabIndex = 41
+        Me.Analyse2.TabStop = True
+        Me.Analyse2.Text = "Analyse 2"
+        Me.Analyse2.UseVisualStyleBackColor = True
+        '
+        'Analyse3
+        '
+        Me.Analyse3.AutoSize = True
+        Me.Analyse3.Location = New System.Drawing.Point(1665, 477)
+        Me.Analyse3.Name = "Analyse3"
+        Me.Analyse3.Size = New System.Drawing.Size(138, 29)
+        Me.Analyse3.TabIndex = 42
+        Me.Analyse3.TabStop = True
+        Me.Analyse3.Text = "Analyse 3"
+        Me.Analyse3.UseVisualStyleBackColor = True
+        '
+        'Analyse4
+        '
+        Me.Analyse4.AutoSize = True
+        Me.Analyse4.Location = New System.Drawing.Point(1665, 521)
+        Me.Analyse4.Name = "Analyse4"
+        Me.Analyse4.Size = New System.Drawing.Size(138, 29)
+        Me.Analyse4.TabIndex = 43
+        Me.Analyse4.TabStop = True
+        Me.Analyse4.Text = "Analyse 4"
+        Me.Analyse4.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(943, 168)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(144, 112)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "Check numers of rise in sequenz"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'C_Investhopping
+        '
+        Me.C_Investhopping.Location = New System.Drawing.Point(1117, 98)
+        Me.C_Investhopping.Name = "C_Investhopping"
+        Me.C_Investhopping.Size = New System.Drawing.Size(168, 55)
+        Me.C_Investhopping.TabIndex = 45
+        Me.C_Investhopping.Text = "Invest Hopping"
+        Me.C_Investhopping.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(1607, 95)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 31)
+        Me.TextBox4.TabIndex = 46
+        '
+        'Ch_FitY
+        '
+        Me.Ch_FitY.AutoSize = True
+        Me.Ch_FitY.Location = New System.Drawing.Point(1665, 580)
+        Me.Ch_FitY.Name = "Ch_FitY"
+        Me.Ch_FitY.Size = New System.Drawing.Size(89, 29)
+        Me.Ch_FitY.TabIndex = 47
+        Me.Ch_FitY.Text = "Fit Y"
+        Me.Ch_FitY.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1758, 878)
+        Me.ClientSize = New System.Drawing.Size(1848, 878)
+        Me.Controls.Add(Me.Ch_FitY)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.C_Investhopping)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Analyse4)
+        Me.Controls.Add(Me.Analyse3)
+        Me.Controls.Add(Me.Analyse2)
+        Me.Controls.Add(Me.Analyse1)
+        Me.Controls.Add(Me.C_BuySell)
+        Me.Controls.Add(Me.C_WriteChartFile)
         Me.Controls.Add(Me.C_LastYear)
         Me.Controls.Add(Me.C_LastMonth)
         Me.Controls.Add(Me.C_LaserWeek)
@@ -530,4 +647,14 @@ Partial Class Form1
     Friend WithEvents C_LastYear As Button
     Friend WithEvents ReadFromWEBToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReadHistoricFromARIVAdeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents C_WriteChartFile As Button
+    Friend WithEvents C_BuySell As Button
+    Friend WithEvents Analyse1 As RadioButton
+    Friend WithEvents Analyse2 As RadioButton
+    Friend WithEvents Analyse3 As RadioButton
+    Friend WithEvents Analyse4 As RadioButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents C_Investhopping As Button
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Ch_FitY As CheckBox
 End Class

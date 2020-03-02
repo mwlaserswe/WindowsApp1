@@ -167,5 +167,21 @@ Module Utilities
 
     End Sub
 
+    Public Function FixLen(s1 As String, le As Long) As String
+        Dim i As Long
+        Dim s2 As String
 
+        If Len(s1) < le Then
+            For i = Len(s1) To le - 1
+                s2 = s2 + " "
+            Next i
+            FixLen = s1 + s2
+        ElseIf Len(s1) > le Then
+            FixLen = Mid(s1, 1, le)
+        Else
+            FixLen = s1
+        End If
+
+
+    End Function
 End Module

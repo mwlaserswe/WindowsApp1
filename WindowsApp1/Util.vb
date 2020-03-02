@@ -71,41 +71,69 @@ AccessError:
 
 
     Public Sub WriteAccountFile(AccountFilename As String)
-        ''''        '    Dim AccountFilename As String
-        ''''        Dim AccountFile As Integer
-        ''''        Dim idx As Long
-        ''''        Dim Zeile As String
+        '    Dim AccountFilename As String
+        Dim AccountFile As Integer
+        Dim idx As Long
+        Dim Zeile As String
 
-        ''''        On Error GoTo OpenError
+        On Error GoTo OpenError
 
-        ''''        '    AccountFilename = App.Path & "\Account.txt"
-        ''''        AccountFile = FreeFile()
-        ''''        Open AccountFilename For Output As AccountFile
+        '    AccountFilename = App.Path & "\Account.txt"
+        AccountFile = FreeFile()
+        FileOpen(AccountFile, AccountFilename, OpenMode.Output)
 
-        ''''    For idx = 0 To UBound(AccountArray)
-        ''''            Zeile = idx _
-        ''''                    & vbTab & FixLen(AccountArray(idx).Date, 10) _
-        ''''                    & vbTab & FixLen(AccountArray(idx).Name, 8) _
-        ''''                    & vbTab & FixLen(AccountArray(idx).WKN, 6) _
-        ''''                    & vbTab & FixLen(Format(AccountArray(idx).Value, "0.00"), 7) _
-        ''''                    & vbTab & FixLen(Format(AccountArray(idx).SD, "0.00"), 7) _
-        ''''                    & vbTab & FixLen(Format(AccountArray(idx).Distance, "0.000000"), 12) _
-        ''''                    & vbTab & FixLen(Format(AccountArray(idx).Account, "0.00"), 7) _
-        ''''                    & vbTab & FixLen(AccountArray(idx).Trend, 8)
-        ''''            Print #AccountFile, Zeile
-        ''''    Next idx
+        For idx = 0 To UBound(AccountArray)
+            Zeile = idx _
+                    & vbTab & FixLen(AccountArray(idx).myDate, 10) _
+                    & vbTab & FixLen(AccountArray(idx).Name, 8) _
+                    & vbTab & FixLen(AccountArray(idx).WKN, 6) _
+                    & vbTab & FixLen(Format(AccountArray(idx).Value, "0.00"), 7) _
+                    & vbTab & FixLen(Format(AccountArray(idx).SD, "0.00"), 7) _
+                    & vbTab & FixLen(Format(AccountArray(idx).Distance, "0.000000"), 12) _
+                    & vbTab & FixLen(Format(AccountArray(idx).Account, "0.00"), 7) _
+                    & vbTab & FixLen(AccountArray(idx).Trend, 8)
+            PrintLine(AccountFile, Zeile)
+        Next idx
 
-        ''''        Close AccountFile
+        FileClose(AccountFile)
 
-        ''''    Exit Sub
+        Exit Sub
 
-        ''''OpenError:
-        ''''        MsgBox AccountFilename, , "Write error"
-
+OpenError:
+        MsgBox(AccountFilename, , "Write error")
+        FileClose(AccountFilename)
     End Sub
 
 
+    Public Sub WriteChartFile(ChartFilename As String)
+        Dim ChartFile As Integer
+        Dim idx As Long
+        Dim Zeile As String
 
+        On Error GoTo OpenError
+
+        ChartFile = FreeFile()
+        FileOpen(ChartFile, ChartFilename, OpenMode.Output)
+
+        For idx = 0 To UBound(ChartArray)
+            Zeile = idx _
+                & vbTab & ChartArray(idx).myDate _
+                & vbTab & ChartArray(idx).Value _
+                & vbTab & ChartArray(idx).SD _
+                & vbTab & ChartArray(idx).Distance _
+                & vbTab & ChartArray(idx).Account _
+                & vbTab & ChartArray(idx).Trend
+            PrintLine(ChartFile, Zeile)
+        Next idx
+
+        FileClose(ChartFile)
+
+        Exit Sub
+
+OpenError:
+        MsgBox(ChartFilename, , "Write error")
+        FileClose(ChartFile)
+    End Sub
 
 
     ' FormatDate
@@ -206,7 +234,7 @@ AccessError:
         Pos = InStr(Zeile, "Schlusskurs")
 
 
-        If InStr(Zeile, "Datum") > 0 And InStr(Zeile, "Erster") > 0 And InStr(Zeile, "Hoch") > 0 And InStr(Zeile, "Tief") > 0 And InStr(Zeile, "Schlusskurs") > 0 And InStr(Zeile, "Stuecke") > 0 And InStr(Zeile, "Volumen") > 0 Then
+        If InStr(Zeile, "Datum") > 0 And InStr(Zeile, "Erster") > 0 And InStr(Zeile, "Hoch") > 0 And InStr(Zeile, "Tief") > 0 And InStr(Zeile, "Schlusskurs") > 0 And InStr(Zeile, "Stuecke") > 0 Then
             SepariereString(Zeile, HistoryEntities, ";")
             HistoryArray(idx).Datum = HistoryEntities(0)
             HistoryArray(idx).Erster = HistoryEntities(1)
@@ -523,19 +551,19 @@ OpenError:
 
 
 
-    Public Function GetvalidSharePrice(arry() As Double) As ShareResult
+    Public Function GetvalidSharePrice(Arry() As Double) As ShareResult
         Dim i As Integer
         Dim ErrorString As String
-
         Dim MyMedian As Double
 
-        MyMedian = Median(arry)
+
+        MyMedian = Median(Arry)
         ErrorString = ""
-        For i = LBound(arry) To UBound(arry)
-            If arry(i) = 0 Then
-                ErrorString = ErrorString & "Web[" & i & "]: " & arry(i) & "  "
-            ElseIf math.Abs(arry(i) - MyMedian) > (myMedian * 0.01) Then
-                ErrorString = ErrorString & "Web[" & i & "]: " & arry(i) & "  "
+        For i = LBound(Arry) To UBound(Arry)
+            If Arry(i) = 0 Then
+                ErrorString = ErrorString & "Web[" & i & "]: " & Arry(i) & "  "
+            ElseIf Math.Abs(Arry(i) - MyMedian) > (MyMedian * 0.01) Then
+                ErrorString = ErrorString & "Web[" & i & "]: " & Arry(i) & "  "
             End If
         Next
 
@@ -548,15 +576,21 @@ OpenError:
         Dim V1 As Double
         Dim V2 As Double
 
-        BubbleSort(Array)
+        Dim LclArray() As Double
+        ReDim LclArray(0 To UBound(Array))
+        For i = 0 To UBound(LclArray)
+            LclArray(i) = Array(i)
+        Next i
 
-        If Array.Length Mod 2 = 1 Then
-            Median = Array(Array.Length \ 2)
-        Else
-            V1 = Array(Array.Length \ 2 - 1)
-            V2 = Array(Array.Length \ 2)
-            Median = (V1 + V2) / 2
-        End If
+        BubbleSort(LclArray)
+
+            If LclArray.Length Mod 2 = 1 Then
+                Median = LclArray(LclArray.Length \ 2)
+            Else
+                V1 = LclArray(LclArray.Length \ 2 - 1)
+                V2 = LclArray(LclArray.Length \ 2)
+                Median = (V1 + V2) / 2
+            End If
 
     End Function
 

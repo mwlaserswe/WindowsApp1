@@ -82,6 +82,7 @@
         OffsetLast.X = GlbOffX
         OffsetLast.Y = GlbOffY
 
+        Analyse2.Checked = True
     End Sub
 
     Private Sub GridViewTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GridViewTestToolStripMenuItem.Click
@@ -185,6 +186,12 @@ ReadCompanyListFileErr:
         CompanyName = DataGridView1.Item(column, row).Value
         ReadHistoryFileToChartArray(Fullpath, CompanyName)
 
+        If Ch_FitY.Checked Then
+            Dim LastValue As Double
+            LastValue = ChartArray(UBound(ChartArray)).Value
+            GlbScaleY = 0.7 * PicChart.Height / LastValue
+        End If
+
         RefreshChart()
 
     End Sub
@@ -194,7 +201,14 @@ ReadCompanyListFileErr:
     Private Sub RefreshChart()
         PicChart.CreateGraphics.Clear(Color.White)
         MovingAverage(SdLength)
-        Analyse_02(T_InvestmentStart.Text, T_StartSharePrice.Text)
+        If Analyse1.Checked Then
+        ElseIf Analyse2.Checked Then
+            Analyse_02(T_InvestmentStart.Text, T_StartSharePrice.Text)
+        ElseIf Analyse3.Checked Then
+            Analyse_03(T_InvestmentStart.Text, T_StartSharePrice.Text)
+        ElseIf Analyse4.Checked Then
+
+        End If
         DispCoordinateSystem(PicChart)
         DisplayChart(PicChart)
     End Sub
@@ -406,6 +420,258 @@ ReadCompanyListFileErr:
     Private Sub ReadHistoricFromARIVAdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReadHistoricFromARIVAdeToolStripMenuItem.Click
         ReadHistoricFromAriva.Show()
     End Sub
+
+    Private Sub C_WriteChartFile_Click(sender As Object, e As EventArgs) Handles C_WriteChartFile.Click
+        WriteChartFile(Application.StartupPath & "\Chart.txt")
+    End Sub
+
+    Private Sub C_BuySell_Click(sender As Object, e As EventArgs) Handles C_BuySell.Click
+        Dim Fullpath As String
+
+        Dim column As Integer
+        Dim row As Integer
+        Dim CompanyName As String
+        Dim WKN As String
+
+        Dim dmystr As String
+
+        'Check if BUY signal...
+
+
+        For idx = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
+            row = idx   ' Point to row       
+            column = 1  ' Point to WKN columnn         
+            WKN = CompPartialLstArr(idx).WKN
+
+            If WKN <> DataGridView1.Item(column, row).Value Then
+                MsgBox("Datagrid and CompPartialArr inconsistent")
+                Exit Sub
+            End If
+
+            Fullpath = Application.StartupPath & "\History\" & WKN & ".txt"
+            T_HistoryFileName.Text = Fullpath
+
+            column = 0  ' Point to company name columnn
+            CompanyName = DataGridView1.Item(column, row).Value
+            ReadHistoryFileToChartArray(Fullpath, CompanyName)
+
+
+            MovingAverage(SdLength)
+            If Analyse1.Checked Then
+            ElseIf Analyse2.Checked Then
+                Analyse_02(T_InvestmentStart.Text, T_StartSharePrice.Text)
+            ElseIf Analyse3.Checked Then
+                Analyse_03(T_InvestmentStart.Text, T_StartSharePrice.Text)
+            ElseIf Analyse4.Checked Then
+
+            End If
+            ''DispCoordinateSystem(PicChart)
+            ''DisplayChart(PicChart)
+
+            dmystr = ChartArray(UBound(ChartArray)).Trend
+
+            column = 4  ' Point to Status columnn
+            If InStr(ChartArray(UBound(ChartArray)).Trend, "5:wait", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.LightGray
+                DataGridView1.Item(column, row).Value = "5:wait"
+            ElseIf InStr(ChartArray(UBound(ChartArray)).Trend, "10: Rise", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.LightGray
+                DataGridView1.Item(column, row).Value = "10: Rise"
+            ElseIf InStr(ChartArray(UBound(ChartArray)).Trend, "10: wait", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.Red
+                DataGridView1.Item(column, row).Value = "10: wait"
+            ElseIf InStr(ChartArray(UBound(ChartArray)).Trend, "20: Hold", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.Red
+                DataGridView1.Item(column, row).Value = "20: Hold"
+            ElseIf InStr(ChartArray(UBound(ChartArray)).Trend, "20: Rise", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.LightGreen
+                DataGridView1.Item(column, row).Value = "20: Rise"
+            ElseIf InStr(ChartArray(UBound(ChartArray)).Trend, "30: Rise", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.Green
+                DataGridView1.Item(column, row).Value = "30: Rise"
+            ElseIf InStr(ChartArray(UBound(ChartArray)).Trend, "30: Hold", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.LightPink
+                DataGridView1.Item(column, row).Value = "30: Hold"
+            End If
+
+            Application.DoEvents()
+
+        Next
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim idx As Integer
+        Dim RiseArray(6000) As Integer
+        Dim RiseCnt As Integer
+        Dim rise As Boolean
+
+        For idx = LBound(ChartArray) + 1 To UBound(ChartArray)
+
+            If ChartArray(idx).Value > ChartArray(idx - 1).Value Then
+                If Not rise Then
+                    RiseCnt = 0
+                End If
+                rise = True
+                RiseCnt = RiseCnt + 1
+            Else
+                If rise Then
+                    RiseArray(RiseCnt) = RiseArray(RiseCnt) + 1
+                    rise = False
+                End If
+            End If
+        Next
+
+
+
+
+
+
+        Dim ChartFile As Integer
+        Dim Zeile As String
+        Dim ChartFilename As String
+
+        ''On Error GoTo OpenError
+
+        ''ChartFilename = Application.StartupPath & "Statistics.txt"
+        ''ChartFile = FreeFile()
+        ''FileOpen(ChartFile, ChartFilename, OpenMode.Output)
+        ListBox1.Items.Clear()
+        For idx = 0 To UBound(RiseArray)
+            If RiseArray(idx) <> 0 Then
+                Zeile = idx & vbTab & RiseArray(idx)
+                ListBox1.Items.Add(Zeile)
+            End If
+
+        Next idx
+
+        ''        FileClose(ChartFile)
+
+        ''        Exit Sub
+
+        ''OpenError:
+        ''        MsgBox(ChartFilename, , "Write error")
+        ''        FileClose(ChartFile)
+
+
+
+
+
+
+    End Sub
+
+
+
+    Private Sub C_Investhopping_Click(sender As Object, e As EventArgs) Handles C_Investhopping.Click
+        Dim idx As Long
+        Dim Fullpath As String
+        Dim CompPartialIdx As Long
+        Dim HistoryArray() As HistoryItem
+        Dim ChartArrayIdx As Long
+        Dim InvestmentStart As Long
+        Dim Zeile As String
+        Dim EarliestInvestStart As Long
+        Dim EarliestWKN As String
+        Dim EarliestCompany As String
+        Dim InvestmentHold As Long
+        Dim StartPriceRisePeriode As Double
+        Dim Cnt As Long
+
+        InvestmentStart = 200
+        StartPriceRisePeriode = T_StartSharePrice.Text
+
+        Do
+
+            EarliestInvestStart = 99999999
+
+            '*** walk all companies in CompPartialLstArr
+            For CompPartialIdx = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
+
+                TextBox4.Text = InvestmentStart
+
+                Zeile = ""
+
+                Fullpath = Application.StartupPath & "\History\" & CompPartialLstArr(CompPartialIdx).WKN & ".txt"
+                '        Zeile = CompPartialLstArr(CompPartialIdx).Name
+
+                ReadHistoryFile(Fullpath, HistoryArray)
+                MovingAverage(SdLength)
+                Analyse_02(InvestmentStart, 0)
+                '*** find earlest investment start point in all companies
+                For ChartArrayIdx = InvestmentStart To UBound(ChartArray)
+                    If ChartArray(ChartArrayIdx).Trend = "10: Rise" Then
+                        Exit For
+                    End If
+                Next ChartArrayIdx
+                '        Zeile = Zeile & " " & ChartArrayIdx
+
+                If ChartArrayIdx < EarliestInvestStart Then
+                    EarliestInvestStart = ChartArrayIdx
+                    EarliestWKN = CompPartialLstArr(CompPartialIdx).WKN
+                    EarliestCompany = CompPartialLstArr(CompPartialIdx).Name
+                End If
+
+                '*** earlieset company found
+                Zeile = EarliestCompany & " Start: " & EarliestWKN & " " & EarliestInvestStart
+
+
+
+
+            Next CompPartialIdx
+
+            Fullpath = Application.StartupPath & "\History\" & EarliestWKN & ".txt"
+            ReadHistoryFile(Fullpath, HistoryArray)
+            MovingAverage(SdLength)
+            Analyse_02(InvestmentStart, StartPriceRisePeriode)
+
+            '*** find next HOLD
+            For ChartArrayIdx = EarliestInvestStart To UBound(ChartArray)
+                If ChartArray(ChartArrayIdx).Trend = "20: Hold" Then
+                    InvestmentHold = ChartArrayIdx
+                    Exit For
+                End If
+            Next ChartArrayIdx
+
+            ReDim Preserve AccountArray(0 To UBound(ChartArray))
+
+            ' No-Invest periode
+            For idx = InvestmentStart To EarliestInvestStart - 1
+                AccountArray(idx).Name = "No Inv."
+                AccountArray(idx).Account = -1
+            Next idx
+
+            ' Invest periode
+            For idx = EarliestInvestStart To InvestmentHold
+                AccountArray(idx) = ChartArray(idx)
+            Next idx
+
+            '*** prepare next investment start
+            StartPriceRisePeriode = ChartArray(InvestmentHold).Account
+            InvestmentStart = ChartArrayIdx + 1
+
+            Zeile = EarliestCompany & " Start: " & EarliestWKN & " " & EarliestInvestStart & ";  Stop: " & ChartArrayIdx
+
+
+            ListBox1.Items.Add(Zeile)
+
+            Cnt = Cnt + 1
+            T_HistoryFileName.Text = Cnt
+
+            Application.DoEvents()
+
+        Loop While InvestmentStart < 1000
+
+
+        WriteAccountFile(Application.StartupPath & "\Account.txt")
+
+
+
+
+    End Sub
+
+
+
 End Class
 
 

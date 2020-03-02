@@ -16,11 +16,19 @@ Module ariva_de
             Exit Function
         End If
 
-        'SaveQuelltext(HtmlCode, Application.StartupPath & "\ArivaText.HTML")
+        SaveQuelltext(HtmlCode, Application.StartupPath & "\ArivaText.HTML")
+
+        'zuerst TempSearchString extrahieren
+        Dim TempSearchString As String
+        Dim TempValue As Double
+        SearchItem = "<span itemprop=""price"" content"
+        EndString = "</span>"
+        TempSearchString = ExtraxtValue(HtmlCode, SearchItem, EndString)
+        TempValue = Zahl(TempSearchString)
 
         'AktuellerKurs extrahieren
-        SearchItem = "<td class=""center"">"
-        EndString = "&nbsp"
+        SearchItem = TempValue & ".00"
+        EndString = "</span>"
         AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
         Dim dmy As Double
 

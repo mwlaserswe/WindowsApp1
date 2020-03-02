@@ -39,6 +39,7 @@ Partial Class ReadSingleShareValue
         Me.ReadBoerseStuttgart = New System.Windows.Forms.Button()
         Me.ReadComdirect = New System.Windows.Forms.Button()
         Me.ReadFinanzNachrichten = New System.Windows.Forms.Button()
+        Me.ReadIng = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -184,11 +185,21 @@ Partial Class ReadSingleShareValue
         Me.ReadFinanzNachrichten.Text = "Read FinanzNachr."
         Me.ReadFinanzNachrichten.UseVisualStyleBackColor = True
         '
+        'ReadIng
+        '
+        Me.ReadIng.Location = New System.Drawing.Point(36, 386)
+        Me.ReadIng.Name = "ReadIng"
+        Me.ReadIng.Size = New System.Drawing.Size(232, 42)
+        Me.ReadIng.TabIndex = 18
+        Me.ReadIng.Text = "Read Ing"
+        Me.ReadIng.UseVisualStyleBackColor = True
+        '
         'ReadSingleShareValue
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 647)
+        Me.Controls.Add(Me.ReadIng)
         Me.Controls.Add(Me.ReadFinanzNachrichten)
         Me.Controls.Add(Me.ReadComdirect)
         Me.Controls.Add(Me.ReadBoerseStuttgart)
@@ -230,4 +241,5 @@ Partial Class ReadSingleShareValue
     Friend WithEvents ReadBoerseStuttgart As Button
     Friend WithEvents ReadComdirect As Button
     Friend WithEvents ReadFinanzNachrichten As Button
+    Friend WithEvents ReadIng As Button
 End Class

@@ -24,20 +24,27 @@ Partial Class ReadTodaysSharePrice
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.C_ReadAllShares = New System.Windows.Forms.Button()
-        Me.C_ReadSingleShare = New System.Windows.Forms.Button()
-        Me.T_Search = New System.Windows.Forms.TextBox()
-        Me.L_Name = New System.Windows.Forms.TextBox()
-        Me.L_SharePrice = New System.Windows.Forms.TextBox()
-        Me.L_WKN = New System.Windows.Forms.TextBox()
-        Me.L_ISIN = New System.Windows.Forms.TextBox()
         Me.L_WebPage = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.L_ISIN = New System.Windows.Forms.TextBox()
+        Me.L_WKN = New System.Windows.Forms.TextBox()
+        Me.L_SharePrice = New System.Windows.Forms.TextBox()
+        Me.L_Name = New System.Windows.Forms.TextBox()
+        Me.T_Search = New System.Windows.Forms.TextBox()
+        Me.C_ReadSingleShare = New System.Windows.Forms.Button()
+        Me.T_S1 = New System.Windows.Forms.TextBox()
+        Me.T_S2 = New System.Windows.Forms.TextBox()
+        Me.T_S3 = New System.Windows.Forms.TextBox()
+        Me.T_S4 = New System.Windows.Forms.TextBox()
+        Me.T_S0 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'C_ReadAllShares
@@ -49,54 +56,9 @@ Partial Class ReadTodaysSharePrice
         Me.C_ReadAllShares.Text = "Read all shares"
         Me.C_ReadAllShares.UseVisualStyleBackColor = True
         '
-        'C_ReadSingleShare
-        '
-        Me.C_ReadSingleShare.Location = New System.Drawing.Point(48, 285)
-        Me.C_ReadSingleShare.Name = "C_ReadSingleShare"
-        Me.C_ReadSingleShare.Size = New System.Drawing.Size(142, 73)
-        Me.C_ReadSingleShare.TabIndex = 1
-        Me.C_ReadSingleShare.Text = "    Read      single share"
-        Me.C_ReadSingleShare.UseVisualStyleBackColor = True
-        '
-        'T_Search
-        '
-        Me.T_Search.Location = New System.Drawing.Point(230, 285)
-        Me.T_Search.Name = "T_Search"
-        Me.T_Search.Size = New System.Drawing.Size(357, 31)
-        Me.T_Search.TabIndex = 2
-        Me.T_Search.Text = "Name, ISISN, WKN"
-        '
-        'L_Name
-        '
-        Me.L_Name.Location = New System.Drawing.Point(345, 367)
-        Me.L_Name.Name = "L_Name"
-        Me.L_Name.Size = New System.Drawing.Size(242, 31)
-        Me.L_Name.TabIndex = 3
-        '
-        'L_SharePrice
-        '
-        Me.L_SharePrice.Location = New System.Drawing.Point(345, 409)
-        Me.L_SharePrice.Name = "L_SharePrice"
-        Me.L_SharePrice.Size = New System.Drawing.Size(242, 31)
-        Me.L_SharePrice.TabIndex = 4
-        '
-        'L_WKN
-        '
-        Me.L_WKN.Location = New System.Drawing.Point(345, 453)
-        Me.L_WKN.Name = "L_WKN"
-        Me.L_WKN.Size = New System.Drawing.Size(242, 31)
-        Me.L_WKN.TabIndex = 5
-        '
-        'L_ISIN
-        '
-        Me.L_ISIN.Location = New System.Drawing.Point(345, 496)
-        Me.L_ISIN.Name = "L_ISIN"
-        Me.L_ISIN.Size = New System.Drawing.Size(242, 31)
-        Me.L_ISIN.TabIndex = 6
-        '
         'L_WebPage
         '
-        Me.L_WebPage.Location = New System.Drawing.Point(48, 557)
+        Me.L_WebPage.Location = New System.Drawing.Point(48, 788)
         Me.L_WebPage.Name = "L_WebPage"
         Me.L_WebPage.Size = New System.Drawing.Size(539, 31)
         Me.L_WebPage.TabIndex = 7
@@ -107,76 +69,181 @@ Partial Class ReadTodaysSharePrice
         Me.ListBox1.ItemHeight = 25
         Me.ListBox1.Location = New System.Drawing.Point(635, 24)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(489, 579)
+        Me.ListBox1.Size = New System.Drawing.Size(489, 804)
         Me.ListBox1.TabIndex = 8
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.ItemHeight = 25
-        Me.ListBox2.Location = New System.Drawing.Point(48, 617)
+        Me.ListBox2.Location = New System.Drawing.Point(48, 840)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.Size = New System.Drawing.Size(1076, 204)
         Me.ListBox2.TabIndex = 9
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(270, 499)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 25)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "ISIN:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(260, 456)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 25)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "WKN:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(175, 412)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(152, 25)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Aktueller Kurs:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(253, 370)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(74, 25)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "Name:"
         '
         'Timer1
         '
         Me.Timer1.Interval = 1000
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(76, 212)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(74, 25)
+        Me.Label4.TabIndex = 33
+        Me.Label4.Text = "Name:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(45, 254)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(105, 25)
+        Me.Label3.TabIndex = 32
+        Me.Label3.Text = "Akt. Kurs:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(83, 298)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 25)
+        Me.Label2.TabIndex = 31
+        Me.Label2.Text = "WKN:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(93, 341)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(57, 25)
+        Me.Label1.TabIndex = 30
+        Me.Label1.Text = "ISIN:"
+        '
+        'L_ISIN
+        '
+        Me.L_ISIN.Location = New System.Drawing.Point(168, 338)
+        Me.L_ISIN.Name = "L_ISIN"
+        Me.L_ISIN.Size = New System.Drawing.Size(242, 31)
+        Me.L_ISIN.TabIndex = 29
+        '
+        'L_WKN
+        '
+        Me.L_WKN.Location = New System.Drawing.Point(168, 295)
+        Me.L_WKN.Name = "L_WKN"
+        Me.L_WKN.Size = New System.Drawing.Size(242, 31)
+        Me.L_WKN.TabIndex = 28
+        '
+        'L_SharePrice
+        '
+        Me.L_SharePrice.Location = New System.Drawing.Point(168, 251)
+        Me.L_SharePrice.Name = "L_SharePrice"
+        Me.L_SharePrice.Size = New System.Drawing.Size(242, 31)
+        Me.L_SharePrice.TabIndex = 27
+        '
+        'L_Name
+        '
+        Me.L_Name.Location = New System.Drawing.Point(168, 209)
+        Me.L_Name.Name = "L_Name"
+        Me.L_Name.Size = New System.Drawing.Size(242, 31)
+        Me.L_Name.TabIndex = 26
+        '
+        'T_Search
+        '
+        Me.T_Search.Location = New System.Drawing.Point(217, 668)
+        Me.T_Search.Name = "T_Search"
+        Me.T_Search.Size = New System.Drawing.Size(357, 31)
+        Me.T_Search.TabIndex = 25
+        Me.T_Search.Text = "Name, ISISN, WKN"
+        '
+        'C_ReadSingleShare
+        '
+        Me.C_ReadSingleShare.Location = New System.Drawing.Point(48, 637)
+        Me.C_ReadSingleShare.Name = "C_ReadSingleShare"
+        Me.C_ReadSingleShare.Size = New System.Drawing.Size(142, 73)
+        Me.C_ReadSingleShare.TabIndex = 24
+        Me.C_ReadSingleShare.Text = "    Read      single share"
+        Me.C_ReadSingleShare.UseVisualStyleBackColor = True
+        '
+        'T_S1
+        '
+        Me.T_S1.Location = New System.Drawing.Point(512, 257)
+        Me.T_S1.Name = "T_S1"
+        Me.T_S1.Size = New System.Drawing.Size(75, 31)
+        Me.T_S1.TabIndex = 34
+        '
+        'T_S2
+        '
+        Me.T_S2.Location = New System.Drawing.Point(512, 299)
+        Me.T_S2.Name = "T_S2"
+        Me.T_S2.Size = New System.Drawing.Size(75, 31)
+        Me.T_S2.TabIndex = 35
+        '
+        'T_S3
+        '
+        Me.T_S3.Location = New System.Drawing.Point(512, 343)
+        Me.T_S3.Name = "T_S3"
+        Me.T_S3.Size = New System.Drawing.Size(75, 31)
+        Me.T_S3.TabIndex = 36
+        '
+        'T_S4
+        '
+        Me.T_S4.Location = New System.Drawing.Point(512, 386)
+        Me.T_S4.Name = "T_S4"
+        Me.T_S4.Size = New System.Drawing.Size(75, 31)
+        Me.T_S4.TabIndex = 37
+        '
+        'T_S0
+        '
+        Me.T_S0.Location = New System.Drawing.Point(512, 209)
+        Me.T_S0.Name = "T_S0"
+        Me.T_S0.Size = New System.Drawing.Size(75, 31)
+        Me.T_S0.TabIndex = 40
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(398, 182)
+        Me.Button1.TabIndex = 41
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(48, 457)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(108, 41)
+        Me.Button2.TabIndex = 42
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ReadTodaysSharePrice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1149, 845)
+        Me.ClientSize = New System.Drawing.Size(1138, 1079)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.T_S0)
+        Me.Controls.Add(Me.T_S4)
+        Me.Controls.Add(Me.T_S3)
+        Me.Controls.Add(Me.T_S2)
+        Me.Controls.Add(Me.T_S1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox2)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.L_WebPage)
         Me.Controls.Add(Me.L_ISIN)
         Me.Controls.Add(Me.L_WKN)
         Me.Controls.Add(Me.L_SharePrice)
         Me.Controls.Add(Me.L_Name)
         Me.Controls.Add(Me.T_Search)
         Me.Controls.Add(Me.C_ReadSingleShare)
+        Me.Controls.Add(Me.ListBox2)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.L_WebPage)
         Me.Controls.Add(Me.C_ReadAllShares)
         Me.Name = "ReadTodaysSharePrice"
         Me.Text = "Form3"
@@ -186,18 +253,25 @@ Partial Class ReadTodaysSharePrice
     End Sub
 
     Friend WithEvents C_ReadAllShares As Button
-    Friend WithEvents C_ReadSingleShare As Button
-    Friend WithEvents T_Search As TextBox
-    Friend WithEvents L_Name As TextBox
-    Friend WithEvents L_SharePrice As TextBox
-    Friend WithEvents L_WKN As TextBox
-    Friend WithEvents L_ISIN As TextBox
     Friend WithEvents L_WebPage As TextBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents L_ISIN As TextBox
+    Friend WithEvents L_WKN As TextBox
+    Friend WithEvents L_SharePrice As TextBox
+    Friend WithEvents L_Name As TextBox
+    Friend WithEvents T_Search As TextBox
+    Friend WithEvents C_ReadSingleShare As Button
+    Friend WithEvents T_S1 As TextBox
+    Friend WithEvents T_S2 As TextBox
+    Friend WithEvents T_S3 As TextBox
+    Friend WithEvents T_S4 As TextBox
+    Friend WithEvents T_S0 As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

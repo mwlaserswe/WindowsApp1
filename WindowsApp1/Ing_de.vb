@@ -1,7 +1,5 @@
-﻿Option Explicit On
-
-Module Comdirect_de
-    Public Function Read_Comdirect(WKN As String) As Double
+﻿Module Ing_de
+    Public Function Read_Ing(WKN As String) As Double
         Dim HtmlCode As String
         Dim ISIN As String
 
@@ -12,26 +10,25 @@ Module Comdirect_de
 
         ISIN = FindIsinInArray(WKN)
 
-        WebPage = "https://www.comdirect.de/inf/aktien/" & ISIN
+        WebPage = "https://wertpapiere.ing.de/Investieren/Aktie/" & ISIN
         HtmlCode = GetHTMLCode(WebPage)
         If HtmlCode = ">>>ERROR<<<" Then
-            Read_Comdirect = -1
+            Read_Ing = -1
             'ReadTodaysSharePrice.L_SharePrice = "Error"
             Exit Function
         End If
 
-        SaveQuelltext(HtmlCode, Application.StartupPath & "\Comdirect.HTML")
+        SaveQuelltext(HtmlCode, Application.StartupPath & "\Ing.HTML")
 
         'AktuellerKurs extrahieren
-        SearchItem = "<span class=""text-size--xxlarge text-weight--medium"""
-        EndString = "</span>"
+        SearchItem = "data-field=""Rate"""
+        EndString = "<meta"
         AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
         Dim dmy As Double
 
         dmy = Zahl(AktuellerKurs)
 
-        Read_Comdirect = dmy
+        Read_Ing = dmy
 
     End Function
-
 End Module

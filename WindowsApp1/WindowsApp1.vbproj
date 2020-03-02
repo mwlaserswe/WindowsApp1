@@ -133,6 +133,7 @@
     <Compile Include="BoerseStuttgart.vb" />
     <Compile Include="Comdirect_de.vb" />
     <Compile Include="FinanzNachrichten_de.vb" />
+    <Compile Include="Ing_de.vb" />
     <Compile Include="Settings.vb" />
     <Compile Include="XMLReader.Designer.vb">
       <DependentUpon>XMLReader.vb</DependentUpon>

@@ -324,6 +324,114 @@ ReadHistoryFileErr:
 
 
 
+    '=====================================================================
+    '                       Analyse_03
+    ' Einstieg: Im Gegensatz zu Analye_01 wird zuerst gewartet, bis
+    '           bis der Kurs von unten durch den GS sticht.
+    ' Wenn der Kurs von unten durch den GD sticht, wird gekauft.
+    ' Wenn die Aktie fällt, wird sofort verkauft
+    ' InvestmentStart: Der Index im History file
+    ' StartAccount: Die Investitionssumme
+    '=====================================================================
+    Public Sub Analyse_03(InvestmentStart As Long, StartAccount As Double)
+        Dim idx As Long
+        Dim State As Integer
+        Dim CostFactor As Double
+
+        CostFactor = 0.9926
+        '    CostFactor = 0.991
+
+        idx = 0
+        State = 0
+
+        'If (0 / 1) + (Not Not ChartArray) = 0 Then
+        '    ' Array ist nicht nicht dimensioniert
+        '    Exit Sub
+        'End If
+
+        While idx <= UBound(ChartArray)
+            Select Case State
+                Case 0
+                    ' no investment before InvestmentStart
+                    If idx >= InvestmentStart Then
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                        State = 5
+                    Else
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                    End If
+
+                Case 5
+                    ' share price under GD now
+                    If ChartArray(idx).Distance <= 0 Then
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5:wait"
+                        State = 10
+                        ' wait until share price under GD
+                    Else
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5: wait"
+                    End If
+                Case 10
+                    ' wait until share price is over GD again the first time
+                    '*** buy now
+                    If ChartArray(idx).Distance > 0 Then
+                        StartSharePrice = ChartArray(idx).Value
+                        ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
+                        ' Remove transfer costs
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
+                        ChartArray(idx).Trend = "10: Rise"
+                        State = 20
+                    Else
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "10: wait"
+                    End If
+                Case 20
+                    ' if share price is lower than yesterday
+                    If ChartArray(idx).Value < ChartArray(idx - 1).Value Then
+                        ChartArray(idx).Trend = "20: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        State = 25
+                        ' share price stays over GD
+                    Else
+                        ChartArray(idx).Trend = "20: Rise"
+                        ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
+                    End If
+                Case 25
+                    ' wait until share price under GD
+                    If ChartArray(idx).Distance < 0 Then
+                        ChartArray(idx).Trend = "30: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account
+                        State = 30
+                    Else
+                        ' share price under GD now
+                        ChartArray(idx).Trend = "30: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account
+                    End If
+
+                Case 30
+                    ' if share price raised over GD again
+                    If ChartArray(idx).Distance > 0 Then
+                        ChartArray(idx).Trend = "30: Rise"
+                        '                    ChartArray(idx).Account = ChartArray(idx).Value / StartSharePrice * StartAccount
+                        StartSharePrice = ChartArray(idx).Value
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        StartAccount = ChartArray(idx).Account
+                        State = 20
+                    Else
+                        ' share price stays under GD
+                        ChartArray(idx).Trend = "30: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account
+                    End If
+
+            End Select
+
+            idx = idx + 1
+        End While
+
+    End Sub
+
 
 
 
