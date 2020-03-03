@@ -79,6 +79,7 @@ Partial Class Form1
         Me.C_Investhopping = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Ch_FitY = New System.Windows.Forms.CheckBox()
+        Me.B_FindBestSD = New System.Windows.Forms.Button()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -99,7 +100,7 @@ Partial Class Form1
         Me.ListBox1.ItemHeight = 25
         Me.ListBox1.Location = New System.Drawing.Point(1353, 18)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(226, 229)
+        Me.ListBox1.Size = New System.Drawing.Size(226, 204)
         Me.ListBox1.TabIndex = 2
         '
         'PicChart
@@ -128,33 +129,33 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1848, 48)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1848, 40)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 44)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 36)
         Me.MenuToolStripMenuItem.Text = "Display Chart"
         '
         'GgggToolStripMenuItem
         '
         Me.GgggToolStripMenuItem.Name = "GgggToolStripMenuItem"
-        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 44)
+        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 36)
         Me.GgggToolStripMenuItem.Text = "Chart List"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 44)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 36)
         Me.ToolStripMenuItem1.Text = "ReadTodaysSharePrice"
         '
         'ReadFromWEBToolStripMenuItem
         '
         Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
         Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
-        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 44)
+        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 36)
         Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
         '
         'ReadHistoricFromARIVAdeToolStripMenuItem
@@ -167,7 +168,7 @@ Partial Class Form1
         '
         Me.WebToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanWebForWKNToolStripMenuItem, Me.SaveWebPageAsHTMLToolStripMenuItem, Me.ReadSingleShareValueToolStripMenuItem, Me.ReadXMLToolStripMenuItem, Me.GridViewTestToolStripMenuItem, Me.TransformToolStripMenuItem})
         Me.WebToolStripMenuItem.Name = "WebToolStripMenuItem"
-        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 44)
+        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 36)
         Me.WebToolStripMenuItem.Text = "Web / Test"
         '
         'ScanWebForWKNToolStripMenuItem
@@ -210,7 +211,7 @@ Partial Class Form1
         '
         Me.ServiceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckWeekdayToolStripMenuItem})
         Me.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem"
-        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 44)
+        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
         Me.ServiceToolStripMenuItem.Text = "Service"
         '
         'CheckWeekdayToolStripMenuItem
@@ -517,7 +518,7 @@ Partial Class Form1
         '
         'C_Investhopping
         '
-        Me.C_Investhopping.Location = New System.Drawing.Point(1117, 98)
+        Me.C_Investhopping.Location = New System.Drawing.Point(1117, 117)
         Me.C_Investhopping.Name = "C_Investhopping"
         Me.C_Investhopping.Size = New System.Drawing.Size(168, 55)
         Me.C_Investhopping.TabIndex = 45
@@ -541,11 +542,21 @@ Partial Class Form1
         Me.Ch_FitY.Text = "Fit Y"
         Me.Ch_FitY.UseVisualStyleBackColor = True
         '
+        'B_FindBestSD
+        '
+        Me.B_FindBestSD.Location = New System.Drawing.Point(1102, 61)
+        Me.B_FindBestSD.Name = "B_FindBestSD"
+        Me.B_FindBestSD.Size = New System.Drawing.Size(183, 40)
+        Me.B_FindBestSD.TabIndex = 48
+        Me.B_FindBestSD.Text = "Find best SB"
+        Me.B_FindBestSD.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1848, 878)
+        Me.Controls.Add(Me.B_FindBestSD)
         Me.Controls.Add(Me.Ch_FitY)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.C_Investhopping)
@@ -657,4 +668,5 @@ Partial Class Form1
     Friend WithEvents C_Investhopping As Button
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Ch_FitY As CheckBox
+    Friend WithEvents B_FindBestSD As Button
 End Class

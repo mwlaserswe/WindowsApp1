@@ -186,6 +186,8 @@ ReadCompanyListFileErr:
         CompanyName = DataGridView1.Item(column, row).Value
         ReadHistoryFileToChartArray(Fullpath, CompanyName)
 
+        FindBestSD(5000, ListBox1)
+
         If Ch_FitY.Checked Then
             Dim LastValue As Double
             LastValue = ChartArray(UBound(ChartArray)).Value
@@ -670,8 +672,21 @@ ReadCompanyListFileErr:
 
     End Sub
 
+    Private Sub B_FindBestSD_Click(sender As Object, e As EventArgs) Handles B_FindBestSD.Click
+        FindBestSD(5000, ListBox1)
+    End Sub
 
 
+    Private Sub Ch_FitY_CheckedChanged(sender As Object, e As EventArgs) Handles Ch_FitY.CheckedChanged
+        If Ch_FitY.Checked Then
+            Dim LastValue As Double
+
+            LastValue = ChartArray(UBound(ChartArray)).Value
+            GlbScaleY = 0.7 * PicChart.Height / LastValue
+            RefreshChart()
+        End If
+
+    End Sub
 End Class
 
 

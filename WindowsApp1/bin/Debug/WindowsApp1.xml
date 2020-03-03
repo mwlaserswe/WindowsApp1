@@ -28,8 +28,5 @@ Dim FinalArray() As HistoryItem
 <member name="M:WindowsApp1.ServiceCheckWeekDay.C_TageszahlInDatum_Click(System.Object,System.EventArgs)">
     End Sub
 </member>
-<member name="M:WindowsApp1.Utilities.BubbleSort(System.Double[])">
-End Function
-</member>
 </members>
 </doc>

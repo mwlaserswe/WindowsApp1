@@ -22,12 +22,9 @@ Partial Class ReadTodaysSharePrice
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.C_ReadAllShares = New System.Windows.Forms.Button()
         Me.L_WebPage = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,18 +40,9 @@ Partial Class ReadTodaysSharePrice
         Me.T_S3 = New System.Windows.Forms.TextBox()
         Me.T_S4 = New System.Windows.Forms.TextBox()
         Me.T_S0 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.C_ReadAllShares = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'C_ReadAllShares
-        '
-        Me.C_ReadAllShares.Location = New System.Drawing.Point(48, 24)
-        Me.C_ReadAllShares.Name = "C_ReadAllShares"
-        Me.C_ReadAllShares.Size = New System.Drawing.Size(539, 134)
-        Me.C_ReadAllShares.TabIndex = 0
-        Me.C_ReadAllShares.Text = "Read all shares"
-        Me.C_ReadAllShares.UseVisualStyleBackColor = True
         '
         'L_WebPage
         '
@@ -80,10 +68,6 @@ Partial Class ReadTodaysSharePrice
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.Size = New System.Drawing.Size(1076, 204)
         Me.ListBox2.TabIndex = 9
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 1000
         '
         'Label4
         '
@@ -201,14 +185,14 @@ Partial Class ReadTodaysSharePrice
         Me.T_S0.Size = New System.Drawing.Size(75, 31)
         Me.T_S0.TabIndex = 40
         '
-        'Button1
+        'C_ReadAllShares
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(398, 182)
-        Me.Button1.TabIndex = 41
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.C_ReadAllShares.Location = New System.Drawing.Point(48, 24)
+        Me.C_ReadAllShares.Name = "C_ReadAllShares"
+        Me.C_ReadAllShares.Size = New System.Drawing.Size(539, 136)
+        Me.C_ReadAllShares.TabIndex = 41
+        Me.C_ReadAllShares.Text = "Read all shares"
+        Me.C_ReadAllShares.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -225,7 +209,7 @@ Partial Class ReadTodaysSharePrice
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1138, 1079)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.C_ReadAllShares)
         Me.Controls.Add(Me.T_S0)
         Me.Controls.Add(Me.T_S4)
         Me.Controls.Add(Me.T_S3)
@@ -244,19 +228,15 @@ Partial Class ReadTodaysSharePrice
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.L_WebPage)
-        Me.Controls.Add(Me.C_ReadAllShares)
         Me.Name = "ReadTodaysSharePrice"
         Me.Text = "Form3"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents C_ReadAllShares As Button
     Friend WithEvents L_WebPage As TextBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -272,6 +252,6 @@ Partial Class ReadTodaysSharePrice
     Friend WithEvents T_S3 As TextBox
     Friend WithEvents T_S4 As TextBox
     Friend WithEvents T_S0 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents C_ReadAllShares As Button
     Friend WithEvents Button2 As Button
 End Class

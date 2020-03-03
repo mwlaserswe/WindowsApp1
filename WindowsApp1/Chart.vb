@@ -234,8 +234,8 @@ ReadHistoryFileErr:
     ' InvestmentStart: Der Index im History file
     ' StartAccount: Die Investitionssumme
     '=====================================================================
-    Public Sub Analyse_02(InvestmentStart As Long, StartAccount As Double)
-        Dim idx As Long
+    Public Sub Analyse_02(InvestmentStart As Integer, StartAccount As Double)
+        Dim idx As Integer
         Dim State As Integer
         Dim CostFactor As Double
 
@@ -543,22 +543,6 @@ ReadHistoryFileErr:
 
     End Sub
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Sub ReadCompanyListFile(MyList As ListBox)
         Dim CompanyListFilename As String
         Dim CompanyListFile As Integer
@@ -607,4 +591,106 @@ ReadHistoryFileErr:
 ReadCompanyListFileErr:
         MsgBox(CompanyListFilename & vbCr & Err.Description, , "xxxxx")
     End Sub
+
+
+    Public Sub FindBestSD(InvestmentStart As Integer, ListBox As ListBox)
+        Dim SdArray(200) As Double
+        Dim ChartFile As Integer
+        Dim Zeile As String
+        Dim ChartFilename As String
+
+        Dim AbsMax As Double
+        Dim AbsMaxPos As Integer
+        Dim RightMax As Double
+        Dim RightMaxPos As Integer
+        Dim Minimum As Double
+        Dim MinPos As Integer
+        Dim ResultString As String
+
+        'Get final accont for each SD
+        For i = 1 To 200
+            MovingAverage(i)
+            Analyse_02(InvestmentStart, 1)
+            SdArray(i) = ChartArray(UBound(ChartArray)).Account
+        Next i
+
+
+
+        'Find AbsMax
+        AbsMax = 0
+        For i = 1 To 200
+            If SdArray(i) > AbsMax Then
+                AbsMaxPos = i
+                AbsMax = SdArray(i)
+            End If
+        Next
+
+        'Find Minimum
+        Minimum = 1.0E+99
+        For i = AbsMaxPos To 200
+            If SdArray(i) < Minimum And FindMaxRight(SdArray, i) Then
+                MinPos = i
+                Minimum = SdArray(i)
+            End If
+        Next
+
+        'Find RightMax
+        RightMax = 0
+        For i = MinPos To 200
+            If SdArray(i) > RightMax Then
+                RightMaxPos = i
+                RightMax = SdArray(i)
+            End If
+        Next
+
+        'Write to ListBox and file
+        On Error GoTo OpenError
+
+        ChartFilename = Application.StartupPath & "\BestSD.txt"
+        ChartFile = FreeFile()
+        FileOpen(ChartFile, ChartFilename, OpenMode.Output)
+        ListBox.Items.Clear()
+
+        ResultString = "Max1: " & AbsMaxPos & "  " & SdArray(AbsMaxPos)
+        ListBox.Items.Add(ResultString)
+        PrintLine(ChartFile, ResultString)
+
+        ResultString = "Max2: " & RightMaxPos & "  " & SdArray(RightMaxPos)
+        ListBox.Items.Add(ResultString)
+        PrintLine(ChartFile, ResultString)
+
+        ResultString = "Min: " & MinPos & "  " & SdArray(MinPos)
+        ListBox.Items.Add(ResultString)
+        PrintLine(ChartFile, ResultString)
+
+        For i = 1 To 200
+            Zeile = i & vbTab & SdArray(i)
+            ListBox.Items.Add(Zeile)
+            PrintLine(ChartFile, Zeile)
+        Next i
+
+        FileClose(ChartFile)
+
+        Exit Sub
+
+OpenError:
+        MsgBox(ChartFilename, , "Write error")
+        FileClose(ChartFile)
+    End Sub
+
+    Private Function FindMaxRight(Arry() As Double, Pos As Integer) As Boolean
+        'Is there another maximum at the right side of Pos?
+        Dim Lclpos As Integer
+        Dim LocMax As Double
+
+        FindMaxRight = False
+        LocMax = Arry(Pos)
+        For Lclpos = Pos To Arry.Length - 1
+            If Arry(Lclpos) > LocMax Then
+                FindMaxRight = True
+                Exit Function
+            End If
+        Next
+    End Function
+
 End Module

@@ -3,16 +3,6 @@
 Public Class ReadTodaysSharePrice
 
 
-    Dim Share_Download_idx As Long
-    Private Sub C_ReadAllShares_Click(sender As Object, e As EventArgs) Handles C_ReadAllShares.Click
-        ListBox1.Items.Clear()
-        ListBox2.Items.Clear()
-
-        Share_Download_idx = LBound(CompanyListArray)
-        Timer1.Enabled = True
-
-    End Sub
-
     Private Sub C_ReadSingleShare_Click(sender As Object, e As EventArgs) Handles C_ReadSingleShare.Click
         Dim arry As Double()
         Dim TodaysSharePrice As ShareResult
@@ -179,65 +169,16 @@ OpenError:
         ReadCompanyListFile()
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+
+
+    Private Sub C_ReadAllShares_Click(sender As Object, e As EventArgs) Handles C_ReadAllShares.Click
         Dim i As Long
         Dim arry As Double()
         Dim TodaysSharePrice As ShareResult
 
-        i = Share_Download_idx
-        L_Name.Text = CompanyListArray(i).Name
-        L_WKN.Text = CompanyListArray(i).WKN
-        L_ISIN.Text = CompanyListArray(i).ISIN
-        T_S0.Text = "--"
-        T_S1.Text = "--"
-        T_S2.Text = "--"
-        T_S3.Text = "--"
-        T_S4.Text = "--"
-
-        ReDim arry(0 To 0)
-        arry(0) = Read_Peketec(CompanyListArray(i).WKN)
-        T_S0.Text = arry(0)
-        Application.DoEvents()
-        ReDim Preserve arry(0 To UBound(arry) + 1)
-        arry(1) = Read_Ariva(CompanyListArray(i).WKN)
-        T_S1.Text = arry(1)
-        Application.DoEvents()
-        ReDim Preserve arry(0 To UBound(arry) + 1)
-        arry(2) = Read_BoerseStuttgart(CompanyListArray(i).WKN)
-        T_S2.Text = arry(2)
-        Application.DoEvents()
-        ReDim Preserve arry(0 To UBound(arry) + 1)
-        arry(3) = Read_Comdirect(CompanyListArray(i).WKN)
-        T_S3.Text = arry(3)
-        Application.DoEvents()
-        ReDim Preserve arry(0 To UBound(arry) + 1)
-        arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
-        T_S4.Text = arry(4)
-        Application.DoEvents()
-
-        TodaysSharePrice = GetvalidSharePrice(arry)
-        L_SharePrice.Text = TodaysSharePrice.Value
-
-        ListBox1.Items.Add(CompanyListArray(i).Name & "  " & CompanyListArray(i).WKN & "  " & TodaysSharePrice.Value)
-
-        If TodaysSharePrice.ErrorString <> "" Then
-            ListBox2.Items.Add(CompanyListArray(i).Name & "  " & CompanyListArray(i).WKN & "   Value: " & TodaysSharePrice.Value & "  " & TodaysSharePrice.ErrorString)
-        End If
-
-        '''AppendLineToHistoryFile(CompanyListArray(i).WKN, Now.Date, L_SharePrice.Text)
-        UpdateHistoryFile(CompanyListArray(i).WKN, Now.Date, L_SharePrice.Text)
-
-        Share_Download_idx = Share_Download_idx + 1
-
-        If Share_Download_idx > UBound(CompanyListArray) Then
-            Timer1.Enabled = False
-        End If
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim i As Long
-        Dim arry As Double()
-        Dim TodaysSharePrice As ShareResult
+        ListBox1.Items.Clear()
+        ListBox2.Items.Clear()
 
         For Share_Download_idx = 0 To UBound(CompanyListArray)
 
@@ -300,35 +241,6 @@ OpenError:
         Next j
     End Sub
 
-    Public Sub replace(a() As Long)
-        ''''Dim k() As Long = {100, 200, 300}
-        ''''a = k
-        ''''For j As Integer = 0 To UBound(a)
-        ''''    a(j) = a(j) + 1
-        ''''Next j
-
-        Dim k() As Long
-        ReDim k(0 To UBound(a))
-
-        For i = 0 To UBound(a)
-            k(i) = a(i)
-        Next i
-
-        For j As Integer = 0 To UBound(a)
-            k(j) = k(j) + 1
-        Next j
 
 
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        Dim n() As Long = {10, 20, 30, 40}
-        Call increase(n)
-        MsgBox("After increase(n): " & CStr(n(0)) & ", " & CStr(n(1)) & ", " & CStr(n(2)) & ", " & CStr(n(3)))
-        Call replace(n)
-        MsgBox("After replace(n): " & CStr(n(0)) & ", " & CStr(n(1)) & ", " & CStr(n(2)) & ", " & CStr(n(3)))
-
-    End Sub
 End Class

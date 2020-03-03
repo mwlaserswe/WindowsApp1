@@ -576,6 +576,9 @@ OpenError:
         Dim V1 As Double
         Dim V2 As Double
 
+        'Very important!
+        'Copy to another array element by element to avoid the modification of the orginal values
+        'LclArray = Array     => will NOT do it!
         Dim LclArray() As Double
         ReDim LclArray(0 To UBound(Array))
         For i = 0 To UBound(LclArray)

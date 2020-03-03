@@ -57,7 +57,6 @@ Module Utilities
     End Function
 
 
-
     Public Sub SepariereString(Zeile As String, ByRef WortArray() As String, Delimiter As String)
         Dim Pos1 As Long
         Dim Pos2 As Long
@@ -97,56 +96,6 @@ Module Utilities
             End If
         Loop While Pos2 > 0
     End Sub
-
-
-
-    '''Public Sub sort(ByRef array As Integer())
-    '''    quicksort(0, array.Length - 1, array)
-    '''End Sub
-    '''Private Sub quicksort(ByVal links As Integer, ByVal rechts As Integer, ByRef daten As Integer())
-    '''    If links < rechts Then
-    '''        Dim teiler As Integer = teile(links, rechts, daten)
-    '''        quicksort(links, teiler - 1, daten)
-    '''        quicksort(teiler + 1, rechts, daten)
-    '''    End If
-    '''End Sub
-    '''Private Function teile(ByVal links As Integer, ByVal rechts As Integer, ByRef daten As Integer()) As Integer
-    '''    Dim i As Integer = links
-    '''    'Starte mit j links vom Pivotelement
-    '''    Dim j As Integer = rechts - 1
-    '''    Dim pivot As Integer = daten(rechts)
-
-    '''    Do
-    '''        'Suche von links ein Element, welches größer als das Pivotelement ist
-    '''        While daten(i) <= pivot AndAlso i < rechts
-    '''            i += 1
-    '''        End While
-
-    '''        'Suche von rechts ein Element, welches kleiner als das Pivotelement ist
-    '''        While daten(j) >= pivot AndAlso j > links
-    '''            j -= 1
-    '''        End While
-
-    '''        If i < j Then
-    '''            Dim z As Integer = daten(i)
-    '''            daten(i) = daten(j) ' tausche daten[i] mit daten[j]
-    '''            daten(j) = z
-    '''        End If
-
-    '''    Loop While i < j 'solange i an j nicht vorbeigelaufen ist 
-
-    '''    ' Tausche Pivotelement (daten[rechts]) mit neuer endgültiger Position (daten[i])
-
-    '''    If daten(i) > pivot Then
-    '''        Dim z As Integer = daten(i)
-    '''        daten(i) = daten(rechts) ' tausche daten[i] mit daten[rechts]
-    '''        daten(rechts) = z
-    '''    End If
-
-    '''    Return i ' gib die Position des Pivotelements zurück
-
-    '''End Function
-
 
 
     Public Sub BubbleSort(Numlist As Double())
