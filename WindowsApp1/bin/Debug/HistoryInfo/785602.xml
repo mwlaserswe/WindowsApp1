@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>ElringKlinger</Name>
+    <WKN>785602</WKN>
+    <ISIN>DE0007856023</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,09882777386698</AbsMax>
+    <AbsMaxPos>6</AbsMaxPos>
+    <Minimum>1,04739775922111</Minimum>
+    <MinPos>177</MinPos>
+    <RightMax>1,05465311547056</RightMax>
+    <RightMaxPos>180</RightMaxPos>
+  </BestSD>
+</ShareInfo>

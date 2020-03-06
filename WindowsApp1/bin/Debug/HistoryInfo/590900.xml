@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Bilfinger</Name>
+    <WKN>590900</WKN>
+    <ISIN>DE0005909006</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,56841771998749</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>0,959647880580334</Minimum>
+    <MinPos>165</MinPos>
+    <RightMax>1,03946094420601</RightMax>
+    <RightMaxPos>183</RightMaxPos>
+  </BestSD>
+</ShareInfo>

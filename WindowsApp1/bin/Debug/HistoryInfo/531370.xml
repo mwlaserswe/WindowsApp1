@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Carl Zeiss Meditec</Name>
+    <WKN>531370</WKN>
+    <ISIN>DE0005313704</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,5094409265025</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>1,1369745613836</Minimum>
+    <MinPos>64</MinPos>
+    <RightMax>1,50489908454535</RightMax>
+    <RightMaxPos>125</RightMaxPos>
+  </BestSD>
+</ShareInfo>

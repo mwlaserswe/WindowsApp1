@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Porsche</Name>
+    <WKN>PAH003</WKN>
+    <ISIN>DE000PAH0038</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,19972928452122</AbsMax>
+    <AbsMaxPos>19</AbsMaxPos>
+    <Minimum>0,896851686662933</Minimum>
+    <MinPos>137</MinPos>
+    <RightMax>0,981702835594238</RightMax>
+    <RightMaxPos>190</RightMaxPos>
+  </BestSD>
+</ShareInfo>

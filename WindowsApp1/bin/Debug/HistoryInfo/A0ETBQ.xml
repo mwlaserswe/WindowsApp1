@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MBB</Name>
+    <WKN>A0ETBQ</WKN>
+    <ISIN>DE000A0ETBQ4</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,14145134501006</AbsMax>
+    <AbsMaxPos>19</AbsMaxPos>
+    <Minimum>0,835070390769157</Minimum>
+    <MinPos>133</MinPos>
+    <RightMax>0,922402865946394</RightMax>
+    <RightMaxPos>166</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Fresenius Medical Care</Name>
+    <WKN>578580</WKN>
+    <ISIN>DE0005785802</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,31820124302844</AbsMax>
+    <AbsMaxPos>6</AbsMaxPos>
+    <Minimum>0,846383325345285</Minimum>
+    <MinPos>197</MinPos>
+    <RightMax>0,895099026468554</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>UZIN UTZ</Name>
+    <WKN>755150</WKN>
+    <ISIN>DE0007551509</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,23899846944455</AbsMax>
+    <AbsMaxPos>50</AbsMaxPos>
+    <Minimum>0,888153908343887</Minimum>
+    <MinPos>148</MinPos>
+    <RightMax>0,974295972696376</RightMax>
+    <RightMaxPos>180</RightMaxPos>
+  </BestSD>
+</ShareInfo>

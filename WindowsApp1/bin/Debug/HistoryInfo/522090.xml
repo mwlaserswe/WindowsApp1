@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>NEXUS</Name>
+    <WKN>522090</WKN>
+    <ISIN>DE0005220909</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,54551000579318</AbsMax>
+    <AbsMaxPos>15</AbsMaxPos>
+    <Minimum>1,08624170366281</Minimum>
+    <MinPos>78</MinPos>
+    <RightMax>1,44421251923334</RightMax>
+    <RightMaxPos>133</RightMaxPos>
+  </BestSD>
+</ShareInfo>

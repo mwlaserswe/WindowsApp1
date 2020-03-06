@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CANCOM</Name>
+    <WKN>541910</WKN>
+    <ISIN>DE0005419105</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,42967091289338</AbsMax>
+    <AbsMaxPos>171</AbsMaxPos>
+    <Minimum>1,2551548710844</Minimum>
+    <MinPos>180</MinPos>
+    <RightMax>1,32074516317131</RightMax>
+    <RightMaxPos>194</RightMaxPos>
+  </BestSD>
+</ShareInfo>

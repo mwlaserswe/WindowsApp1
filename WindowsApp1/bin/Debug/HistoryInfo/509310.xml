@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Amadeus FiRe</Name>
+    <WKN>509310</WKN>
+    <ISIN>DE0005093108</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,96860208066166</AbsMax>
+    <AbsMaxPos>23</AbsMaxPos>
+    <Minimum>1,21113654317809</Minimum>
+    <MinPos>179</MinPos>
+    <RightMax>1,35882134049513</RightMax>
+    <RightMaxPos>196</RightMaxPos>
+  </BestSD>
+</ShareInfo>

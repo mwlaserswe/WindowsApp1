@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Aareal Bank</Name>
+    <WKN>540811</WKN>
+    <ISIN>DE0005408116</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,33458418638236</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>0,914624436208666</Minimum>
+    <MinPos>151</MinPos>
+    <RightMax>0,976491066221321</RightMax>
+    <RightMaxPos>157</RightMaxPos>
+  </BestSD>
+</ShareInfo>

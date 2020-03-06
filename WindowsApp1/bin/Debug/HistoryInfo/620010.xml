@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>INDUS</Name>
+    <WKN>620010</WKN>
+    <ISIN>DE0006200108</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,13301364534022</AbsMax>
+    <AbsMaxPos>41</AbsMaxPos>
+    <Minimum>0,796905720596825</Minimum>
+    <MinPos>144</MinPos>
+    <RightMax>0,932910542228521</RightMax>
+    <RightMaxPos>180</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Masterflex</Name>
+    <WKN>549293</WKN>
+    <ISIN>DE0005492938</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,03824027107421</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>0,780464688330096</Minimum>
+    <MinPos>73</MinPos>
+    <RightMax>0,98525476</RightMax>
+    <RightMaxPos>132</RightMaxPos>
+  </BestSD>
+</ShareInfo>

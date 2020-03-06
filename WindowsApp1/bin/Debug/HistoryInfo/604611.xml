@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Biofrontera</Name>
+    <WKN>604611</WKN>
+    <ISIN>DE0006046113</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,35603147545066</AbsMax>
+    <AbsMaxPos>21</AbsMaxPos>
+    <Minimum>1,01184726935141</Minimum>
+    <MinPos>61</MinPos>
+    <RightMax>1,1668000396261</RightMax>
+    <RightMaxPos>94</RightMaxPos>
+  </BestSD>
+</ShareInfo>

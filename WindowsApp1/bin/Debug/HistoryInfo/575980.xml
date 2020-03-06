@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>init innovation in traffic systems</Name>
+    <WKN>575980</WKN>
+    <ISIN>DE0005759807</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,59087219844886</AbsMax>
+    <AbsMaxPos>42</AbsMaxPos>
+    <Minimum>1,17133554269464</Minimum>
+    <MinPos>88</MinPos>
+    <RightMax>1,45961281166056</RightMax>
+    <RightMaxPos>189</RightMaxPos>
+  </BestSD>
+</ShareInfo>

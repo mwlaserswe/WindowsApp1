@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>United Internet</Name>
+    <WKN>508903</WKN>
+    <ISIN>DE0005089031</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,27823365365886</AbsMax>
+    <AbsMaxPos>43</AbsMaxPos>
+    <Minimum>0,878559643605861</Minimum>
+    <MinPos>146</MinPos>
+    <RightMax>1,06247374836614</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

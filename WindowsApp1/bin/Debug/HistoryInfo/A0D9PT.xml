@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MTU Aero Engines</Name>
+    <WKN>A0D9PT</WKN>
+    <ISIN>DE000A0D9PT0</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,31939132666153</AbsMax>
+    <AbsMaxPos>110</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,31939132666153</RightMax>
+    <RightMaxPos>110</RightMaxPos>
+  </BestSD>
+</ShareInfo>

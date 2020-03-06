@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Volkswagen (VW) vz.</Name>
+    <WKN>766403</WKN>
+    <ISIN>DE0007664039</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,25630353274741</AbsMax>
+    <AbsMaxPos>22</AbsMaxPos>
+    <Minimum>0,990505307339997</Minimum>
+    <MinPos>153</MinPos>
+    <RightMax>1,07213424947599</RightMax>
+    <RightMaxPos>168</RightMaxPos>
+  </BestSD>
+</ShareInfo>

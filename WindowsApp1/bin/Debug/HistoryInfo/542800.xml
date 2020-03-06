@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>comdirect bank</Name>
+    <WKN>542800</WKN>
+    <ISIN>DE0005428007</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,23130434782609</AbsMax>
+    <AbsMaxPos>194</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,23130434782609</RightMax>
+    <RightMaxPos>194</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>BMW</Name>
+    <WKN>519000</WKN>
+    <ISIN>DE0005190003</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,20594205986462</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,952367483899032</Minimum>
+    <MinPos>193</MinPos>
+    <RightMax>0,976422851660736</RightMax>
+    <RightMaxPos>197</RightMaxPos>
+  </BestSD>
+</ShareInfo>

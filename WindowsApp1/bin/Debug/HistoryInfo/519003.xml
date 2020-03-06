@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>BMW Vz.</Name>
+    <WKN>519003</WKN>
+    <ISIN>DE0005190037</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,19410074357159</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>0,832075954686731</Minimum>
+    <MinPos>188</MinPos>
+    <RightMax>0,879674500642876</RightMax>
+    <RightMaxPos>191</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Basler</Name>
+    <WKN>510200</WKN>
+    <ISIN>DE0005102008</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,520574844953</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>0,880334046368775</Minimum>
+    <MinPos>44</MinPos>
+    <RightMax>1,32615685166906</RightMax>
+    <RightMaxPos>73</RightMaxPos>
+  </BestSD>
+</ShareInfo>

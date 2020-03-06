@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>ISRA VISION</Name>
+    <WKN>548810</WKN>
+    <ISIN>DE0005488100</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,36120829879943</AbsMax>
+    <AbsMaxPos>7</AbsMaxPos>
+    <Minimum>0,861625164757003</Minimum>
+    <MinPos>170</MinPos>
+    <RightMax>0,978614271967042</RightMax>
+    <RightMaxPos>191</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Siemens</Name>
+    <WKN>723610</WKN>
+    <ISIN>DE0007236101</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,22649177488754</AbsMax>
+    <AbsMaxPos>38</AbsMaxPos>
+    <Minimum>0,983249070314296</Minimum>
+    <MinPos>197</MinPos>
+    <RightMax>0,988322393558625</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

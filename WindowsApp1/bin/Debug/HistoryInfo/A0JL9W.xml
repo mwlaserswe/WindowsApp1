@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>VERBIO Vereinigte BioEnergie</Name>
+    <WKN>A0JL9W</WKN>
+    <ISIN>DE000A0JL9W6</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,79345037882012</AbsMax>
+    <AbsMaxPos>51</AbsMaxPos>
+    <Minimum>1,32037812923566</Minimum>
+    <MinPos>89</MinPos>
+    <RightMax>1,48948717842225</RightMax>
+    <RightMaxPos>101</RightMaxPos>
+  </BestSD>
+</ShareInfo>

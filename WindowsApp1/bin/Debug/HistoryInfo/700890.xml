@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>REALTECH</Name>
+    <WKN>700890</WKN>
+    <ISIN>DE0007008906</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,894176211677072</AbsMax>
+    <AbsMaxPos>200</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,894176211677072</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

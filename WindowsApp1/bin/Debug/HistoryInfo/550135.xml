@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Axel Springer</Name>
+    <WKN>550135</WKN>
+    <ISIN>DE0005501357</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,14156079854809</AbsMax>
+    <AbsMaxPos>195</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,14156079854809</RightMax>
+    <RightMaxPos>195</RightMaxPos>
+  </BestSD>
+</ShareInfo>

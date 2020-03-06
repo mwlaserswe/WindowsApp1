@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Continental</Name>
+    <WKN>543900</WKN>
+    <ISIN>DE0005439004</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,23206051168492</AbsMax>
+    <AbsMaxPos>12</AbsMaxPos>
+    <Minimum>0,848067421194731</Minimum>
+    <MinPos>150</MinPos>
+    <RightMax>0,989636791542044</RightMax>
+    <RightMaxPos>176</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>WashTec</Name>
+    <WKN>750750</WKN>
+    <ISIN>DE0007507501</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,16640936371163</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,815303399172225</Minimum>
+    <MinPos>173</MinPos>
+    <RightMax>0,921697576373731</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

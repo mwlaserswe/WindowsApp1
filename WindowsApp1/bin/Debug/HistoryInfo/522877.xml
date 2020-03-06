@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>ORBIS</Name>
+    <WKN>522877</WKN>
+    <ISIN>DE0005228779</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,4548320696653</AbsMax>
+    <AbsMaxPos>29</AbsMaxPos>
+    <Minimum>1,00662119428001</Minimum>
+    <MinPos>60</MinPos>
+    <RightMax>1,43398465069307</RightMax>
+    <RightMaxPos>182</RightMaxPos>
+  </BestSD>
+</ShareInfo>

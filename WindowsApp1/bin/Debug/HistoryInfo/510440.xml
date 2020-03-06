@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>ATOSS Software</Name>
+    <WKN>510440</WKN>
+    <ISIN>DE0005104400</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,61715556619727</AbsMax>
+    <AbsMaxPos>26</AbsMaxPos>
+    <Minimum>1,13678419930144</Minimum>
+    <MinPos>33</MinPos>
+    <RightMax>1,37713942289485</RightMax>
+    <RightMaxPos>78</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>RHÃ–N-KLINIKUM</Name>
+    <WKN>704230</WKN>
+    <ISIN>DE0007042301</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,05063984861818</AbsMax>
+    <AbsMaxPos>89</AbsMaxPos>
+    <Minimum>0</Minimum>
+    <MinPos>126</MinPos>
+    <RightMax>0,98525476</RightMax>
+    <RightMaxPos>158</RightMaxPos>
+  </BestSD>
+</ShareInfo>

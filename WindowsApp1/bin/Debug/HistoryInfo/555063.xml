@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>DrÃ¤gerwerk</Name>
+    <WKN>555063</WKN>
+    <ISIN>DE0005550636</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,26807679410927</AbsMax>
+    <AbsMaxPos>3</AbsMaxPos>
+    <Minimum>0,93636016903503</Minimum>
+    <MinPos>122</MinPos>
+    <RightMax>1,2284050274597</RightMax>
+    <RightMaxPos>145</RightMaxPos>
+  </BestSD>
+</ShareInfo>

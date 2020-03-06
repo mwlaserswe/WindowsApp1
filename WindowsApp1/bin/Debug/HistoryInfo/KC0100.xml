@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>KlÃ¶ckner</Name>
+    <WKN>KC0100</WKN>
+    <ISIN>DE000KC01000</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,67001943525287</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,887858234420933</Minimum>
+    <MinPos>112</MinPos>
+    <RightMax>1,02496415233544</RightMax>
+    <RightMaxPos>122</RightMaxPos>
+  </BestSD>
+</ShareInfo>

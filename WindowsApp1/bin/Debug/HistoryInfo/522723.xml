@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Biotest vz.</Name>
+    <WKN>522723</WKN>
+    <ISIN>DE0005227235</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,897822807870989</AbsMax>
+    <AbsMaxPos>200</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,897822807870989</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

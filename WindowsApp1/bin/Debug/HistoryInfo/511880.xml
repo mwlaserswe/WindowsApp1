@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>11880 Solutions</Name>
+    <WKN>511880</WKN>
+    <ISIN>DE0005118806</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,66379317952681</AbsMax>
+    <AbsMaxPos>32</AbsMaxPos>
+    <Minimum>1,2889093467304</Minimum>
+    <MinPos>196</MinPos>
+    <RightMax>1,34065454545455</RightMax>
+    <RightMaxPos>198</RightMaxPos>
+  </BestSD>
+</ShareInfo>

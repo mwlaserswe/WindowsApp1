@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>SGL Carbon</Name>
+    <WKN>723530</WKN>
+    <ISIN>DE0007235301</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,34089865927173</AbsMax>
+    <AbsMaxPos>10</AbsMaxPos>
+    <Minimum>0,742142680910976</Minimum>
+    <MinPos>40</MinPos>
+    <RightMax>1,02601965684824</RightMax>
+    <RightMaxPos>54</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>edel</Name>
+    <WKN>564950</WKN>
+    <ISIN>DE0005649503</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,15597888523098</AbsMax>
+    <AbsMaxPos>20</AbsMaxPos>
+    <Minimum>0,89325338539789</Minimum>
+    <MinPos>52</MinPos>
+    <RightMax>1,1442992488368</RightMax>
+    <RightMaxPos>80</RightMaxPos>
+  </BestSD>
+</ShareInfo>

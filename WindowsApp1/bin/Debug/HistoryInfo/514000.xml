@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Deutsche Bank</Name>
+    <WKN>514000</WKN>
+    <ISIN>DE0005140008</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,74884993191209</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>0,905767633341224</Minimum>
+    <MinPos>92</MinPos>
+    <RightMax>1,1677384495261</RightMax>
+    <RightMaxPos>145</RightMaxPos>
+  </BestSD>
+</ShareInfo>

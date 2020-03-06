@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Daimler</Name>
+    <WKN>710000</WKN>
+    <ISIN>DE0007100000</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,21994926982588</AbsMax>
+    <AbsMaxPos>16</AbsMaxPos>
+    <Minimum>0,875513663075734</Minimum>
+    <MinPos>148</MinPos>
+    <RightMax>0,94083604073135</RightMax>
+    <RightMaxPos>196</RightMaxPos>
+  </BestSD>
+</ShareInfo>

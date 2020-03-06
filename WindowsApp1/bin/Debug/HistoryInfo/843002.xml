@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MÃ¼nchener RÃ¼ckversicherungs-Gesellschaft</Name>
+    <WKN>843002</WKN>
+    <ISIN>DE0008430026</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,25979897149173</AbsMax>
+    <AbsMaxPos>68</AbsMaxPos>
+    <Minimum>0</Minimum>
+    <MinPos>171</MinPos>
+    <RightMax>0,9926</RightMax>
+    <RightMaxPos>191</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>YOC</Name>
+    <WKN>593273</WKN>
+    <ISIN>DE0005932735</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,37777757811869</AbsMax>
+    <AbsMaxPos>12</AbsMaxPos>
+    <Minimum>0,80721852370774</Minimum>
+    <MinPos>35</MinPos>
+    <RightMax>1,04927374064508</RightMax>
+    <RightMaxPos>164</RightMaxPos>
+  </BestSD>
+</ShareInfo>

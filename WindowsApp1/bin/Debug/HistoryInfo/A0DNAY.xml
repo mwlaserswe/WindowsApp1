@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>bet-at-home.com</Name>
+    <WKN>A0DNAY</WKN>
+    <ISIN>DE000A0DNAY5</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,11159262256093</AbsMax>
+    <AbsMaxPos>68</AbsMaxPos>
+    <Minimum>0,806293424944364</Minimum>
+    <MinPos>173</MinPos>
+    <RightMax>0,899267330405339</RightMax>
+    <RightMaxPos>186</RightMaxPos>
+  </BestSD>
+</ShareInfo>

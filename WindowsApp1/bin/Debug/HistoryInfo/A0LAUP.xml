@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CropEnergies</Name>
+    <WKN>A0LAUP</WKN>
+    <ISIN>DE000A0LAUP1</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,00168958919126</AbsMax>
+    <AbsMaxPos>31</AbsMaxPos>
+    <Minimum>1,55440594505763</Minimum>
+    <MinPos>137</MinPos>
+    <RightMax>1,86033519553073</RightMax>
+    <RightMaxPos>190</RightMaxPos>
+  </BestSD>
+</ShareInfo>

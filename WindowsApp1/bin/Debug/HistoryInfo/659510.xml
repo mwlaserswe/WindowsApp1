@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MediClin</Name>
+    <WKN>659510</WKN>
+    <ISIN>DE0006595101</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,00881910397054</AbsMax>
+    <AbsMaxPos>148</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,00881910397054</RightMax>
+    <RightMaxPos>148</RightMaxPos>
+  </BestSD>
+</ShareInfo>

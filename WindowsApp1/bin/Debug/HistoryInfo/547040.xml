@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>LANXESS</Name>
+    <WKN>547040</WKN>
+    <ISIN>DE0005470405</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,57090093096667</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,959478117267701</Minimum>
+    <MinPos>157</MinPos>
+    <RightMax>1,09485241107227</RightMax>
+    <RightMaxPos>170</RightMaxPos>
+  </BestSD>
+</ShareInfo>

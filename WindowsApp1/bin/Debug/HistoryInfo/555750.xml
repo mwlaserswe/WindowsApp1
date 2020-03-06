@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Deutsche Telekom</Name>
+    <WKN>555750</WKN>
+    <ISIN>DE0005557508</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,00155256343586</AbsMax>
+    <AbsMaxPos>42</AbsMaxPos>
+    <Minimum>0,82523910031582</Minimum>
+    <MinPos>123</MinPos>
+    <RightMax>0,916701617974205</RightMax>
+    <RightMaxPos>164</RightMaxPos>
+  </BestSD>
+</ShareInfo>

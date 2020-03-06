@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Deutsche Euroshop</Name>
+    <WKN>748020</WKN>
+    <ISIN>DE0007480204</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,03110862035731</AbsMax>
+    <AbsMaxPos>89</AbsMaxPos>
+    <Minimum>0,767348488583643</Minimum>
+    <MinPos>158</MinPos>
+    <RightMax>0,86396814020734</RightMax>
+    <RightMaxPos>186</RightMaxPos>
+  </BestSD>
+</ShareInfo>

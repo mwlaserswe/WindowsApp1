@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>PUMA</Name>
+    <WKN>696960</WKN>
+    <ISIN>DE0006969603</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,31700395631205</AbsMax>
+    <AbsMaxPos>58</AbsMaxPos>
+    <Minimum>0,875842402737602</Minimum>
+    <MinPos>91</MinPos>
+    <RightMax>1,05044454863158</RightMax>
+    <RightMaxPos>122</RightMaxPos>
+  </BestSD>
+</ShareInfo>

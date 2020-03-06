@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>JDC Group</Name>
+    <WKN>A0B9N3</WKN>
+    <ISIN>DE000A0B9N37</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,17101226050393</AbsMax>
+    <AbsMaxPos>25</AbsMaxPos>
+    <Minimum>0,908790485099546</Minimum>
+    <MinPos>125</MinPos>
+    <RightMax>1,0397556008716</RightMax>
+    <RightMaxPos>176</RightMaxPos>
+  </BestSD>
+</ShareInfo>

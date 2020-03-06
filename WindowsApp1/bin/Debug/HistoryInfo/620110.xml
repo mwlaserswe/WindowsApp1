@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>FRIWO</Name>
+    <WKN>620110</WKN>
+    <ISIN>DE0006201106</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,03923125314831</AbsMax>
+    <AbsMaxPos>48</AbsMaxPos>
+    <Minimum>0</Minimum>
+    <MinPos>138</MinPos>
+    <RightMax>1,00835555555556</RightMax>
+    <RightMaxPos>182</RightMaxPos>
+  </BestSD>
+</ShareInfo>

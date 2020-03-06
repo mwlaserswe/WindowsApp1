@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CLIQ Digital</Name>
+    <WKN>A0HHJR</WKN>
+    <ISIN>DE000A0HHJR3</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,02730822013878</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>1,36236070637082</Minimum>
+    <MinPos>45</MinPos>
+    <RightMax>1,71945701357466</RightMax>
+    <RightMaxPos>97</RightMaxPos>
+  </BestSD>
+</ShareInfo>

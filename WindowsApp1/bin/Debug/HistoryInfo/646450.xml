@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>LEIFHEIT</Name>
+    <WKN>646450</WKN>
+    <ISIN>DE0006464506</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,02972672861422</AbsMax>
+    <AbsMaxPos>46</AbsMaxPos>
+    <Minimum>0,869434300307853</Minimum>
+    <MinPos>166</MinPos>
+    <RightMax>0,917375884516911</RightMax>
+    <RightMaxPos>167</RightMaxPos>
+  </BestSD>
+</ShareInfo>

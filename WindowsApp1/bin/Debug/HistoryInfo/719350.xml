@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Koenig Bauer</Name>
+    <WKN>719350</WKN>
+    <ISIN>DE0007193500</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,59439243459033</AbsMax>
+    <AbsMaxPos>4</AbsMaxPos>
+    <Minimum>0,876720994481736</Minimum>
+    <MinPos>159</MinPos>
+    <RightMax>0,997570455683525</RightMax>
+    <RightMaxPos>180</RightMaxPos>
+  </BestSD>
+</ShareInfo>

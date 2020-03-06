@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Merck</Name>
+    <WKN>659990</WKN>
+    <ISIN>DE0006599905</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,33963895025634</AbsMax>
+    <AbsMaxPos>20</AbsMaxPos>
+    <Minimum>0,958438377376753</Minimum>
+    <MinPos>79</MinPos>
+    <RightMax>1,13170446454907</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

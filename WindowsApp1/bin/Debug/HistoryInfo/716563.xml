@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Sartorius vz.</Name>
+    <WKN>716563</WKN>
+    <ISIN>DE0007165631</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,35010077206778</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>1,05668927486163</Minimum>
+    <MinPos>88</MinPos>
+    <RightMax>1,34676434676435</RightMax>
+    <RightMaxPos>198</RightMaxPos>
+  </BestSD>
+</ShareInfo>

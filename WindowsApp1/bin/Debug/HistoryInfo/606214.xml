@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Covestro</Name>
+    <WKN>606214</WKN>
+    <ISIN>DE0006062144</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,17960041391418</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>0,764228307397262</Minimum>
+    <MinPos>149</MinPos>
+    <RightMax>0,93954284325267</RightMax>
+    <RightMaxPos>181</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Delticom</Name>
+    <WKN>514680</WKN>
+    <ISIN>DE0005146807</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,52650833994045</AbsMax>
+    <AbsMaxPos>7</AbsMaxPos>
+    <Minimum>0,813828063969722</Minimum>
+    <MinPos>149</MinPos>
+    <RightMax>0,905338461538462</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

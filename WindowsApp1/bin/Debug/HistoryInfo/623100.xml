@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Infineon</Name>
+    <WKN>623100</WKN>
+    <ISIN>DE0006231004</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,68852802955038</AbsMax>
+    <AbsMaxPos>3</AbsMaxPos>
+    <Minimum>0,952214126670024</Minimum>
+    <MinPos>193</MinPos>
+    <RightMax>0,980928915609848</RightMax>
+    <RightMaxPos>196</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>First Sensor</Name>
+    <WKN>720190</WKN>
+    <ISIN>DE0007201907</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,07021932350605</AbsMax>
+    <AbsMaxPos>47</AbsMaxPos>
+    <Minimum>0</Minimum>
+    <MinPos>93</MinPos>
+    <RightMax>1,92929292929293</RightMax>
+    <RightMaxPos>159</RightMaxPos>
+  </BestSD>
+</ShareInfo>

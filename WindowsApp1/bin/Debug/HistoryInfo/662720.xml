@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MÃ¼hlbauer</Name>
+    <WKN>662720</WKN>
+    <ISIN>DE0006627201</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,985532243789575</AbsMax>
+    <AbsMaxPos>168</AbsMaxPos>
+    <Minimum>0,912659768472192</Minimum>
+    <MinPos>195</MinPos>
+    <RightMax>0,921651490329061</RightMax>
+    <RightMaxPos>198</RightMaxPos>
+  </BestSD>
+</ShareInfo>

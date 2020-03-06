@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>TAKKT</Name>
+    <WKN>744600</WKN>
+    <ISIN>DE0007446007</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,1453843668324</AbsMax>
+    <AbsMaxPos>10</AbsMaxPos>
+    <Minimum>0,864877878477198</Minimum>
+    <MinPos>185</MinPos>
+    <RightMax>0,976359759641371</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

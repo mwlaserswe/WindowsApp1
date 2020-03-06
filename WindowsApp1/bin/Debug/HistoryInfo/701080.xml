@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>RATIONAL</Name>
+    <WKN>701080</WKN>
+    <ISIN>DE0007010803</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,30142618543258</AbsMax>
+    <AbsMaxPos>118</AbsMaxPos>
+    <Minimum>1,09161374760748</Minimum>
+    <MinPos>195</MinPos>
+    <RightMax>1,09639314229929</RightMax>
+    <RightMaxPos>198</RightMaxPos>
+  </BestSD>
+</ShareInfo>

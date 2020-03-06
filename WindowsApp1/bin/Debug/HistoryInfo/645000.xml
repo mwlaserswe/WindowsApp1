@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>LPKF Laser Electronics</Name>
+    <WKN>645000</WKN>
+    <ISIN>DE0006450000</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>3,65738275163732</AbsMax>
+    <AbsMaxPos>6</AbsMaxPos>
+    <Minimum>2,20404156829973</Minimum>
+    <MinPos>12</MinPos>
+    <RightMax>3,191313618509</RightMax>
+    <RightMaxPos>80</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>DÃ¼rr</Name>
+    <WKN>556520</WKN>
+    <ISIN>DE0005565204</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,77354375407126</AbsMax>
+    <AbsMaxPos>4</AbsMaxPos>
+    <Minimum>0,854975761489173</Minimum>
+    <MinPos>149</MinPos>
+    <RightMax>0,982207781671209</RightMax>
+    <RightMaxPos>177</RightMaxPos>
+  </BestSD>
+</ShareInfo>

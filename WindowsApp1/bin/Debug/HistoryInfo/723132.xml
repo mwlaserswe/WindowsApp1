@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Sixt</Name>
+    <WKN>723132</WKN>
+    <ISIN>DE0007231326</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,21224714991668</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,881413356333928</Minimum>
+    <MinPos>34</MinPos>
+    <RightMax>1,09458946299744</RightMax>
+    <RightMaxPos>106</RightMaxPos>
+  </BestSD>
+</ShareInfo>

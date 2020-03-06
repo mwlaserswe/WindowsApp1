@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>artec technologies</Name>
+    <WKN>520958</WKN>
+    <ISIN>DE0005209589</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,02717761912122</AbsMax>
+    <AbsMaxPos>78</AbsMaxPos>
+    <Minimum>0,891257799280396</Minimum>
+    <MinPos>147</MinPos>
+    <RightMax>0,918636772876527</RightMax>
+    <RightMaxPos>196</RightMaxPos>
+  </BestSD>
+</ShareInfo>

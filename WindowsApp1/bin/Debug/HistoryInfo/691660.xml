@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Pfeiffer Vacuum</Name>
+    <WKN>691660</WKN>
+    <ISIN>DE0006916604</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,3883375161806</AbsMax>
+    <AbsMaxPos>74</AbsMaxPos>
+    <Minimum>1,13990225630505</Minimum>
+    <MinPos>187</MinPos>
+    <RightMax>1,15878249154462</RightMax>
+    <RightMaxPos>192</RightMaxPos>
+  </BestSD>
+</ShareInfo>

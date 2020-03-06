@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>OHB</Name>
+    <WKN>593612</WKN>
+    <ISIN>DE0005936124</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,23915774760104</AbsMax>
+    <AbsMaxPos>78</AbsMaxPos>
+    <Minimum>0,924861206325553</Minimum>
+    <MinPos>193</MinPos>
+    <RightMax>0,967035270901764</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

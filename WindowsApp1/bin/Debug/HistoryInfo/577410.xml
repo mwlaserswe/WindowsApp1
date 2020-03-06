@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>FORTEC Elektronik</Name>
+    <WKN>577410</WKN>
+    <ISIN>DE0005774103</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,976423026627128</AbsMax>
+    <AbsMaxPos>169</AbsMaxPos>
+    <Minimum>0,869899306191087</Minimum>
+    <MinPos>195</MinPos>
+    <RightMax>0,89134825115409</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

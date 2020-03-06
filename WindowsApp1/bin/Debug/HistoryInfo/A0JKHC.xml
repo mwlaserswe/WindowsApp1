@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Nanogate</Name>
+    <WKN>A0JKHC</WKN>
+    <ISIN>DE000A0JKHC9</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,89972029987954</AbsMax>
+    <AbsMaxPos>3</AbsMaxPos>
+    <Minimum>0,867112587752245</Minimum>
+    <MinPos>125</MinPos>
+    <RightMax>0,977963874776</RightMax>
+    <RightMaxPos>158</RightMaxPos>
+  </BestSD>
+</ShareInfo>

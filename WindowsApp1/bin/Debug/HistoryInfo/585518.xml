@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MS Industrie</Name>
+    <WKN>585518</WKN>
+    <ISIN>DE0005855183</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,07964640643325</AbsMax>
+    <AbsMaxPos>15</AbsMaxPos>
+    <Minimum>0,805678274925878</Minimum>
+    <MinPos>107</MinPos>
+    <RightMax>0,971963933064941</RightMax>
+    <RightMaxPos>148</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>LEONI</Name>
+    <WKN>540888</WKN>
+    <ISIN>DE0005408884</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,65278543157375</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,769373298407642</Minimum>
+    <MinPos>90</MinPos>
+    <RightMax>0,963752435530086</RightMax>
+    <RightMaxPos>167</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>SURTECO GROUP</Name>
+    <WKN>517690</WKN>
+    <ISIN>DE0005176903</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,02901241110082</AbsMax>
+    <AbsMaxPos>133</AbsMaxPos>
+    <Minimum>0,900350526238375</Minimum>
+    <MinPos>164</MinPos>
+    <RightMax>0,970726942102658</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

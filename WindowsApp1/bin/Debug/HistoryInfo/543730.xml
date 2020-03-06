@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CompuGroup Medical</Name>
+    <WKN>543730</WKN>
+    <ISIN>DE0005437305</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,44884285739098</AbsMax>
+    <AbsMaxPos>25</AbsMaxPos>
+    <Minimum>0,865772283904735</Minimum>
+    <MinPos>192</MinPos>
+    <RightMax>0,869963197682016</RightMax>
+    <RightMaxPos>194</RightMaxPos>
+  </BestSD>
+</ShareInfo>

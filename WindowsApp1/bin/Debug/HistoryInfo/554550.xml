@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>1&amp;1 Drillisch</Name>
+    <WKN>554550</WKN>
+    <ISIN>DE0005545503</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,48440393488958</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>0,959147311601795</Minimum>
+    <MinPos>159</MinPos>
+    <RightMax>0,99959014084507</RightMax>
+    <RightMaxPos>179</RightMaxPos>
+  </BestSD>
+</ShareInfo>

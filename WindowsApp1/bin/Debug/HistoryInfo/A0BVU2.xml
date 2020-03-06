@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>USU Software</Name>
+    <WKN>A0BVU2</WKN>
+    <ISIN>DE000A0BVU28</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,47238812096314</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>0,877094582978202</Minimum>
+    <MinPos>161</MinPos>
+    <RightMax>0,952418865566043</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

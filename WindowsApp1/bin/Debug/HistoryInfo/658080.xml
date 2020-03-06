@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Mensch und Maschine Software</Name>
+    <WKN>658080</WKN>
+    <ISIN>DE0006580806</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,86020780851773</AbsMax>
+    <AbsMaxPos>29</AbsMaxPos>
+    <Minimum>1,19671081489051</Minimum>
+    <MinPos>156</MinPos>
+    <RightMax>1,51064893640183</RightMax>
+    <RightMaxPos>182</RightMaxPos>
+  </BestSD>
+</ShareInfo>

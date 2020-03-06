@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Bechtle</Name>
+    <WKN>515870</WKN>
+    <ISIN>DE0005158703</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,94486703359892</AbsMax>
+    <AbsMaxPos>15</AbsMaxPos>
+    <Minimum>1,2002574108355</Minimum>
+    <MinPos>105</MinPos>
+    <RightMax>1,62793733681462</RightMax>
+    <RightMaxPos>187</RightMaxPos>
+  </BestSD>
+</ShareInfo>

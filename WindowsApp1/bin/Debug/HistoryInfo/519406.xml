@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>BayWa</Name>
+    <WKN>519406</WKN>
+    <ISIN>DE0005194062</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,12572362179838</AbsMax>
+    <AbsMaxPos>34</AbsMaxPos>
+    <Minimum>0,941054936575244</Minimum>
+    <MinPos>170</MinPos>
+    <RightMax>1,011209242143</RightMax>
+    <RightMaxPos>194</RightMaxPos>
+  </BestSD>
+</ShareInfo>

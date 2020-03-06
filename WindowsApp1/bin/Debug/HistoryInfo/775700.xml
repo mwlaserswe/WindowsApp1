@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>H&amp;R</Name>
+    <WKN>775700</WKN>
+    <ISIN>DE0007757007</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,08723220592818</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>0,815975087636611</Minimum>
+    <MinPos>54</MinPos>
+    <RightMax>1,03345272059227</RightMax>
+    <RightMaxPos>96</RightMaxPos>
+  </BestSD>
+</ShareInfo>

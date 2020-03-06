@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>FUCHS PETROLUB</Name>
+    <WKN>579043</WKN>
+    <ISIN>DE0005790430</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,30980325475565</AbsMax>
+    <AbsMaxPos>7</AbsMaxPos>
+    <Minimum>0,937502500298104</Minimum>
+    <MinPos>133</MinPos>
+    <RightMax>1,01177038626609</RightMax>
+    <RightMaxPos>167</RightMaxPos>
+  </BestSD>
+</ShareInfo>

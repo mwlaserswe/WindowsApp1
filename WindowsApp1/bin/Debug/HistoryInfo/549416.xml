@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>EQS Group</Name>
+    <WKN>549416</WKN>
+    <ISIN>DE0005494165</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,15301358554668</AbsMax>
+    <AbsMaxPos>34</AbsMaxPos>
+    <Minimum>0,862325688786096</Minimum>
+    <MinPos>164</MinPos>
+    <RightMax>0,936928252351505</RightMax>
+    <RightMaxPos>198</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Alphabet Inc Class C</Name>
+    <WKN>A14Y6H</WKN>
+    <ISIN>US02079K1079</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>779,946460898608</AbsMax>
+    <AbsMaxPos>2</AbsMaxPos>
+    <Minimum>0,863666331015988</Minimum>
+    <MinPos>161</MinPos>
+    <RightMax>1,03362769514329</RightMax>
+    <RightMaxPos>168</RightMaxPos>
+  </BestSD>
+</ShareInfo>

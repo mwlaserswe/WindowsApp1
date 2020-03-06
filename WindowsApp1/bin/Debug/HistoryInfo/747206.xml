@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Wirecard</Name>
+    <WKN>747206</WKN>
+    <ISIN>DE0007472060</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,66893978608923</AbsMax>
+    <AbsMaxPos>7</AbsMaxPos>
+    <Minimum>0,871018544708816</Minimum>
+    <MinPos>182</MinPos>
+    <RightMax>0,941205704794357</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

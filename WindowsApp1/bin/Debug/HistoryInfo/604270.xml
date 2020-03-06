@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>HAWESKO</Name>
+    <WKN>604270</WKN>
+    <ISIN>DE0006042708</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,06903652786967</AbsMax>
+    <AbsMaxPos>35</AbsMaxPos>
+    <Minimum>0,901992430687424</Minimum>
+    <MinPos>51</MinPos>
+    <RightMax>1,02809932000459</RightMax>
+    <RightMaxPos>184</RightMaxPos>
+  </BestSD>
+</ShareInfo>

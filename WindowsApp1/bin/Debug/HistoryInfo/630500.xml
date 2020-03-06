@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>DEUTZ</Name>
+    <WKN>630500</WKN>
+    <ISIN>DE0006305006</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,50873459399718</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>0,942234579085763</Minimum>
+    <MinPos>51</MinPos>
+    <RightMax>1,25019782439782</RightMax>
+    <RightMaxPos>139</RightMaxPos>
+  </BestSD>
+</ShareInfo>

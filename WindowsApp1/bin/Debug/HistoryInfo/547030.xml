@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CTS Eventim</Name>
+    <WKN>547030</WKN>
+    <ISIN>DE0005470306</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,53187557587266</AbsMax>
+    <AbsMaxPos>39</AbsMaxPos>
+    <Minimum>1,27290205595519</Minimum>
+    <MinPos>120</MinPos>
+    <RightMax>1,44435030799962</RightMax>
+    <RightMaxPos>121</RightMaxPos>
+  </BestSD>
+</ShareInfo>

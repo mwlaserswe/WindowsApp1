@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MÃ¼ller - Die lila Logistik</Name>
+    <WKN>621468</WKN>
+    <ISIN>DE0006214687</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,86091381213588</AbsMax>
+    <AbsMaxPos>12</AbsMaxPos>
+    <Minimum>0,770097958795045</Minimum>
+    <MinPos>84</MinPos>
+    <RightMax>1,26849060574495</RightMax>
+    <RightMaxPos>132</RightMaxPos>
+  </BestSD>
+</ShareInfo>

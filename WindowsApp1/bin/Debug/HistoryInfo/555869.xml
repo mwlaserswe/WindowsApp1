@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>paragon</Name>
+    <WKN>555869</WKN>
+    <ISIN>DE0005558696</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>6,7323407731121</AbsMax>
+    <AbsMaxPos>2</AbsMaxPos>
+    <Minimum>0,720380865909441</Minimum>
+    <MinPos>161</MinPos>
+    <RightMax>0,870251403714953</RightMax>
+    <RightMaxPos>193</RightMaxPos>
+  </BestSD>
+</ShareInfo>

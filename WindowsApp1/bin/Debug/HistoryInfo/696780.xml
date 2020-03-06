@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>PRO DV</Name>
+    <WKN>696780</WKN>
+    <ISIN>DE0006967805</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,34231584349551</AbsMax>
+    <AbsMaxPos>17</AbsMaxPos>
+    <Minimum>0,690628923856001</Minimum>
+    <MinPos>44</MinPos>
+    <RightMax>1,292309405954</RightMax>
+    <RightMaxPos>180</RightMaxPos>
+  </BestSD>
+</ShareInfo>

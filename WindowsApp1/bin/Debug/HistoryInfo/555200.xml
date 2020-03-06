@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Deutsche Post</Name>
+    <WKN>555200</WKN>
+    <ISIN>DE0005552004</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,26708762165594</AbsMax>
+    <AbsMaxPos>7</AbsMaxPos>
+    <Minimum>0,980669117472006</Minimum>
+    <MinPos>153</MinPos>
+    <RightMax>1,12440095391373</RightMax>
+    <RightMaxPos>187</RightMaxPos>
+  </BestSD>
+</ShareInfo>

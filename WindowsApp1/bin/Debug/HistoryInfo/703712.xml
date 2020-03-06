@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>RWE</Name>
+    <WKN>703712</WKN>
+    <ISIN>DE0007037129</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,53680398512356</AbsMax>
+    <AbsMaxPos>129</AbsMaxPos>
+    <Minimum>1,45684106413172</Minimum>
+    <MinPos>133</MinPos>
+    <RightMax>1,53022611905861</RightMax>
+    <RightMaxPos>156</RightMaxPos>
+  </BestSD>
+</ShareInfo>

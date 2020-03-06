@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>ADVA</Name>
+    <WKN>510300</WKN>
+    <ISIN>DE0005103006</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,27602482098266</AbsMax>
+    <AbsMaxPos>10</AbsMaxPos>
+    <Minimum>0,945393196427942</Minimum>
+    <MinPos>160</MinPos>
+    <RightMax>0,981632044198895</RightMax>
+    <RightMaxPos>175</RightMaxPos>
+  </BestSD>
+</ShareInfo>

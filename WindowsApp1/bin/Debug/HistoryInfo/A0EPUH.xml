@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Intershop Communications</Name>
+    <WKN>A0EPUH</WKN>
+    <ISIN>DE000A0EPUH1</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,10039014646157</AbsMax>
+    <AbsMaxPos>20</AbsMaxPos>
+    <Minimum>0,834704120592063</Minimum>
+    <MinPos>38</MinPos>
+    <RightMax>1,00928656115673</RightMax>
+    <RightMaxPos>147</RightMaxPos>
+  </BestSD>
+</ShareInfo>

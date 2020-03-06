@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>GFT</Name>
+    <WKN>580060</WKN>
+    <ISIN>DE0005800601</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,18785753672177</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>1,31644248534038</Minimum>
+    <MinPos>147</MinPos>
+    <RightMax>1,52972258916777</RightMax>
+    <RightMaxPos>161</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MAN</Name>
+    <WKN>593700</WKN>
+    <ISIN>DE0005937007</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,0080355338745</AbsMax>
+    <AbsMaxPos>26</AbsMaxPos>
+    <Minimum>0,869155306411</Minimum>
+    <MinPos>37</MinPos>
+    <RightMax>1,00133749442711</RightMax>
+    <RightMaxPos>115</RightMaxPos>
+  </BestSD>
+</ShareInfo>

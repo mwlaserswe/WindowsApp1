@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>PAION</Name>
+    <WKN>A0B65S</WKN>
+    <ISIN>DE000A0B65S3</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,09651094592344</AbsMax>
+    <AbsMaxPos>49</AbsMaxPos>
+    <Minimum>0,827428635181482</Minimum>
+    <MinPos>129</MinPos>
+    <RightMax>0,898410672246294</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

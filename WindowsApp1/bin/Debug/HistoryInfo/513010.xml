@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>msg life</Name>
+    <WKN>513010</WKN>
+    <ISIN>DE0005130108</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0</AbsMax>
+    <AbsMaxPos>0</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0</RightMax>
+    <RightMaxPos>0</RightMaxPos>
+  </BestSD>
+</ShareInfo>

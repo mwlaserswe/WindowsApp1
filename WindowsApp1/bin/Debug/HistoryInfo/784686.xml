@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Viscom</Name>
+    <WKN>784686</WKN>
+    <ISIN>DE0007846867</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,40685203444656</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,86320841954753</Minimum>
+    <MinPos>78</MinPos>
+    <RightMax>1,05357214471842</RightMax>
+    <RightMaxPos>107</RightMaxPos>
+  </BestSD>
+</ShareInfo>

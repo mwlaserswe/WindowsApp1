@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Fielmann</Name>
+    <WKN>577220</WKN>
+    <ISIN>DE0005772206</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,2017735437122</AbsMax>
+    <AbsMaxPos>79</AbsMaxPos>
+    <Minimum>1,08969910246934</Minimum>
+    <MinPos>110</MinPos>
+    <RightMax>1,13234658085278</RightMax>
+    <RightMaxPos>118</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Nabaltec</Name>
+    <WKN>A0KPPR</WKN>
+    <ISIN>DE000A0KPPR7</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,42397586879071</AbsMax>
+    <AbsMaxPos>22</AbsMaxPos>
+    <Minimum>0,792039437161027</Minimum>
+    <MinPos>109</MinPos>
+    <RightMax>1,01431391141685</RightMax>
+    <RightMaxPos>151</RightMaxPos>
+  </BestSD>
+</ShareInfo>

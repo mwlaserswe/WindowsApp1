@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MorphoSys</Name>
+    <WKN>663200</WKN>
+    <ISIN>DE0006632003</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,62280628046258</AbsMax>
+    <AbsMaxPos>26</AbsMaxPos>
+    <Minimum>0,957374071100888</Minimum>
+    <MinPos>77</MinPos>
+    <RightMax>1,14103368439337</RightMax>
+    <RightMaxPos>135</RightMaxPos>
+  </BestSD>
+</ShareInfo>

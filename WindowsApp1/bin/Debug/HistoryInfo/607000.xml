@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>HOCHTIEF</Name>
+    <WKN>607000</WKN>
+    <ISIN>DE0006070006</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,10695083458095</AbsMax>
+    <AbsMaxPos>65</AbsMaxPos>
+    <Minimum>0,85927500470679</Minimum>
+    <MinPos>182</MinPos>
+    <RightMax>0,971606409214075</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

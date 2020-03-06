@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>STO</Name>
+    <WKN>727413</WKN>
+    <ISIN>DE0007274136</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,34318764817596</AbsMax>
+    <AbsMaxPos>47</AbsMaxPos>
+    <Minimum>1,01998612281212</Minimum>
+    <MinPos>183</MinPos>
+    <RightMax>1,04460935195245</RightMax>
+    <RightMaxPos>191</RightMaxPos>
+  </BestSD>
+</ShareInfo>

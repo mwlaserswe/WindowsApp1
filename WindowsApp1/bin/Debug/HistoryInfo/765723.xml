@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Villeroy Boch</Name>
+    <WKN>765723</WKN>
+    <ISIN>DE0007657231</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,22009981586631</AbsMax>
+    <AbsMaxPos>50</AbsMaxPos>
+    <Minimum>0,895018446007458</Minimum>
+    <MinPos>195</MinPos>
+    <RightMax>0,909885862054093</RightMax>
+    <RightMaxPos>197</RightMaxPos>
+  </BestSD>
+</ShareInfo>

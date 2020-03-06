@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>PNE</Name>
+    <WKN>A0JBPG</WKN>
+    <ISIN>DE000A0JBPG2</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,94060500598654</AbsMax>
+    <AbsMaxPos>170</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,94060500598654</RightMax>
+    <RightMaxPos>170</RightMaxPos>
+  </BestSD>
+</ShareInfo>

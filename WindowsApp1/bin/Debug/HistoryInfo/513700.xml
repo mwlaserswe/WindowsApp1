@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>QSC</Name>
+    <WKN>513700</WKN>
+    <ISIN>DE0005137004</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,27815021832243</AbsMax>
+    <AbsMaxPos>6</AbsMaxPos>
+    <Minimum>0,798079965414241</Minimum>
+    <MinPos>127</MinPos>
+    <RightMax>0,94208478841301</RightMax>
+    <RightMaxPos>187</RightMaxPos>
+  </BestSD>
+</ShareInfo>

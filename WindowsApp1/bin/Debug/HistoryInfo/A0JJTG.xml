@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Gateway Real Estate</Name>
+    <WKN>A0JJTG</WKN>
+    <ISIN>DE000A0JJTG7</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,997563</AbsMax>
+    <AbsMaxPos>179</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,997563</RightMax>
+    <RightMaxPos>179</RightMaxPos>
+  </BestSD>
+</ShareInfo>

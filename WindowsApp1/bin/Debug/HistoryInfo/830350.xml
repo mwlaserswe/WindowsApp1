@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>TAG Immobilien</Name>
+    <WKN>830350</WKN>
+    <ISIN>DE0008303504</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,1498047562463</AbsMax>
+    <AbsMaxPos>20</AbsMaxPos>
+    <Minimum>0,910734116228308</Minimum>
+    <MinPos>187</MinPos>
+    <RightMax>0,917726316736779</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

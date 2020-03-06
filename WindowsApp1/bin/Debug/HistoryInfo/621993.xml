@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Jungheinrich</Name>
+    <WKN>621993</WKN>
+    <ISIN>DE0006219934</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,57697411788584</AbsMax>
+    <AbsMaxPos>3</AbsMaxPos>
+    <Minimum>0,924563377929725</Minimum>
+    <MinPos>143</MinPos>
+    <RightMax>1,09408202887206</RightMax>
+    <RightMaxPos>165</RightMaxPos>
+  </BestSD>
+</ShareInfo>

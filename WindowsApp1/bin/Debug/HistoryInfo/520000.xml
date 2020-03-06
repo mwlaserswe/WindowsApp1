@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Beiersdorf</Name>
+    <WKN>520000</WKN>
+    <ISIN>DE0005200000</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,1624207941651</AbsMax>
+    <AbsMaxPos>60</AbsMaxPos>
+    <Minimum>0,9783035117272</Minimum>
+    <MinPos>195</MinPos>
+    <RightMax>1,01787313202405</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

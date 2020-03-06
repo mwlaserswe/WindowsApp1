@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>United Labels</Name>
+    <WKN>548956</WKN>
+    <ISIN>DE0005489561</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,36600726876569</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>0,795777042668695</Minimum>
+    <MinPos>46</MinPos>
+    <RightMax>0,970463534240185</RightMax>
+    <RightMaxPos>139</RightMaxPos>
+  </BestSD>
+</ShareInfo>

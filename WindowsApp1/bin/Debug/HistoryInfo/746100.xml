@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>PVA TePla</Name>
+    <WKN>746100</WKN>
+    <ISIN>DE0007461006</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,9606176656456</AbsMax>
+    <AbsMaxPos>6</AbsMaxPos>
+    <Minimum>0,95431920195108</Minimum>
+    <MinPos>176</MinPos>
+    <RightMax>0,975822549856113</RightMax>
+    <RightMaxPos>183</RightMaxPos>
+  </BestSD>
+</ShareInfo>

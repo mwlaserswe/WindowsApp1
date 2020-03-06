@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Fraport</Name>
+    <WKN>577330</WKN>
+    <ISIN>DE0005773303</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,07214799433401</AbsMax>
+    <AbsMaxPos>164</AbsMaxPos>
+    <Minimum>0,980025857307135</Minimum>
+    <MinPos>181</MinPos>
+    <RightMax>1,05395711092933</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

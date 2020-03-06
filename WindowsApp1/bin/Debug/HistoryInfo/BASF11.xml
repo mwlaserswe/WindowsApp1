@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>BASF</Name>
+    <WKN>BASF11</WKN>
+    <ISIN>DE000BASF111</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,15904737533691</AbsMax>
+    <AbsMaxPos>29</AbsMaxPos>
+    <Minimum>0,881896853212731</Minimum>
+    <MinPos>191</MinPos>
+    <RightMax>0,946048455955298</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

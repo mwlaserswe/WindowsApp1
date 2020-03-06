@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Allianz</Name>
+    <WKN>840400</WKN>
+    <ISIN>DE0008404005</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,1791960792885</AbsMax>
+    <AbsMaxPos>18</AbsMaxPos>
+    <Minimum>0,868768554561435</Minimum>
+    <MinPos>59</MinPos>
+    <RightMax>1,0622484905879</RightMax>
+    <RightMaxPos>96</RightMaxPos>
+  </BestSD>
+</ShareInfo>

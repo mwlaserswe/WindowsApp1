@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Manz</Name>
+    <WKN>A0JQ5U</WKN>
+    <ISIN>DE000A0JQ5U3</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,74621441791766</AbsMax>
+    <AbsMaxPos>4</AbsMaxPos>
+    <Minimum>0,790169950675709</Minimum>
+    <MinPos>164</MinPos>
+    <RightMax>0,928547245463199</RightMax>
+    <RightMaxPos>192</RightMaxPos>
+  </BestSD>
+</ShareInfo>

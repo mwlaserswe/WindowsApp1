@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Heidelberger Druckmaschinen</Name>
+    <WKN>731400</WKN>
+    <ISIN>DE0007314007</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,33813562821282</AbsMax>
+    <AbsMaxPos>20</AbsMaxPos>
+    <Minimum>0,771851123085096</Minimum>
+    <MinPos>131</MinPos>
+    <RightMax>0,990464164904716</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

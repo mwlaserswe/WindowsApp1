@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>KUKA</Name>
+    <WKN>620440</WKN>
+    <ISIN>DE0006204407</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,9926</AbsMax>
+    <AbsMaxPos>117</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,9926</RightMax>
+    <RightMaxPos>117</RightMaxPos>
+  </BestSD>
+</ShareInfo>

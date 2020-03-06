@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Eckert Ziegler Strahlen- und Medizintechnik</Name>
+    <WKN>565970</WKN>
+    <ISIN>DE0005659700</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,37856856010568</AbsMax>
+    <AbsMaxPos>124</AbsMaxPos>
+    <Minimum>0</Minimum>
+    <MinPos>135</MinPos>
+    <RightMax>0,9926</RightMax>
+    <RightMaxPos>189</RightMaxPos>
+  </BestSD>
+</ShareInfo>

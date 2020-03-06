@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>E.ON</Name>
+    <WKN>ENAG99</WKN>
+    <ISIN>DE000ENAG999</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,20650044856925</AbsMax>
+    <AbsMaxPos>17</AbsMaxPos>
+    <Minimum>1,05535685714194</Minimum>
+    <MinPos>66</MinPos>
+    <RightMax>1,18668823344886</RightMax>
+    <RightMaxPos>85</RightMaxPos>
+  </BestSD>
+</ShareInfo>

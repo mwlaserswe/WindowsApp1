@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>OVB</Name>
+    <WKN>628656</WKN>
+    <ISIN>DE0006286560</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,957740994346016</AbsMax>
+    <AbsMaxPos>105</AbsMaxPos>
+    <Minimum>0,806148519407982</Minimum>
+    <MinPos>192</MinPos>
+    <RightMax>0,838945966529482</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

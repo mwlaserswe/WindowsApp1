@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CEWE Stiftung</Name>
+    <WKN>540390</WKN>
+    <ISIN>DE0005403901</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,35322346653609</AbsMax>
+    <AbsMaxPos>66</AbsMaxPos>
+    <Minimum>1,15709616411881</Minimum>
+    <MinPos>160</MinPos>
+    <RightMax>1,23708920187793</RightMax>
+    <RightMaxPos>188</RightMaxPos>
+  </BestSD>
+</ShareInfo>

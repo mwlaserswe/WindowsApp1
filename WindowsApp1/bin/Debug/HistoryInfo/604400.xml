@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MATERNUS-Kliniken</Name>
+    <WKN>604400</WKN>
+    <ISIN>DE0006044001</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,14886451772824</AbsMax>
+    <AbsMaxPos>19</AbsMaxPos>
+    <Minimum>0,646773926467435</Minimum>
+    <MinPos>128</MinPos>
+    <RightMax>0,817151616645886</RightMax>
+    <RightMaxPos>164</RightMaxPos>
+  </BestSD>
+</ShareInfo>

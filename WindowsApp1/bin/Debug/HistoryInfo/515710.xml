@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Dr. HÃ¶nle</Name>
+    <WKN>515710</WKN>
+    <ISIN>DE0005157101</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,251243899881</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>0,901378528616392</Minimum>
+    <MinPos>144</MinPos>
+    <RightMax>1,05945455063666</RightMax>
+    <RightMaxPos>170</RightMaxPos>
+  </BestSD>
+</ShareInfo>

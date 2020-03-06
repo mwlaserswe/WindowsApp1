@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>SAP</Name>
+    <WKN>716460</WKN>
+    <ISIN>DE0007164600</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,18392042546326</AbsMax>
+    <AbsMaxPos>21</AbsMaxPos>
+    <Minimum>0,919770899915757</Minimum>
+    <MinPos>139</MinPos>
+    <RightMax>1,1368183927185</RightMax>
+    <RightMaxPos>155</RightMaxPos>
+  </BestSD>
+</ShareInfo>

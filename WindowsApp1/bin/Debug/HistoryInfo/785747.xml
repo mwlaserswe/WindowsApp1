@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Klassik Radio</Name>
+    <WKN>785747</WKN>
+    <ISIN>DE0007857476</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,985938255033557</AbsMax>
+    <AbsMaxPos>171</AbsMaxPos>
+    <Minimum>0,92821257044427</Minimum>
+    <MinPos>181</MinPos>
+    <RightMax>0,963373385485826</RightMax>
+    <RightMaxPos>185</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Linde</Name>
+    <WKN>A2DSYC</WKN>
+    <ISIN>IE00BZ12WP82</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,17949308639189</AbsMax>
+    <AbsMaxPos>22</AbsMaxPos>
+    <Minimum>0,952860482531879</Minimum>
+    <MinPos>93</MinPos>
+    <RightMax>1,07934155085371</RightMax>
+    <RightMaxPos>149</RightMaxPos>
+  </BestSD>
+</ShareInfo>

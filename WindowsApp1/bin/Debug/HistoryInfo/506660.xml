@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>aap Implantate</Name>
+    <WKN>506660</WKN>
+    <ISIN>DE0005066609</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,99473021426349</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>0,947429289987939</Minimum>
+    <MinPos>160</MinPos>
+    <RightMax>1,08791247608218</RightMax>
+    <RightMaxPos>174</RightMaxPos>
+  </BestSD>
+</ShareInfo>

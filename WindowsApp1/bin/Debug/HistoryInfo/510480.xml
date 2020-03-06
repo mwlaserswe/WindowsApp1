@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>syzygy</Name>
+    <WKN>510480</WKN>
+    <ISIN>DE0005104806</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,993354536922424</AbsMax>
+    <AbsMaxPos>130</AbsMaxPos>
+    <Minimum>0,829472817949759</Minimum>
+    <MinPos>194</MinPos>
+    <RightMax>0,870870709262178</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>CENIT</Name>
+    <WKN>540710</WKN>
+    <ISIN>DE0005407100</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,14202184506495</AbsMax>
+    <AbsMaxPos>14</AbsMaxPos>
+    <Minimum>0,869405671216661</Minimum>
+    <MinPos>104</MinPos>
+    <RightMax>0,95481654795934</RightMax>
+    <RightMaxPos>115</RightMaxPos>
+  </BestSD>
+</ShareInfo>

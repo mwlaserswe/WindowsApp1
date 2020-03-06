@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>secunet Security Networks</Name>
+    <WKN>727650</WKN>
+    <ISIN>DE0007276503</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,33160847619741</AbsMax>
+    <AbsMaxPos>200</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,33160847619741</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

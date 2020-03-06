@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Scherzer</Name>
+    <WKN>694280</WKN>
+    <ISIN>DE0006942808</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,98525476</AbsMax>
+    <AbsMaxPos>169</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,98525476</RightMax>
+    <RightMaxPos>169</RightMaxPos>
+  </BestSD>
+</ShareInfo>

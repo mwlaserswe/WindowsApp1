@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>DMG MORI</Name>
+    <WKN>587800</WKN>
+    <ISIN>DE0005878003</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,879341868108702</AbsMax>
+    <AbsMaxPos>193</AbsMaxPos>
+    <Minimum>0,854599206250703</Minimum>
+    <MinPos>198</MinPos>
+    <RightMax>0,871071073037848</RightMax>
+    <RightMaxPos>200</RightMaxPos>
+  </BestSD>
+</ShareInfo>

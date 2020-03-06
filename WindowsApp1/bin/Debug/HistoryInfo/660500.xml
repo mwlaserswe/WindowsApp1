@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MEDION</Name>
+    <WKN>660500</WKN>
+    <ISIN>DE0006605009</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,98525476</AbsMax>
+    <AbsMaxPos>194</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,98525476</RightMax>
+    <RightMaxPos>194</RightMaxPos>
+  </BestSD>
+</ShareInfo>

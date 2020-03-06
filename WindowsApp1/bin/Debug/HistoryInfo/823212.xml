@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Lufthansa</Name>
+    <WKN>823212</WKN>
+    <ISIN>DE0008232125</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,3054198541526</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>0,830213262769058</Minimum>
+    <MinPos>164</MinPos>
+    <RightMax>0,919817590272112</RightMax>
+    <RightMaxPos>192</RightMaxPos>
+  </BestSD>
+</ShareInfo>

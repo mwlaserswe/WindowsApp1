@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Deutsche BÃ¶rse</Name>
+    <WKN>581005</WKN>
+    <ISIN>DE0005810055</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,31336920079544</AbsMax>
+    <AbsMaxPos>136</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>1,31336920079544</RightMax>
+    <RightMaxPos>136</RightMaxPos>
+  </BestSD>
+</ShareInfo>

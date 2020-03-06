@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Ludwig Beck am Rathauseck - Textilhaus Feldmeier</Name>
+    <WKN>519990</WKN>
+    <ISIN>DE0005199905</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>0,974205684130414</AbsMax>
+    <AbsMaxPos>196</AbsMaxPos>
+    <Minimum>1E+99</Minimum>
+    <MinPos>0</MinPos>
+    <RightMax>0,974205684130414</RightMax>
+    <RightMaxPos>196</RightMaxPos>
+  </BestSD>
+</ShareInfo>

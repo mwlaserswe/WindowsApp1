@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>ecotel communication</Name>
+    <WKN>585434</WKN>
+    <ISIN>DE0005854343</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,01603816779202</AbsMax>
+    <AbsMaxPos>9</AbsMaxPos>
+    <Minimum>0,855460197693242</Minimum>
+    <MinPos>19</MinPos>
+    <RightMax>1,01205582483291</RightMax>
+    <RightMaxPos>68</RightMaxPos>
+  </BestSD>
+</ShareInfo>

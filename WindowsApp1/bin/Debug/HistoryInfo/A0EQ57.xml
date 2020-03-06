@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>HELMA</Name>
+    <WKN>A0EQ57</WKN>
+    <ISIN>DE000A0EQ578</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,20584262137026</AbsMax>
+    <AbsMaxPos>151</AbsMaxPos>
+    <Minimum>1,15975942720711</Minimum>
+    <MinPos>154</MinPos>
+    <RightMax>1,20139326860399</RightMax>
+    <RightMaxPos>172</RightMaxPos>
+  </BestSD>
+</ShareInfo>

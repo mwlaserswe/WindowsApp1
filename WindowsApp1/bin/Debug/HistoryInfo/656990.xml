@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>MLP</Name>
+    <WKN>656990</WKN>
+    <ISIN>DE0006569908</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,30182838436764</AbsMax>
+    <AbsMaxPos>39</AbsMaxPos>
+    <Minimum>1,0382307794447</Minimum>
+    <MinPos>101</MinPos>
+    <RightMax>1,16368270260429</RightMax>
+    <RightMaxPos>192</RightMaxPos>
+  </BestSD>
+</ShareInfo>

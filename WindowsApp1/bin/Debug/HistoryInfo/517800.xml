@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Softing</Name>
+    <WKN>517800</WKN>
+    <ISIN>DE0005178008</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,43327634534912</AbsMax>
+    <AbsMaxPos>4</AbsMaxPos>
+    <Minimum>0,769580587614879</Minimum>
+    <MinPos>94</MinPos>
+    <RightMax>0,912854856962888</RightMax>
+    <RightMaxPos>122</RightMaxPos>
+  </BestSD>
+</ShareInfo>

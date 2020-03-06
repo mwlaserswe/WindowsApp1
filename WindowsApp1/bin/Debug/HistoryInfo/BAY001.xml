@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Bayer</Name>
+    <WKN>BAY001</WKN>
+    <ISIN>DE000BAY0017</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,20630105400153</AbsMax>
+    <AbsMaxPos>101</AbsMaxPos>
+    <Minimum>1,02084463700996</Minimum>
+    <MinPos>196</MinPos>
+    <RightMax>1,03477716657738</RightMax>
+    <RightMaxPos>198</RightMaxPos>
+  </BestSD>
+</ShareInfo>

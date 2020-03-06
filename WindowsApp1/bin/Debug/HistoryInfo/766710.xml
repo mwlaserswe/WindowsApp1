@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>Vossloh</Name>
+    <WKN>766710</WKN>
+    <ISIN>DE0007667107</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,11517311838976</AbsMax>
+    <AbsMaxPos>7</AbsMaxPos>
+    <Minimum>0,780445131735341</Minimum>
+    <MinPos>97</MinPos>
+    <RightMax>1,0121557722238</RightMax>
+    <RightMaxPos>199</RightMaxPos>
+  </BestSD>
+</ShareInfo>

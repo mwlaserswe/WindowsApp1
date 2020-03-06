@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>DATAGROUP</Name>
+    <WKN>A0JC8S</WKN>
+    <ISIN>DE000A0JC8S7</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,78615128042245</AbsMax>
+    <AbsMaxPos>40</AbsMaxPos>
+    <Minimum>0</Minimum>
+    <MinPos>159</MinPos>
+    <RightMax>1,67668097281831</RightMax>
+    <RightMaxPos>167</RightMaxPos>
+  </BestSD>
+</ShareInfo>

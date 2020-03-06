@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo>
+  <General>
+    <ID>0</ID>
+    <Name>WACKER CHEMIE</Name>
+    <WKN>WCH888</WKN>
+    <ISIN>DE000WCH8881</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>1,20194238781382</AbsMax>
+    <AbsMaxPos>13</AbsMaxPos>
+    <Minimum>0,769122109349213</Minimum>
+    <MinPos>32</MinPos>
+    <RightMax>0,965832959584487</RightMax>
+    <RightMaxPos>99</RightMaxPos>
+  </BestSD>
+</ShareInfo>
