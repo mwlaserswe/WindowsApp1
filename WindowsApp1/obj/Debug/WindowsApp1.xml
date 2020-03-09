@@ -22,11 +22,25 @@ WindowsApp1
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="M:WindowsApp1.ServiceCheckWeekDay.C_ServiceHistory_Click(System.Object,System.EventArgs)">
+<member name="M:WindowsApp1.FrmServiceCheckWeekDay.C_ServiceHistory_Click(System.Object,System.EventArgs)">
 Dim FinalArray() As HistoryItem
 </member>
-<member name="M:WindowsApp1.ServiceCheckWeekDay.C_TageszahlInDatum_Click(System.Object,System.EventArgs)">
+<member name="M:WindowsApp1.FrmServiceCheckWeekDay.C_TageszahlInDatum_Click(System.Object,System.EventArgs)">
     End Sub
+</member>
+<member name="M:WindowsApp1.XmlUtilities.ReadShareInfo(System.String)">
+Public _firstName As String
+Public _id As Integer
+Public _lastName As String
+Public _salary As Integer
+</member>
+<member name="T:WindowsApp1.Utilities">
+    ' Storage of employee data.
+    Public _firstName As String
+    Public _id As Integer
+    Public _lastName As String
+    Public _salary As Integer
+End Class
 </member>
 </members>
 </doc>

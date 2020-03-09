@@ -73,85 +73,93 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Forms\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="Forms\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChartList.Designer.vb">
-      <DependentUpon>ChartList.vb</DependentUpon>
+    <Compile Include="Forms\FrmChartList.Designer.vb">
+      <DependentUpon>FrmChartList.vb</DependentUpon>
     </Compile>
-    <Compile Include="ChartList.vb">
+    <Compile Include="Forms\FrmChartList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Forms\frmXmlReadWrite.Designer.vb">
+      <DependentUpon>frmXmlReadWrite.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Forms\frmXmlReadWrite.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="Forms\FrmRotateImageExamples.Designer.vb">
+      <DependentUpon>FrmRotateImageExamples.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="Forms\FrmRotateImageExamples.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <Compile Include="Forms\FrmReadTodaysSharePrice.Designer.vb">
+      <DependentUpon>FrmReadTodaysSharePrice.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form4.vb">
+    <Compile Include="Forms\FrmReadTodaysSharePrice.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.vb">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <Compile Include="Forms\FrmServiceCheckWeekDay.Designer.vb">
+      <DependentUpon>FrmServiceCheckWeekDay.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form5.vb">
+    <Compile Include="Forms\FrmServiceCheckWeekDay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.vb">
-      <DependentUpon>Form6.vb</DependentUpon>
+    <Compile Include="Forms\FrmScanWebForWKN.Designer.vb">
+      <DependentUpon>FrmScanWebForWKN.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form6.vb">
+    <Compile Include="Forms\FrmScanWebForWKN.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.vb">
-      <DependentUpon>Form7.vb</DependentUpon>
+    <Compile Include="Forms\FrmSaveWebpageAsHTML.Designer.vb">
+      <DependentUpon>FrmSaveWebpageAsHTML.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form7.vb">
+    <Compile Include="Forms\FrmSaveWebpageAsHTML.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.vb">
-      <DependentUpon>Form8.vb</DependentUpon>
+    <Compile Include="Forms\FrmReadHistoricFromAriva.Designer.vb">
+      <DependentUpon>FrmReadHistoricFromAriva.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form8.vb">
+    <Compile Include="Forms\FrmReadHistoricFromAriva.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="gauss.vb" />
-    <Compile Include="ariva_de.vb" />
-    <Compile Include="BoerseStuttgart.vb" />
-    <Compile Include="Comdirect_de.vb" />
-    <Compile Include="FinanzNachrichten_de.vb" />
-    <Compile Include="Ing_de.vb" />
-    <Compile Include="Settings.vb" />
-    <Compile Include="XMLReader.Designer.vb">
-      <DependentUpon>XMLReader.vb</DependentUpon>
+    <Compile Include="Forms\ReadHistoricFromAriva.Designer.vb">
+      <DependentUpon>ReadHistoricFromAriva.vb</DependentUpon>
     </Compile>
-    <Compile Include="XMLReader.vb">
+    <Compile Include="Forms\ReadHistoricFromAriva.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReadSingleShareValue.Designer.vb">
-      <DependentUpon>ReadSingleShareValue.vb</DependentUpon>
+    <Compile Include="Forms\FrmInfoFiles.Designer.vb">
+      <DependentUpon>FrmInfoFiles.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReadSingleShareValue.vb">
+    <Compile Include="Forms\FrmInfoFiles.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chart.vb" />
-    <Compile Include="GlobalVariables.vb" />
-    <Compile Include="peketec_de.vb" />
-    <Compile Include="Util.vb" />
-    <Compile Include="Utilities.vb" />
+    <Compile Include="Modules\gauss.vb" />
+    <Compile Include="Modules\ariva_de.vb" />
+    <Compile Include="Modules\BoerseStuttgart.vb" />
+    <Compile Include="Modules\Comdirect_de.vb" />
+    <Compile Include="Modules\FinanzNachrichten_de.vb" />
+    <Compile Include="Modules\BoerseBerlin_de.vb" />
+    <Compile Include="Modules\WallStreet_de.vb" />
+    <Compile Include="Modules\XmlUtilities.vb" />
+    <Compile Include="Modules\Settings.vb" />
+    <Compile Include="Forms\FrmReadSingleShareValue.Designer.vb">
+      <DependentUpon>FrmReadSingleShareValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReadSingleShareValue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Chart.vb" />
+    <Compile Include="Modules\GlobalVariables.vb" />
+    <Compile Include="Modules\peketec_de.vb" />
+    <Compile Include="Modules\Util.vb" />
+    <Compile Include="Modules\Utilities.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,38 +177,41 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList.resx">
-      <DependentUpon>ChartList.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmChartList.resx">
+      <DependentUpon>FrmChartList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frmXmlReadWrite.resx">
+      <DependentUpon>frmXmlReadWrite.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmRotateImageExamples.resx">
+      <DependentUpon>FrmRotateImageExamples.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmReadTodaysSharePrice.resx">
+      <DependentUpon>FrmReadTodaysSharePrice.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmServiceCheckWeekDay.resx">
+      <DependentUpon>FrmServiceCheckWeekDay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmScanWebForWKN.resx">
+      <DependentUpon>FrmScanWebForWKN.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmSaveWebpageAsHTML.resx">
+      <DependentUpon>FrmSaveWebpageAsHTML.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmReadHistoricFromAriva.resx">
+      <DependentUpon>FrmReadHistoricFromAriva.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XMLReader.resx">
-      <DependentUpon>XMLReader.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\ReadHistoricFromAriva.resx">
+      <DependentUpon>ReadHistoricFromAriva.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReadSingleShareValue.resx">
-      <DependentUpon>ReadSingleShareValue.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmInfoFiles.resx">
+      <DependentUpon>FrmInfoFiles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReadSingleShareValue.resx">
+      <DependentUpon>FrmReadSingleShareValue.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -221,5 +232,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
