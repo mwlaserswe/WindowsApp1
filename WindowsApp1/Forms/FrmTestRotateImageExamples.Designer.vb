@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmRotateImageExamples
+Partial Class FrmTestRotateImageExamples
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -90,7 +90,7 @@ Partial Class FrmRotateImageExamples
         Me.Button3.Text = "Zoom Out"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'RotateImageExamples
+        'FrmTestRotateImageExamples
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -101,8 +101,8 @@ Partial Class FrmRotateImageExamples
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Name = "RotateImageExamples"
-        Me.Text = "Form2"
+        Me.Name = "FrmTestRotateImageExamples"
+        Me.Text = "Test Rotate Image"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

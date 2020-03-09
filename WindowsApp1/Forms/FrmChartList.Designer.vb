@@ -63,7 +63,7 @@ Partial Class FrmChartList
         Me.TextBox1.Size = New System.Drawing.Size(100, 31)
         Me.TextBox1.TabIndex = 3
         '
-        'ChartList
+        'FrmChartList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -72,8 +72,8 @@ Partial Class FrmChartList
         Me.Controls.Add(Me.C_MoveToPartialList)
         Me.Controls.Add(Me.ListPartial)
         Me.Controls.Add(Me.ListCompelete)
-        Me.Name = "ChartList"
-        Me.Text = "Form2"
+        Me.Name = "FrmChartList"
+        Me.Text = "Chart List"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -35,16 +35,13 @@ D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\Wi
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\bin\Debug\WindowsApp1.pdb
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\bin\Debug\WindowsApp1.xml
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
-D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.ReadHistoricFromAriva.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.exe
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.xml
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.pdb
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
-D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.frmXmlReadWrite.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmChartList.resources
-D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmRotateImageExamples.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmReadTodaysSharePrice.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmServiceCheckWeekDay.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmScanWebForWKN.resources
@@ -52,3 +49,6 @@ D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\Wi
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmReadHistoricFromAriva.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmInfoFiles.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmReadSingleShareValue.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmTestDataGrid.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmTestReadWriteXML.resources
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmTestRotateImageExamples.resources

@@ -136,33 +136,33 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(2655, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(2655, 42)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 36)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 38)
         Me.MenuToolStripMenuItem.Text = "Display Chart"
         '
         'GgggToolStripMenuItem
         '
         Me.GgggToolStripMenuItem.Name = "GgggToolStripMenuItem"
-        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 36)
+        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 38)
         Me.GgggToolStripMenuItem.Text = "Chart List"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 36)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 38)
         Me.ToolStripMenuItem1.Text = "ReadTodaysSharePrice"
         '
         'ReadFromWEBToolStripMenuItem
         '
         Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
         Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
-        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 36)
+        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 38)
         Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
         '
         'ReadHistoricFromARIVAdeToolStripMenuItem
@@ -175,50 +175,50 @@ Partial Class Form1
         '
         Me.WebToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanWebForWKNToolStripMenuItem, Me.SaveWebPageAsHTMLToolStripMenuItem, Me.ReadSingleShareValueToolStripMenuItem, Me.ReadXMLToolStripMenuItem, Me.GridViewTestToolStripMenuItem, Me.TransformToolStripMenuItem})
         Me.WebToolStripMenuItem.Name = "WebToolStripMenuItem"
-        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 36)
+        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 38)
         Me.WebToolStripMenuItem.Text = "Web / Test"
         '
         'ScanWebForWKNToolStripMenuItem
         '
         Me.ScanWebForWKNToolStripMenuItem.Name = "ScanWebForWKNToolStripMenuItem"
-        Me.ScanWebForWKNToolStripMenuItem.Size = New System.Drawing.Size(413, 44)
+        Me.ScanWebForWKNToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
         Me.ScanWebForWKNToolStripMenuItem.Text = "Scan Web for WKN"
         '
         'SaveWebPageAsHTMLToolStripMenuItem
         '
         Me.SaveWebPageAsHTMLToolStripMenuItem.Name = "SaveWebPageAsHTMLToolStripMenuItem"
-        Me.SaveWebPageAsHTMLToolStripMenuItem.Size = New System.Drawing.Size(413, 44)
+        Me.SaveWebPageAsHTMLToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
         Me.SaveWebPageAsHTMLToolStripMenuItem.Text = "Save Web page as HTML"
         '
         'ReadSingleShareValueToolStripMenuItem
         '
         Me.ReadSingleShareValueToolStripMenuItem.Name = "ReadSingleShareValueToolStripMenuItem"
-        Me.ReadSingleShareValueToolStripMenuItem.Size = New System.Drawing.Size(413, 44)
+        Me.ReadSingleShareValueToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
         Me.ReadSingleShareValueToolStripMenuItem.Text = "Read single share value"
         '
         'ReadXMLToolStripMenuItem
         '
         Me.ReadXMLToolStripMenuItem.Name = "ReadXMLToolStripMenuItem"
-        Me.ReadXMLToolStripMenuItem.Size = New System.Drawing.Size(413, 44)
-        Me.ReadXMLToolStripMenuItem.Text = "Read / Wirite XML"
+        Me.ReadXMLToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.ReadXMLToolStripMenuItem.Text = "Test Read / Wirite XML"
         '
         'GridViewTestToolStripMenuItem
         '
         Me.GridViewTestToolStripMenuItem.Name = "GridViewTestToolStripMenuItem"
-        Me.GridViewTestToolStripMenuItem.Size = New System.Drawing.Size(413, 44)
-        Me.GridViewTestToolStripMenuItem.Text = "GridView Test"
+        Me.GridViewTestToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.GridViewTestToolStripMenuItem.Text = "Test DataGridView"
         '
         'TransformToolStripMenuItem
         '
         Me.TransformToolStripMenuItem.Name = "TransformToolStripMenuItem"
-        Me.TransformToolStripMenuItem.Size = New System.Drawing.Size(413, 44)
-        Me.TransformToolStripMenuItem.Text = "Transform PictureBox"
+        Me.TransformToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.TransformToolStripMenuItem.Text = "Test Transform PictureBox"
         '
         'ServiceToolStripMenuItem
         '
         Me.ServiceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckWeekdayToolStripMenuItem, Me.InfoFilesToolStripMenuItem})
         Me.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem"
-        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
+        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 38)
         Me.ServiceToolStripMenuItem.Text = "Service"
         '
         'CheckWeekdayToolStripMenuItem

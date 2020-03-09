@@ -34,14 +34,14 @@ Partial Class FrmInfoFiles
         Me.B_GenerateInfoFiles.Text = "Generate new Info Files"
         Me.B_GenerateInfoFiles.UseVisualStyleBackColor = True
         '
-        'InfoFiles
+        'FrmInfoFiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1149, 627)
         Me.Controls.Add(Me.B_GenerateInfoFiles)
-        Me.Name = "InfoFiles"
-        Me.Text = "Form9"
+        Me.Name = "FrmInfoFiles"
+        Me.Text = "InfoFiles"
         Me.ResumeLayout(False)
 
     End Sub

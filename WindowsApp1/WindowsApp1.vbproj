@@ -86,16 +86,16 @@
     <Compile Include="Forms\FrmChartList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmXmlReadWrite.Designer.vb">
-      <DependentUpon>frmXmlReadWrite.vb</DependentUpon>
+    <Compile Include="Forms\FrmTestReadWriteXML.Designer.vb">
+      <DependentUpon>FrmTestReadWriteXML.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmXmlReadWrite.vb">
+    <Compile Include="Forms\FrmTestReadWriteXML.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRotateImageExamples.Designer.vb">
-      <DependentUpon>FrmRotateImageExamples.vb</DependentUpon>
+    <Compile Include="Forms\FrmTestRotateImageExamples.Designer.vb">
+      <DependentUpon>FrmTestRotateImageExamples.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRotateImageExamples.vb">
+    <Compile Include="Forms\FrmTestRotateImageExamples.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmReadTodaysSharePrice.Designer.vb">
@@ -122,16 +122,16 @@
     <Compile Include="Forms\FrmSaveWebpageAsHTML.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmTestDataGrid.Designer.vb">
+      <DependentUpon>FrmTestDataGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTestDataGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmReadHistoricFromAriva.Designer.vb">
       <DependentUpon>FrmReadHistoricFromAriva.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmReadHistoricFromAriva.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ReadHistoricFromAriva.Designer.vb">
-      <DependentUpon>ReadHistoricFromAriva.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ReadHistoricFromAriva.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmInfoFiles.Designer.vb">
@@ -183,11 +183,11 @@
     <EmbeddedResource Include="Forms\FrmChartList.resx">
       <DependentUpon>FrmChartList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmXmlReadWrite.resx">
-      <DependentUpon>frmXmlReadWrite.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmTestReadWriteXML.resx">
+      <DependentUpon>FrmTestReadWriteXML.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmRotateImageExamples.resx">
-      <DependentUpon>FrmRotateImageExamples.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmTestRotateImageExamples.resx">
+      <DependentUpon>FrmTestRotateImageExamples.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmReadTodaysSharePrice.resx">
       <DependentUpon>FrmReadTodaysSharePrice.vb</DependentUpon>
@@ -201,11 +201,11 @@
     <EmbeddedResource Include="Forms\FrmSaveWebpageAsHTML.resx">
       <DependentUpon>FrmSaveWebpageAsHTML.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTestDataGrid.resx">
+      <DependentUpon>FrmTestDataGrid.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmReadHistoricFromAriva.resx">
       <DependentUpon>FrmReadHistoricFromAriva.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReadHistoricFromAriva.resx">
-      <DependentUpon>ReadHistoricFromAriva.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmInfoFiles.resx">
       <DependentUpon>FrmInfoFiles.vb</DependentUpon>

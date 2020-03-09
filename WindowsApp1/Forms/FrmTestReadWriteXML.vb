@@ -1,6 +1,6 @@
 ﻿Imports System.Xml
 Imports mshtml
-Public Class frmXmlReadWrite
+Public Class FrmTestReadWriteXML
 
 
 

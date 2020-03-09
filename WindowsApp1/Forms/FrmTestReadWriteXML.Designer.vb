@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmXmlReadWrite
+Partial Class FrmTestReadWriteXML
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -127,7 +127,7 @@ Partial Class frmXmlReadWrite
         Me.L_ISIN.TabIndex = 25
         Me.L_ISIN.Text = "MyIsin"
         '
-        'frmXmlReadWrite
+        'FrmTestReadWriteXML
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -142,8 +142,8 @@ Partial Class frmXmlReadWrite
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Name = "frmXmlReadWrite"
-        Me.Text = "Xml Read/Write"
+        Me.Name = "FrmTestReadWriteXML"
+        Me.Text = "Test Read/Write XML"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

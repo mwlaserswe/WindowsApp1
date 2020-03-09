@@ -31,7 +31,7 @@ Public Class Form1
     End Sub
 
     Private Sub ReadXMLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReadXMLToolStripMenuItem.Click
-        frmXmlReadWrite.Show()
+        FrmTestReadWriteXML.Show()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,23 +39,23 @@ Public Class Form1
         ' Init DataGridView1 
 
         ' Spalten hinzufügen
-        DataGridView1.Columns.Add("spCompany", "Company")
-        DataGridView1.Columns.Add("spWKN", "WKN")
-        DataGridView1.Columns.Add("spIsin", "ISIN")
-        DataGridView1.Columns.Add("spIndex", "Index")
-        DataGridView1.Columns.Add("spStatus", "Status")
-        DataGridView1.Columns.Add("spAccount", "Account")
+        DataGridView1.Columns.Add(spCompany, "Company")
+        DataGridView1.Columns.Add(spWKN, "WKN")
+        DataGridView1.Columns.Add(spIsin, "ISIN")
+        DataGridView1.Columns.Add(spIndex, "Index")
+        DataGridView1.Columns.Add(spStatus, "Status")
+        DataGridView1.Columns.Add(spAccount, "Account")
 
         ' Breite einstellen
         '''For i = 0 To (DataGridView1.Columns.Count) - 1
         '''    DataGridView1.Columns(i).Width = 75
         '''Next
-        DataGridView1.Columns(0).Width = 75
-        DataGridView1.Columns(1).Width = 75
-        DataGridView1.Columns(2).Width = 110
-        DataGridView1.Columns(3).Width = 35
-        DataGridView1.Columns(4).Width = 20
-        DataGridView1.Columns(5).Width = 20
+        DataGridView1.Columns(spCompany).Width = 75
+        DataGridView1.Columns(spWKN).Width = 75
+        DataGridView1.Columns(spIsin).Width = 110
+        DataGridView1.Columns(spIndex).Width = 35
+        DataGridView1.Columns(spStatus).Width = 20
+        DataGridView1.Columns(spAccount).Width = 20
 
         'DataGridView1 row = DataGridView.Rows(0)
         '    row.Height = 15
@@ -89,7 +89,7 @@ Public Class Form1
     End Sub
 
     Private Sub GridViewTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GridViewTestToolStripMenuItem.Click
-        FrmReadHistoricFromAriva.Show()
+        FrmTestDataGrid.Show()
     End Sub
 
 
@@ -174,7 +174,7 @@ ReadCompanyListFileErr:
     Private Sub DataGridView1_SelectionChanged(sender As Object, e As EventArgs) Handles DataGridView1.SelectionChanged
         Dim Fullpath As String
 
-        Dim column As Integer
+        Dim column As Object
         Dim row As Integer
         Dim CompanyName As String
         Dim WKN As String
@@ -186,17 +186,17 @@ ReadCompanyListFileErr:
 
         ' DataGridView1.Row is cursor
         row = DataGridView1.CurrentCell.RowIndex
-        column = 1  ' Point to WKN columnn
+        column = spWKN      ' Point to WKN columnn 1
         WKN = DataGridView1.Item(column, row).Value
         T_CurrWKN.Text = WKN
         Fullpath = Application.StartupPath & "\History\" & WKN & ".txt"
         T_HistoryFileName.Text = Fullpath
 
-        column = 2  ' Point to ISIN columnn
+        column = spIsin     ' Point to ISIN columnn 2
         ISIN = DataGridView1.Item(column, row).Value
         T_CurrISIN.Text = ISIN
 
-        column = 0  ' Point to company name columnn
+        column = spCompany  ' Point to company name columnn 0
         CompanyName = DataGridView1.Item(column, row).Value
         T_CurrCompName.Text = CompanyName
         ReadHistoryFileToChartArray(Fullpath, CompanyName)
@@ -266,7 +266,7 @@ ReadCompanyListFileErr:
     End Sub
 
     Private Sub TransformToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TransformToolStripMenuItem.Click
-        FrmRotateImageExamples.Show()
+        FrmTestRotateImageExamples.Show()
     End Sub
 
 
@@ -445,7 +445,7 @@ ReadCompanyListFileErr:
 
 
     Private Sub ReadHistoricFromARIVAdeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReadHistoricFromARIVAdeToolStripMenuItem.Click
-        ReadHistoricFromAriva.Show()
+        FrmReadHistoricFromAriva.Show()
     End Sub
 
     Private Sub C_WriteChartFile_Click(sender As Object, e As EventArgs) Handles C_WriteChartFile.Click
@@ -468,7 +468,7 @@ ReadCompanyListFileErr:
 
         For idx = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
             row = idx   ' Point to row       
-            column = 1  ' Point to WKN columnn         
+            column = spWKN   ' Point to WKN columnn 1        
             WKN = CompPartialLstArr(idx).WKN
 
             If WKN <> DataGridView1.Item(column, row).Value Then
@@ -479,7 +479,7 @@ ReadCompanyListFileErr:
             Fullpath = Application.StartupPath & "\History\" & WKN & ".txt"
             T_HistoryFileName.Text = Fullpath
 
-            column = 0  ' Point to company name columnn
+            column = spCompany   ' Point to company name columnn 0
             CompanyName = DataGridView1.Item(column, row).Value
             ReadHistoryFileToChartArray(Fullpath, CompanyName)
 
@@ -503,7 +503,7 @@ ReadCompanyListFileErr:
 
             dmystr = ChartArray(UBound(ChartArray)).Trend
 
-            column = 4  ' Point to Status columnn
+            column = spStatus       ' Point to Status columnn 4
             If InStr(ChartArray(UBound(ChartArray)).Trend, "5:wait", CompareMethod.Text) Then
                 DataGridView1.Item(column, row).Style.ForeColor = Color.LightGray
                 DataGridView1.Item(column, row).Value = "5:wait"
@@ -527,7 +527,7 @@ ReadCompanyListFileErr:
                 DataGridView1.Item(column, row).Value = "30: Hold"
             End If
 
-            column = 5  ' Point to Account columnn
+            column = spAccount      ' Point to Account columnn 5
             DataGridView1.Item(column, row).Value = ChartArray(UBound(ChartArray)).Account
 
 

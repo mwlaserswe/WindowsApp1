@@ -55,7 +55,13 @@ Module GlobalVariables
         Dim SdArry() As Double
     End Structure
 
-
+    '=== Alias for DataGridView
+    Public Const spCompany = "spCompany"
+    Public Const spWKN = "spWKN"
+    Public Const spIsin = "spIsin"
+    Public Const spIndex = "spIndex"
+    Public Const spStatus = "spStatus"
+    Public Const spAccount = "spAccount"
 
     '=== Visualisieung ===
     Public GlbScaleX As Single

@@ -2,7 +2,7 @@
 'rotate/scale image using coordinate geometry or matrix transforms
 'Option Strict On
 
-Public Class FrmRotateImageExamples
+Public Class FrmTestRotateImageExamples
     Dim bm_rusty As Bitmap = Image.FromFile("d:\kl.jpg")  'replace this path with your own image path
     Dim Rotation As Single = 0
     Dim ScaleFactor As Single = 1
