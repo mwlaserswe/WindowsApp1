@@ -7,11 +7,11 @@
     <ISIN>DE000A0BVU28</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,47238812096314</AbsMax>
-    <AbsMaxPos>8</AbsMaxPos>
-    <Minimum>0,877094582978202</Minimum>
+    <AbsMax>5,82056645858824</AbsMax>
+    <AbsMaxPos>139</AbsMaxPos>
+    <Minimum>2,79468875798785</Minimum>
     <MinPos>161</MinPos>
-    <RightMax>0,952418865566043</RightMax>
-    <RightMaxPos>188</RightMaxPos>
+    <RightMax>4,07953696003561</RightMax>
+    <RightMaxPos>194</RightMaxPos>
   </BestSD>
 </ShareInfo>

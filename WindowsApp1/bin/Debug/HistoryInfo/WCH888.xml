@@ -7,11 +7,11 @@
     <ISIN>DE000WCH8881</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,20194238781382</AbsMax>
-    <AbsMaxPos>13</AbsMaxPos>
-    <Minimum>0,769122109349213</Minimum>
-    <MinPos>32</MinPos>
-    <RightMax>0,965832959584487</RightMax>
-    <RightMaxPos>99</RightMaxPos>
+    <AbsMax>120,449115717108</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>2,6335089941107</Minimum>
+    <MinPos>118</MinPos>
+    <RightMax>6,14374234665339</RightMax>
+    <RightMaxPos>181</RightMaxPos>
   </BestSD>
 </ShareInfo>

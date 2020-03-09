@@ -7,11 +7,11 @@
     <ISIN>DE000FPH9000</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,11926690589214</AbsMax>
+    <AbsMax>27,807473308099</AbsMax>
     <AbsMaxPos>9</AbsMaxPos>
-    <Minimum>0,873191498702387</Minimum>
-    <MinPos>130</MinPos>
-    <RightMax>1,04290824682453</RightMax>
-    <RightMaxPos>164</RightMaxPos>
+    <Minimum>1,73511782566239</Minimum>
+    <MinPos>64</MinPos>
+    <RightMax>4,84554163537963</RightMax>
+    <RightMaxPos>185</RightMaxPos>
   </BestSD>
 </ShareInfo>

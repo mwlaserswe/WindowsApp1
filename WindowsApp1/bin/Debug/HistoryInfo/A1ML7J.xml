@@ -7,11 +7,11 @@
     <ISIN>DE000A1ML7J1</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,17810216762627</AbsMax>
-    <AbsMaxPos>80</AbsMaxPos>
-    <Minimum>0,948071612710752</Minimum>
-    <MinPos>166</MinPos>
-    <RightMax>1,04933933524233</RightMax>
-    <RightMaxPos>197</RightMaxPos>
+    <AbsMax>2,46621832276786</AbsMax>
+    <AbsMaxPos>100</AbsMaxPos>
+    <Minimum>0,969241932964867</Minimum>
+    <MinPos>169</MinPos>
+    <RightMax>1,07837646736676</RightMax>
+    <RightMaxPos>184</RightMaxPos>
   </BestSD>
 </ShareInfo>

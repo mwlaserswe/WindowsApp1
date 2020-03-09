@@ -7,11 +7,11 @@
     <ISIN>DE000PAH0038</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,19972928452122</AbsMax>
-    <AbsMaxPos>19</AbsMaxPos>
-    <Minimum>0,896851686662933</Minimum>
-    <MinPos>137</MinPos>
-    <RightMax>0,981702835594238</RightMax>
-    <RightMaxPos>190</RightMaxPos>
+    <AbsMax>305,491185224318</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>2,87753140534113</Minimum>
+    <MinPos>125</MinPos>
+    <RightMax>5,36647713819575</RightMax>
+    <RightMaxPos>172</RightMaxPos>
   </BestSD>
 </ShareInfo>

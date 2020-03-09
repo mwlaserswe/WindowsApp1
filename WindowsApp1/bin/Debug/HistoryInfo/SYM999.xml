@@ -7,11 +7,11 @@
     <ISIN>DE000SYM9999</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,1409464847538</AbsMax>
-    <AbsMaxPos>170</AbsMaxPos>
-    <Minimum>1E+99</Minimum>
-    <MinPos>0</MinPos>
-    <RightMax>1,1409464847538</RightMax>
-    <RightMaxPos>170</RightMaxPos>
+    <AbsMax>5,38303854916634</AbsMax>
+    <AbsMaxPos>81</AbsMaxPos>
+    <Minimum>3,60859573018548</Minimum>
+    <MinPos>147</MinPos>
+    <RightMax>5,09482255805456</RightMax>
+    <RightMaxPos>177</RightMaxPos>
   </BestSD>
 </ShareInfo>

@@ -7,11 +7,11 @@
     <ISIN>DE000BAY0017</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,20630105400153</AbsMax>
-    <AbsMaxPos>101</AbsMaxPos>
-    <Minimum>1,02084463700996</Minimum>
-    <MinPos>196</MinPos>
-    <RightMax>1,03477716657738</RightMax>
+    <AbsMax>9,87700880467457</AbsMax>
+    <AbsMaxPos>40</AbsMaxPos>
+    <Minimum>2,17260583467713</Minimum>
+    <MinPos>103</MinPos>
+    <RightMax>7,16166954261866</RightMax>
     <RightMaxPos>198</RightMaxPos>
   </BestSD>
 </ShareInfo>

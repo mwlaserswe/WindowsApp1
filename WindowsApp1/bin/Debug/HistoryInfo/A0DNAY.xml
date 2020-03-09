@@ -7,11 +7,11 @@
     <ISIN>DE000A0DNAY5</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,11159262256093</AbsMax>
-    <AbsMaxPos>68</AbsMaxPos>
-    <Minimum>0,806293424944364</Minimum>
-    <MinPos>173</MinPos>
-    <RightMax>0,899267330405339</RightMax>
-    <RightMaxPos>186</RightMaxPos>
+    <AbsMax>7325,06295604704</AbsMax>
+    <AbsMaxPos>6</AbsMaxPos>
+    <Minimum>44,9143711826478</Minimum>
+    <MinPos>196</MinPos>
+    <RightMax>52,3660838747895</RightMax>
+    <RightMaxPos>198</RightMaxPos>
   </BestSD>
 </ShareInfo>

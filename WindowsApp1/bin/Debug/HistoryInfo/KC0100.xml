@@ -7,11 +7,11 @@
     <ISIN>DE000KC01000</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,67001943525287</AbsMax>
+    <AbsMax>1623,29734547892</AbsMax>
     <AbsMaxPos>5</AbsMaxPos>
-    <Minimum>0,887858234420933</Minimum>
-    <MinPos>112</MinPos>
-    <RightMax>1,02496415233544</RightMax>
-    <RightMaxPos>122</RightMaxPos>
+    <Minimum>4,35864661939695</Minimum>
+    <MinPos>194</MinPos>
+    <RightMax>4,73537596153915</RightMax>
+    <RightMaxPos>199</RightMaxPos>
   </BestSD>
 </ShareInfo>

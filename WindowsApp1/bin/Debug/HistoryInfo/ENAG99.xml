@@ -7,11 +7,11 @@
     <ISIN>DE000ENAG999</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,20650044856925</AbsMax>
-    <AbsMaxPos>17</AbsMaxPos>
-    <Minimum>1,05535685714194</Minimum>
-    <MinPos>66</MinPos>
-    <RightMax>1,18668823344886</RightMax>
-    <RightMaxPos>85</RightMaxPos>
+    <AbsMax>4,2603042599403</AbsMax>
+    <AbsMaxPos>23</AbsMaxPos>
+    <Minimum>0,892937195318739</Minimum>
+    <MinPos>123</MinPos>
+    <RightMax>1,63273387243018</RightMax>
+    <RightMaxPos>164</RightMaxPos>
   </BestSD>
 </ShareInfo>

@@ -7,11 +7,11 @@
     <ISIN>DE000A0EPUH1</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,10039014646157</AbsMax>
-    <AbsMaxPos>20</AbsMaxPos>
-    <Minimum>0,834704120592063</Minimum>
-    <MinPos>38</MinPos>
-    <RightMax>1,00928656115673</RightMax>
-    <RightMaxPos>147</RightMaxPos>
+    <AbsMax>449,120461066138</AbsMax>
+    <AbsMaxPos>3</AbsMaxPos>
+    <Minimum>0,820704549395751</Minimum>
+    <MinPos>192</MinPos>
+    <RightMax>1,28294958359976</RightMax>
+    <RightMaxPos>198</RightMaxPos>
   </BestSD>
 </ShareInfo>

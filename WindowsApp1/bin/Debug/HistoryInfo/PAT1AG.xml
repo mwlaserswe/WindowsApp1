@@ -7,11 +7,11 @@
     <ISIN>DE000PAT1AG3</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,2186429500611</AbsMax>
-    <AbsMaxPos>139</AbsMaxPos>
-    <Minimum>1,11811410667499</Minimum>
-    <MinPos>171</MinPos>
-    <RightMax>1,17622207977741</RightMax>
-    <RightMaxPos>188</RightMaxPos>
+    <AbsMax>201,699755331586</AbsMax>
+    <AbsMaxPos>5</AbsMaxPos>
+    <Minimum>10,4931825832152</Minimum>
+    <MinPos>181</MinPos>
+    <RightMax>18,0650851247831</RightMax>
+    <RightMaxPos>195</RightMaxPos>
   </BestSD>
 </ShareInfo>

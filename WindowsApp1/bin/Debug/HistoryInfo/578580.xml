@@ -7,11 +7,11 @@
     <ISIN>DE0005785802</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,31820124302844</AbsMax>
-    <AbsMaxPos>6</AbsMaxPos>
-    <Minimum>0,846383325345285</Minimum>
-    <MinPos>197</MinPos>
-    <RightMax>0,895099026468554</RightMax>
+    <AbsMax>3,01998118609221</AbsMax>
+    <AbsMaxPos>41</AbsMaxPos>
+    <Minimum>1,02720956453397</Minimum>
+    <MinPos>168</MinPos>
+    <RightMax>1,55977301652195</RightMax>
     <RightMaxPos>200</RightMaxPos>
   </BestSD>
 </ShareInfo>

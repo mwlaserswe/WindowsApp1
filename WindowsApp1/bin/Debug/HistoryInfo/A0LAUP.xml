@@ -7,11 +7,11 @@
     <ISIN>DE000A0LAUP1</ISIN>
   </General>
   <BestSD>
-    <AbsMax>2,00168958919126</AbsMax>
-    <AbsMaxPos>31</AbsMaxPos>
-    <Minimum>1,55440594505763</Minimum>
-    <MinPos>137</MinPos>
-    <RightMax>1,86033519553073</RightMax>
-    <RightMaxPos>190</RightMaxPos>
+    <AbsMax>17,9529531822277</AbsMax>
+    <AbsMaxPos>20</AbsMaxPos>
+    <Minimum>3,12558550108715</Minimum>
+    <MinPos>105</MinPos>
+    <RightMax>7,25848732216653</RightMax>
+    <RightMaxPos>193</RightMaxPos>
   </BestSD>
 </ShareInfo>

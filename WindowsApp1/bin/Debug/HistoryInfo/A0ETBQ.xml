@@ -7,11 +7,11 @@
     <ISIN>DE000A0ETBQ4</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,14145134501006</AbsMax>
-    <AbsMaxPos>19</AbsMaxPos>
-    <Minimum>0,835070390769157</Minimum>
-    <MinPos>133</MinPos>
-    <RightMax>0,922402865946394</RightMax>
-    <RightMaxPos>166</RightMaxPos>
+    <AbsMax>14,5699250304868</AbsMax>
+    <AbsMaxPos>17</AbsMaxPos>
+    <Minimum>3,29289830338766</Minimum>
+    <MinPos>173</MinPos>
+    <RightMax>4,45245869426821</RightMax>
+    <RightMaxPos>191</RightMaxPos>
   </BestSD>
 </ShareInfo>

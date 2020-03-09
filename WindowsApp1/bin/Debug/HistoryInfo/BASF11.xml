@@ -7,11 +7,11 @@
     <ISIN>DE000BASF111</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,15904737533691</AbsMax>
-    <AbsMaxPos>29</AbsMaxPos>
-    <Minimum>0,881896853212731</Minimum>
-    <MinPos>191</MinPos>
-    <RightMax>0,946048455955298</RightMax>
+    <AbsMax>8,51967851628303</AbsMax>
+    <AbsMaxPos>34</AbsMaxPos>
+    <Minimum>3,11622287349039</Minimum>
+    <MinPos>193</MinPos>
+    <RightMax>3,43520192219388</RightMax>
     <RightMaxPos>200</RightMaxPos>
   </BestSD>
 </ShareInfo>

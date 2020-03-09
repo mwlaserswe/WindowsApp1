@@ -7,11 +7,11 @@
     <ISIN>DE000A1EWWW0</ISIN>
   </General>
   <BestSD>
-    <AbsMax>1,49828903280335</AbsMax>
-    <AbsMaxPos>28</AbsMaxPos>
-    <Minimum>0,885403149088743</Minimum>
-    <MinPos>70</MinPos>
-    <RightMax>1,10630361819574</RightMax>
-    <RightMaxPos>101</RightMaxPos>
+    <AbsMax>15,5945751426512</AbsMax>
+    <AbsMaxPos>24</AbsMaxPos>
+    <Minimum>5,12042477151252</Minimum>
+    <MinPos>129</MinPos>
+    <RightMax>14,357450743512</RightMax>
+    <RightMaxPos>195</RightMaxPos>
   </BestSD>
 </ShareInfo>

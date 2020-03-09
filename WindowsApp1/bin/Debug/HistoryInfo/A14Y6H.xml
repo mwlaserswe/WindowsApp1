@@ -7,11 +7,11 @@
     <ISIN>US02079K1079</ISIN>
   </General>
   <BestSD>
-    <AbsMax>779,946460898608</AbsMax>
+    <AbsMax>235854,812525006</AbsMax>
     <AbsMaxPos>2</AbsMaxPos>
-    <Minimum>0,863666331015988</Minimum>
-    <MinPos>161</MinPos>
-    <RightMax>1,03362769514329</RightMax>
-    <RightMaxPos>168</RightMaxPos>
+    <Minimum>1,11434704763857</Minimum>
+    <MinPos>8</MinPos>
+    <RightMax>2,19495187992842</RightMax>
+    <RightMaxPos>65</RightMaxPos>
   </BestSD>
 </ShareInfo>
