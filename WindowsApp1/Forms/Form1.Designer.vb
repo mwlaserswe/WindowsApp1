@@ -87,6 +87,8 @@ Partial Class Form1
         Me.T_CurrWKN = New System.Windows.Forms.TextBox()
         Me.T_CurrCompName = New System.Windows.Forms.TextBox()
         Me.T_CurrAccount = New System.Windows.Forms.TextBox()
+        Me.AnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckNumberOfRiseInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -133,7 +135,7 @@ Partial Class Form1
         '
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(32, 32)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.AnalysisToolStripMenuItem, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(2655, 42)
@@ -610,6 +612,19 @@ Partial Class Form1
         Me.T_CurrAccount.Size = New System.Drawing.Size(168, 31)
         Me.T_CurrAccount.TabIndex = 54
         '
+        'AnalysisToolStripMenuItem
+        '
+        Me.AnalysisToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckNumberOfRiseInToolStripMenuItem})
+        Me.AnalysisToolStripMenuItem.Name = "AnalysisToolStripMenuItem"
+        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(120, 38)
+        Me.AnalysisToolStripMenuItem.Text = "Analysis"
+        '
+        'CheckNumberOfRiseInToolStripMenuItem
+        '
+        Me.CheckNumberOfRiseInToolStripMenuItem.Name = "CheckNumberOfRiseInToolStripMenuItem"
+        Me.CheckNumberOfRiseInToolStripMenuItem.Size = New System.Drawing.Size(654, 44)
+        Me.CheckNumberOfRiseInToolStripMenuItem.Text = "Check number of rising share prises in sequenz"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -741,4 +756,6 @@ Partial Class Form1
     Friend WithEvents T_CurrWKN As TextBox
     Friend WithEvents T_CurrCompName As TextBox
     Friend WithEvents T_CurrAccount As TextBox
+    Friend WithEvents AnalysisToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckNumberOfRiseInToolStripMenuItem As ToolStripMenuItem
 End Class

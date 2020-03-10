@@ -37,8 +37,11 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         ' Init DataGridView1 
+        DataGridView1.ColumnHeadersVisible = True
+        DataGridView1.RowHeadersVisible = False
 
         ' Spalten hinzufügen
+        DataGridView1.Columns.Add(spPrimaryKey, "Key")
         DataGridView1.Columns.Add(spCompany, "Company")
         DataGridView1.Columns.Add(spWKN, "WKN")
         DataGridView1.Columns.Add(spIsin, "ISIN")
@@ -47,9 +50,7 @@ Public Class Form1
         DataGridView1.Columns.Add(spAccount, "Account")
 
         ' Breite einstellen
-        '''For i = 0 To (DataGridView1.Columns.Count) - 1
-        '''    DataGridView1.Columns(i).Width = 75
-        '''Next
+        DataGridView1.Columns(spPrimaryKey).Width = 30
         DataGridView1.Columns(spCompany).Width = 75
         DataGridView1.Columns(spWKN).Width = 75
         DataGridView1.Columns(spIsin).Width = 110
@@ -67,6 +68,9 @@ Public Class Form1
 
         ' "\ISIN-WKN.txt" -> CompanyListArray()
         CompanyFileToArray(Application.StartupPath & "\ISIN-WKN.txt", CompanyListArray)
+        ' Init: CompPartialLstArr = CompanyListArray
+        CompanyFileToArray(Application.StartupPath & "\ISIN-WKN.txt", CompPartialLstArr)
+
 
         ArrayToFlexFrid(CompanyListArray)
 
@@ -111,12 +115,12 @@ Public Class Form1
         FileOpen(CompanyListFile, CompanyListFilename, OpenMode.Input)
         ' Close before reopening in another mode.
 
+        idx = 0
         While Not EOF(CompanyListFile)
             Zeile = LineInput(CompanyListFile)
             If Zeile <> "" Then
                 'MyList.Items.Add(Zeile)
                 SepariereString(Zeile, CompanyListEntities, vbTab)
-                idx = UBound(CompanyListArray)
                 CompanyListArray(idx).Name = CompanyListEntities(0)
                 CompanyListArray(idx).WKN = CompanyListEntities(1)
                 CompanyListArray(idx).ISIN = CompanyListEntities(2)
@@ -131,11 +135,12 @@ Public Class Form1
                 '''                    List2.AddItem Zeile
                 '''                End If
                 '''            Next i
-
+                idx = idx + 1
                 ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) + 1)
             End If
 
         End While
+        idx = idx - 1
         ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) - 1)
         FileClose(CompanyListFile)
 
@@ -160,7 +165,7 @@ ReadCompanyListFileErr:
 
 
             ' Zeilen hinzufügen
-            DataGridView1.Rows.Add(CompanyListArray(idx).Name, CompanyListArray(idx).WKN, CompanyListArray(idx).ISIN, CompanyListArray(idx).Index, "--")
+            DataGridView1.Rows.Add(idx, CompanyListArray(idx).Name, CompanyListArray(idx).WKN, CompanyListArray(idx).ISIN, CompanyListArray(idx).Index, "--")
             DataGridView1.Rows(idx).Height = 15
 
 
@@ -389,13 +394,13 @@ ReadCompanyListFileErr:
     End Sub
 
     Private Sub C_LastYear_Click(sender As Object, e As EventArgs) Handles C_LastYear.Click
-        ScaleChart(UBound(ChartArray), 261)
+        ScaleChart(UBound(ChartArray) + 10, 271)
     End Sub
     Private Sub C_LastMonth_Click(sender As Object, e As EventArgs) Handles C_LastMonth.Click
-        ScaleChart(UBound(ChartArray), 22)
+        ScaleChart(UBound(ChartArray) + 1, 22)
     End Sub
     Private Sub C_LaserWeek_Click(sender As Object, e As EventArgs) Handles C_LaserWeek.Click
-        ScaleChart(UBound(ChartArray), 5)
+        ScaleChart(UBound(ChartArray) + 1, 5)
     End Sub
 
     Private Sub C_HomeView_Click(sender As Object, e As EventArgs) Handles C_HomeView.Click
@@ -455,7 +460,7 @@ ReadCompanyListFileErr:
     Private Sub C_BuySell_Click(sender As Object, e As EventArgs) Handles C_BuySell.Click
         Dim Fullpath As String
 
-        Dim column As Integer
+        Dim column As Object
         Dim row As Integer
         Dim CompanyName As String
         Dim WKN As String
@@ -467,9 +472,19 @@ ReadCompanyListFileErr:
 
 
         For idx = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
-            row = idx   ' Point to row       
+
+
+
+            'row = idx   ' Point to row    --> this doesn't work if DataGridView is sorted !!   
             column = spWKN   ' Point to WKN columnn 1        
             WKN = CompPartialLstArr(idx).WKN
+
+            'Find row with matching WKN
+            For row = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
+                If WKN = DataGridView1.Item(column, row).Value Then
+                    Exit For
+                End If
+            Next
 
             If WKN <> DataGridView1.Item(column, row).Value Then
                 MsgBox("Datagrid and CompPartialArr inconsistent")
@@ -849,6 +864,32 @@ OpenError:
         '''End If
     End Sub
 
+    Private Sub CheckNumberOfRiseInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckNumberOfRiseInToolStripMenuItem.Click
+        Dim FlyingListBox As FrmFlyingListBox
+        Dim ListArray() As String
+
+        Dim Zeile As String
+        Dim idx As Long
+
+        ReDim ListArray(0 To 0)
+
+        For idx = 0 To 10
+            Zeile = idx
+
+            ListArray(idx) = Zeile
+
+            ReDim Preserve ListArray(0 To UBound(ListArray) + 1)
+        Next idx
+
+        ReDim Preserve ListArray(0 To UBound(ListArray) - 1)
+
+
+        FlyingListBox = New FrmFlyingListBox
+        FlyingListBox.Title = "Test Flying ListBox"
+        FlyingListBox.Filename = ""
+        FlyingListBox.ListArray = ListArray
+        FlyingListBox.Show()
+    End Sub
 End Class
 
 

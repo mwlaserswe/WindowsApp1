@@ -56,6 +56,8 @@ Module GlobalVariables
     End Structure
 
     '=== Alias for DataGridView
+
+    Public Const spPrimaryKey = "spPrimaryKey"
     Public Const spCompany = "spCompany"
     Public Const spWKN = "spWKN"
     Public Const spIsin = "spIsin"

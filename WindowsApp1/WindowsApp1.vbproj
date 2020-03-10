@@ -80,6 +80,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmFlyingListBox.Designer.vb">
+      <DependentUpon>FrmFlyingListBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFlyingListBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmChartList.Designer.vb">
       <DependentUpon>FrmChartList.vb</DependentUpon>
     </Compile>
@@ -179,9 +185,14 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmChartList.resx">
       <DependentUpon>FrmChartList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFlyingListBox.resx">
+      <DependentUpon>FrmFlyingListBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTestReadWriteXML.resx">
       <DependentUpon>FrmTestReadWriteXML.vb</DependentUpon>
