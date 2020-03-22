@@ -88,7 +88,7 @@ AccessError:
                     & vbTab & FixLen(AccountArray(idx).Name, 8) _
                     & vbTab & FixLen(AccountArray(idx).WKN, 6) _
                     & vbTab & FixLen(Format(AccountArray(idx).Value, "0.00"), 7) _
-                    & vbTab & FixLen(Format(AccountArray(idx).SD, "0.00"), 7) _
+                    & vbTab & FixLen(Format(AccountArray(idx).SMA, "0.00"), 7) _
                     & vbTab & FixLen(Format(AccountArray(idx).Distance, "0.000000"), 12) _
                     & vbTab & FixLen(Format(AccountArray(idx).Account, "0.00"), 7) _
                     & vbTab & FixLen(AccountArray(idx).Trend, 8)
@@ -104,36 +104,6 @@ OpenError:
         FileClose(AccountFilename)
     End Sub
 
-
-    Public Sub WriteChartFile(ChartFilename As String)
-        Dim ChartFile As Integer
-        Dim idx As Long
-        Dim Zeile As String
-
-        On Error GoTo OpenError
-
-        ChartFile = FreeFile()
-        FileOpen(ChartFile, ChartFilename, OpenMode.Output)
-
-        For idx = 0 To UBound(ChartArray)
-            Zeile = idx _
-                & vbTab & ChartArray(idx).myDate _
-                & vbTab & ChartArray(idx).Value _
-                & vbTab & ChartArray(idx).SD _
-                & vbTab & ChartArray(idx).Distance _
-                & vbTab & ChartArray(idx).Account _
-                & vbTab & ChartArray(idx).Trend
-            PrintLine(ChartFile, Zeile)
-        Next idx
-
-        FileClose(ChartFile)
-
-        Exit Sub
-
-OpenError:
-        MsgBox(ChartFilename, , "Write error")
-        FileClose(ChartFile)
-    End Sub
 
 
     ' FormatDate
@@ -163,7 +133,7 @@ OpenError:
         TodayFunction = FormatDate(SepArray(0))
     End Function
 
-    Public Function DownloadHistoricFromArivaFct(WKN As String, ByRef HistoricFomAriva As String, InfoText As TextBox) As Double
+    Public Function DownloadHistoricFromArivaFct(WKN As String, ByRef HistoricFomAriva As String, ByRef InfoText As TextBox) As Double
         Dim URLstring As String
         Dim HtmlCode As String
 
@@ -371,7 +341,7 @@ ReadHistoryFileError:
         ReDim FinalArray(0 To 0)
 
         '''ListBox2.Items.Clear()
-        HistoryFileName = Application.StartupPath & "\HistoryNew\" & WKN & ".txt"
+        HistoryFileName = Application.StartupPath & "\02_HistoryNew\" & WKN & ".txt"
         '''ListBox2.Items.Add("**** " & WKN & " ****")
         Today = TodayFunction()
 
@@ -487,7 +457,7 @@ ReadHistoryFileError:
         FileClose(HistoryFile)
 
 
-        WriteHistoryFile(Application.StartupPath & "\HistoryService\" & WKN & ".txt", FinalArray)
+        WriteHistoryFile(Application.StartupPath & "\03_HistoryService\" & WKN & ".txt", FinalArray)
 
         Exit Sub
 ReadHistoryFileErr:
@@ -597,4 +567,180 @@ OpenError:
 
     End Function
 
+
+    Public Function ArrayValid(ByRef Array) As Boolean
+        Dim l As Integer
+        On Error GoTo ArrayNotValid
+        l = Array.length
+        ArrayValid = True
+        Exit Function
+ArrayNotValid:
+        ArrayValid = False
+    End Function
+
+
+    Public Sub CompanyFileToArray(CompanyListFilename As String, ByRef CompanyListArray() As ShareItem)
+        Dim CompanyListFile As Integer
+        Dim Zeile As String
+        Dim CompanyListEntities() As String
+        Dim idx As Long
+
+        ReDim CompanyListArray(0 To 0)
+        '    MyList.Clear
+        '    List2.Clear
+
+        On Error GoTo ReadCompanyListFileErr
+
+        'CompanyListFilename = App.Path & "\ISIN-WKN.txt"
+        CompanyListFile = FreeFile()
+        'Open CompanyListFilename For Input As CompanyListFile
+        FileOpen(CompanyListFile, CompanyListFilename, OpenMode.Input)
+        ' Close before reopening in another mode.
+
+        idx = 0
+        While Not EOF(CompanyListFile)
+            Zeile = LineInput(CompanyListFile)
+            If Zeile <> "" Then
+                'MyList.Items.Add(Zeile)
+                SepariereString(Zeile, CompanyListEntities, vbTab)
+                CompanyListArray(idx).Name = CompanyListEntities(0)
+                CompanyListArray(idx).WKN = CompanyListEntities(1)
+                CompanyListArray(idx).ISIN = CompanyListEntities(2)
+                If UBound(CompanyListEntities) >= 3 Then
+                    CompanyListArray(idx).Index = CompanyListEntities(3)
+                End If
+
+                '''            'Search doubbles
+                '''            Dim i As Long
+                '''            For i = 0 To UBound(CompanyListArray) - 1
+                '''                If CompanyListArray(i).WKN = CompanyListArray(idx).WKN Then
+                '''                    List2.AddItem Zeile
+                '''                End If
+                '''            Next i
+                idx = idx + 1
+                ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) + 1)
+            End If
+
+        End While
+        idx = idx - 1
+        ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) - 1)
+        FileClose(CompanyListFile)
+
+        Exit Sub
+ReadCompanyListFileErr:
+        MsgBox(CompanyListFilename & vbCr & Err.Description, , "xxxxx")
+
+    End Sub
+
+    Public Sub CompleteCompWknIsin(InFileName As String, OutFileName As String)
+        Dim ChartFile As Integer
+        Dim Zeile As String
+        Dim ChartEntities() As String
+        Dim idx As Long
+        Dim Item As String
+        Dim isWKN As Boolean
+        Dim isISIN As Boolean
+        Dim isCompany As Boolean
+        Dim LettersOnly As Boolean
+        Dim CompanyArray() As ShareItem
+        Dim COPM_WKN_ISIN As String
+
+        ReDim CompanyArray(0 To 0)
+
+        'On Error GoTo ReadHistoryFileErr
+
+        ChartFile = FreeFile()
+        FileOpen(ChartFile, InFileName, OpenMode.Input)
+
+        idx = 0
+
+        While Not EOF(ChartFile)
+            Zeile = LineInput(ChartFile)
+            If Zeile <> "" Then
+
+
+                SepariereString(Zeile, ChartEntities, vbTab)
+
+                For i = 0 To ChartEntities.Length - 1
+
+                    isWKN = True
+                    isISIN = True
+                    LettersOnly = True
+
+                    Item = ChartEntities(i)
+                    For Each c As Char In Item 'Input ist ein String
+                        If Not (Char.IsUpper(c) Or Char.IsDigit(c)) Then
+                            isWKN = False
+                            isISIN = False
+                        End If
+                        If Char.IsDigit(c) Then
+                            LettersOnly = False
+                        End If
+                    Next
+
+                    If Item.Length <> 6 Or LettersOnly Then
+                        isWKN = False
+                    End If
+
+                    If Item.Length <> 12 Then
+                        isISIN = False
+                    End If
+
+                    If isWKN Then
+                        CompanyArray(idx).WKN = ChartEntities(i)
+                    ElseIf isISIN Then
+                        CompanyArray(idx).ISIN = ChartEntities(i)
+                    Else
+                        CompanyArray(idx).Name = ChartEntities(i)
+                    End If
+
+
+                    'idx = UBound(ChartArray)
+                    'ChartArray(idx).myDate = ChartEntities(0)
+                    'ChartArray(idx).Value = Zahl(ChartEntities(4))
+                    'ChartArray(idx).WKN = IO.Path.GetFileNameWithoutExtension(FileName)
+                    'ChartArray(idx).Name = CompanyName
+                Next
+
+                If isWKN Then
+                    CompanyArray(idx).ISIN = ReadCompleteShareInfo(CompanyArray(idx).WKN).ISIN
+                ElseIf isISIN Then
+                    CompanyArray(idx).WKN = ReadCompleteShareInfo(CompanyArray(idx).ISIN).WKN
+                Else
+                    ReadCompleteShareInfo(CompanyArray(idx).Name)
+                    CompanyArray(idx).ISIN = ReadCompleteShareInfo(CompanyArray(idx).WKN).ISIN
+                    CompanyArray(idx).WKN = ReadCompleteShareInfo(CompanyArray(idx).ISIN).WKN
+                End If
+
+                idx = idx + 1
+                ReDim Preserve CompanyArray(0 To UBound(CompanyArray) + 1)
+            End If
+        End While
+
+        ReDim Preserve CompanyArray(0 To UBound(CompanyArray) - 1)
+
+        FileClose(ChartFile)
+
+
+        'On Error GoTo OpenError
+
+        ChartFile = FreeFile()
+        FileOpen(ChartFile, OutFileName, OpenMode.Output)
+
+        For idx = 0 To UBound(CompanyArray)
+            Zeile = CompanyArray(idx).Name _
+                    & vbTab & CompanyArray(idx).WKN _
+                    & vbTab & CompanyArray(idx).ISIN
+            PrintLine(ChartFile, Zeile)
+        Next idx
+
+        FileClose(ChartFile)
+
+        Exit Sub
+ReadHistoryFileErr:
+        MsgBox(InFileName & vbCr & Err.Description, , "xxxxx")
+        Exit Sub
+OpenError:
+        MsgBox(InFileName & vbCr & Err.Description, , "xxxxx")
+    End Sub
 End Module

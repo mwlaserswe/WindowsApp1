@@ -26,6 +26,7 @@ Partial Class FrmFlyingListBox
         Me.B_Save = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.L_FileName = New System.Windows.Forms.Label()
+        Me.B_OpenInNotepad = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -39,7 +40,7 @@ Partial Class FrmFlyingListBox
         '
         'B_Save
         '
-        Me.B_Save.Location = New System.Drawing.Point(12, 23)
+        Me.B_Save.Location = New System.Drawing.Point(175, 23)
         Me.B_Save.Name = "B_Save"
         Me.B_Save.Size = New System.Drawing.Size(147, 58)
         Me.B_Save.TabIndex = 1
@@ -49,17 +50,27 @@ Partial Class FrmFlyingListBox
         'L_FileName
         '
         Me.L_FileName.AutoSize = True
-        Me.L_FileName.Location = New System.Drawing.Point(192, 40)
+        Me.L_FileName.Location = New System.Drawing.Point(344, 40)
         Me.L_FileName.Name = "L_FileName"
         Me.L_FileName.Size = New System.Drawing.Size(26, 25)
         Me.L_FileName.TabIndex = 2
         Me.L_FileName.Text = "--"
+        '
+        'B_OpenInNotepad
+        '
+        Me.B_OpenInNotepad.Location = New System.Drawing.Point(12, 23)
+        Me.B_OpenInNotepad.Name = "B_OpenInNotepad"
+        Me.B_OpenInNotepad.Size = New System.Drawing.Size(147, 58)
+        Me.B_OpenInNotepad.TabIndex = 3
+        Me.B_OpenInNotepad.Text = "Notepad++"
+        Me.B_OpenInNotepad.UseVisualStyleBackColor = True
         '
         'FrmFlyingListBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(814, 456)
+        Me.Controls.Add(Me.B_OpenInNotepad)
         Me.Controls.Add(Me.L_FileName)
         Me.Controls.Add(Me.B_Save)
         Me.Controls.Add(Me.ListBox1)
@@ -74,4 +85,5 @@ Partial Class FrmFlyingListBox
     Friend WithEvents B_Save As Button
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents L_FileName As Label
+    Friend WithEvents B_OpenInNotepad As Button
 End Class

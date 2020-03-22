@@ -2,7 +2,7 @@
 Public Class FrmInfoFiles
     Private Sub B_GenerateInfoFiles_Click(sender As Object, e As EventArgs) Handles B_GenerateInfoFiles.Click
         Dim Content As ShareInfo
-        Dim DemoBestSD As BestSD
+        Dim DemoBestSD As BestSMA
         Dim Fullpath As String
 
         If MsgBox("All Info-Files will be overwritten!", MsgBoxStyle.OkCancel) = vbCancel Then
@@ -26,13 +26,9 @@ Public Class FrmInfoFiles
             Fullpath = Application.StartupPath & "\History\" & Company.WKN & ".txt"
             ReadHistoryFileToChartArray(Fullpath, Company.Name)
 
-            DemoBestSD = FindBestSD(500, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
+            DemoBestSD = Chart.FindBestSMA(500, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
             Content._AbsMax = DemoBestSD.AbsMax
             Content._AbsMaxPos = DemoBestSD.AbsMaxPos
-            Content._Minimum = DemoBestSD.Minimum
-            Content._MinPos = DemoBestSD.MinPos
-            Content._RightMax = DemoBestSD.RightMax
-            Content._RightMaxPos = DemoBestSD.RightMaxPos
 
             CreateShareInfo(Application.StartupPath & "\HistoryInfo\" & Company.WKN & ".xml", Content)
 

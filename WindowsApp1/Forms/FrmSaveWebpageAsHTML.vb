@@ -30,7 +30,7 @@ Public Class FrmSaveWebpageAsHTML
 
         WKN = T_WKN.Text
 
-        'Diectory: \History_download_from_ARIVA
+        'Diectory: \01_History_download_from_ARIVA
 
 
         Application.DoEvents()
@@ -40,7 +40,7 @@ Public Class FrmSaveWebpageAsHTML
             MsgBox("Problem beim Download der Kurse von: " & WKN)
             Exit Sub
         End If
-        SaveQuelltext(HistoricFomAriva, Application.StartupPath & "\History_download_from_ARIVA\" & WKN & ".txt")
+        SaveQuelltext(HistoricFomAriva, Application.StartupPath & "\01_History_download_from_ARIVA\" & WKN & ".txt")
     End Sub
 
 

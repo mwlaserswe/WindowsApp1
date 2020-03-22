@@ -37,15 +37,13 @@ Public Class FrmChartList
     End Sub
 
 
-
-
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         Dim k As Long
         Dim CompanyEntry As String
 
         ListPartial.Items.Clear()
         For k = 0 To ListCompelete.Items.Count - 1
-            CompanyEntry = ListCompelete.SelectedItem(k)
+            CompanyEntry = ListCompelete.Items.Item(k)
 
             If InStr(1, CompanyEntry, TextBox1.Text, vbTextCompare) <> 0 Then
                 ListPartial.Items.Add(CompanyEntry)

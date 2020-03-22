@@ -5,7 +5,7 @@ Module GlobalVariables
         Dim Name As String
         Dim WKN As String
         Dim Value As Double
-        Dim SD As Double
+        Dim SMA As Double
         Dim Distance As Double      ' Distance to moving average
         Dim Account As Double
         Dim Trend As String
@@ -15,6 +15,7 @@ Module GlobalVariables
     Public Structure ShareItem
         Dim myDate As String
         Dim Time As String
+        'Dim Company As String
         Dim Name As String
         Dim WKN As String
         Dim ISIN As String
@@ -44,15 +45,11 @@ Module GlobalVariables
         Dim Y As Double
     End Structure
 
-    Public Structure BestSD
+    Public Structure BestSMA
         Dim AbsMax As Double
         Dim AbsMaxPos As Integer
-        Dim Minimum As Double
-        Dim MinPos As Integer
-        Dim RightMax As Double
-        Dim RightMaxPos As Integer
 
-        Dim SdArry() As Double
+        Dim SMAArry() As Double
     End Structure
 
     '=== Alias for DataGridView
@@ -95,7 +92,7 @@ Module GlobalVariables
     Public MouseXY As MousePos
 
     '=== Analyse ===
-    Public SdLength As Long
+    Public SMALength As Long
     'Public SharePrice As Double
     'Public Rise As Boolean
     Public StartSharePrice As Double

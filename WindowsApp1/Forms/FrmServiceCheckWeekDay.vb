@@ -10,10 +10,10 @@ Public Class FrmServiceCheckWeekDay
 
         For idx = 0 To UBound(CompPartialLstArr)
             ListBox2.Items.Add("**** " & CompPartialLstArr(idx).WKN & " Check date order ****")
-            FileName = Application.StartupPath & "\History\" & CompPartialLstArr(idx).WKN & ".txt"
+            FileName = Application.StartupPath & "\02_History\" & CompPartialLstArr(idx).WKN & ".txt"
             ReadHistoryFile(FileName, HistoryArray)
             InvertDateOrder(HistoryArray)
-            WriteHistoryFile(Application.StartupPath & "\HistoryNew\" & CompPartialLstArr(idx).WKN & ".txt", HistoryArray)
+            WriteHistoryFile(Application.StartupPath & "\02_HistoryNew\" & CompPartialLstArr(idx).WKN & ".txt", HistoryArray)
             ServiceHistory(CompPartialLstArr(idx).WKN)
         Next idx
     End Sub
@@ -35,7 +35,7 @@ Public Class FrmServiceCheckWeekDay
     '''        ReDim FinalArray(0 To 0)
 
     '''        ListBox2.Items.Clear()
-    '''        HistoryFileName = Application.StartupPath & "\HistoryNew\" & WKN & ".txt"
+    '''        HistoryFileName = Application.StartupPath & "\02_HistoryNew\" & WKN & ".txt"
     '''        ListBox2.Items.Add("**** " & WKN & " ****")
     '''        Today = TodayFunction()
 
@@ -151,7 +151,7 @@ Public Class FrmServiceCheckWeekDay
     '''        FileClose(HistoryFile)
 
 
-    '''        WriteHistoryFile(Application.StartupPath & "\HistoryService\" & WKN & ".txt", FinalArray)
+    '''        WriteHistoryFile(Application.StartupPath & "\03_HistoryService\" & WKN & ".txt", FinalArray)
 
     '''        Exit Sub
     '''ReadHistoryFileErr:

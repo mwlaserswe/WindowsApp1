@@ -80,6 +80,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmFindBestSMA.Designer.vb">
+      <DependentUpon>FrmFindBestSMA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFindBestSMA.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmFlyingListBox.Designer.vb">
       <DependentUpon>FrmFlyingListBox.vb</DependentUpon>
     </Compile>
@@ -152,6 +158,7 @@
     <Compile Include="Modules\Comdirect_de.vb" />
     <Compile Include="Modules\FinanzNachrichten_de.vb" />
     <Compile Include="Modules\BoerseBerlin_de.vb" />
+    <Compile Include="Modules\CompleteShare.vb" />
     <Compile Include="Modules\WallStreet_de.vb" />
     <Compile Include="Modules\XmlUtilities.vb" />
     <Compile Include="Modules\Settings.vb" />
@@ -183,6 +190,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FrmFindBestSMA.resx">
+      <DependentUpon>FrmFindBestSMA.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -193,6 +203,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFlyingListBox.resx">
       <DependentUpon>FrmFlyingListBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTestReadWriteXML.resx">
       <DependentUpon>FrmTestReadWriteXML.vb</DependentUpon>

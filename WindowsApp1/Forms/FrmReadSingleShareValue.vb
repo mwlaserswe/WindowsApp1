@@ -150,18 +150,4 @@ Public Class FrmReadSingleShareValue
         Return True
     End Function
 
-    Private Sub ReadSingleShareValue_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim a
-        a = 1
-        TextBox2.Text = My.Settings.Textbox_Settings
-    End Sub
-
-    Private Sub ReadSingleShareValue_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-
-        My.Settings.Textbox_Settings = TextBox2.Text
-
-        My.Settings.Save()
-    End Sub
-
-
 End Class

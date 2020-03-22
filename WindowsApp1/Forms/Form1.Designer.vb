@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -30,6 +30,12 @@ Partial Class Form1
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GgggToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckNumberOfRiseInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HowManyPercentInSequenceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RisePriodeStatisticToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WriteChartFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReadFromWEBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReadHistoricFromARIVAdeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,8 +50,8 @@ Partial Class Form1
         Me.InfoFilesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.T_HistoryFileName = New System.Windows.Forms.TextBox()
         Me.RefreshDataGrid = New System.Windows.Forms.Button()
-        Me.HS_SD = New System.Windows.Forms.HScrollBar()
-        Me.T_SD = New System.Windows.Forms.TextBox()
+        Me.HS_SMA = New System.Windows.Forms.HScrollBar()
+        Me.T_SMA = New System.Windows.Forms.TextBox()
         Me.T_InvestmentStart = New System.Windows.Forms.TextBox()
         Me.T_StartSharePrice = New System.Windows.Forms.TextBox()
         Me.T_MouseXY = New System.Windows.Forms.TextBox()
@@ -70,25 +76,22 @@ Partial Class Form1
         Me.C_LaserWeek = New System.Windows.Forms.Button()
         Me.C_LastMonth = New System.Windows.Forms.Button()
         Me.C_LastYear = New System.Windows.Forms.Button()
-        Me.C_WriteChartFile = New System.Windows.Forms.Button()
         Me.C_BuySell = New System.Windows.Forms.Button()
         Me.Analyse1 = New System.Windows.Forms.RadioButton()
         Me.Analyse2 = New System.Windows.Forms.RadioButton()
         Me.Analyse3 = New System.Windows.Forms.RadioButton()
         Me.Analyse4 = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.C_Investhopping = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Ch_FitY = New System.Windows.Forms.CheckBox()
-        Me.B_FindBestSDSingle = New System.Windows.Forms.Button()
-        Me.B_SortDataGrid = New System.Windows.Forms.Button()
-        Me.B_FindBestSDMultiple = New System.Windows.Forms.Button()
         Me.T_CurrISIN = New System.Windows.Forms.TextBox()
         Me.T_CurrWKN = New System.Windows.Forms.TextBox()
         Me.T_CurrCompName = New System.Windows.Forms.TextBox()
         Me.T_CurrAccount = New System.Windows.Forms.TextBox()
-        Me.AnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckNumberOfRiseInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Analyse5 = New System.Windows.Forms.RadioButton()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -97,7 +100,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1700, 67)
+        Me.Label1.Location = New System.Drawing.Point(1682, 671)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 25)
         Me.Label1.TabIndex = 1
@@ -107,9 +110,9 @@ Partial Class Form1
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 25
-        Me.ListBox1.Location = New System.Drawing.Point(1836, 53)
+        Me.ListBox1.Location = New System.Drawing.Point(2099, 53)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(788, 804)
+        Me.ListBox1.Size = New System.Drawing.Size(525, 804)
         Me.ListBox1.TabIndex = 2
         '
         'PicChart
@@ -138,33 +141,70 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.AnalysisToolStripMenuItem, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(2655, 42)
+        Me.MenuStrip1.Size = New System.Drawing.Size(2655, 40)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 38)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 36)
         Me.MenuToolStripMenuItem.Text = "Display Chart"
         '
         'GgggToolStripMenuItem
         '
         Me.GgggToolStripMenuItem.Name = "GgggToolStripMenuItem"
-        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 38)
+        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 36)
         Me.GgggToolStripMenuItem.Text = "Chart List"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 38)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 36)
         Me.ToolStripMenuItem1.Text = "ReadTodaysSharePrice"
+        '
+        'AnalysisToolStripMenuItem
+        '
+        Me.AnalysisToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckNumberOfRiseInToolStripMenuItem, Me.HowManyPercentInSequenceToolStripMenuItem, Me.RisePriodeStatisticToolStripMenuItem, Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem, Me.WriteChartFileToolStripMenuItem})
+        Me.AnalysisToolStripMenuItem.Name = "AnalysisToolStripMenuItem"
+        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(120, 36)
+        Me.AnalysisToolStripMenuItem.Text = "Analysis"
+        '
+        'CheckNumberOfRiseInToolStripMenuItem
+        '
+        Me.CheckNumberOfRiseInToolStripMenuItem.Name = "CheckNumberOfRiseInToolStripMenuItem"
+        Me.CheckNumberOfRiseInToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.CheckNumberOfRiseInToolStripMenuItem.Text = "How many days of rising share prises in sequence?"
+        '
+        'HowManyPercentInSequenceToolStripMenuItem
+        '
+        Me.HowManyPercentInSequenceToolStripMenuItem.Name = "HowManyPercentInSequenceToolStripMenuItem"
+        Me.HowManyPercentInSequenceToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.HowManyPercentInSequenceToolStripMenuItem.Text = "How many percent in sequence?"
+        '
+        'RisePriodeStatisticToolStripMenuItem
+        '
+        Me.RisePriodeStatisticToolStripMenuItem.Name = "RisePriodeStatisticToolStripMenuItem"
+        Me.RisePriodeStatisticToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.RisePriodeStatisticToolStripMenuItem.Text = "Rise priode statistic"
+        '
+        'FindBestSMAInAllListedShares100Times1YearToolStripMenuItem
+        '
+        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Name = "FindBestSMAInAllListedShares100Times1YearToolStripMenuItem"
+        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Text = "Find best SMA in all listed shares"
+        '
+        'WriteChartFileToolStripMenuItem
+        '
+        Me.WriteChartFileToolStripMenuItem.Name = "WriteChartFileToolStripMenuItem"
+        Me.WriteChartFileToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.WriteChartFileToolStripMenuItem.Text = "Write chart file"
         '
         'ReadFromWEBToolStripMenuItem
         '
         Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
         Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
-        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 38)
+        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 36)
         Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
         '
         'ReadHistoricFromARIVAdeToolStripMenuItem
@@ -177,7 +217,7 @@ Partial Class Form1
         '
         Me.WebToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanWebForWKNToolStripMenuItem, Me.SaveWebPageAsHTMLToolStripMenuItem, Me.ReadSingleShareValueToolStripMenuItem, Me.ReadXMLToolStripMenuItem, Me.GridViewTestToolStripMenuItem, Me.TransformToolStripMenuItem})
         Me.WebToolStripMenuItem.Name = "WebToolStripMenuItem"
-        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 38)
+        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 36)
         Me.WebToolStripMenuItem.Text = "Web / Test"
         '
         'ScanWebForWKNToolStripMenuItem
@@ -220,7 +260,7 @@ Partial Class Form1
         '
         Me.ServiceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckWeekdayToolStripMenuItem, Me.InfoFilesToolStripMenuItem})
         Me.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem"
-        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 38)
+        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
         Me.ServiceToolStripMenuItem.Text = "Service"
         '
         'CheckWeekdayToolStripMenuItem
@@ -251,30 +291,29 @@ Partial Class Form1
         Me.RefreshDataGrid.Text = "Refresh"
         Me.RefreshDataGrid.UseVisualStyleBackColor = True
         '
-        'HS_SD
+        'HS_SMA
         '
-        Me.HS_SD.Location = New System.Drawing.Point(32, 821)
-        Me.HS_SD.Maximum = 300
-        Me.HS_SD.Minimum = 1
-        Me.HS_SD.Name = "HS_SD"
-        Me.HS_SD.Size = New System.Drawing.Size(434, 34)
-        Me.HS_SD.TabIndex = 12
-        Me.HS_SD.Value = 1
+        Me.HS_SMA.Location = New System.Drawing.Point(32, 821)
+        Me.HS_SMA.Maximum = 200
+        Me.HS_SMA.Minimum = 1
+        Me.HS_SMA.Name = "HS_SMA"
+        Me.HS_SMA.Size = New System.Drawing.Size(434, 34)
+        Me.HS_SMA.TabIndex = 12
+        Me.HS_SMA.Value = 1
         '
-        'T_SD
+        'T_SMA
         '
-        Me.T_SD.Location = New System.Drawing.Point(530, 821)
-        Me.T_SD.Name = "T_SD"
-        Me.T_SD.Size = New System.Drawing.Size(100, 31)
-        Me.T_SD.TabIndex = 13
+        Me.T_SMA.Location = New System.Drawing.Point(545, 818)
+        Me.T_SMA.Name = "T_SMA"
+        Me.T_SMA.Size = New System.Drawing.Size(68, 31)
+        Me.T_SMA.TabIndex = 13
         '
         'T_InvestmentStart
         '
-        Me.T_InvestmentStart.Location = New System.Drawing.Point(863, 821)
+        Me.T_InvestmentStart.Location = New System.Drawing.Point(888, 818)
         Me.T_InvestmentStart.Name = "T_InvestmentStart"
         Me.T_InvestmentStart.Size = New System.Drawing.Size(100, 31)
         Me.T_InvestmentStart.TabIndex = 14
-        Me.T_InvestmentStart.Text = "5000"
         '
         'T_StartSharePrice
         '
@@ -300,14 +339,14 @@ Partial Class Form1
         '
         'T_SD1
         '
-        Me.T_SD1.Location = New System.Drawing.Point(796, 760)
+        Me.T_SD1.Location = New System.Drawing.Point(813, 757)
         Me.T_SD1.Name = "T_SD1"
         Me.T_SD1.Size = New System.Drawing.Size(100, 31)
         Me.T_SD1.TabIndex = 18
         '
         'T_Account
         '
-        Me.T_Account.Location = New System.Drawing.Point(619, 760)
+        Me.T_Account.Location = New System.Drawing.Point(619, 757)
         Me.T_Account.Name = "T_Account"
         Me.T_Account.Size = New System.Drawing.Size(100, 31)
         Me.T_Account.TabIndex = 19
@@ -338,7 +377,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(680, 824)
+        Me.Label3.Location = New System.Drawing.Point(714, 821)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(157, 25)
         Me.Label3.TabIndex = 23
@@ -349,9 +388,9 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(481, 824)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 25)
+        Me.Label4.Size = New System.Drawing.Size(58, 25)
         Me.Label4.TabIndex = 24
-        Me.Label4.Text = "GD"
+        Me.Label4.Text = "SMA"
         '
         'Label5
         '
@@ -367,9 +406,9 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(743, 763)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(47, 25)
+        Me.Label6.Size = New System.Drawing.Size(64, 25)
         Me.Label6.TabIndex = 26
-        Me.Label6.Text = "SD:"
+        Me.Label6.Text = "SMA:"
         '
         'Label7
         '
@@ -398,7 +437,7 @@ Partial Class Form1
         '
         'T_X_Sc_Off
         '
-        Me.T_X_Sc_Off.Location = New System.Drawing.Point(1030, 334)
+        Me.T_X_Sc_Off.Location = New System.Drawing.Point(1015, 334)
         Me.T_X_Sc_Off.Name = "T_X_Sc_Off"
         Me.T_X_Sc_Off.Size = New System.Drawing.Size(501, 31)
         Me.T_X_Sc_Off.TabIndex = 30
@@ -426,48 +465,39 @@ Partial Class Form1
         '
         'C_HomeView
         '
-        Me.C_HomeView.Location = New System.Drawing.Point(1607, 292)
+        Me.C_HomeView.Location = New System.Drawing.Point(1542, 334)
         Me.C_HomeView.Name = "C_HomeView"
-        Me.C_HomeView.Size = New System.Drawing.Size(139, 36)
+        Me.C_HomeView.Size = New System.Drawing.Size(74, 49)
         Me.C_HomeView.TabIndex = 34
-        Me.C_HomeView.Text = "Home View"
+        Me.C_HomeView.Text = "Max"
         Me.C_HomeView.UseVisualStyleBackColor = True
         '
         'C_LaserWeek
         '
-        Me.C_LaserWeek.Location = New System.Drawing.Point(1607, 248)
+        Me.C_LaserWeek.Location = New System.Drawing.Point(1302, 334)
         Me.C_LaserWeek.Name = "C_LaserWeek"
-        Me.C_LaserWeek.Size = New System.Drawing.Size(139, 32)
+        Me.C_LaserWeek.Size = New System.Drawing.Size(74, 49)
         Me.C_LaserWeek.TabIndex = 35
-        Me.C_LaserWeek.Text = "Last Week"
+        Me.C_LaserWeek.Text = "1 W"
         Me.C_LaserWeek.UseVisualStyleBackColor = True
         '
         'C_LastMonth
         '
-        Me.C_LastMonth.Location = New System.Drawing.Point(1607, 203)
+        Me.C_LastMonth.Location = New System.Drawing.Point(1382, 334)
         Me.C_LastMonth.Name = "C_LastMonth"
-        Me.C_LastMonth.Size = New System.Drawing.Size(139, 39)
+        Me.C_LastMonth.Size = New System.Drawing.Size(74, 46)
         Me.C_LastMonth.TabIndex = 36
-        Me.C_LastMonth.Text = "Last Month"
+        Me.C_LastMonth.Text = "1 M"
         Me.C_LastMonth.UseVisualStyleBackColor = True
         '
         'C_LastYear
         '
-        Me.C_LastYear.Location = New System.Drawing.Point(1607, 162)
+        Me.C_LastYear.Location = New System.Drawing.Point(1462, 334)
         Me.C_LastYear.Name = "C_LastYear"
-        Me.C_LastYear.Size = New System.Drawing.Size(139, 35)
+        Me.C_LastYear.Size = New System.Drawing.Size(74, 49)
         Me.C_LastYear.TabIndex = 37
-        Me.C_LastYear.Text = "Last Year"
+        Me.C_LastYear.Text = "1 J"
         Me.C_LastYear.UseVisualStyleBackColor = True
-        '
-        'C_WriteChartFile
-        '
-        Me.C_WriteChartFile.Location = New System.Drawing.Point(1140, 189)
-        Me.C_WriteChartFile.Name = "C_WriteChartFile"
-        Me.C_WriteChartFile.Size = New System.Drawing.Size(181, 53)
-        Me.C_WriteChartFile.TabIndex = 38
-        Me.C_WriteChartFile.Text = "Write Chart File"
-        Me.C_WriteChartFile.UseVisualStyleBackColor = True
         '
         'C_BuySell
         '
@@ -522,27 +552,18 @@ Partial Class Form1
         Me.Analyse4.Text = "Analyse 4"
         Me.Analyse4.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(943, 168)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 112)
-        Me.Button1.TabIndex = 44
-        Me.Button1.Text = "Check numers of rise in sequenz"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'C_Investhopping
         '
         Me.C_Investhopping.Location = New System.Drawing.Point(1117, 117)
         Me.C_Investhopping.Name = "C_Investhopping"
-        Me.C_Investhopping.Size = New System.Drawing.Size(168, 55)
+        Me.C_Investhopping.Size = New System.Drawing.Size(204, 55)
         Me.C_Investhopping.TabIndex = 45
         Me.C_Investhopping.Text = "Invest Hopping"
         Me.C_Investhopping.UseVisualStyleBackColor = True
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(1607, 95)
+        Me.TextBox4.Location = New System.Drawing.Point(1687, 711)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 31)
         Me.TextBox4.TabIndex = 46
@@ -550,39 +571,12 @@ Partial Class Form1
         'Ch_FitY
         '
         Me.Ch_FitY.AutoSize = True
-        Me.Ch_FitY.Location = New System.Drawing.Point(1665, 580)
+        Me.Ch_FitY.Location = New System.Drawing.Point(1665, 604)
         Me.Ch_FitY.Name = "Ch_FitY"
         Me.Ch_FitY.Size = New System.Drawing.Size(89, 29)
         Me.Ch_FitY.TabIndex = 47
         Me.Ch_FitY.Text = "Fit Y"
         Me.Ch_FitY.UseVisualStyleBackColor = True
-        '
-        'B_FindBestSDSingle
-        '
-        Me.B_FindBestSDSingle.Location = New System.Drawing.Point(1102, 43)
-        Me.B_FindBestSDSingle.Name = "B_FindBestSDSingle"
-        Me.B_FindBestSDSingle.Size = New System.Drawing.Size(245, 33)
-        Me.B_FindBestSDSingle.TabIndex = 48
-        Me.B_FindBestSDSingle.Text = "Find best SB single"
-        Me.B_FindBestSDSingle.UseVisualStyleBackColor = True
-        '
-        'B_SortDataGrid
-        '
-        Me.B_SortDataGrid.Location = New System.Drawing.Point(949, 301)
-        Me.B_SortDataGrid.Name = "B_SortDataGrid"
-        Me.B_SortDataGrid.Size = New System.Drawing.Size(138, 64)
-        Me.B_SortDataGrid.TabIndex = 49
-        Me.B_SortDataGrid.Text = "Sort"
-        Me.B_SortDataGrid.UseVisualStyleBackColor = True
-        '
-        'B_FindBestSDMultiple
-        '
-        Me.B_FindBestSDMultiple.Location = New System.Drawing.Point(1102, 78)
-        Me.B_FindBestSDMultiple.Name = "B_FindBestSDMultiple"
-        Me.B_FindBestSDMultiple.Size = New System.Drawing.Size(245, 33)
-        Me.B_FindBestSDMultiple.TabIndex = 50
-        Me.B_FindBestSDMultiple.Text = "Find best SB mult."
-        Me.B_FindBestSDMultiple.UseVisualStyleBackColor = True
         '
         'T_CurrISIN
         '
@@ -590,6 +584,7 @@ Partial Class Form1
         Me.T_CurrISIN.Name = "T_CurrISIN"
         Me.T_CurrISIN.Size = New System.Drawing.Size(168, 31)
         Me.T_CurrISIN.TabIndex = 51
+        Me.T_CurrISIN.Text = "ISIN"
         '
         'T_CurrWKN
         '
@@ -597,6 +592,7 @@ Partial Class Form1
         Me.T_CurrWKN.Name = "T_CurrWKN"
         Me.T_CurrWKN.Size = New System.Drawing.Size(168, 31)
         Me.T_CurrWKN.TabIndex = 52
+        Me.T_CurrWKN.Text = "WKN"
         '
         'T_CurrCompName
         '
@@ -604,6 +600,7 @@ Partial Class Form1
         Me.T_CurrCompName.Name = "T_CurrCompName"
         Me.T_CurrCompName.Size = New System.Drawing.Size(168, 31)
         Me.T_CurrCompName.TabIndex = 53
+        Me.T_CurrCompName.Text = "Company"
         '
         'T_CurrAccount
         '
@@ -611,43 +608,65 @@ Partial Class Form1
         Me.T_CurrAccount.Name = "T_CurrAccount"
         Me.T_CurrAccount.Size = New System.Drawing.Size(168, 31)
         Me.T_CurrAccount.TabIndex = 54
+        Me.T_CurrAccount.Text = "Accont"
         '
-        'AnalysisToolStripMenuItem
+        'Label9
         '
-        Me.AnalysisToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckNumberOfRiseInToolStripMenuItem})
-        Me.AnalysisToolStripMenuItem.Name = "AnalysisToolStripMenuItem"
-        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(120, 38)
-        Me.AnalysisToolStripMenuItem.Text = "Analysis"
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(619, 821)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(58, 25)
+        Me.Label9.TabIndex = 55
+        Me.Label9.Text = "days"
         '
-        'CheckNumberOfRiseInToolStripMenuItem
+        'ComboBox1
         '
-        Me.CheckNumberOfRiseInToolStripMenuItem.Name = "CheckNumberOfRiseInToolStripMenuItem"
-        Me.CheckNumberOfRiseInToolStripMenuItem.Size = New System.Drawing.Size(654, 44)
-        Me.CheckNumberOfRiseInToolStripMenuItem.Text = "Check number of rising share prises in sequenz"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(953, 203)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(309, 33)
+        Me.ComboBox1.TabIndex = 56
+        '
+        'Analyse5
+        '
+        Me.Analyse5.AutoSize = True
+        Me.Analyse5.Location = New System.Drawing.Point(1665, 569)
+        Me.Analyse5.Name = "Analyse5"
+        Me.Analyse5.Size = New System.Drawing.Size(138, 29)
+        Me.Analyse5.TabIndex = 57
+        Me.Analyse5.TabStop = True
+        Me.Analyse5.Text = "Analyse 5"
+        Me.Analyse5.UseVisualStyleBackColor = True
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(1702, 141)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(256, 31)
+        Me.TextBox6.TabIndex = 59
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2655, 878)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Analyse5)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.T_CurrAccount)
         Me.Controls.Add(Me.T_CurrCompName)
         Me.Controls.Add(Me.T_CurrWKN)
         Me.Controls.Add(Me.T_CurrISIN)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.B_FindBestSDMultiple)
-        Me.Controls.Add(Me.B_SortDataGrid)
-        Me.Controls.Add(Me.B_FindBestSDSingle)
         Me.Controls.Add(Me.Ch_FitY)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.C_Investhopping)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Analyse4)
         Me.Controls.Add(Me.Analyse3)
         Me.Controls.Add(Me.Analyse2)
         Me.Controls.Add(Me.Analyse1)
         Me.Controls.Add(Me.C_BuySell)
-        Me.Controls.Add(Me.C_WriteChartFile)
         Me.Controls.Add(Me.C_LastYear)
         Me.Controls.Add(Me.C_LastMonth)
         Me.Controls.Add(Me.C_LaserWeek)
@@ -672,8 +691,8 @@ Partial Class Form1
         Me.Controls.Add(Me.T_MouseXY)
         Me.Controls.Add(Me.T_StartSharePrice)
         Me.Controls.Add(Me.T_InvestmentStart)
-        Me.Controls.Add(Me.T_SD)
-        Me.Controls.Add(Me.HS_SD)
+        Me.Controls.Add(Me.T_SMA)
+        Me.Controls.Add(Me.HS_SMA)
         Me.Controls.Add(Me.RefreshDataGrid)
         Me.Controls.Add(Me.T_HistoryFileName)
         Me.Controls.Add(Me.DataGridView1)
@@ -709,8 +728,8 @@ Partial Class Form1
     Friend WithEvents GridViewTestToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents T_HistoryFileName As TextBox
     Friend WithEvents RefreshDataGrid As Button
-    Friend WithEvents HS_SD As HScrollBar
-    Friend WithEvents T_SD As TextBox
+    Friend WithEvents HS_SMA As HScrollBar
+    Friend WithEvents T_SMA As TextBox
     Friend WithEvents T_InvestmentStart As TextBox
     Friend WithEvents T_StartSharePrice As TextBox
     Friend WithEvents TransformToolStripMenuItem As ToolStripMenuItem
@@ -738,24 +757,27 @@ Partial Class Form1
     Friend WithEvents C_LastYear As Button
     Friend WithEvents ReadFromWEBToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReadHistoricFromARIVAdeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents C_WriteChartFile As Button
     Friend WithEvents C_BuySell As Button
     Friend WithEvents Analyse1 As RadioButton
     Friend WithEvents Analyse2 As RadioButton
     Friend WithEvents Analyse3 As RadioButton
     Friend WithEvents Analyse4 As RadioButton
-    Friend WithEvents Button1 As Button
     Friend WithEvents C_Investhopping As Button
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Ch_FitY As CheckBox
-    Friend WithEvents B_FindBestSDSingle As Button
     Friend WithEvents InfoFilesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents B_SortDataGrid As Button
-    Friend WithEvents B_FindBestSDMultiple As Button
     Friend WithEvents T_CurrISIN As TextBox
     Friend WithEvents T_CurrWKN As TextBox
     Friend WithEvents T_CurrCompName As TextBox
     Friend WithEvents T_CurrAccount As TextBox
     Friend WithEvents AnalysisToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckNumberOfRiseInToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HowManyPercentInSequenceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FindBestSMAInAllListedShares100Times1YearToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label9 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents WriteChartFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RisePriodeStatisticToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Analyse5 As RadioButton
+    Friend WithEvents TextBox6 As TextBox
 End Class

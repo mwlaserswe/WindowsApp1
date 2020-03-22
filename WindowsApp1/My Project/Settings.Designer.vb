@@ -57,12 +57,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Textbox_Settings() As String
+        Public Property InvestmentStart() As String
             Get
-                Return CType(Me("Textbox_Settings"),String)
+                Return CType(Me("InvestmentStart"),String)
             End Get
             Set
-                Me("Textbox_Settings") = value
+                Me("InvestmentStart") = value
             End Set
         End Property
         

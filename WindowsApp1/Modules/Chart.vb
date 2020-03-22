@@ -79,23 +79,15 @@ ReadHistoryFileErr:
         Dim Rise As Integer
         Dim RiseOld As Integer
 
-
-
-
         DisplayTestPattern(Pic)
-
-
-
-
 
         'idx 0 is the head line
         idx = 1
 
-        '''If (0 / 1) + (Not Not ChartArray) = 0 Then
-        '''    ' Array ist nicht nicht dimensioniert
-        '''    Exit Sub
-        '''End If
-
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
         '==== Draw share charts ====
 
@@ -131,20 +123,20 @@ ReadHistoryFileErr:
                     DistanceColor = Color.Blue
                 End If
 
-                DrawLine(Pic, CDbl(idx), ChartArray(idx).SD, DistanceColor)
+                DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
 
             Else
                 ' Different color: End current line. Start new line 
-                DrawLine(Pic, CDbl(idx), ChartArray(idx).SD, DistanceColor)
+                DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
                 DrawEnd(Pic, DistanceColor)
-                DrawStart(Pic, CDbl(idx), ChartArray(idx).SD, DistanceColor)
+                DrawStart(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
                 If Rise = 1 Then
                     DistanceColor = Color.Green
                 Else
                     DistanceColor = Color.Blue
                 End If
 
-                DrawLine(Pic, CDbl(idx), ChartArray(idx).SD, DistanceColor)
+                DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
             End If
 
             RiseOld = Rise
@@ -164,7 +156,77 @@ ReadHistoryFileErr:
 
     End Sub
 
-    Public Sub MovingAverage(Length As Long)
+    Public Sub DisplayDate(Pic As PictureBox, Txt As TextBox)
+        Dim NewYear() As Integer
+        Dim OldYear As Integer
+        Dim NewMonth() As Integer
+        Dim OldMonth As Integer
+
+        ReDim NewYear(0)
+        ReDim NewMonth(0)
+
+        For i = 1 To UBound(ChartArray)
+            If Year(ChartArray(i).myDate) <> OldYear Then
+                NewYear(UBound(NewYear)) = i
+                OldYear = Year(ChartArray(i).myDate)
+                ReDim Preserve NewYear(UBound(NewYear) + 1)
+            End If
+
+            If Month(ChartArray(i).myDate) <> OldMonth Then
+                NewMonth(UBound(NewMonth)) = i
+                OldMonth = Month(ChartArray(i).myDate)
+                ReDim Preserve NewMonth(UBound(NewMonth) + 1)
+            End If
+
+        Next
+
+        ReDim Preserve NewYear(UBound(NewYear) - 1)
+        ReDim Preserve NewMonth(UBound(NewMonth) - 1)
+
+
+
+
+        '================== Den linken und rechten Rand der PictureBox in Idx des ChartArrays umrechnen    ===================
+        Dim Xleft
+        Dim Xright
+        Dim ChartArrayIdxLeft
+        Dim ChartArrayIdxRight
+
+        Xleft = 0
+        Xright = Pic.Width
+
+        ChartArrayIdxLeft = (Xleft - GlbOffX) / GlbScaleX
+        ChartArrayIdxRight = (Xright - GlbOffX) / GlbScaleX
+        'MouseXY.Y = (Y - (Pic.Height - GlbOffY)) / -GlbScaleY
+        Txt.Text = "Left: " & ChartArrayIdxLeft & "    Right: " & ChartArrayIdxRight
+        '============================================== Ende    ==============================================================
+
+
+        If (ChartArrayIdxRight - ChartArrayIdxLeft) > 1000 Then
+            For i = 0 To UBound(NewYear)
+                DrawStart(Pic, NewYear(i), 0, Color.LightGray)
+                DrawLine(Pic, NewYear(i), 200, Color.LightGray)
+                DrawEnd(Pic, Color.LightGray)
+            Next
+        ElseIf (ChartArrayIdxRight - ChartArrayIdxLeft) > 25 Then
+            For i = 0 To UBound(NewMonth)
+                DrawStart(Pic, NewMonth(i), 0, Color.LightGray)
+                DrawLine(Pic, NewMonth(i), 200, Color.LightGray)
+                DrawEnd(Pic, Color.LightGray)
+            Next
+        Else
+            For i = 0 To UBound(ChartArray)
+                DrawStart(Pic, i, 0, Color.LightGray)
+                DrawLine(Pic, i, 200, Color.LightGray)
+                DrawEnd(Pic, Color.LightGray)
+            Next
+        End If
+
+
+
+    End Sub
+
+    Public Sub SimpleMovingAverage(Length As Long)
         Dim idx As Long
         Dim i As Long
         Dim Sum As Double
@@ -172,11 +234,10 @@ ReadHistoryFileErr:
         Dim Distance As Double
         Static LastDistance As Double
 
-        'If (0 / 1) + (Not Not ChartArray) = 0 Then
-        '    ' Array ist nicht nicht dimensioniert
-        '    Exit Sub
-        'End If
-
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
         If UBound(ChartArray) <= Length Then
             Exit Sub
@@ -192,7 +253,7 @@ ReadHistoryFileErr:
         While idx < Length
             Sum = Sum + ChartArray(idx).Value
             Average = Sum / idx
-            ChartArray(idx).SD = Average
+            ChartArray(idx).SMA = Average
             If ChartArray(idx).Value <> 0 Then
                 Distance = (ChartArray(idx).Value - Average) / ChartArray(idx).Value
             Else
@@ -208,7 +269,7 @@ ReadHistoryFileErr:
                 Sum = Sum + ChartArray(i).Value
             Next i
             Average = Sum / Length
-            ChartArray(idx).SD = Average
+            ChartArray(idx).SMA = Average
 
             ' Share prises in history files sometimes are zero
             ' Just avoid division by zero
@@ -229,8 +290,8 @@ ReadHistoryFileErr:
     '                       Analyse_02
     ' Einstieg: Im Gegensatz zu Analye_01 wird zuerst gewartet, bis
     '           bis der Kurs von unten durch den GS sticht.
-    ' Wenn der Kurs von unten durch den GD sticht, wird gekauft.
-    ' Wenn der Kurs von oben unter den GD fällt, wird verkauft.
+    ' Wenn der Kurs von unten durch den SMA sticht, wird gekauft.
+    ' Wenn der Kurs von oben unter den SMA fällt, wird verkauft.
     ' InvestmentStart: Der Index im History file
     ' StartAccount: Die Investitionssumme
     '=====================================================================
@@ -245,10 +306,10 @@ ReadHistoryFileErr:
         idx = 0
         State = 0
 
-        'If (0 / 1) + (Not Not ChartArray) = 0 Then
-        '    ' Array ist nicht nicht dimensioniert
-        '    Exit Sub
-        'End If
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
         While idx <= UBound(ChartArray)
             Select Case State
@@ -327,8 +388,8 @@ ReadHistoryFileErr:
     '=====================================================================
     '                       Analyse_03
     ' Einstieg: Im Gegensatz zu Analye_01 wird zuerst gewartet, bis
-    '           bis der Kurs von unten durch den GS sticht.
-    ' Wenn der Kurs von unten durch den GD sticht, wird gekauft.
+    '           bis der Kurs von unten durch den SMA sticht.
+    ' Wenn der Kurs von unten durch den SMA sticht, wird gekauft.
     ' Wenn die Aktie fällt, wird sofort verkauft
     ' InvestmentStart: Der Index im History file
     ' StartAccount: Die Investitionssumme
@@ -344,10 +405,10 @@ ReadHistoryFileErr:
         idx = 0
         State = 0
 
-        'If (0 / 1) + (Not Not ChartArray) = 0 Then
-        '    ' Array ist nicht nicht dimensioniert
-        '    Exit Sub
-        'End If
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
         While idx <= UBound(ChartArray)
             Select Case State
@@ -433,7 +494,118 @@ ReadHistoryFileErr:
     End Sub
 
 
+    '=====================================================================
+    '                       Analyse_04
+    ' Einstieg: Im Gegensatz zu Analye_01 wird zuerst gewartet, bis
+    '           bis der Kurs von unten durch den GS sticht.
+    ' Wenn der Kurs von unten durch den SMA sticht, wird gekauft.
+    ' Wenn der Kurs um x% gestiegen ist, wird verkauft
+    ' Wenn der Kurs von oben unter den SMA fällt, wird auch verkauft.
+    ' InvestmentStart: Der Index im History file
+    ' StartAccount: Die Investitionssumme
+    '=====================================================================
+    Public Sub Analyse_04(InvestmentStart As Integer, StartAccount As Double, PercentageLimit As Double)
+        Dim idx As Integer
+        Dim State As Integer
+        Dim CostFactor As Double
+        Dim Percentage As Double
 
+        CostFactor = 0.9926
+        '    CostFactor = 0.991
+
+        idx = 0
+        State = 0
+
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
+
+        While idx <= UBound(ChartArray)
+            Select Case State
+                Case 0
+                    ' no investment before InvestmentStart
+                    If idx >= InvestmentStart Then
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                        State = 5
+                    Else
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                    End If
+
+                Case 5
+                    ' share price under GD now
+                    If ChartArray(idx).Distance <= 0 Then
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5:wait"
+                        State = 10
+                        ' wait until share price under GD
+                    Else
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5: wait"
+                    End If
+                Case 10
+                    ' wait until share price is over GD again the first time
+                    '*** buy now
+                    If ChartArray(idx).Distance > 0 Then
+                        StartSharePrice = ChartArray(idx).Value
+                        ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
+                        ' Remove transfer costs
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
+                        ChartArray(idx).Trend = "10: Rise"
+                        State = 20
+                    Else
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "10: wait"
+                    End If
+                Case 20
+                    Percentage = (ChartArray(idx).Value - StartSharePrice) / StartSharePrice
+
+                    ' if share price falls under GD again
+                    If ChartArray(idx).Distance <= 0 Then
+                        ChartArray(idx).Trend = "20: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        State = 30
+                        'PercentageLimit is reached
+                    ElseIf Percentage > PercentageLimit Then
+                        ChartArray(idx).Trend = "25: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        State = 25
+                    Else
+                        ' share price stays over GD
+                        ChartArray(idx).Trend = "20: Rise"
+                        ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
+                    End If
+                Case 25
+                    ' if share price falls under GD again
+                    ChartArray(idx).Trend = "25: Wait"
+                    ChartArray(idx).Account = ChartArray(idx - 1).Account
+
+                    If ChartArray(idx).Distance <= 0 Then
+                        State = 30
+                    End If
+                Case 30
+                        ' if share price raised over GD again
+                        If ChartArray(idx).Distance > 0 Then
+                        ChartArray(idx).Trend = "30: Rise"
+                        '                    ChartArray(idx).Account = ChartArray(idx).Value / StartSharePrice * StartAccount
+                        StartSharePrice = ChartArray(idx).Value
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        StartAccount = ChartArray(idx).Account
+                        State = 20
+                    Else
+                        ' share price stays under GD
+                        ChartArray(idx).Trend = "30: Hold"
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account
+                    End If
+
+            End Select
+
+            idx = idx + 1
+        End While
+
+    End Sub
 
     Public Sub DrawStart(Pic As PictureBox, X As Single, Y As Single, LclColor As Color)
         Dim PicX As Single
@@ -593,100 +765,78 @@ ReadCompanyListFileErr:
     End Sub
 
 
-    Public Function FindBestSD(InvestmentStart As Integer, InvestDuration As Integer) As BestSD
-        Dim SdArray(200) As Double
+    Public Function FindBestSMA(InvestmentStart As Integer, InvestDuration As Integer) As BestSMA
+        Dim SMAArray(200) As Double
 
         Dim AbsMax As Double
         Dim AbsMaxPos As Integer
-        Dim RightMax As Double
-        Dim RightMaxPos As Integer
-        Dim Minimum As Double
-        Dim MinPos As Integer
 
-
-        'Get final accont for each SD
+        'Get final accont for each SMA
         For i = 1 To 200
-            MovingAverage(i)
+            SimpleMovingAverage(i)
             Analyse_02(InvestmentStart, 1)
             If (InvestmentStart + InvestDuration) > UBound(ChartArray) Then
-                SdArray(i) = ChartArray(UBound(ChartArray)).Account
+                SMAArray(i) = ChartArray(UBound(ChartArray)).Account
             Else
-                SdArray(i) = ChartArray(InvestmentStart + InvestDuration).Account
+                SMAArray(i) = ChartArray(InvestmentStart + InvestDuration).Account
             End If
         Next i
 
-        ReDim FindBestSD.SdArry(200)
-        FindBestSD.SdArry = SdArray
+        ReDim FindBestSMA.SMAArry(200)
+        FindBestSMA.SMAArry = SMAArray
 
         'Find AbsMax
         AbsMax = 0
         For i = 1 To 200
-            If SdArray(i) > AbsMax Then
+            If SMAArray(i) > AbsMax Then
                 AbsMaxPos = i
-                AbsMax = SdArray(i)
+                AbsMax = SMAArray(i)
             End If
         Next
 
-        'Find Minimum
-        Minimum = 1.0E+99
-        For i = AbsMaxPos To 200
-            If SdArray(i) < Minimum And FindMaxRight(SdArray, i) Then
-                MinPos = i
-                Minimum = SdArray(i)
+        FindBestSMA.AbsMax = AbsMax
+        FindBestSMA.AbsMaxPos = AbsMaxPos
+
+    End Function
+
+    Public Function FindSmoothedBestSMA(InvestmentStart As Integer, InvestDuration As Integer) As BestSMA
+        Dim SMAArray(200) As Double
+        Dim TmpArray(200) As Double
+
+        Dim AbsMax As Double
+        Dim AbsMaxPos As Integer
+
+
+        'Get final accont for each SMA
+        For i = 1 To 200
+            SimpleMovingAverage(i)
+            Analyse_02(InvestmentStart, 1)
+            If (InvestmentStart + InvestDuration) > UBound(ChartArray) Then
+                SMAArray(i) = ChartArray(UBound(ChartArray)).Account
+            Else
+                SMAArray(i) = ChartArray(InvestmentStart + InvestDuration).Account
+            End If
+        Next i
+
+        For i = 2 To 199
+            TmpArray(i) = (SMAArray(i - 1) + SMAArray(i) + SMAArray(i + 1)) / 3
+        Next
+
+        ReDim FindSmoothedBestSMA.SMAArry(200)
+        FindSmoothedBestSMA.SMAArry = TmpArray
+
+        'Find AbsMax
+        AbsMax = 0
+        For i = 1 To 200
+            If TmpArray(i) > AbsMax Then
+                AbsMaxPos = i
+                AbsMax = TmpArray(i)
             End If
         Next
 
-        'Find RightMax
-        RightMax = 0
-        For i = MinPos To 200
-            If SdArray(i) > RightMax Then
-                RightMaxPos = i
-                RightMax = SdArray(i)
-            End If
-        Next
+        FindSmoothedBestSMA.AbsMax = AbsMax
+        FindSmoothedBestSMA.AbsMaxPos = AbsMaxPos
 
-        FindBestSD.AbsMax = AbsMax
-        FindBestSD.AbsMaxPos = AbsMaxPos
-        FindBestSD.RightMax = RightMax
-        FindBestSD.RightMaxPos = RightMaxPos
-        FindBestSD.Minimum = Minimum
-        FindBestSD.MinPos = MinPos
-
-
-
-        ''''Write to ListBox and file
-        '''On Error GoTo OpenError
-
-        '''ChartFilename = Application.StartupPath & "\BestSD.txt"
-        '''ChartFile = FreeFile()
-        '''FileOpen(ChartFile, ChartFilename, OpenMode.Output)
-        '''ListBox.Items.Clear()
-
-        '''ResultString = "Max1: " & AbsMaxPos & "  " & SdArray(AbsMaxPos)
-        '''ListBox.Items.Add(ResultString)
-        '''PrintLine(ChartFile, ResultString)
-
-        '''ResultString = "Min: " & MinPos & "  " & SdArray(MinPos)
-        '''ListBox.Items.Add(ResultString)
-        '''PrintLine(ChartFile, ResultString)
-
-        '''ResultString = "Max2: " & RightMaxPos & "  " & SdArray(RightMaxPos)
-        '''ListBox.Items.Add(ResultString)
-        '''PrintLine(ChartFile, ResultString)
-
-        '''For i = 1 To 200
-        '''    Zeile = i & vbTab & SdArray(i)
-        '''    ListBox.Items.Add(Zeile)
-        '''    PrintLine(ChartFile, Zeile)
-        '''Next i
-
-        '''FileClose(ChartFile)
-
-        Exit Function
-
-        '''OpenError:
-        '''        MsgBox(ChartFilename, , "Write error")
-        '''        FileClose(ChartFile)
     End Function
 
     Private Function FindMaxRight(Arry() As Double, Pos As Integer) As Boolean
@@ -703,5 +853,264 @@ ReadCompanyListFileErr:
             End If
         Next
     End Function
+
+
+
+
+    Public Sub FindRisingInSequenz(ByRef ListArray() As String)
+        Dim idx As Integer
+        Dim RiseArray() As Integer
+        Dim Rise As Boolean
+        Dim RiseCnt As Integer
+        Dim Risemax As Integer
+        Dim Zeile As String
+
+        ReDim RiseArray(0)
+
+        For idx = LBound(ChartArray) + 1 To UBound(ChartArray)
+            If ChartArray(idx).Value > ChartArray(idx - 1).Value Then
+                If Not Rise Then
+                    RiseCnt = 0
+                End If
+                Rise = True
+                RiseCnt = RiseCnt + 1
+            Else
+                If Rise Then
+                    If RiseCnt > Risemax Then
+                        Risemax = RiseCnt
+                        ReDim Preserve RiseArray(0 To Risemax)
+                    End If
+                    RiseArray(RiseCnt) = RiseArray(RiseCnt) + 1
+                    Rise = False
+                End If
+            End If
+        Next
+
+        ReDim ListArray(UBound(RiseArray))
+
+        For idx = LBound(RiseArray) To UBound(RiseArray)
+            Zeile = idx & " days is sequenz:" & vbTab & RiseArray(idx)
+            ListArray(idx) = Zeile
+        Next
+    End Sub
+
+    Public Sub FindRisingPercentage(ByRef ListArray() As String)
+        Dim idx As Integer
+        Dim RiseArray() As Integer
+        Dim Rise As Boolean
+        Dim RiseCnt As Integer
+        Dim Risemax As Integer
+        Dim Zeile As String
+        Dim PercentageArray() As Integer
+        Dim ReferenceValue As Double
+        Dim RisePercentage As Double
+        Dim PercentageIdx As Integer
+        Dim PercentageIdxMax As Double
+
+        ReDim RiseArray(0)
+        ReDim PercentageArray(0)
+
+        For idx = 2 To UBound(ChartArray)
+            If ChartArray(idx).Value > ChartArray(idx - 1).Value Then
+                If Not Rise Then
+                    RiseCnt = 0
+                    ReferenceValue = ChartArray(idx - 1).Value
+                End If
+                Rise = True
+                RisePercentage = (ChartArray(idx).Value - ReferenceValue) / ReferenceValue
+                PercentageIdx = CInt(RisePercentage * 1000)   ' [ % * 10 ]
+                RiseCnt = RiseCnt + 1
+            Else
+                If Rise Then
+                    If RiseCnt > Risemax Then
+                        Risemax = RiseCnt
+                        ReDim Preserve RiseArray(0 To Risemax)
+                    End If
+
+                    If PercentageIdx > PercentageIdxMax Then
+                        PercentageIdxMax = PercentageIdx
+                        ReDim Preserve PercentageArray(0 To PercentageIdxMax)
+                    End If
+                    PercentageArray(PercentageIdx) = PercentageArray(PercentageIdx) + 1
+
+
+                    RiseArray(RiseCnt) = RiseArray(RiseCnt) + 1
+                    Rise = False
+                End If
+            End If
+        Next
+
+        ReDim ListArray(0)
+
+        Dim AccumulatedNumber As Integer
+        Dim Costs As Integer
+        Costs = 20   ' Costs: 20 means 2.0% buy and sell
+
+        idx = 0
+        For i = 0 To UBound(PercentageArray)
+            If PercentageArray(i) > 0 Then
+                AccumulatedNumber = 0
+                For k = i To UBound(PercentageArray)
+                    AccumulatedNumber = AccumulatedNumber + PercentageArray(k)
+                Next
+                Zeile = i / 10 & " %:" & vbTab & PercentageArray(i) & vbTab & "Accu: " & AccumulatedNumber & vbTab & "Account: " & (i - Costs) * AccumulatedNumber
+                ListArray(idx) = Zeile
+                ReDim Preserve ListArray(UBound(ListArray) + 1)
+                idx = idx + 1
+            End If
+        Next
+        ReDim Preserve ListArray(UBound(ListArray) - 1)
+
+    End Sub
+
+
+    Public Function FindBestMultipleSMA(InvestmentStart As Integer, InvestDuration As Integer) As BestSMA
+        Dim DemoBestSMA As BestSMA
+        Dim ChartFile As Integer
+        Dim Zeile As String
+        Dim ChartFilename As String
+        Dim ResultString As String
+        Dim ListArray() As String
+        Dim ListIdx As Integer
+
+        'Write to ListBox and file
+        '''On Error GoTo OpenError
+
+
+        ChartFilename = Application.StartupPath & "\BestSD " & Form1.T_CurrCompName.Text & " " & Form1.T_CurrWKN.Text & ".txt"
+        ChartFile = FreeFile()
+        FileOpen(ChartFile, ChartFilename, OpenMode.Output)
+        ListIdx = 0
+        Form1.ListBox1.Items.Clear()
+
+        Zeile = FixLen("", 70) & vbTab
+        For i = 1 To 200
+            Zeile = Zeile + CStr(i) & vbTab
+        Next i
+        Form1.ListBox1.Items.Add(Zeile)
+        PrintLine(ChartFile, Zeile)
+
+        ListIdx = 0
+        ReDim ListArray(ListIdx)
+        ListArray(ListIdx) = Zeile
+
+
+
+
+
+        For i = 500 To 5000 Step 50
+
+
+            DemoBestSMA = FindBestSMA(i, 260)  '260 Entries in HistoryArray is about 1 year 
+
+            Zeile = CStr(i) & " "
+            ResultString = "Max1: " & DemoBestSMA.AbsMaxPos & "  " & Format(DemoBestSMA.AbsMax, "0.000")
+            Zeile = Zeile + ResultString & "   "
+
+            For j = 1 To 200
+                Zeile = Zeile + Format(DemoBestSMA.SMAArry(j), "0.000") & vbTab
+            Next j
+            Form1.ListBox1.Items.Add(Zeile)
+
+            PrintLine(ChartFile, Zeile)
+
+            ListIdx = ListIdx + 1
+            ReDim Preserve ListArray(ListIdx)
+            ListArray(ListIdx) = Zeile
+
+            Application.DoEvents()
+        Next i
+
+        FileClose(ChartFile)
+
+        Dim FlyingListBox As FrmFlyingListBox
+
+        FlyingListBox = New FrmFlyingListBox
+        FlyingListBox.Title = "Percentage in sequence"
+        FlyingListBox.Filename = ""
+        FlyingListBox.ListArray = ListArray
+        FlyingListBox.Show()
+
+
+
+        ''''        Exit Sub
+
+        ''''OpenError:
+        ''''        MsgBox(ChartFilename, , "Write error")
+        ''''        FileClose(ChartFile)
+    End Function
+
+    Public Sub RiseSatistics(ByRef ListArray() As String)
+        Dim idx As Integer
+        Dim Rise As Boolean
+        Dim RiseValueMax As Double
+        Dim Zeile As String
+        Dim PercentageArray() As Integer
+        Dim ReferenceValue As Double
+        Dim RisePercentage As Double
+        Dim PercentageIdx As Integer
+        Dim PercentageIdxMax As Double
+        ReDim PercentageArray(0)
+
+        For idx = 2 To UBound(ChartArray)
+
+            ' Check rise periode only
+            If InStr(ChartArray(idx).Trend, "Rise", CompareMethod.Text) Then
+                If Not Rise Then
+                    RiseValueMax = ChartArray(idx).Value
+                    ReferenceValue = ChartArray(idx).Value
+                End If
+                Rise = True
+                'RisePercentage = (ChartArray(idx).Value - ReferenceValue) / ReferenceValue
+                'PercentageIdx = CInt(RisePercentage * 1000)   ' [ % * 10 ]
+                If ChartArray(idx).Value > RiseValueMax Then
+                    RiseValueMax = ChartArray(idx).Value
+                End If
+
+            Else
+                If Rise Then
+
+                    RisePercentage = (RiseValueMax - ReferenceValue) / ReferenceValue
+                    PercentageIdx = CInt(RisePercentage * 1000)   ' [ % * 10 ]
+
+                    'Percentage could be negative. Negative index is not allowed
+                    If PercentageIdx < 0 Then
+                        PercentageIdx = 0
+                    End If
+
+                    If PercentageIdx > PercentageIdxMax Then
+                        PercentageIdxMax = PercentageIdx
+                        ReDim Preserve PercentageArray(0 To PercentageIdxMax)
+                    End If
+                    PercentageArray(PercentageIdx) = PercentageArray(PercentageIdx) + 1
+
+                    Rise = False
+                End If
+            End If
+        Next
+
+        ReDim ListArray(0)
+
+        Dim AccumulatedNumber As Integer
+        Dim Costs As Integer
+        Costs = 20   ' Costs: 20 means 2.0% buy and sell
+
+        idx = 0
+        For i = 0 To UBound(PercentageArray)
+            If PercentageArray(i) > 0 Then
+                AccumulatedNumber = 0
+                For k = i To UBound(PercentageArray)
+                    AccumulatedNumber = AccumulatedNumber + PercentageArray(k)
+                Next
+                Zeile = i / 10 & " %:" & vbTab & PercentageArray(i) & vbTab & "Accu: " & AccumulatedNumber & vbTab & "Account: " & (i - Costs) * AccumulatedNumber
+                ListArray(idx) = Zeile
+                ReDim Preserve ListArray(UBound(ListArray) + 1)
+                idx = idx + 1
+            End If
+        Next
+        ReDim Preserve ListArray(UBound(ListArray) - 1)
+    End Sub
+
+
 
 End Module

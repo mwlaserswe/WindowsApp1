@@ -1,4 +1,6 @@
 ﻿Option Explicit On
+
+Imports System.IO
 Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
@@ -35,6 +37,9 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        T_InvestmentStart.Text = My.Settings.InvestmentStart
+
 
         ' Init DataGridView1 
         DataGridView1.ColumnHeadersVisible = True
@@ -76,8 +81,10 @@ Public Class Form1
 
 
 
-        SdLength = 20
-        HS_SD.Value = SdLength
+        SMALength = 20
+        HS_SMA.Value = SMALength
+        T_SMA.Text = SMALength
+
         GlbScaleX = 1
         GlbScaleY = 1
         ScaleLast.X = GlbScaleX
@@ -90,6 +97,13 @@ Public Class Form1
         OffsetLast.Y = GlbOffY
 
         Analyse2.Checked = True
+
+        ComboBox1.Items.Add("Use SMA of TextBox")
+        ComboBox1.Items.Add("Use best SMA")
+        ComboBox1.SelectedIndex = 0
+
+
+
     End Sub
 
     Private Sub GridViewTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GridViewTestToolStripMenuItem.Click
@@ -97,78 +111,71 @@ Public Class Form1
     End Sub
 
 
-    Private Sub CompanyFileToArray(CompanyListFilename As String, ByRef CompanyListArray() As ShareItem)
-        Dim CompanyListFile As Integer
-        Dim Zeile As String
-        Dim CompanyListEntities() As String
-        Dim idx As Long
+    '''    Private Sub CompanyFileToArray(CompanyListFilename As String, ByRef CompanyListArray() As ShareItem)
+    '''        Dim CompanyListFile As Integer
+    '''        Dim Zeile As String
+    '''        Dim CompanyListEntities() As String
+    '''        Dim idx As Long
 
-        ReDim CompanyListArray(0 To 0)
-        '    MyList.Clear
-        '    List2.Clear
+    '''        ReDim CompanyListArray(0 To 0)
+    '''        '    MyList.Clear
+    '''        '    List2.Clear
 
-        On Error GoTo ReadCompanyListFileErr
+    '''        On Error GoTo ReadCompanyListFileErr
 
-        'CompanyListFilename = App.Path & "\ISIN-WKN.txt"
-        CompanyListFile = FreeFile()
-        'Open CompanyListFilename For Input As CompanyListFile
-        FileOpen(CompanyListFile, CompanyListFilename, OpenMode.Input)
-        ' Close before reopening in another mode.
+    '''        'CompanyListFilename = App.Path & "\ISIN-WKN.txt"
+    '''        CompanyListFile = FreeFile()
+    '''        'Open CompanyListFilename For Input As CompanyListFile
+    '''        FileOpen(CompanyListFile, CompanyListFilename, OpenMode.Input)
+    '''        ' Close before reopening in another mode.
 
-        idx = 0
-        While Not EOF(CompanyListFile)
-            Zeile = LineInput(CompanyListFile)
-            If Zeile <> "" Then
-                'MyList.Items.Add(Zeile)
-                SepariereString(Zeile, CompanyListEntities, vbTab)
-                CompanyListArray(idx).Name = CompanyListEntities(0)
-                CompanyListArray(idx).WKN = CompanyListEntities(1)
-                CompanyListArray(idx).ISIN = CompanyListEntities(2)
-                If UBound(CompanyListEntities) >= 3 Then
-                    CompanyListArray(idx).Index = CompanyListEntities(3)
-                End If
+    '''        idx = 0
+    '''        While Not EOF(CompanyListFile)
+    '''            Zeile = LineInput(CompanyListFile)
+    '''            If Zeile <> "" Then
+    '''                'MyList.Items.Add(Zeile)
+    '''                SepariereString(Zeile, CompanyListEntities, vbTab)
+    '''                CompanyListArray(idx).Name = CompanyListEntities(0)
+    '''                CompanyListArray(idx).WKN = CompanyListEntities(1)
+    '''                CompanyListArray(idx).ISIN = CompanyListEntities(2)
+    '''                If UBound(CompanyListEntities) >= 3 Then
+    '''                    CompanyListArray(idx).Index = CompanyListEntities(3)
+    '''                End If
 
-                '''            'Search doubbles
-                '''            Dim i As Long
-                '''            For i = 0 To UBound(CompanyListArray) - 1
-                '''                If CompanyListArray(i).WKN = CompanyListArray(idx).WKN Then
-                '''                    List2.AddItem Zeile
-                '''                End If
-                '''            Next i
-                idx = idx + 1
-                ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) + 1)
-            End If
+    '''                '''            'Search doubbles
+    '''                '''            Dim i As Long
+    '''                '''            For i = 0 To UBound(CompanyListArray) - 1
+    '''                '''                If CompanyListArray(i).WKN = CompanyListArray(idx).WKN Then
+    '''                '''                    List2.AddItem Zeile
+    '''                '''                End If
+    '''                '''            Next i
+    '''                idx = idx + 1
+    '''                ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) + 1)
+    '''            End If
 
-        End While
-        idx = idx - 1
-        ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) - 1)
-        FileClose(CompanyListFile)
+    '''        End While
+    '''        idx = idx - 1
+    '''        ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) - 1)
+    '''        FileClose(CompanyListFile)
 
-        Exit Sub
-ReadCompanyListFileErr:
-        MsgBox(CompanyListFilename & vbCr & Err.Description, , "xxxxx")
+    '''        Exit Sub
+    '''ReadCompanyListFileErr:
+    '''        MsgBox(CompanyListFilename & vbCr & Err.Description, , "xxxxx")
 
-    End Sub
+    '''    End Sub
 
     Private Sub ArrayToFlexFrid(ByRef CompanyListArray() As ShareItem)
         Dim idx As Long
 
-        Dim sTest As String
-
-        '''If (0 / 1) + (Not Not CompanyListArray) = 0 Then
-        '''    ' Array ist nicht nicht dimensioniert
-        '''    Exit Sub
-        '''End If
-
+        If Not ArrayValid(CompanyListArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
         For idx = 0 To UBound(CompanyListArray)
-
-
             ' Zeilen hinzufügen
             DataGridView1.Rows.Add(idx, CompanyListArray(idx).Name, CompanyListArray(idx).WKN, CompanyListArray(idx).ISIN, CompanyListArray(idx).Index, "--")
             DataGridView1.Rows(idx).Height = 15
-
-
         Next idx
     End Sub
 
@@ -216,8 +223,14 @@ ReadCompanyListFileErr:
 
         CurrentShareInfo = ReadShareInfo(Application.StartupPath & "\HistoryInfo\" & WKN & ".xml")
 
-        SdLength = CurrentShareInfo._AbsMaxPos
-        T_SD.Text = SdLength
+        If ComboBox1.SelectedIndex = 0 Then
+            SMALength = T_SMA.Text
+        ElseIf ComboBox1.SelectedIndex = 1 Then
+            SMALength = CurrentShareInfo._AbsMaxPos
+            T_SMA.Text = SMALength
+        End If
+
+
 
         RefreshChart()
 
@@ -229,17 +242,20 @@ ReadCompanyListFileErr:
 
     Private Sub RefreshChart()
         PicChart.CreateGraphics.Clear(Color.White)
-        MovingAverage(SdLength)
+        SimpleMovingAverage(SMALength)
         If Analyse1.Checked Then
         ElseIf Analyse2.Checked Then
             Analyse_02(T_InvestmentStart.Text, T_StartSharePrice.Text)
         ElseIf Analyse3.Checked Then
             Analyse_03(T_InvestmentStart.Text, T_StartSharePrice.Text)
         ElseIf Analyse4.Checked Then
+            Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, 0.104)
+        ElseIf Analyse5.Checked Then
 
         End If
         DispCoordinateSystem(PicChart)
         DisplayChart(PicChart)
+        DisplayDate(PicChart, TextBox6)
     End Sub
 
     Private Sub RefreshDataGrid_Click(sender As Object, e As EventArgs) Handles RefreshDataGrid.Click
@@ -248,15 +264,14 @@ ReadCompanyListFileErr:
     End Sub
 
 
-    Private Sub HS_SD_Scroll(sender As Object, e As ScrollEventArgs) Handles HS_SD.Scroll
-        T_SD.Text = HS_SD.Value
-        SdLength = HS_SD.Value
+    Private Sub HS_SD_Scroll(sender As Object, e As ScrollEventArgs) Handles HS_SMA.Scroll
+        T_SMA.Text = HS_SMA.Value
+        SMALength = HS_SMA.Value
 
-        '''If (0 / 1) + (Not Not ChartArray) = 0 Then
-        '''    ' Array ist nicht nicht dimensioniert
-        '''    Exit Sub
-        '''End If
-
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
         'PicChart.Cls
         ''MovingAverage(SdLength)
@@ -371,15 +386,15 @@ ReadCompanyListFileErr:
                 '''CursorDate = DateSerial(2000, 1, 1) + CInt(MouseXY.X) - 1
                 ' T_CursorDate = CursorDate
 
-                ' Array ist nicht nicht dimensioniert
-                '''If (0 / 1) + (Not Not ChartArray) <> 0 Then
-                If MouseXY.X <= UBound(ChartArray) And MouseXY.X >= LBound(ChartArray) Then
-                    T_CursorDate.Text = ChartArray(MouseXY.X).myDate
-                    T_Value.Text = ChartArray(MouseXY.X).Value
-                    T_Account.Text = Format(ChartArray(MouseXY.X).Account, "0.00")
-                    T_SD1.Text = Format(ChartArray(MouseXY.X).SD, "0.00")
+                ' Array ist dimensioniert
+                If ArrayValid(ChartArray) Then
+                    If MouseXY.X <= UBound(ChartArray) And MouseXY.X >= LBound(ChartArray) Then
+                        T_CursorDate.Text = ChartArray(MouseXY.X).myDate
+                        T_Value.Text = ChartArray(MouseXY.X).Value
+                        T_Account.Text = Format(ChartArray(MouseXY.X).Account, "0.00")
+                        T_SD1.Text = Format(ChartArray(MouseXY.X).SMA, "0.00")
+                    End If
                 End If
-                '''End If
 
             End If
 
@@ -453,9 +468,6 @@ ReadCompanyListFileErr:
         FrmReadHistoricFromAriva.Show()
     End Sub
 
-    Private Sub C_WriteChartFile_Click(sender As Object, e As EventArgs) Handles C_WriteChartFile.Click
-        WriteChartFile(Application.StartupPath & "\Chart.txt")
-    End Sub
 
     Private Sub C_BuySell_Click(sender As Object, e As EventArgs) Handles C_BuySell.Click
         Dim Fullpath As String
@@ -500,17 +512,19 @@ ReadCompanyListFileErr:
 
             CurrentShareInfo = ReadShareInfo(Application.StartupPath & "\HistoryInfo\" & WKN & ".xml")
 
-            SdLength = CurrentShareInfo._AbsMaxPos
-            T_SD.Text = SdLength
+            SMALength = CurrentShareInfo._AbsMaxPos
+            T_SMA.Text = SMALength
 
 
-            MovingAverage(SdLength)
+            SimpleMovingAverage(SMALength)
             If Analyse1.Checked Then
             ElseIf Analyse2.Checked Then
                 Analyse_02(T_InvestmentStart.Text, T_StartSharePrice.Text)
             ElseIf Analyse3.Checked Then
                 Analyse_03(T_InvestmentStart.Text, T_StartSharePrice.Text)
             ElseIf Analyse4.Checked Then
+                Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, 10.4)
+            ElseIf Analyse5.Checked Then
 
             End If
             ''DispCoordinateSystem(PicChart)
@@ -554,65 +568,7 @@ ReadCompanyListFileErr:
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim idx As Integer
-        Dim RiseArray(6000) As Integer
-        Dim RiseCnt As Integer
-        Dim rise As Boolean
 
-        For idx = LBound(ChartArray) + 1 To UBound(ChartArray)
-
-            If ChartArray(idx).Value > ChartArray(idx - 1).Value Then
-                If Not rise Then
-                    RiseCnt = 0
-                End If
-                rise = True
-                RiseCnt = RiseCnt + 1
-            Else
-                If rise Then
-                    RiseArray(RiseCnt) = RiseArray(RiseCnt) + 1
-                    rise = False
-                End If
-            End If
-        Next
-
-
-
-
-
-
-        Dim ChartFile As Integer
-        Dim Zeile As String
-        Dim ChartFilename As String
-
-        ''On Error GoTo OpenError
-
-        ''ChartFilename = Application.StartupPath & "Statistics.txt"
-        ''ChartFile = FreeFile()
-        ''FileOpen(ChartFile, ChartFilename, OpenMode.Output)
-        ListBox1.Items.Clear()
-        For idx = 0 To UBound(RiseArray)
-            If RiseArray(idx) <> 0 Then
-                Zeile = idx & vbTab & RiseArray(idx)
-                ListBox1.Items.Add(Zeile)
-            End If
-
-        Next idx
-
-        ''        FileClose(ChartFile)
-
-        ''        Exit Sub
-
-        ''OpenError:
-        ''        MsgBox(ChartFilename, , "Write error")
-        ''        FileClose(ChartFile)
-
-
-
-
-
-
-    End Sub
 
 
 
@@ -649,7 +605,7 @@ ReadCompanyListFileErr:
                 '        Zeile = CompPartialLstArr(CompPartialIdx).Name
 
                 ReadHistoryFile(Fullpath, HistoryArray)
-                MovingAverage(SdLength)
+                SimpleMovingAverage(SMALength)
                 Analyse_02(InvestmentStart, 0)
                 '*** find earlest investment start point in all companies
                 For ChartArrayIdx = InvestmentStart To UBound(ChartArray)
@@ -675,7 +631,7 @@ ReadCompanyListFileErr:
 
             Fullpath = Application.StartupPath & "\History\" & EarliestWKN & ".txt"
             ReadHistoryFile(Fullpath, HistoryArray)
-            MovingAverage(SdLength)
+            SimpleMovingAverage(SMALength)
             Analyse_02(InvestmentStart, StartPriceRisePeriode)
 
             '*** find next HOLD
@@ -718,117 +674,6 @@ ReadCompanyListFileErr:
 
         WriteAccountFile(Application.StartupPath & "\Account.txt")
 
-
-
-
-    End Sub
-
-    Private Sub B_FindBestSD_Click(sender As Object, e As EventArgs) Handles B_FindBestSDSingle.Click
-        Dim DemoBestSD As BestSD
-        Dim ChartFile As Integer
-        Dim Zeile As String
-        Dim ChartFilename As String
-        Dim ResultString As String
-
-        DemoBestSD = FindBestSD(500, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
-
-
-        'Write to ListBox and file
-        On Error GoTo OpenError
-
-
-        ChartFilename = Application.StartupPath & "\BestSD.txt"
-        ChartFile = FreeFile()
-        FileOpen(ChartFile, ChartFilename, OpenMode.Output)
-        ListBox1.Items.Clear()
-
-        ResultString = "Max1: " & DemoBestSD.AbsMaxPos & "  " & DemoBestSD.AbsMax
-        ListBox1.Items.Add(ResultString)
-        PrintLine(ChartFile, ResultString)
-
-        ResultString = "Min: " & DemoBestSD.MinPos & "  " & DemoBestSD.Minimum
-        ListBox1.Items.Add(ResultString)
-        PrintLine(ChartFile, ResultString)
-
-        ResultString = "Max2: " & DemoBestSD.RightMaxPos & "  " & DemoBestSD.RightMax
-        ListBox1.Items.Add(ResultString)
-        PrintLine(ChartFile, ResultString)
-
-        For i = 1 To 200
-            Zeile = i & vbTab & DemoBestSD.SdArry(i)
-            ListBox1.Items.Add(Zeile)
-            PrintLine(ChartFile, Zeile)
-        Next i
-
-        FileClose(ChartFile)
-
-        Exit Sub
-
-OpenError:
-        MsgBox(ChartFilename, , "Write error")
-        FileClose(ChartFile)
-    End Sub
-
-
-    Private Sub B_FindBestSDMultiple_Click(sender As Object, e As EventArgs) Handles B_FindBestSDMultiple.Click
-        Dim DemoBestSD As BestSD
-        Dim ChartFile As Integer
-        Dim Zeile As String
-        Dim ChartFilename As String
-        Dim ResultString As String
-
-        'Write to ListBox and file
-        '''On Error GoTo OpenError
-
-
-        ChartFilename = Application.StartupPath & "\BestSD " & T_CurrCompName.Text & " " & T_CurrWKN.Text & ".txt"
-        ChartFile = FreeFile()
-        FileOpen(ChartFile, ChartFilename, OpenMode.Output)
-        ListBox1.Items.Clear()
-
-        Zeile = FixLen("", 70) & vbTab
-        For i = 1 To 200
-            Zeile = Zeile + CStr(i) & vbTab
-        Next i
-        ListBox1.Items.Add(Zeile)
-        PrintLine(ChartFile, Zeile)
-
-
-
-        For i = 500 To 5000 Step 50
-
-
-            DemoBestSD = FindBestSD(i, 260)  '260 Entries in HistoryArray is about 1 year 
-
-            Zeile = CStr(i) & " "
-            ResultString = "Max1: " & DemoBestSD.AbsMaxPos & "  " & Format(DemoBestSD.AbsMax, "0.000")
-            Zeile = Zeile + ResultString & "   "
-
-            ResultString = "Min: " & DemoBestSD.MinPos & "  " & Format(DemoBestSD.Minimum, "0.000")
-            If DemoBestSD.MinPos = 0 Then
-                ResultString = "Min: " & DemoBestSD.MinPos & "  " & "XXXXX"
-            End If
-            Zeile = Zeile + ResultString & "   "
-
-            ResultString = "Max2: " & DemoBestSD.RightMaxPos & "  " & Format(DemoBestSD.RightMax, "0.000")
-            Zeile = FixLen(Zeile + ResultString & " ===>", 70) & vbTab
-
-            For j = 1 To 200
-                Zeile = Zeile + Format(DemoBestSD.SdArry(j), "0.000") & vbTab
-            Next j
-            ListBox1.Items.Add(Zeile)
-            PrintLine(ChartFile, Zeile)
-
-            Application.DoEvents()
-        Next i
-
-        FileClose(ChartFile)
-
-        ''''        Exit Sub
-
-        ''''OpenError:
-        ''''        MsgBox(ChartFilename, , "Write error")
-        ''''        FileClose(ChartFile)
     End Sub
 
 
@@ -848,48 +693,104 @@ OpenError:
         FrmInfoFiles.Show()
     End Sub
 
-    Private Sub B_SortDataGrid_Click(sender As Object, e As EventArgs) Handles B_SortDataGrid.Click
-        '''Dim a As Boolean
-        '''Dim d As Boolean
-        '''Static ascending As Boolean
-        '''a = System.ComponentModel.ListSortDirection.Ascending
-        '''d = System.ComponentModel.ListSortDirection.Descending
-
-        '''If Not ascending Then
-        '''    DataGridView1.Sort(DataGridView1.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
-        '''    ascending = True
-        '''Else
-        '''    DataGridView1.Sort(DataGridView1.Columns(0), System.ComponentModel.ListSortDirection.Descending)
-        '''    ascending = False
-        '''End If
-    End Sub
 
     Private Sub CheckNumberOfRiseInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckNumberOfRiseInToolStripMenuItem.Click
         Dim FlyingListBox As FrmFlyingListBox
         Dim ListArray() As String
 
-        Dim Zeile As String
-        Dim idx As Long
-
-        ReDim ListArray(0 To 0)
-
-        For idx = 0 To 10
-            Zeile = idx
-
-            ListArray(idx) = Zeile
-
-            ReDim Preserve ListArray(0 To UBound(ListArray) + 1)
-        Next idx
-
-        ReDim Preserve ListArray(0 To UBound(ListArray) - 1)
-
+        FindRisingInSequenz(ListArray)
 
         FlyingListBox = New FrmFlyingListBox
-        FlyingListBox.Title = "Test Flying ListBox"
+        FlyingListBox.Title = "Number of rising share prices in sequence"
         FlyingListBox.Filename = ""
         FlyingListBox.ListArray = ListArray
         FlyingListBox.Show()
     End Sub
+
+    Private Sub HowManyPercentInSequenceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HowManyPercentInSequenceToolStripMenuItem.Click
+        Dim FlyingListBox As FrmFlyingListBox
+        Dim ListArray() As String
+
+        FindRisingPercentage(ListArray)
+
+        FlyingListBox = New FrmFlyingListBox
+        FlyingListBox.Title = "Percentage in sequence"
+        FlyingListBox.Filename = ""
+        FlyingListBox.ListArray = ListArray
+        FlyingListBox.Show()
+    End Sub
+
+    Private Sub FindBestSMAInAllListedShares100Times1YearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Click
+        FrmFindBestSMA.Show()
+    End Sub
+
+
+    Private Sub WriteChartFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WriteChartFileToolStripMenuItem.Click
+        Dim idx As Long
+        Dim Zeile As String
+
+        Dim FlyingListBox As FrmFlyingListBox
+        Dim ListArray() As String
+
+        ReDim ListArray(UBound(ChartArray))
+
+        Zeile = "Idx" & vbTab & "myDate" & vbTab & "Value" & vbTab & "SMA" & vbTab & "Distance" & vbTab & "Account" & vbTab & "Trend"
+
+        ListArray(idx) = Zeile
+        For idx = 1 To UBound(ChartArray)
+            Zeile = idx _
+                & vbTab & ChartArray(idx).myDate _
+                & vbTab & Format(ChartArray(idx).Value, "0.00") _
+                & vbTab & Format(ChartArray(idx).SMA, "0.00") _
+                & vbTab & Format(ChartArray(idx).Distance, "0.0000") _
+                & vbTab & Format(ChartArray(idx).Account, "0.00") _
+                & vbTab & ChartArray(idx).Trend
+            ListArray(idx) = Zeile
+        Next idx
+
+        FlyingListBox = New FrmFlyingListBox
+        FlyingListBox.Title = "Write chart array"
+        FlyingListBox.Filename = Application.StartupPath & "\Chart.txt"
+        FlyingListBox.ListArray = ListArray
+        FlyingListBox.Show()
+    End Sub
+
+    Private Sub RisePriodeStatisticToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RisePriodeStatisticToolStripMenuItem.Click
+        Dim FlyingListBox As FrmFlyingListBox
+        Dim ListArray() As String
+
+        RiseSatistics(ListArray)
+
+        FlyingListBox = New FrmFlyingListBox
+        FlyingListBox.Title = T_CurrCompName.Text & ": Rise periode statisics"
+        FlyingListBox.Filename = ""
+        FlyingListBox.ListArray = ListArray
+        FlyingListBox.Show()
+    End Sub
+
+    Private Sub T_InvestmentStart_TextChanged(sender As Object, e As EventArgs) Handles T_InvestmentStart.TextChanged
+        My.Settings.InvestmentStart = T_InvestmentStart.Text
+        My.Settings.Save()
+    End Sub
+
+    Private Sub PicChart_Click(sender As Object, e As EventArgs) Handles PicChart.Click
+
+    End Sub
+
+    Private Sub PicChart_MouseWheel(sender As Object, e As MouseEventArgs) Handles PicChart.MouseWheel
+
+    End Sub
+
+    ''Private Sub CompleteCompanyWKNISINToolStripMenuItem_Click(sender As Object, e As EventArgs)
+    ''    Dim InFileName As String
+    ''    Dim OutFileName As String
+
+    ''    InFileName = Path.Combine(Application.StartupPath, "ISIN-WKN-TEST.txt")
+    ''    OutFileName = Path.Combine(Application.StartupPath, "ISIN-WKN-TEST-COMPLETE.txt")
+    ''    CompleteCompWknIsin(InFileName, OutFileName)
+    ''End Sub
+
+
 End Class
 
 

@@ -22,6 +22,9 @@ WindowsApp1
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:WindowsApp1.Form1.ArrayToFlexFrid(WindowsApp1.GlobalVariables.ShareItem[]@)">
+    End Sub
+</member>
 <member name="M:WindowsApp1.FrmServiceCheckWeekDay.C_ServiceHistory_Click(System.Object,System.EventArgs)">
 Dim FinalArray() As HistoryItem
 </member>

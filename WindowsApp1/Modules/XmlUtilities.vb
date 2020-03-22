@@ -25,6 +25,12 @@ Module XmlUtilities
 
     Public Function ReadShareInfo(FileName As String) As ShareInfo
         Dim xmlDoc As New XmlDocument()
+
+        If Not System.IO.File.Exists(FileName) Then
+            Exit Function
+        End If
+
+
         xmlDoc.Load(FileName)
         Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/ShareInfo/General")
         'Dim ID As String = "", WKN As String = "", ISIN As String = ""
