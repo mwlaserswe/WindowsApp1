@@ -1,0 +1,30 @@
+1&1 Drillisch	DE0005545503	TechDax
+AIXTRON	DE000A0WMPJ6	TechDax
+Bechtle	DE0005158703	TechDax
+CANCOM	DE0005419105	TechDax
+Carl Zeiss Meditec	DE0005313704	TechDax
+CompuGroup Medical	DE0005437305	TechDax
+Deutsche Telekom	DE0005557508	TechDax
+Dialog Semiconductor	GB0059822006	TechDax
+EVOTEC	DE0005664809	TechDax
+freenet	DE000A0Z2ZZ5	TechDax
+Infineon	DE0006231004	TechDax
+JENOPTIK	DE000A2NB601	TechDax
+MorphoSys	DE0006632003	TechDax
+Nemetschek	DE0006452907	TechDax
+New Work	DE000NWRK013	TechDax
+Nordex	DE000A0D6554	TechDax
+Pfeiffer Vacuum	DE0006916604	TechDax
+QIAGEN	NL0012169213	TechDax
+RIB Software	DE000A0Z2XN6	TechDax
+S&T	AT0000A0E9W5	TechDax
+SAP	DE0007164600	TechDax
+Sartorius vz.	DE0007165631	TechDax
+Siemens Healthineers	DE000SHL1006	TechDax
+Siltronic	DE000WAF3001	TechDax
+Software	DE000A2GS401	TechDax
+TeamViewer	DE000A2YN900	TechDax
+Telefonica Deutschland	DE000A1J5RX9	TechDax
+United Internet	DE0005089031	TechDax
+Varta	DE000A0TGJ55	TechDax
+Wirecard	DE0007472060	TechDax
