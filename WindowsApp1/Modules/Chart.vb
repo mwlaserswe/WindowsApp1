@@ -713,6 +713,8 @@ ReadHistoryFileErr:
         DrawLine(pic, 200, 0, DistanceColor)
         DrawEnd(pic, DistanceColor)
 
+        pic.CreateGraphics.DrawString("Mein Text...", New Font("Arial", 12, FontStyle.Bold), Brushes.Black, 10, 10)
+
     End Sub
 
     Sub ReadCompanyListFile(MyList As ListBox)
