@@ -98,11 +98,11 @@ Public Class Form1
 
         Analyse2.Checked = True
 
-        ComboBox1.Items.Add("Use SMA of TextBox")
-        ComboBox1.Items.Add("Use best SMA")
+        ComboBox1.Items.Add("Use SMA of TextBox")               'Index 0
+        ComboBox1.Items.Add("Use best SMA since 2000")          'Index 1
+        ComboBox1.Items.Add("Use best SMA since CORONA")        'Index 2
+        ComboBox1.Items.Add("Use best user defined SMA")        'Index 3
         ComboBox1.SelectedIndex = 0
-
-
 
     End Sub
 
@@ -223,13 +223,19 @@ Public Class Form1
 
         CurrentShareInfo = ReadShareInfo(Application.StartupPath & "\HistoryInfo\" & WKN & ".xml")
 
-        If ComboBox1.SelectedIndex = 0 Then
-            SMALength = T_SMA.Text
-        ElseIf ComboBox1.SelectedIndex = 1 Then
-            SMALength = CurrentShareInfo._AbsMaxPos
-            T_SMA.Text = SMALength
-        End If
-
+        Select Case ComboBox1.SelectedIndex
+            Case 0
+                ' Use SMA of TextBox
+                SMALength = T_SMA.Text
+            Case 1
+                ' Use best SMA since 2000
+                SMALength = CurrentShareInfo._AbsMaxPos
+                T_SMA.Text = SMALength
+                'Case 2
+                ' Use best SMA since CORONA
+                'Case 3
+                ' Use best user defined SMA"
+        End Select
 
 
         RefreshChart()
