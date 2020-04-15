@@ -25,7 +25,7 @@ Partial Class FrmFindBestSMA
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CB_SelectSmaMethod = New System.Windows.Forms.ComboBox()
-        Me.B_FindBestSDSingle = New System.Windows.Forms.Button()
+        Me.B_FindBestSMASingle = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,14 +56,14 @@ Partial Class FrmFindBestSMA
         Me.CB_SelectSmaMethod.Size = New System.Drawing.Size(293, 33)
         Me.CB_SelectSmaMethod.TabIndex = 59
         '
-        'B_FindBestSDSingle
+        'B_FindBestSMASingle
         '
-        Me.B_FindBestSDSingle.Location = New System.Drawing.Point(536, 23)
-        Me.B_FindBestSDSingle.Name = "B_FindBestSDSingle"
-        Me.B_FindBestSDSingle.Size = New System.Drawing.Size(245, 47)
-        Me.B_FindBestSDSingle.TabIndex = 58
-        Me.B_FindBestSDSingle.Text = "Find best SB single"
-        Me.B_FindBestSDSingle.UseVisualStyleBackColor = True
+        Me.B_FindBestSMASingle.Location = New System.Drawing.Point(536, 23)
+        Me.B_FindBestSMASingle.Name = "B_FindBestSMASingle"
+        Me.B_FindBestSMASingle.Size = New System.Drawing.Size(245, 47)
+        Me.B_FindBestSMASingle.TabIndex = 58
+        Me.B_FindBestSMASingle.Text = "Find best SMA single"
+        Me.B_FindBestSMASingle.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -81,7 +81,7 @@ Partial Class FrmFindBestSMA
         Me.ClientSize = New System.Drawing.Size(1089, 533)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.CB_SelectSmaMethod)
-        Me.Controls.Add(Me.B_FindBestSDSingle)
+        Me.Controls.Add(Me.B_FindBestSMASingle)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "FrmFindBestSMA"
@@ -94,6 +94,6 @@ Partial Class FrmFindBestSMA
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents CB_SelectSmaMethod As ComboBox
-    Friend WithEvents B_FindBestSDSingle As Button
+    Friend WithEvents B_FindBestSMASingle As Button
     Friend WithEvents PictureBox1 As PictureBox
 End Class

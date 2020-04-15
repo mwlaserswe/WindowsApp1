@@ -36,7 +36,7 @@
         CB_SelectSmaMethod.SelectedIndex = 0
     End Sub
 
-    Private Sub B_FindBestSDSingle_Click(sender As Object, e As EventArgs) Handles B_FindBestSDSingle.Click
+    Private Sub B_FindBestSMASingle_Click(sender As Object, e As EventArgs) Handles B_FindBestSMASingle.Click
         Dim DemoBestSD As BestSMA
         Dim ChartFile As Integer
         Dim Zeile As String
