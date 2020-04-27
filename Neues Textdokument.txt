@@ -1,0 +1,24 @@
+=== Frameworkwersion ===
+	- https://docs.microsoft.com/de-de/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
+	- ist .NET Framework 4.5 noch eine höhere Version installiert?
+	  HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP\V4\Full ist aufgeführt.
+	  
+	- welche ist tatsächlich installiert?
+	  HKEY_LOCAL_MACHINE\Software\Microsoft\NET Framework Setup\NDP\V4\Full\Release aufgeführt.
+	  .NET Framework-Version	Minimalwert
+	  .NET Framework 4.5		378389
+	  .NET Framework 4.5.1		378675
+	  .NET Framework 4.5.2		379893
+	  .NET Framework 4.6		393295
+	  .NET Framework 4.6.1		394254
+	  .NET Framework 4.6.2		394802
+	  .NET Framework 4.7		460798
+	  .NET Framework 4.7.1		461308
+	  .NET Framework 4.7.2		461808
+	  .NET Framework 4.8		528040
+	  
+	- Developer Version 4.7.2 installiert  
+	  
+	  
+	  
+	  
