@@ -92,6 +92,7 @@ Partial Class Form1
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Analyse5 = New System.Windows.Forms.RadioButton()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.B_Last3Month = New System.Windows.Forms.Button()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -141,33 +142,33 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GgggToolStripMenuItem, Me.ToolStripMenuItem1, Me.AnalysisToolStripMenuItem, Me.ReadFromWEBToolStripMenuItem, Me.WebToolStripMenuItem, Me.ServiceToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(2655, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(2655, 42)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 36)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 38)
         Me.MenuToolStripMenuItem.Text = "Display Chart"
         '
         'GgggToolStripMenuItem
         '
         Me.GgggToolStripMenuItem.Name = "GgggToolStripMenuItem"
-        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 36)
+        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 38)
         Me.GgggToolStripMenuItem.Text = "Chart List"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 36)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 38)
         Me.ToolStripMenuItem1.Text = "ReadTodaysSharePrice"
         '
         'AnalysisToolStripMenuItem
         '
         Me.AnalysisToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckNumberOfRiseInToolStripMenuItem, Me.HowManyPercentInSequenceToolStripMenuItem, Me.RisePriodeStatisticToolStripMenuItem, Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem, Me.WriteChartFileToolStripMenuItem})
         Me.AnalysisToolStripMenuItem.Name = "AnalysisToolStripMenuItem"
-        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(120, 36)
+        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(120, 38)
         Me.AnalysisToolStripMenuItem.Text = "Analysis"
         '
         'CheckNumberOfRiseInToolStripMenuItem
@@ -192,7 +193,7 @@ Partial Class Form1
         '
         Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Name = "FindBestSMAInAllListedShares100Times1YearToolStripMenuItem"
         Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
-        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Text = "Find best SMA in all listed shares"
+        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Text = "Find best SMA"
         '
         'WriteChartFileToolStripMenuItem
         '
@@ -204,7 +205,7 @@ Partial Class Form1
         '
         Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
         Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
-        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 36)
+        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 38)
         Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
         '
         'ReadHistoricFromARIVAdeToolStripMenuItem
@@ -217,7 +218,7 @@ Partial Class Form1
         '
         Me.WebToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanWebForWKNToolStripMenuItem, Me.SaveWebPageAsHTMLToolStripMenuItem, Me.ReadSingleShareValueToolStripMenuItem, Me.ReadXMLToolStripMenuItem, Me.GridViewTestToolStripMenuItem, Me.TransformToolStripMenuItem})
         Me.WebToolStripMenuItem.Name = "WebToolStripMenuItem"
-        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 36)
+        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 38)
         Me.WebToolStripMenuItem.Text = "Web / Test"
         '
         'ScanWebForWKNToolStripMenuItem
@@ -260,7 +261,7 @@ Partial Class Form1
         '
         Me.ServiceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckWeekdayToolStripMenuItem, Me.InfoFilesToolStripMenuItem})
         Me.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem"
-        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
+        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 38)
         Me.ServiceToolStripMenuItem.Text = "Service"
         '
         'CheckWeekdayToolStripMenuItem
@@ -474,7 +475,7 @@ Partial Class Form1
         '
         'C_LaserWeek
         '
-        Me.C_LaserWeek.Location = New System.Drawing.Point(1302, 334)
+        Me.C_LaserWeek.Location = New System.Drawing.Point(1205, 335)
         Me.C_LaserWeek.Name = "C_LaserWeek"
         Me.C_LaserWeek.Size = New System.Drawing.Size(74, 49)
         Me.C_LaserWeek.TabIndex = 35
@@ -483,7 +484,7 @@ Partial Class Form1
         '
         'C_LastMonth
         '
-        Me.C_LastMonth.Location = New System.Drawing.Point(1382, 334)
+        Me.C_LastMonth.Location = New System.Drawing.Point(1285, 335)
         Me.C_LastMonth.Name = "C_LastMonth"
         Me.C_LastMonth.Size = New System.Drawing.Size(74, 46)
         Me.C_LastMonth.TabIndex = 36
@@ -645,11 +646,21 @@ Partial Class Form1
         Me.TextBox6.Size = New System.Drawing.Size(256, 31)
         Me.TextBox6.TabIndex = 59
         '
+        'B_Last3Month
+        '
+        Me.B_Last3Month.Location = New System.Drawing.Point(1376, 335)
+        Me.B_Last3Month.Name = "B_Last3Month"
+        Me.B_Last3Month.Size = New System.Drawing.Size(74, 46)
+        Me.B_Last3Month.TabIndex = 60
+        Me.B_Last3Month.Text = "3 M"
+        Me.B_Last3Month.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2655, 878)
+        Me.Controls.Add(Me.B_Last3Month)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Analyse5)
         Me.Controls.Add(Me.ComboBox1)
@@ -780,4 +791,5 @@ Partial Class Form1
     Friend WithEvents RisePriodeStatisticToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Analyse5 As RadioButton
     Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents B_Last3Month As Button
 End Class

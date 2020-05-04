@@ -31,8 +31,8 @@
         CB_SelectSmaMethod.Items.Add("Smoothed best SMA of last year")
         CB_SelectSmaMethod.Items.Add("Best SMA all time")
         CB_SelectSmaMethod.Items.Add("Smoothed best SMA all time")
-        CB_SelectSmaMethod.Items.Add("Best SMA in period")
-        CB_SelectSmaMethod.Items.Add("Smoothed best SMA in periode")
+        CB_SelectSmaMethod.Items.Add("Best SMA in Corona")
+        CB_SelectSmaMethod.Items.Add("Smoothed best SMA in Corona")
         CB_SelectSmaMethod.SelectedIndex = 0
     End Sub
 
@@ -52,9 +52,9 @@
         ElseIf CB_SelectSmaMethod.SelectedIndex = 3 Then
             DemoBestSD = FindSmoothedBestSMA(10, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
         ElseIf CB_SelectSmaMethod.SelectedIndex = 4 Then
-            'DemoBestSD = FindBestSMA(UBound(ChartArray) - 260, 260)  '260 Entries in HistoryArray is about 1 year. 9999: all
+            DemoBestSD = FindBestSMA(5254, 9999)  'Corona starts 10.02.2020
         ElseIf CB_SelectSmaMethod.SelectedIndex = 5 Then
-            'DemoBestSD = FindSmoothedBestSMA(UBound(ChartArray) - 260, 260)  '260 Entries in HistoryArray is about 1 year. 9999: all
+            DemoBestSD = FindSmoothedBestSMA(5254, 9999)   'Corona starts 10.02.2020
         End If
 
         Dim FlyingListBox As FrmFlyingListBox

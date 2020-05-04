@@ -1,8 +1,30 @@
 ﻿Option Explicit On
 
+Imports System.IO
 Imports System.Xml
+Imports System.Text
+Imports System.Xml.Serialization
+Imports System.Runtime.Serialization.Formatters.Binary
 
 Module XmlUtilities
+
+    ' Codebook 2010.pdf S-1111-
+    '<Serializable()> Public Class ClsShareInfo
+    '    Public _ID As String
+    '    Public _WKN As String
+    '    Public _Name As String
+    '    Public _ISIN As String
+    '    Public _AbsMax As Double
+    '    Public _AbsMaxPos As Integer
+    '    Public _Minimum As Double
+    '    Public _MinPos As Integer
+    '    Public _RightMax As Double
+    '    Public _RightMaxPos As Integer
+    'End Class
+
+
+
+    'Old Style
     Public Structure ShareInfo
         Public _ID As String
         Public _WKN As String
@@ -15,14 +37,73 @@ Module XmlUtilities
         Public _RightMax As Double
         Public _RightMaxPos As Integer
     End Structure
+    '/Old Style
 
 
-    '''' Storage of employee data.
-    '''Public _firstName As String
-    '''Public _id As Integer
-    '''Public _lastName As String
-    '''Public _salary As Integer
 
+    ' Codebook 2010.pdf S-1111-
+    Public Sub SerializeToXmlFile(obj As Object, filename As String, encoding As Encoding)
+        'XmlSerializer für den Typ des Objekts erzeugen
+        Dim serializer As XmlSerializer = New XmlSerializer(obj.GetType())
+
+        'Objekt über ein StreamWriter-Objekt serialisieren
+        Using StreamWriter As StreamWriter = New StreamWriter(filename, False, encoding)
+            serializer.Serialize(StreamWriter, obj)
+        End Using
+    End Sub
+
+
+    Public Function SerializeToXmlString(obj As Object) As String
+        ' XmlSerializer für den Typ des Objekts erzeugen
+        Dim serializer As XmlSerializer = New XmlSerializer(obj.GetType())
+        ' Objekt über einen StringWriter serialisieren
+        Using stringWriter As StringWriter = New StringWriter()
+            serializer.Serialize(stringWriter, obj)
+            ' Das Ergebnis zurückgeben
+            SerializeToXmlString = stringWriter.ToString()
+        End Using
+    End Function
+
+
+    Public Function DeserializeFromXmlFile(filename As String, objectType As Type, encoding As Encoding) As Object
+        ' XmlSerializer für den Typ des Objekts erzeugen
+        Dim serializer As XmlSerializer = New XmlSerializer(objectType)
+        ' Objekt über ein StreamReader-Objekt serialisieren
+        Using streamReader As StreamReader = New StreamReader(filename, encoding)
+            DeserializeFromXmlFile = serializer.Deserialize(streamReader)
+        End Using
+    End Function
+
+
+    Public Function DeserializeFromXmlString(xmlString As String, objectType As Type) As Object
+        ' XmlSerializer für den Typ des Objekts erzeugen
+        Dim serializer As XmlSerializer = New XmlSerializer(objectType)
+        ' Objekt über ein StreamReader-Objekt deserialisieren
+        Using stringReader As StringReader = New StringReader(xmlString)
+            DeserializeFromXmlString = serializer.Deserialize(stringReader)
+        End Using
+    End Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    'Old Style
     Public Function ReadShareInfo(FileName As String) As ShareInfo
         Dim xmlDoc As New XmlDocument()
 
@@ -99,7 +180,7 @@ Module XmlUtilities
             ''Dim employee As ShareInfo
             ''For Each employee In ShareItem
             writer.WriteStartElement("General")
-            writer.WriteElementString("ID", ShareItem._id.ToString)
+            writer.WriteElementString("ID", ShareItem._ID.ToString)
             writer.WriteElementString("Name", ShareItem._Name)
             writer.WriteElementString("WKN", ShareItem._WKN)
             writer.WriteElementString("ISIN", ShareItem._ISIN)
@@ -164,5 +245,6 @@ Module XmlUtilities
 
         doc.Save(FileName)
     End Sub
+    '/Old Style
 
 End Module

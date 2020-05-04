@@ -2,7 +2,6 @@
 
 Imports System.IO
 Public Class Form1
-
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         FrmChartList.Show()
     End Sub
@@ -104,6 +103,8 @@ Public Class Form1
         ComboBox1.Items.Add("Use best user defined SMA")        'Index 3
         ComboBox1.SelectedIndex = 0
 
+        B_Last3Month_Click(Nothing, Nothing)
+        Ch_FitY.Checked = True
     End Sub
 
     Private Sub GridViewTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GridViewTestToolStripMenuItem.Click
@@ -415,12 +416,23 @@ Public Class Form1
     End Sub
 
     Private Sub C_LastYear_Click(sender As Object, e As EventArgs) Handles C_LastYear.Click
+        GlbOffY = 0
+        GlbScaleY = 1
         ScaleChart(UBound(ChartArray) + 10, 271)
     End Sub
+    Private Sub B_Last3Month_Click(sender As Object, e As EventArgs) Handles B_Last3Month.Click
+        GlbOffY = 0
+        GlbScaleY = 1
+        ScaleChart(UBound(ChartArray) + 3, 90)
+    End Sub
     Private Sub C_LastMonth_Click(sender As Object, e As EventArgs) Handles C_LastMonth.Click
+        GlbOffY = 0
+        GlbScaleY = 1
         ScaleChart(UBound(ChartArray) + 1, 22)
     End Sub
     Private Sub C_LaserWeek_Click(sender As Object, e As EventArgs) Handles C_LaserWeek.Click
+        GlbOffY = 0
+        GlbScaleY = 1
         ScaleChart(UBound(ChartArray) + 1, 5)
     End Sub
 
@@ -428,13 +440,13 @@ Public Class Form1
         'GlbScaleX = 1
         GlbScaleY = 1
         'ScaleLast.X = GlbScaleX
-        ScaleLast.Y = GlbScaleY
+        'ScaleLast.Y = GlbScaleY
 
 
         'GlbOffX = 0
         GlbOffY = 0
         'OffsetLast.X = GlbOffX
-        OffsetLast.Y = GlbOffY
+        'OffsetLast.Y = GlbOffY
 
         'RefreshChart()
 
@@ -786,6 +798,7 @@ Public Class Form1
     Private Sub PicChart_MouseWheel(sender As Object, e As MouseEventArgs) Handles PicChart.MouseWheel
 
     End Sub
+
 
     ''Private Sub CompleteCompanyWKNISINToolStripMenuItem_Click(sender As Object, e As EventArgs)
     ''    Dim InFileName As String

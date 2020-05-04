@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <General>
+    <ID>0</ID>
+    <Name>Volkswagen(VW) St.</Name>
+    <WKN>766400</WKN>
+    <ISIN>DE0007664005</ISIN>
+  </General>
+  <BestSD>
+    <AbsMax>2,2</AbsMax>
+    <AbsMaxPos>8</AbsMaxPos>
+    <Minimum>3,8</Minimum>
+    <MinPos>185</MinPos>
+    <RightMax>4</RightMax>
+    <RightMaxPos>123</RightMaxPos>
+  </BestSD>
+</ShareInfo>
