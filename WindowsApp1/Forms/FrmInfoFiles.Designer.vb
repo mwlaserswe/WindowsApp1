@@ -22,56 +22,17 @@ Partial Class FrmInfoFiles
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.T_Search = New System.Windows.Forms.TextBox()
-        Me.B_GenerateSingleInfoFiles = New System.Windows.Forms.Button()
-        Me.B_GenerateInfoFiles = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.T_Search1 = New System.Windows.Forms.TextBox()
         Me.T_Info1 = New System.Windows.Forms.TextBox()
         Me.T_Info2 = New System.Windows.Forms.TextBox()
         Me.T_Info3 = New System.Windows.Forms.TextBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.B_GenerateSingleInfoFiles = New System.Windows.Forms.Button()
+        Me.T_Search = New System.Windows.Forms.TextBox()
+        Me.B_GenerateAllInfoFiles = New System.Windows.Forms.Button()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.T_Search)
-        Me.GroupBox1.Controls.Add(Me.B_GenerateSingleInfoFiles)
-        Me.GroupBox1.Controls.Add(Me.B_GenerateInfoFiles)
-        Me.GroupBox1.Location = New System.Drawing.Point(54, 382)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(657, 211)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Old Style"
-        '
-        'T_Search
-        '
-        Me.T_Search.Location = New System.Drawing.Point(40, 147)
-        Me.T_Search.Name = "T_Search"
-        Me.T_Search.Size = New System.Drawing.Size(261, 31)
-        Me.T_Search.TabIndex = 5
-        Me.T_Search.Text = "Name, ISISN, WKN"
-        '
-        'B_GenerateSingleInfoFiles
-        '
-        Me.B_GenerateSingleInfoFiles.Location = New System.Drawing.Point(40, 65)
-        Me.B_GenerateSingleInfoFiles.Name = "B_GenerateSingleInfoFiles"
-        Me.B_GenerateSingleInfoFiles.Size = New System.Drawing.Size(261, 53)
-        Me.B_GenerateSingleInfoFiles.TabIndex = 4
-        Me.B_GenerateSingleInfoFiles.Text = "Generate single info file"
-        Me.B_GenerateSingleInfoFiles.UseVisualStyleBackColor = True
-        '
-        'B_GenerateInfoFiles
-        '
-        Me.B_GenerateInfoFiles.Location = New System.Drawing.Point(357, 65)
-        Me.B_GenerateInfoFiles.Name = "B_GenerateInfoFiles"
-        Me.B_GenerateInfoFiles.Size = New System.Drawing.Size(281, 53)
-        Me.B_GenerateInfoFiles.TabIndex = 3
-        Me.B_GenerateInfoFiles.Text = "Generate all Info files"
-        Me.B_GenerateInfoFiles.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -120,34 +81,70 @@ Partial Class FrmInfoFiles
         Me.T_Info3.Size = New System.Drawing.Size(261, 31)
         Me.T_Info3.TabIndex = 9
         '
+        'B_GenerateSingleInfoFiles
+        '
+        Me.B_GenerateSingleInfoFiles.Location = New System.Drawing.Point(729, 212)
+        Me.B_GenerateSingleInfoFiles.Name = "B_GenerateSingleInfoFiles"
+        Me.B_GenerateSingleInfoFiles.Size = New System.Drawing.Size(261, 53)
+        Me.B_GenerateSingleInfoFiles.TabIndex = 11
+        Me.B_GenerateSingleInfoFiles.Text = "Generate single info file"
+        Me.B_GenerateSingleInfoFiles.UseVisualStyleBackColor = True
+        '
+        'T_Search
+        '
+        Me.T_Search.Location = New System.Drawing.Point(729, 286)
+        Me.T_Search.Name = "T_Search"
+        Me.T_Search.Size = New System.Drawing.Size(261, 31)
+        Me.T_Search.TabIndex = 12
+        Me.T_Search.Text = "Name, ISISN, WKN"
+        '
+        'B_GenerateAllInfoFiles
+        '
+        Me.B_GenerateAllInfoFiles.Location = New System.Drawing.Point(729, 58)
+        Me.B_GenerateAllInfoFiles.Name = "B_GenerateAllInfoFiles"
+        Me.B_GenerateAllInfoFiles.Size = New System.Drawing.Size(281, 53)
+        Me.B_GenerateAllInfoFiles.TabIndex = 13
+        Me.B_GenerateAllInfoFiles.Text = "Generate all Info files"
+        Me.B_GenerateAllInfoFiles.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 25
+        Me.ListBox1.Location = New System.Drawing.Point(1086, 32)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(484, 554)
+        Me.ListBox1.TabIndex = 14
+        '
         'FrmInfoFiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1149, 627)
+        Me.ClientSize = New System.Drawing.Size(1599, 627)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.B_GenerateAllInfoFiles)
+        Me.Controls.Add(Me.T_Search)
+        Me.Controls.Add(Me.B_GenerateSingleInfoFiles)
         Me.Controls.Add(Me.T_Info3)
         Me.Controls.Add(Me.T_Info2)
         Me.Controls.Add(Me.T_Info1)
         Me.Controls.Add(Me.T_Search1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FrmInfoFiles"
         Me.Text = "InfoFiles"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents T_Search As TextBox
-    Friend WithEvents B_GenerateSingleInfoFiles As Button
-    Friend WithEvents B_GenerateInfoFiles As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents T_Search1 As TextBox
     Friend WithEvents T_Info1 As TextBox
     Friend WithEvents T_Info2 As TextBox
     Friend WithEvents T_Info3 As TextBox
+    Friend WithEvents B_GenerateSingleInfoFiles As Button
+    Friend WithEvents T_Search As TextBox
+    Friend WithEvents B_GenerateAllInfoFiles As Button
+    Friend WithEvents ListBox1 As ListBox
 End Class

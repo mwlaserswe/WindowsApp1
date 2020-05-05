@@ -37,7 +37,8 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        T_InvestmentStart.Text = My.Settings.InvestmentStart
+        '      T_InvestmentStart.Text = My.Settings.InvestmentStart
+        T_InvestmentStart.Text = 5200
 
 
         ' Init DataGridView1 

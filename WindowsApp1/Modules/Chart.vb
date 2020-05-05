@@ -232,7 +232,8 @@ ReadHistoryFileErr:
         Dim Sum As Double
         Dim Average As Double
         Dim Distance As Double
-        Static LastDistance As Double
+        'SWE        Static LastDistance As Double
+        Dim LastDistance As Double
 
         If Not ArrayValid(ChartArray) Then
             ' Array ist nicht dimensioniert

@@ -8,22 +8,6 @@ Imports System.Runtime.Serialization.Formatters.Binary
 
 Module XmlUtilities
 
-    ' Codebook 2010.pdf S-1111-
-    '<Serializable()> Public Class ClsShareInfo
-    '    Public _ID As String
-    '    Public _WKN As String
-    '    Public _Name As String
-    '    Public _ISIN As String
-    '    Public _AbsMax As Double
-    '    Public _AbsMaxPos As Integer
-    '    Public _Minimum As Double
-    '    Public _MinPos As Integer
-    '    Public _RightMax As Double
-    '    Public _RightMaxPos As Integer
-    'End Class
-
-
-
     'Old Style
     Public Structure ShareInfo
         Public _ID As String

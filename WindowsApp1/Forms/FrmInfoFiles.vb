@@ -7,10 +7,8 @@ Imports System.Runtime.Serialization.Formatters.Binary
 
 Public Class FrmInfoFiles
 
-    Private Sub B_GenerateInfoFiles_Click(sender As Object, e As EventArgs)
-        Dim Content As ShareInfo
-        Dim DemoBestSD As BestSMA
-        Dim Fullpath As String
+    Private Sub B_GenerateAllInfoFiles_Click(sender As Object, e As EventArgs) Handles B_GenerateAllInfoFiles.Click
+        Dim ShareInfo As New ClsXML.ShareInfo
 
         If MsgBox("All Info-Files will be overwritten!", MsgBoxStyle.OkCancel) = vbCancel Then
             Exit Sub
@@ -25,19 +23,8 @@ Public Class FrmInfoFiles
                 End If
             Next i
 
-            Content._ID = 0
-            Content._Name = Company.Name
-            Content._WKN = Company.WKN
-            Content._ISIN = Company.ISIN
-
-            Fullpath = Application.StartupPath & "\History\" & Company.WKN & ".txt"
-            ReadHistoryFileToChartArray(Fullpath, Company.Name)
-
-            DemoBestSD = Chart.FindBestSMA(500, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
-            Content._AbsMax = DemoBestSD.AbsMax
-            Content._AbsMaxPos = DemoBestSD.AbsMaxPos
-
-            CreateShareInfo(Application.StartupPath & "\HistoryInfo\" & Company.WKN & ".xml", Content)
+            ListBox1.Items.Add(Company.Name)
+            WriteBestSMAofSingleShare(Company, ShareInfo)
 
             Application.DoEvents()
         Next
@@ -45,36 +32,62 @@ Public Class FrmInfoFiles
 
     End Sub
 
-    Private Sub B_GenerateSingleInfoFiles_Click(sender As Object, e As EventArgs)
-        Dim Company As ShareItem
-        Dim Content As ShareInfo
+
+    Private Sub WriteBestSMAofSingleShare(Company As ShareItem, ShareInfo As ClsXML.ShareInfo)
         Dim DemoBestSD As BestSMA
-        Dim Fullpath As String
-        Dim i As Long
-        Dim WKN As String
+        Dim FullpathHistory As String
+        Dim FullpathInfo As String
+        Dim SMAArry As String
+
+        FullpathHistory = Path.Combine(Application.StartupPath, "History", Company.WKN & ".txt")
+        ReadHistoryFileToChartArray(FullpathHistory, "")
+
+        FullpathInfo = Path.Combine(Application.StartupPath & "HistoryInfo", Company.WKN & ".XML")
+        If File.Exists(FullpathInfo) Then
+            ShareInfo = DeserializeFromXmlFile(FullpathInfo, ShareInfo.GetType(), Encoding.UTF8)
+        Else
+            ShareInfo.General.ID = "0"
+            ShareInfo.General.Name = Company.Name
+            ShareInfo.General.WKN = Company.WKN
+            ShareInfo.General.ISIN = Company.ISIN
+        End If
 
 
-        For i = LBound(CompanyListArray) To UBound(CompanyListArray)
-            Application.DoEvents()
-            If InStr(1, CompanyListArray(i).Name, T_Search.Text, vbTextCompare) > 0 _
-                Or InStr(1, CompanyListArray(i).WKN, T_Search.Text, vbTextCompare) > 0 _
-                Or InStr(1, CompanyListArray(i).ISIN, T_Search.Text, vbTextCompare) _
-            Then
+        'Last year
+        DemoBestSD = FindBestSMA(UBound(ChartArray) - 260, 260)  '260 Entries in HistoryArray is about 1 year.
+        ShareInfo.BestSD.SMA_OneYear.AbsMax = DemoBestSD.AbsMax
+        ShareInfo.BestSD.SMA_OneYear.AbsMaxPos = DemoBestSD.AbsMaxPos
+        SMAArry = ""
+        For Each Element In DemoBestSD.SMAArry
+            SMAArry = SMAArry & Format(Element, "0.000") & " "
+        Next
+        ShareInfo.BestSD.SMA_OneYear.SMAArry = SMAArry
 
-                Company = CompanyListArray(i)
-                Fullpath = Application.StartupPath & "\History\" & Company.WKN & ".txt"
-                ReadHistoryFileToChartArray(Fullpath, Company.Name)
+        'Since 2000
+        DemoBestSD = FindBestSMA(10, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
+        ShareInfo.BestSD.SMA_Since2000.AbsMax = DemoBestSD.AbsMax
+        ShareInfo.BestSD.SMA_Since2000.AbsMaxPos = DemoBestSD.AbsMaxPos
+        SMAArry = ""
+        For Each Element In DemoBestSD.SMAArry
+            SMAArry = SMAArry & Format(Element, "0.000") & " "
+        Next
+        ShareInfo.BestSD.SMA_Since2000.SMAArry = SMAArry
 
-                DemoBestSD = Chart.FindBestSMA(500, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
-                Content._AbsMax = DemoBestSD.AbsMax
-                Content._AbsMaxPos = DemoBestSD.AbsMaxPos
+        'Since Corona
+        DemoBestSD = FindBestSMA(5254, 9999)  'Corona starts 10.02.2020
+        ShareInfo.BestSD.SMA_SinceCorona.AbsMax = DemoBestSD.AbsMax
+        ShareInfo.BestSD.SMA_SinceCorona.AbsMaxPos = DemoBestSD.AbsMaxPos
+        SMAArry = ""
+        For Each Element In DemoBestSD.SMAArry
+            SMAArry = SMAArry & Format(Element, "0.000") & " "
+        Next
+        ShareInfo.BestSD.SMA_SinceCorona.SMAArry = SMAArry
 
-            End If
-
-        Next i
+        If File.Exists(FullpathInfo) Then
+            ' Object in XML-datei schreiben
+            SerializeToXmlFile(ShareInfo, FullpathInfo, Encoding.UTF8)
+        End If
     End Sub
-
-
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ShareInfo As New ClsXML.ShareInfo
@@ -84,13 +97,6 @@ Public Class FrmInfoFiles
         ShareInfo.General.Name = "Volkswagen(VW) St."
         ShareInfo.General.WKN = "766400"
         ShareInfo.General.ISIN = "DE0007664005"
-
-        ShareInfo.BestSD.AbsMax = 2.2
-        ShareInfo.BestSD.AbsMaxPos = 8
-        ShareInfo.BestSD.Minimum = 3.8
-        ShareInfo.BestSD.MinPos = 185
-        ShareInfo.BestSD.RightMax = 4
-        ShareInfo.BestSD.RightMaxPos = 123
 
         XML_Filename = Path.Combine(Application.StartupPath, "TEST_INFO_FILE.XML")
         ' Object in XML-datei schreiben
@@ -116,20 +122,37 @@ Public Class FrmInfoFiles
 
                 T_Info1.Text = ShareInfo.General.WKN
                 T_Info2.Text = ShareInfo.General.ISIN
-                T_Info3.Text = ShareInfo.BestSD.AbsMax
+            End If
 
-                T_Info3.Text = ShareInfo.BestSD.AbsMaxPos
-                T_Info3.Text = ShareInfo.BestSD.Minimum
-                T_Info3.Text = ShareInfo.BestSD.MinPos
-                T_Info3.Text = ShareInfo.BestSD.RightMax
-                T_Info3.Text = ShareInfo.BestSD.RightMaxPos
+        Next i
+
+    End Sub
 
 
+
+    Private Sub B_GenerateSingleInfoFiles_Click_1(sender As Object, e As EventArgs) Handles B_GenerateSingleInfoFiles.Click
+        Dim ShareInfo As New ClsXML.ShareInfo
+        Dim Company As ShareItem
+        Dim Fullpath As String
+        Dim i As Long
+
+        For i = LBound(CompanyListArray) To UBound(CompanyListArray)
+            Application.DoEvents()
+            If InStr(1, CompanyListArray(i).Name, T_Search.Text, vbTextCompare) > 0 _
+                Or InStr(1, CompanyListArray(i).WKN, T_Search.Text, vbTextCompare) > 0 _
+                Or InStr(1, CompanyListArray(i).ISIN, T_Search.Text, vbTextCompare) _
+            Then
+                Company = CompanyListArray(i)
+                ListBox1.Items.Add(Company.Name)
+                WriteBestSMAofSingleShare(Company, ShareInfo)
 
             End If
 
         Next i
 
     End Sub
+
+
+
 
 End Class
