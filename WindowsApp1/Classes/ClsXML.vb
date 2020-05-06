@@ -14,21 +14,29 @@ Public Class ClsXML
         Public ISIN As String
     End Class
 
-    Public Class BestSD
-        Public SMA_OneYear As New SMAInfo
-        Public SMA_Since2000 As New SMAInfo
-        Public SMA_SinceCorona As New SMAInfo
-    End Class
-
     Public Class SMAInfo
         Public AbsMax As String
         Public AbsMaxPos As String
         Public SMAArry As String
     End Class
 
+    Public Class UserDefinitions
+        Public UserDefinedSMA As String
+    End Class
+
+
+
+    Public Class BestSMA
+        Public SMA_LastYear As New SMAInfo
+        Public SMA_Since2000 As New SMAInfo
+        Public SMA_SinceCorona As New SMAInfo
+    End Class
+
+
     <Serializable()> Public Class ShareInfo
         Public General As New General
-        Public BestSD As New BestSD
+        Public BestSMA As New BestSMA
+        Public UserDefinitions As New UserDefinitions
     End Class
 
 End Class

@@ -61,6 +61,7 @@ Module GlobalVariables
     Public Const spIndex = "spIndex"
     Public Const spStatus = "spStatus"
     Public Const spAccount = "spAccount"
+    Public Const spSMA = "spSMA"
 
     '=== Visualisieung ===
     Public GlbScaleX As Single
@@ -79,7 +80,7 @@ Module GlobalVariables
 
     Public ChartArray() As ChartItem
 
-
+    Public GlbShareInfo As New ClsXML.ShareInfo
 
     Public MouseDnPos As MousePos
     Public MouseUpPos As MousePos

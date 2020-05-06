@@ -1,4 +1,10 @@
-﻿Public Class FrmFindBestSMA
+﻿
+Option Explicit On
+
+Imports System.IO
+Imports System.Text
+
+Public Class FrmFindBestSMA
     Dim PtArray As Point()
     Dim idx As Integer
 
@@ -90,6 +96,61 @@
 
     End Sub
 
+    Private Sub B_DisplaySMA_Click(sender As Object, e As EventArgs) Handles B_DisplaySMA.Click
+        Dim ShareInfo As New ClsXML.ShareInfo
+        Dim TxtSince2000 As String
+        Dim ListSince2000 As New List(Of String)
+
+        TxtSince2000 = GlbShareInfo.BestSMA.SMA_Since2000.SMAArry
+        ListSince2000 = SepariereStringLst(TxtSince2000, " ")
+
+
+    End Sub
+
+    Public Function SepariereStringLst(Zeile As String, Delimiter As String) As List(Of String)
+        Dim Pos1 As Long
+        Dim Pos2 As Long
+        Dim AnzahlWorte As Long               'Anzahl der Worte der Zeile
+        Dim lclList As New List(Of String)
+
+        'ReDim WortArray(0 To 0)                         'WortArray löschen
+        AnzahlWorte = 0
+        Pos2 = 0
+
+        If Delimiter = " " Then Zeile = Trim(Zeile)
+
+        Zeile = Trim(Zeile)
+        Do
+            Pos1 = Pos2
+
+            'Trennzeichen [CR]: [LF] werden überlesen
+            If Delimiter = vbCr Then
+                If Mid(Zeile, Pos1 + 1, 1) = vbLf Then
+                    Pos1 = Pos1 + 1                             'LF übergehen
+                End If
+            End If
+
+            'Trennzeichen [Space]: [Space] werden überlesen
+            If Delimiter = " " Then
+                Do While Mid(Zeile, Pos1 + 1, 1) = " "
+                    Pos1 = Pos1 + 1                             'Space übergehen
+                Loop
+            End If
+
+            Pos2 = InStr(Pos1 + 1, Zeile, Delimiter, CompareMethod.Binary)      'nach Trennzeichen suchen
+            If Pos2 > 0 Then                              'noch ein Trennzeichen in der Zeile
+                lclList.Add(Mid(Zeile, Pos1 + 1, Pos2 - Pos1 - 1))
+
+                AnzahlWorte = AnzahlWorte + 1
+            Else                                          'kein Trennzeichen mehr vorhanden
+                lclList.Add(Mid(Zeile, Pos1 + 1))
+            End If
+        Loop While Pos2 > 0
+
+        SepariereStringLst = lclList
+    End Function
+
+
     Private Sub DrawStartNew(Pic As PictureBox, X As Single, Y As Single, Sc As PicScaling, LclColor As Color)
         Dim PicX As Single
         Dim PicY As Single
@@ -172,10 +233,6 @@
         Dim pen1 As New System.Drawing.Pen(LclColor, 1)
         Pic.CreateGraphics.DrawLines(pen1, PtArray)
     End Sub
-
-
-
-
 
 
 End Class

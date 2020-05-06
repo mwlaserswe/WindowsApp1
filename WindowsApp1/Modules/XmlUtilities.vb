@@ -88,52 +88,52 @@ Module XmlUtilities
 
 
     'Old Style
-    Public Function ReadShareInfo(FileName As String) As ShareInfo
-        Dim xmlDoc As New XmlDocument()
+    '''Public Function ReadShareInfo(FileName As String) As ShareInfo
+    '''    Dim xmlDoc As New XmlDocument()
 
-        If Not System.IO.File.Exists(FileName) Then
-            Exit Function
-        End If
+    '''    If Not System.IO.File.Exists(FileName) Then
+    '''        Exit Function
+    '''    End If
 
 
-        xmlDoc.Load(FileName)
-        Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/ShareInfo/General")
-        'Dim ID As String = "", WKN As String = "", ISIN As String = ""
-        For Each node As XmlNode In nodes
-            ReadShareInfo._ID = node.SelectSingleNode("ID").InnerText
-            ReadShareInfo._Name = node.SelectSingleNode("Name").InnerText
-            ReadShareInfo._WKN = node.SelectSingleNode("WKN").InnerText
-            ReadShareInfo._ISIN = node.SelectSingleNode("ISIN").InnerText
-        Next
-        nodes = xmlDoc.DocumentElement.SelectNodes("/ShareInfo/BestSD")
-        'Dim ID As String = "", WKN As String = "", ISIN As String = ""
-        For Each node As XmlNode In nodes
-            ReadShareInfo._AbsMax = node.SelectSingleNode("AbsMax").InnerText
-            ReadShareInfo._AbsMaxPos = node.SelectSingleNode("AbsMaxPos").InnerText
-            ReadShareInfo._Minimum = node.SelectSingleNode("Minimum").InnerText
-            ReadShareInfo._MinPos = node.SelectSingleNode("MinPos").InnerText
-            ReadShareInfo._RightMax = node.SelectSingleNode("RightMax").InnerText
-            ReadShareInfo._RightMaxPos = node.SelectSingleNode("RightMaxPos").InnerText
-        Next
+    '''    xmlDoc.Load(FileName)
+    '''    Dim nodes As XmlNodeList = xmlDoc.DocumentElement.SelectNodes("/ShareInfo/General")
+    '''    'Dim ID As String = "", WKN As String = "", ISIN As String = ""
+    '''    For Each node As XmlNode In nodes
+    '''        ReadShareInfo._ID = node.SelectSingleNode("ID").InnerText
+    '''        ReadShareInfo._Name = node.SelectSingleNode("Name").InnerText
+    '''        ReadShareInfo._WKN = node.SelectSingleNode("WKN").InnerText
+    '''        ReadShareInfo._ISIN = node.SelectSingleNode("ISIN").InnerText
+    '''    Next
+    '''    nodes = xmlDoc.DocumentElement.SelectNodes("/ShareInfo/BestSD")
+    '''    'Dim ID As String = "", WKN As String = "", ISIN As String = ""
+    '''    For Each node As XmlNode In nodes
+    '''        ReadShareInfo._AbsMax = node.SelectSingleNode("AbsMax").InnerText
+    '''        ReadShareInfo._AbsMaxPos = node.SelectSingleNode("AbsMaxPos").InnerText
+    '''        ReadShareInfo._Minimum = node.SelectSingleNode("Minimum").InnerText
+    '''        ReadShareInfo._MinPos = node.SelectSingleNode("MinPos").InnerText
+    '''        ReadShareInfo._RightMax = node.SelectSingleNode("RightMax").InnerText
+    '''        ReadShareInfo._RightMaxPos = node.SelectSingleNode("RightMaxPos").InnerText
+    '''    Next
 
-        '''Dim Zeile As String
+    '''Dim Zeile As String
 
-        '''' So kommt man auf den Desktop
-        '''Dim xmlReader As New XmlTextReader(FileName)
-        '''While xmlReader.Read()
-        '''    Select Case xmlReader.NodeType
-        '''        Case XmlNodeType.Element
-        '''            Zeile = ("<" + xmlReader.Name & ">")
-        '''            Exit Select
-        '''        Case XmlNodeType.Text
-        '''            Zeile = (xmlReader.Value)
-        '''            Exit Select
-        '''        Case XmlNodeType.EndElement
-        '''            Zeile = ("")
-        '''            Exit Select
-        '''    End Select
-        '''End While
-    End Function
+    '''' So kommt man auf den Desktop
+    '''Dim xmlReader As New XmlTextReader(FileName)
+    '''While xmlReader.Read()
+    '''    Select Case xmlReader.NodeType
+    '''        Case XmlNodeType.Element
+    '''            Zeile = ("<" + xmlReader.Name & ">")
+    '''            Exit Select
+    '''        Case XmlNodeType.Text
+    '''            Zeile = (xmlReader.Value)
+    '''            Exit Select
+    '''        Case XmlNodeType.EndElement
+    '''            Zeile = ("")
+    '''            Exit Select
+    '''    End Select
+    '''End While
+    '''End Function
 
     Public Sub ReadShareInfo_2(FileName As String)
         Dim xmlDoc As New XmlDocument()

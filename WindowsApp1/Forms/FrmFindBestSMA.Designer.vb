@@ -27,6 +27,7 @@ Partial Class FrmFindBestSMA
         Me.CB_SelectSmaMethod = New System.Windows.Forms.ComboBox()
         Me.B_FindBestSMASingle = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.B_DisplaySMA = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,11 +75,21 @@ Partial Class FrmFindBestSMA
         Me.PictureBox1.TabIndex = 60
         Me.PictureBox1.TabStop = False
         '
+        'B_DisplaySMA
+        '
+        Me.B_DisplaySMA.Location = New System.Drawing.Point(270, 183)
+        Me.B_DisplaySMA.Name = "B_DisplaySMA"
+        Me.B_DisplaySMA.Size = New System.Drawing.Size(245, 73)
+        Me.B_DisplaySMA.TabIndex = 61
+        Me.B_DisplaySMA.Text = "Display SMA of current chart"
+        Me.B_DisplaySMA.UseVisualStyleBackColor = True
+        '
         'FrmFindBestSMA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1089, 533)
+        Me.Controls.Add(Me.B_DisplaySMA)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.CB_SelectSmaMethod)
         Me.Controls.Add(Me.B_FindBestSMASingle)
@@ -96,4 +107,5 @@ Partial Class FrmFindBestSMA
     Friend WithEvents CB_SelectSmaMethod As ComboBox
     Friend WithEvents B_FindBestSMASingle As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents B_DisplaySMA As Button
 End Class

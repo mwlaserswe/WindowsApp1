@@ -98,7 +98,7 @@ ReadHistoryFileErr:
         DrawEnd(Pic, ColorCoord)
 
 
-        '==== Draw SD ====
+        '==== Draw SMA ====
 
         'idx 0 is the head line
         idx = 1
@@ -353,8 +353,11 @@ ReadHistoryFileErr:
                 Case 20
                     ' if share price falls under GD again
                     If ChartArray(idx).Distance <= 0 Then
+                        'SWE ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
+                        ' Remove transfer costs
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
                         ChartArray(idx).Trend = "20: Hold"
-                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
                         State = 30
                         ' share price stays over GD
                     Else
@@ -364,11 +367,11 @@ ReadHistoryFileErr:
                 Case 30
                     ' if share price raised over GD again
                     If ChartArray(idx).Distance > 0 Then
-                        ChartArray(idx).Trend = "30: Rise"
                         '                    ChartArray(idx).Account = ChartArray(idx).Value / StartSharePrice * StartAccount
                         StartSharePrice = ChartArray(idx).Value
                         ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
                         StartAccount = ChartArray(idx).Account
+                        ChartArray(idx).Trend = "30: Rise"
                         State = 20
                     Else
                         ' share price stays under GD
@@ -980,7 +983,7 @@ ReadCompanyListFileErr:
         '''On Error GoTo OpenError
 
 
-        ChartFilename = Application.StartupPath & "\BestSD " & Form1.T_CurrCompName.Text & " " & Form1.T_CurrWKN.Text & ".txt"
+        ChartFilename = Application.StartupPath & "\BestSMA " & Form1.T_CurrCompName.Text & " " & Form1.T_CurrWKN.Text & ".txt"
         ChartFile = FreeFile()
         FileOpen(ChartFile, ChartFilename, OpenMode.Output)
         ListIdx = 0

@@ -1,6 +1,7 @@
 ﻿Option Explicit On
 
 Imports System.IO
+Imports System.Text
 Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         FrmChartList.Show()
@@ -37,9 +38,7 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        '      T_InvestmentStart.Text = My.Settings.InvestmentStart
-        T_InvestmentStart.Text = 5200
-
+        T_InvestmentStart.Text = My.Settings.InvestmentStart
 
         ' Init DataGridView1 
         DataGridView1.ColumnHeadersVisible = True
@@ -53,15 +52,17 @@ Public Class Form1
         DataGridView1.Columns.Add(spIndex, "Index")
         DataGridView1.Columns.Add(spStatus, "Status")
         DataGridView1.Columns.Add(spAccount, "Account")
+        DataGridView1.Columns.Add(spSMA, "SMA")
 
         ' Breite einstellen
         DataGridView1.Columns(spPrimaryKey).Width = 30
         DataGridView1.Columns(spCompany).Width = 75
         DataGridView1.Columns(spWKN).Width = 75
-        DataGridView1.Columns(spIsin).Width = 110
+        DataGridView1.Columns(spIsin).Width = 10
         DataGridView1.Columns(spIndex).Width = 35
         DataGridView1.Columns(spStatus).Width = 20
         DataGridView1.Columns(spAccount).Width = 20
+        DataGridView1.Columns(spSMA).Width = 20
 
         'DataGridView1 row = DataGridView.Rows(0)
         '    row.Height = 15
@@ -98,10 +99,11 @@ Public Class Form1
 
         Analyse2.Checked = True
 
-        ComboBox1.Items.Add("Use SMA of TextBox")               'Index 0
+        ComboBox1.Items.Add("Use best user defined SMA")        'Index 3
+        ComboBox1.Items.Add("Use best SMA last year")               'Index 0
         ComboBox1.Items.Add("Use best SMA since 2000")          'Index 1
         ComboBox1.Items.Add("Use best SMA since CORONA")        'Index 2
-        ComboBox1.Items.Add("Use best user defined SMA")        'Index 3
+        ComboBox1.Items.Add("Use SMA of TextBox")               'Index 0
         ComboBox1.SelectedIndex = 0
 
         B_Last3Month_Click(Nothing, Nothing)
@@ -194,9 +196,6 @@ Public Class Form1
         Dim WKN As String
         Dim ISIN As String
 
-        Dim CurrentShareInfo As ShareInfo
-
-
 
         ' DataGridView1.Row is cursor
         row = DataGridView1.CurrentCell.RowIndex
@@ -223,21 +222,46 @@ Public Class Form1
             GlbScaleY = 0.7 * PicChart.Height / LastValue
         End If
 
-        CurrentShareInfo = ReadShareInfo(Application.StartupPath & "\HistoryInfo\" & WKN & ".xml")
+        Dim FullpathInfo As String
+        FullpathInfo = Path.Combine(Application.StartupPath, "HistoryInfo", WKN & ".XML")
+        If File.Exists(FullpathInfo) Then
+            GlbShareInfo = DeserializeFromXmlFile(FullpathInfo, GlbShareInfo.GetType(), Encoding.UTF8)
+            ''Else
+            ''    ShareInfo.General.ID = "0"
+            ''    ShareInfo.General.Name = Company.Name
+            ''    ShareInfo.General.WKN = Company.WKN
+            ''    ShareInfo.General.ISIN = Company.ISIN
+        End If
+
 
         Select Case ComboBox1.SelectedIndex
             Case 0
+                ' Use user defined SMA"
+                SMALength = GlbShareInfo.UserDefinitions.UserDefinedSMA
+                If SMALength = 0 Then
+                    SMALength = GlbShareInfo.BestSMA.SMA_LastYear.AbsMaxPos
+                    T_SMA.Text = SMALength
+                End If
+            Case 1
+                ' Use best SMA last year
+                SMALength = GlbShareInfo.BestSMA.SMA_LastYear.AbsMaxPos
+                T_SMA.Text = SMALength
+            Case 2
+                ' Use best SMA since 2000
+                SMALength = GlbShareInfo.BestSMA.SMA_Since2000.AbsMaxPos
+                T_SMA.Text = SMALength
+            Case 3
+                ' Use best SMA since CORONA
+                SMALength = GlbShareInfo.BestSMA.SMA_SinceCorona.AbsMaxPos
+                T_SMA.Text = SMALength
+            Case 4
                 ' Use SMA of TextBox
                 SMALength = T_SMA.Text
-            Case 1
-                ' Use best SMA since 2000
-                SMALength = CurrentShareInfo._AbsMaxPos
-                T_SMA.Text = SMALength
-                'Case 2
-                ' Use best SMA since CORONA
-                'Case 3
-                ' Use best user defined SMA"
         End Select
+
+        column = spSMA      ' Point to spSMA columnn
+        DataGridView1.Item(column, row).Value = SMALength
+        T_CurrWKN.Text = WKN
 
 
         RefreshChart()
@@ -529,8 +553,6 @@ Public Class Form1
             CompanyName = DataGridView1.Item(column, row).Value
             ReadHistoryFileToChartArray(Fullpath, CompanyName)
 
-            CurrentShareInfo = ReadShareInfo(Application.StartupPath & "\HistoryInfo\" & WKN & ".xml")
-
             SMALength = CurrentShareInfo._AbsMaxPos
             T_SMA.Text = SMALength
 
@@ -588,6 +610,9 @@ Public Class Form1
     End Sub
 
 
+
+
+    Private BuySell()
 
 
 

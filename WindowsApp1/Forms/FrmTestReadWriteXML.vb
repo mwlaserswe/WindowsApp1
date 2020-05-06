@@ -29,7 +29,7 @@ Public Class FrmTestReadWriteXML
 
     Private Sub B_ReadXML_Click_1(sender As Object, e As EventArgs) Handles B_ReadXML.Click
         Dim zeile As ShareInfo
-        zeile = ReadShareInfo(Application.StartupPath & "\XML-Test\" & L_WKN.Text & ".xml")
+        'zeile = ReadShareInfo(Application.StartupPath & "\XML-Test\" & L_WKN.Text & ".xml")
     End Sub
 
     Private Sub B_AppendXML_Click_1(sender As Object, e As EventArgs) Handles B_AppendXML.Click

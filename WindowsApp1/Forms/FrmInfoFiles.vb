@@ -7,6 +7,28 @@ Imports System.Runtime.Serialization.Formatters.Binary
 
 Public Class FrmInfoFiles
 
+    Private Sub B_GenerateSingleInfoFiles_Click_1(sender As Object, e As EventArgs) Handles B_GenerateSingleInfoFiles.Click
+        Dim ShareInfo As New ClsXML.ShareInfo
+        Dim Company As ShareItem
+        Dim Fullpath As String
+        Dim i As Long
+
+        For i = LBound(CompanyListArray) To UBound(CompanyListArray)
+            Application.DoEvents()
+            If InStr(1, CompanyListArray(i).Name, T_Search.Text, vbTextCompare) > 0 _
+                Or InStr(1, CompanyListArray(i).WKN, T_Search.Text, vbTextCompare) > 0 _
+                Or InStr(1, CompanyListArray(i).ISIN, T_Search.Text, vbTextCompare) _
+            Then
+                Company = CompanyListArray(i)
+                ListBox1.Items.Add(Company.Name)
+                WriteBestSMAofSingleShare(Company, ShareInfo)
+
+            End If
+
+        Next i
+
+    End Sub
+
     Private Sub B_GenerateAllInfoFiles_Click(sender As Object, e As EventArgs) Handles B_GenerateAllInfoFiles.Click
         Dim ShareInfo As New ClsXML.ShareInfo
 
@@ -34,7 +56,7 @@ Public Class FrmInfoFiles
 
 
     Private Sub WriteBestSMAofSingleShare(Company As ShareItem, ShareInfo As ClsXML.ShareInfo)
-        Dim DemoBestSD As BestSMA
+        Dim BestSMA As BestSMA
         Dim FullpathHistory As String
         Dim FullpathInfo As String
         Dim SMAArry As String
@@ -42,7 +64,7 @@ Public Class FrmInfoFiles
         FullpathHistory = Path.Combine(Application.StartupPath, "History", Company.WKN & ".txt")
         ReadHistoryFileToChartArray(FullpathHistory, "")
 
-        FullpathInfo = Path.Combine(Application.StartupPath & "HistoryInfo", Company.WKN & ".XML")
+        FullpathInfo = Path.Combine(Application.StartupPath, "HistoryInfo", Company.WKN & ".XML")
         If File.Exists(FullpathInfo) Then
             ShareInfo = DeserializeFromXmlFile(FullpathInfo, ShareInfo.GetType(), Encoding.UTF8)
         Else
@@ -54,39 +76,37 @@ Public Class FrmInfoFiles
 
 
         'Last year
-        DemoBestSD = FindBestSMA(UBound(ChartArray) - 260, 260)  '260 Entries in HistoryArray is about 1 year.
-        ShareInfo.BestSD.SMA_OneYear.AbsMax = DemoBestSD.AbsMax
-        ShareInfo.BestSD.SMA_OneYear.AbsMaxPos = DemoBestSD.AbsMaxPos
+        BestSMA = FindBestSMA(UBound(ChartArray) - 260, 260)  '260 Entries in HistoryArray is about 1 year.
+        ShareInfo.BestSMA.SMA_LastYear.AbsMax = BestSMA.AbsMax
+        ShareInfo.BestSMA.SMA_LastYear.AbsMaxPos = BestSMA.AbsMaxPos
         SMAArry = ""
-        For Each Element In DemoBestSD.SMAArry
+        For Each Element In BestSMA.SMAArry
             SMAArry = SMAArry & Format(Element, "0.000") & " "
         Next
-        ShareInfo.BestSD.SMA_OneYear.SMAArry = SMAArry
+        ShareInfo.BestSMA.SMA_LastYear.SMAArry = SMAArry
 
         'Since 2000
-        DemoBestSD = FindBestSMA(10, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
-        ShareInfo.BestSD.SMA_Since2000.AbsMax = DemoBestSD.AbsMax
-        ShareInfo.BestSD.SMA_Since2000.AbsMaxPos = DemoBestSD.AbsMaxPos
+        BestSMA = FindBestSMA(10, 9999)  '260 Entries in HistoryArray is about 1 year. 9999: all
+        ShareInfo.BestSMA.SMA_Since2000.AbsMax = BestSMA.AbsMax
+        ShareInfo.BestSMA.SMA_Since2000.AbsMaxPos = BestSMA.AbsMaxPos
         SMAArry = ""
-        For Each Element In DemoBestSD.SMAArry
+        For Each Element In BestSMA.SMAArry
             SMAArry = SMAArry & Format(Element, "0.000") & " "
         Next
-        ShareInfo.BestSD.SMA_Since2000.SMAArry = SMAArry
+        ShareInfo.BestSMA.SMA_Since2000.SMAArry = SMAArry
 
         'Since Corona
-        DemoBestSD = FindBestSMA(5254, 9999)  'Corona starts 10.02.2020
-        ShareInfo.BestSD.SMA_SinceCorona.AbsMax = DemoBestSD.AbsMax
-        ShareInfo.BestSD.SMA_SinceCorona.AbsMaxPos = DemoBestSD.AbsMaxPos
+        BestSMA = FindBestSMA(5254, 9999)  'Corona starts 10.02.2020
+        ShareInfo.BestSMA.SMA_SinceCorona.AbsMax = BestSMA.AbsMax
+        ShareInfo.BestSMA.SMA_SinceCorona.AbsMaxPos = BestSMA.AbsMaxPos
         SMAArry = ""
-        For Each Element In DemoBestSD.SMAArry
+        For Each Element In BestSMA.SMAArry
             SMAArry = SMAArry & Format(Element, "0.000") & " "
         Next
-        ShareInfo.BestSD.SMA_SinceCorona.SMAArry = SMAArry
+        ShareInfo.BestSMA.SMA_SinceCorona.SMAArry = SMAArry
 
-        If File.Exists(FullpathInfo) Then
-            ' Object in XML-datei schreiben
-            SerializeToXmlFile(ShareInfo, FullpathInfo, Encoding.UTF8)
-        End If
+        ' Object in XML-datei schreiben
+        SerializeToXmlFile(ShareInfo, FullpathInfo, Encoding.UTF8)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -97,6 +117,9 @@ Public Class FrmInfoFiles
         ShareInfo.General.Name = "Volkswagen(VW) St."
         ShareInfo.General.WKN = "766400"
         ShareInfo.General.ISIN = "DE0007664005"
+
+        ShareInfo.UserDefinitions.UserDefinedSMA = "1234"
+
 
         XML_Filename = Path.Combine(Application.StartupPath, "TEST_INFO_FILE.XML")
         ' Object in XML-datei schreiben
@@ -130,27 +153,6 @@ Public Class FrmInfoFiles
 
 
 
-    Private Sub B_GenerateSingleInfoFiles_Click_1(sender As Object, e As EventArgs) Handles B_GenerateSingleInfoFiles.Click
-        Dim ShareInfo As New ClsXML.ShareInfo
-        Dim Company As ShareItem
-        Dim Fullpath As String
-        Dim i As Long
-
-        For i = LBound(CompanyListArray) To UBound(CompanyListArray)
-            Application.DoEvents()
-            If InStr(1, CompanyListArray(i).Name, T_Search.Text, vbTextCompare) > 0 _
-                Or InStr(1, CompanyListArray(i).WKN, T_Search.Text, vbTextCompare) > 0 _
-                Or InStr(1, CompanyListArray(i).ISIN, T_Search.Text, vbTextCompare) _
-            Then
-                Company = CompanyListArray(i)
-                ListBox1.Items.Add(Company.Name)
-                WriteBestSMAofSingleShare(Company, ShareInfo)
-
-            End If
-
-        Next i
-
-    End Sub
 
 
 
