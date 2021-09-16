@@ -94,6 +94,7 @@ Module GlobalVariables
 
     '=== Analyse ===
     Public SMALength As Long
+    Public Percentage As Double
     'Public SharePrice As Double
     'Public Rise As Boolean
     Public StartSharePrice As Double

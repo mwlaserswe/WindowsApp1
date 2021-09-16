@@ -281,7 +281,7 @@ Public Class Form1
         ElseIf Analyse3.Checked Then
             Analyse_03(T_InvestmentStart.Text, T_StartSharePrice.Text)
         ElseIf Analyse4.Checked Then
-            Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, 0.104)
+            Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, Percentage)
         ElseIf Analyse5.Checked Then
 
         End If
@@ -564,7 +564,7 @@ Public Class Form1
             ElseIf Analyse3.Checked Then
                 Analyse_03(T_InvestmentStart.Text, T_StartSharePrice.Text)
             ElseIf Analyse4.Checked Then
-                Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, 10.4)
+                Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, 0.104)
             ElseIf Analyse5.Checked Then
 
             End If
@@ -817,12 +817,14 @@ Public Class Form1
         My.Settings.Save()
     End Sub
 
-    Private Sub PicChart_Click(sender As Object, e As EventArgs) Handles PicChart.Click
 
+    Private Sub B_FindBest04_Click(sender As Object, e As EventArgs) Handles B_FindBest04.Click
+        FindBestA04()
     End Sub
 
-    Private Sub PicChart_MouseWheel(sender As Object, e As MouseEventArgs) Handles PicChart.MouseWheel
-
+    Private Sub HS_Percent_Scroll(sender As Object, e As ScrollEventArgs) Handles HS_Percent.Scroll
+        T_Percent.Text = HS_Percent.Value / 10
+        Percentage = HS_Percent.Value / 1000
     End Sub
 
 

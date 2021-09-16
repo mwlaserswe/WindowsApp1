@@ -31,6 +31,9 @@ Dim FinalArray() As HistoryItem
 <member name="M:WindowsApp1.FrmServiceCheckWeekDay.C_TageszahlInDatum_Click(System.Object,System.EventArgs)">
     End Sub
 </member>
+<member name="M:WindowsApp1.Chart.DrawStart(System.Windows.Forms.PictureBox,System.Single,System.Single,System.Drawing.Color)">
+End Sub
+</member>
 <member name="T:WindowsApp1.Utilities">
     ' Storage of employee data.
     Public _firstName As String
