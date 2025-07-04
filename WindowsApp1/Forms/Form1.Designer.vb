@@ -97,6 +97,7 @@ Partial Class Form1
         Me.HS_Percent = New System.Windows.Forms.HScrollBar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.T_Percent = New System.Windows.Forms.TextBox()
+        Me.WriteCartArrayToFile = New System.Windows.Forms.Button()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -153,131 +154,131 @@ Partial Class Form1
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(176, 36)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(175, 36)
         Me.MenuToolStripMenuItem.Text = "Display Chart"
         '
         'GgggToolStripMenuItem
         '
         Me.GgggToolStripMenuItem.Name = "GgggToolStripMenuItem"
-        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(134, 36)
+        Me.GgggToolStripMenuItem.Size = New System.Drawing.Size(133, 36)
         Me.GgggToolStripMenuItem.Text = "Chart List"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(271, 36)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(270, 36)
         Me.ToolStripMenuItem1.Text = "ReadTodaysSharePrice"
         '
         'AnalysisToolStripMenuItem
         '
         Me.AnalysisToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckNumberOfRiseInToolStripMenuItem, Me.HowManyPercentInSequenceToolStripMenuItem, Me.RisePriodeStatisticToolStripMenuItem, Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem, Me.WriteChartFileToolStripMenuItem})
         Me.AnalysisToolStripMenuItem.Name = "AnalysisToolStripMenuItem"
-        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(120, 36)
+        Me.AnalysisToolStripMenuItem.Size = New System.Drawing.Size(119, 36)
         Me.AnalysisToolStripMenuItem.Text = "Analysis"
         '
         'CheckNumberOfRiseInToolStripMenuItem
         '
         Me.CheckNumberOfRiseInToolStripMenuItem.Name = "CheckNumberOfRiseInToolStripMenuItem"
-        Me.CheckNumberOfRiseInToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.CheckNumberOfRiseInToolStripMenuItem.Size = New System.Drawing.Size(689, 44)
         Me.CheckNumberOfRiseInToolStripMenuItem.Text = "How many days of rising share prises in sequence?"
         '
         'HowManyPercentInSequenceToolStripMenuItem
         '
         Me.HowManyPercentInSequenceToolStripMenuItem.Name = "HowManyPercentInSequenceToolStripMenuItem"
-        Me.HowManyPercentInSequenceToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.HowManyPercentInSequenceToolStripMenuItem.Size = New System.Drawing.Size(689, 44)
         Me.HowManyPercentInSequenceToolStripMenuItem.Text = "How many percent in sequence?"
         '
         'RisePriodeStatisticToolStripMenuItem
         '
         Me.RisePriodeStatisticToolStripMenuItem.Name = "RisePriodeStatisticToolStripMenuItem"
-        Me.RisePriodeStatisticToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.RisePriodeStatisticToolStripMenuItem.Size = New System.Drawing.Size(689, 44)
         Me.RisePriodeStatisticToolStripMenuItem.Text = "Rise priode statistic"
         '
         'FindBestSMAInAllListedShares100Times1YearToolStripMenuItem
         '
         Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Name = "FindBestSMAInAllListedShares100Times1YearToolStripMenuItem"
-        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Size = New System.Drawing.Size(689, 44)
         Me.FindBestSMAInAllListedShares100Times1YearToolStripMenuItem.Text = "Find best SMA"
         '
         'WriteChartFileToolStripMenuItem
         '
         Me.WriteChartFileToolStripMenuItem.Name = "WriteChartFileToolStripMenuItem"
-        Me.WriteChartFileToolStripMenuItem.Size = New System.Drawing.Size(691, 44)
+        Me.WriteChartFileToolStripMenuItem.Size = New System.Drawing.Size(689, 44)
         Me.WriteChartFileToolStripMenuItem.Text = "Write chart file"
         '
         'ReadFromWEBToolStripMenuItem
         '
         Me.ReadFromWEBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadHistoricFromARIVAdeToolStripMenuItem})
         Me.ReadFromWEBToolStripMenuItem.Name = "ReadFromWEBToolStripMenuItem"
-        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(200, 36)
+        Me.ReadFromWEBToolStripMenuItem.Size = New System.Drawing.Size(199, 36)
         Me.ReadFromWEBToolStripMenuItem.Text = "Read from WEB"
         '
         'ReadHistoricFromARIVAdeToolStripMenuItem
         '
         Me.ReadHistoricFromARIVAdeToolStripMenuItem.Name = "ReadHistoricFromARIVAdeToolStripMenuItem"
-        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Size = New System.Drawing.Size(446, 44)
+        Me.ReadHistoricFromARIVAdeToolStripMenuItem.Size = New System.Drawing.Size(444, 44)
         Me.ReadHistoricFromARIVAdeToolStripMenuItem.Text = "Read historic from ARIVA.de"
         '
         'WebToolStripMenuItem
         '
         Me.WebToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanWebForWKNToolStripMenuItem, Me.SaveWebPageAsHTMLToolStripMenuItem, Me.ReadSingleShareValueToolStripMenuItem, Me.ReadXMLToolStripMenuItem, Me.GridViewTestToolStripMenuItem, Me.TransformToolStripMenuItem})
         Me.WebToolStripMenuItem.Name = "WebToolStripMenuItem"
-        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(148, 36)
+        Me.WebToolStripMenuItem.Size = New System.Drawing.Size(147, 36)
         Me.WebToolStripMenuItem.Text = "Web / Test"
         '
         'ScanWebForWKNToolStripMenuItem
         '
         Me.ScanWebForWKNToolStripMenuItem.Name = "ScanWebForWKNToolStripMenuItem"
-        Me.ScanWebForWKNToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.ScanWebForWKNToolStripMenuItem.Size = New System.Drawing.Size(421, 44)
         Me.ScanWebForWKNToolStripMenuItem.Text = "Scan Web for WKN"
         '
         'SaveWebPageAsHTMLToolStripMenuItem
         '
         Me.SaveWebPageAsHTMLToolStripMenuItem.Name = "SaveWebPageAsHTMLToolStripMenuItem"
-        Me.SaveWebPageAsHTMLToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.SaveWebPageAsHTMLToolStripMenuItem.Size = New System.Drawing.Size(421, 44)
         Me.SaveWebPageAsHTMLToolStripMenuItem.Text = "Save Web page as HTML"
         '
         'ReadSingleShareValueToolStripMenuItem
         '
         Me.ReadSingleShareValueToolStripMenuItem.Name = "ReadSingleShareValueToolStripMenuItem"
-        Me.ReadSingleShareValueToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.ReadSingleShareValueToolStripMenuItem.Size = New System.Drawing.Size(421, 44)
         Me.ReadSingleShareValueToolStripMenuItem.Text = "Read single share value"
         '
         'ReadXMLToolStripMenuItem
         '
         Me.ReadXMLToolStripMenuItem.Name = "ReadXMLToolStripMenuItem"
-        Me.ReadXMLToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.ReadXMLToolStripMenuItem.Size = New System.Drawing.Size(421, 44)
         Me.ReadXMLToolStripMenuItem.Text = "Test Read / Wirite XML"
         '
         'GridViewTestToolStripMenuItem
         '
         Me.GridViewTestToolStripMenuItem.Name = "GridViewTestToolStripMenuItem"
-        Me.GridViewTestToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.GridViewTestToolStripMenuItem.Size = New System.Drawing.Size(421, 44)
         Me.GridViewTestToolStripMenuItem.Text = "Test DataGridView"
         '
         'TransformToolStripMenuItem
         '
         Me.TransformToolStripMenuItem.Name = "TransformToolStripMenuItem"
-        Me.TransformToolStripMenuItem.Size = New System.Drawing.Size(423, 44)
+        Me.TransformToolStripMenuItem.Size = New System.Drawing.Size(421, 44)
         Me.TransformToolStripMenuItem.Text = "Test Transform PictureBox"
         '
         'ServiceToolStripMenuItem
         '
         Me.ServiceToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckWeekdayToolStripMenuItem, Me.InfoFilesToolStripMenuItem})
         Me.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem"
-        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(111, 36)
+        Me.ServiceToolStripMenuItem.Size = New System.Drawing.Size(110, 36)
         Me.ServiceToolStripMenuItem.Text = "Service"
         '
         'CheckWeekdayToolStripMenuItem
         '
         Me.CheckWeekdayToolStripMenuItem.Name = "CheckWeekdayToolStripMenuItem"
-        Me.CheckWeekdayToolStripMenuItem.Size = New System.Drawing.Size(318, 44)
+        Me.CheckWeekdayToolStripMenuItem.Size = New System.Drawing.Size(316, 44)
         Me.CheckWeekdayToolStripMenuItem.Text = "Check Weekday"
         '
         'InfoFilesToolStripMenuItem
         '
         Me.InfoFilesToolStripMenuItem.Name = "InfoFilesToolStripMenuItem"
-        Me.InfoFilesToolStripMenuItem.Size = New System.Drawing.Size(318, 44)
+        Me.InfoFilesToolStripMenuItem.Size = New System.Drawing.Size(316, 44)
         Me.InfoFilesToolStripMenuItem.Text = "Info Files"
         '
         'T_HistoryFileName
@@ -299,7 +300,7 @@ Partial Class Form1
         'HS_SMA
         '
         Me.HS_SMA.Location = New System.Drawing.Point(32, 821)
-        Me.HS_SMA.Maximum = 200
+        Me.HS_SMA.Maximum = 1000
         Me.HS_SMA.Minimum = 1
         Me.HS_SMA.Name = "HS_SMA"
         Me.HS_SMA.Size = New System.Drawing.Size(434, 34)
@@ -694,11 +695,21 @@ Partial Class Form1
         Me.T_Percent.Size = New System.Drawing.Size(68, 31)
         Me.T_Percent.TabIndex = 64
         '
+        'WriteCartArrayToFile
+        '
+        Me.WriteCartArrayToFile.Location = New System.Drawing.Point(1116, 58)
+        Me.WriteCartArrayToFile.Name = "WriteCartArrayToFile"
+        Me.WriteCartArrayToFile.Size = New System.Drawing.Size(254, 54)
+        Me.WriteCartArrayToFile.TabIndex = 65
+        Me.WriteCartArrayToFile.Text = "Write CartArray to File"
+        Me.WriteCartArrayToFile.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2655, 918)
+        Me.Controls.Add(Me.WriteCartArrayToFile)
         Me.Controls.Add(Me.T_Percent)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.HS_Percent)
@@ -839,4 +850,5 @@ Partial Class Form1
     Friend WithEvents HS_Percent As HScrollBar
     Friend WithEvents Label10 As Label
     Friend WithEvents T_Percent As TextBox
+    Friend WithEvents WriteCartArrayToFile As Button
 End Class

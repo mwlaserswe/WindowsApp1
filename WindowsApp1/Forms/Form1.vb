@@ -827,6 +827,10 @@ Public Class Form1
         Percentage = HS_Percent.Value / 1000
     End Sub
 
+    Private Sub WriteCartArrayToFile_Click(sender As Object, e As EventArgs) Handles WriteCartArrayToFile.Click
+        WriteChartArrayToCsv()
+    End Sub
+
 
     ''Private Sub CompleteCompanyWKNISINToolStripMenuItem_Click(sender As Object, e As EventArgs)
     ''    Dim InFileName As String

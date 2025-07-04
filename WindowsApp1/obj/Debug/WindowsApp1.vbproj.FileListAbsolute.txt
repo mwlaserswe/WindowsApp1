@@ -40,7 +40,6 @@ D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\Wi
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.exe
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.xml
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.pdb
-D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmChartList.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmReadTodaysSharePrice.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmServiceCheckWeekDay.resources
@@ -56,3 +55,4 @@ D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\Wi
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmFindBestSMA.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.FrmFlyingListBoxList.resources
 D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+D:\Eigene Dateien\Projekte privat\Visual Studio\VB-Projekt_01\WindowsApp1.git\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache

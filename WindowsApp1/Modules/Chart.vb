@@ -72,6 +72,42 @@ ReadHistoryFileErr:
         MsgBox(HistoryFileName & vbCr & Err.Description, , "xxxxx")
     End Sub
 
+    Public Sub WriteChartArrayToCsv()
+        Dim CsvFileName As String
+        Dim CsvFile As Integer
+        Dim idx As Long
+        On Error GoTo WriteChartArrayToCsvErr
+
+        CsvFileName = Application.StartupPath & "\ChartArray.csv"
+
+        CsvFile = FreeFile()
+        FileOpen(CsvFile, CsvFileName, OpenMode.Output)
+
+        ' Kopfzeile schreiben
+        PrintLine(CsvFile, "myDate;Value;WKN;Name;SMA;Distance;Account;Trend")
+
+        For idx = LBound(ChartArray) To UBound(ChartArray)
+            PrintLine(CsvFile,
+                ChartArray(idx).myDate & ";" &
+                ChartArray(idx).Value & ";" &
+                ChartArray(idx).WKN & ";" &
+                ChartArray(idx).Name & ";" &
+                ChartArray(idx).SMA & ";" &
+                ChartArray(idx).Distance & ";" &
+                ChartArray(idx).Account & ";" &
+                ChartArray(idx).Trend)
+        Next
+
+        FileClose(CsvFile)
+        Exit Sub
+
+WriteChartArrayToCsvErr:
+        MsgBox(CsvFileName & vbCr & Err.Description, , "Fehler beim Schreiben der CSV-Datei")
+    End Sub
+
+
+
+
 
     Public Sub DisplayChart(Pic As PictureBox)
 
@@ -301,6 +337,7 @@ ReadHistoryFileErr:
         Dim State As Integer
         Dim CostFactor As Double
 
+        'CostFactor = 1
         CostFactor = 0.9926
         '    CostFactor = 0.991
 
