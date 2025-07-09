@@ -6,9 +6,11 @@ Module GlobalVariables
         Dim WKN As String
         Dim Value As Double
         Dim SMA As Double
-        Dim Distance As Double      ' Distance to moving average
+        Dim Distance As Double          ' Distance to moving average
+        Dim StartSharePrice As Double   ' Einstiegskurs
         Dim Account As Double
         Dim Trend As String
+        Dim State As Integer
 
     End Structure
 
@@ -97,7 +99,7 @@ Module GlobalVariables
     Public Percentage As Double
     'Public SharePrice As Double
     'Public Rise As Boolean
-    Public StartSharePrice As Double
+    Public StartSharePrice As Double    ' Einstiegskurs
     Public StartEuro As Double
     Public StartAccount As Double
 
@@ -108,6 +110,8 @@ Module GlobalVariables
     Public DelayTime As Long
     Public AccessErrorCnt As Long
     Public AccessCnt As Long
+
+    Public glbBand As Double
 
     '=== today's share price ===
     Public CompanyListArray() As ShareItem

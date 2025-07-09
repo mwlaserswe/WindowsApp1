@@ -55,7 +55,7 @@ Partial Class Form1
         Me.T_InvestmentStart = New System.Windows.Forms.TextBox()
         Me.T_StartSharePrice = New System.Windows.Forms.TextBox()
         Me.T_MouseXY = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.T_State = New System.Windows.Forms.TextBox()
         Me.T_SD1 = New System.Windows.Forms.TextBox()
         Me.T_Account = New System.Windows.Forms.TextBox()
         Me.T_Value = New System.Windows.Forms.TextBox()
@@ -98,6 +98,16 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.T_Percent = New System.Windows.Forms.TextBox()
         Me.WriteCartArrayToFile = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.T_Trend = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.T_StartPrice = New System.Windows.Forms.TextBox()
+        Me.Analyse6 = New System.Windows.Forms.RadioButton()
+        Me.T_Band = New System.Windows.Forms.TextBox()
+        Me.HS_Band = New System.Windows.Forms.HScrollBar()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -299,7 +309,7 @@ Partial Class Form1
         '
         'HS_SMA
         '
-        Me.HS_SMA.Location = New System.Drawing.Point(32, 821)
+        Me.HS_SMA.Location = New System.Drawing.Point(800, 826)
         Me.HS_SMA.Maximum = 1000
         Me.HS_SMA.Minimum = 1
         Me.HS_SMA.Name = "HS_SMA"
@@ -309,21 +319,21 @@ Partial Class Form1
         '
         'T_SMA
         '
-        Me.T_SMA.Location = New System.Drawing.Point(545, 818)
+        Me.T_SMA.Location = New System.Drawing.Point(1251, 829)
         Me.T_SMA.Name = "T_SMA"
         Me.T_SMA.Size = New System.Drawing.Size(68, 31)
         Me.T_SMA.TabIndex = 13
         '
         'T_InvestmentStart
         '
-        Me.T_InvestmentStart.Location = New System.Drawing.Point(888, 818)
+        Me.T_InvestmentStart.Location = New System.Drawing.Point(1594, 829)
         Me.T_InvestmentStart.Name = "T_InvestmentStart"
         Me.T_InvestmentStart.Size = New System.Drawing.Size(100, 31)
         Me.T_InvestmentStart.TabIndex = 14
         '
         'T_StartSharePrice
         '
-        Me.T_StartSharePrice.Location = New System.Drawing.Point(1221, 821)
+        Me.T_StartSharePrice.Location = New System.Drawing.Point(1927, 832)
         Me.T_StartSharePrice.Name = "T_StartSharePrice"
         Me.T_StartSharePrice.Size = New System.Drawing.Size(100, 31)
         Me.T_StartSharePrice.TabIndex = 15
@@ -336,30 +346,30 @@ Partial Class Form1
         Me.T_MouseXY.Size = New System.Drawing.Size(100, 31)
         Me.T_MouseXY.TabIndex = 16
         '
-        'TextBox1
+        'T_State
         '
-        Me.TextBox1.Location = New System.Drawing.Point(1102, 760)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 31)
-        Me.TextBox1.TabIndex = 17
+        Me.T_State.Location = New System.Drawing.Point(420, 951)
+        Me.T_State.Name = "T_State"
+        Me.T_State.Size = New System.Drawing.Size(100, 31)
+        Me.T_State.TabIndex = 17
         '
         'T_SD1
         '
-        Me.T_SD1.Location = New System.Drawing.Point(813, 757)
+        Me.T_SD1.Location = New System.Drawing.Point(420, 802)
         Me.T_SD1.Name = "T_SD1"
         Me.T_SD1.Size = New System.Drawing.Size(100, 31)
         Me.T_SD1.TabIndex = 18
         '
         'T_Account
         '
-        Me.T_Account.Location = New System.Drawing.Point(619, 757)
+        Me.T_Account.Location = New System.Drawing.Point(420, 877)
         Me.T_Account.Name = "T_Account"
         Me.T_Account.Size = New System.Drawing.Size(100, 31)
         Me.T_Account.TabIndex = 19
         '
         'T_Value
         '
-        Me.T_Value.Location = New System.Drawing.Point(389, 760)
+        Me.T_Value.Location = New System.Drawing.Point(420, 765)
         Me.T_Value.Name = "T_Value"
         Me.T_Value.Size = New System.Drawing.Size(100, 31)
         Me.T_Value.TabIndex = 20
@@ -374,7 +384,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1010, 824)
+        Me.Label2.Location = New System.Drawing.Point(1716, 835)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(205, 25)
         Me.Label2.TabIndex = 22
@@ -383,7 +393,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(714, 821)
+        Me.Label3.Location = New System.Drawing.Point(1420, 832)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(157, 25)
         Me.Label3.TabIndex = 23
@@ -392,7 +402,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(481, 824)
+        Me.Label4.Location = New System.Drawing.Point(721, 832)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 25)
         Me.Label4.TabIndex = 24
@@ -401,16 +411,16 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(1010, 763)
+        Me.Label5.Location = New System.Drawing.Point(335, 954)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(77, 25)
+        Me.Label5.Size = New System.Drawing.Size(68, 25)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Label5"
+        Me.Label5.Text = "State:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(743, 763)
+        Me.Label6.Location = New System.Drawing.Point(341, 805)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(64, 25)
         Me.Label6.TabIndex = 26
@@ -419,20 +429,20 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(517, 763)
+        Me.Label7.Location = New System.Drawing.Point(288, 880)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(96, 25)
+        Me.Label7.Size = New System.Drawing.Size(115, 25)
         Me.Label7.TabIndex = 27
-        Me.Label7.Text = "Account:"
+        Me.Label7.Text = "Depotwert:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(310, 763)
+        Me.Label8.Location = New System.Drawing.Point(341, 768)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 25)
+        Me.Label8.Size = New System.Drawing.Size(62, 25)
         Me.Label8.TabIndex = 28
-        Me.Label8.Text = "Value:"
+        Me.Label8.Text = "Kurs:"
         '
         'TextBox2
         '
@@ -577,7 +587,7 @@ Partial Class Form1
         'Ch_FitY
         '
         Me.Ch_FitY.AutoSize = True
-        Me.Ch_FitY.Location = New System.Drawing.Point(1665, 604)
+        Me.Ch_FitY.Location = New System.Drawing.Point(1665, 639)
         Me.Ch_FitY.Name = "Ch_FitY"
         Me.Ch_FitY.Size = New System.Drawing.Size(89, 29)
         Me.Ch_FitY.TabIndex = 47
@@ -619,7 +629,7 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(619, 821)
+        Me.Label9.Location = New System.Drawing.Point(1325, 832)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(58, 25)
         Me.Label9.TabIndex = 55
@@ -671,9 +681,9 @@ Partial Class Form1
         '
         'HS_Percent
         '
-        Me.HS_Percent.LargeChange = 100
-        Me.HS_Percent.Location = New System.Drawing.Point(32, 875)
-        Me.HS_Percent.Maximum = 1000
+        Me.HS_Percent.LargeChange = 5
+        Me.HS_Percent.Location = New System.Drawing.Point(800, 886)
+        Me.HS_Percent.Maximum = 50
         Me.HS_Percent.Name = "HS_Percent"
         Me.HS_Percent.Size = New System.Drawing.Size(434, 34)
         Me.HS_Percent.TabIndex = 62
@@ -682,7 +692,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(481, 875)
+        Me.Label10.Location = New System.Drawing.Point(1325, 892)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(31, 25)
         Me.Label10.TabIndex = 63
@@ -690,7 +700,7 @@ Partial Class Form1
         '
         'T_Percent
         '
-        Me.T_Percent.Location = New System.Drawing.Point(545, 878)
+        Me.T_Percent.Location = New System.Drawing.Point(1251, 889)
         Me.T_Percent.Name = "T_Percent"
         Me.T_Percent.Size = New System.Drawing.Size(68, 31)
         Me.T_Percent.TabIndex = 64
@@ -704,11 +714,107 @@ Partial Class Form1
         Me.WriteCartArrayToFile.Text = "Write CartArray to File"
         Me.WriteCartArrayToFile.UseVisualStyleBackColor = True
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(329, 920)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(74, 25)
+        Me.Label11.TabIndex = 67
+        Me.Label11.Text = "Trend:"
+        '
+        'T_Trend
+        '
+        Me.T_Trend.Location = New System.Drawing.Point(420, 914)
+        Me.T_Trend.Name = "T_Trend"
+        Me.T_Trend.Size = New System.Drawing.Size(138, 31)
+        Me.T_Trend.TabIndex = 66
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(256, 841)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(147, 25)
+        Me.Label12.TabIndex = 69
+        Me.Label12.Text = "Einstiegskurs:"
+        '
+        'T_StartPrice
+        '
+        Me.T_StartPrice.Location = New System.Drawing.Point(420, 839)
+        Me.T_StartPrice.Name = "T_StartPrice"
+        Me.T_StartPrice.Size = New System.Drawing.Size(100, 31)
+        Me.T_StartPrice.TabIndex = 68
+        '
+        'Analyse6
+        '
+        Me.Analyse6.AutoSize = True
+        Me.Analyse6.Location = New System.Drawing.Point(1665, 604)
+        Me.Analyse6.Name = "Analyse6"
+        Me.Analyse6.Size = New System.Drawing.Size(138, 29)
+        Me.Analyse6.TabIndex = 70
+        Me.Analyse6.TabStop = True
+        Me.Analyse6.Text = "Analyse 6"
+        Me.Analyse6.UseVisualStyleBackColor = True
+        '
+        'T_Band
+        '
+        Me.T_Band.Location = New System.Drawing.Point(1251, 948)
+        Me.T_Band.Name = "T_Band"
+        Me.T_Band.Size = New System.Drawing.Size(68, 31)
+        Me.T_Band.TabIndex = 72
+        '
+        'HS_Band
+        '
+        Me.HS_Band.Location = New System.Drawing.Point(800, 945)
+        Me.HS_Band.Maximum = 200
+        Me.HS_Band.Name = "HS_Band"
+        Me.HS_Band.Size = New System.Drawing.Size(434, 34)
+        Me.HS_Band.TabIndex = 71
+        Me.HS_Band.Value = 1
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(579, 892)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(200, 25)
+        Me.Label13.TabIndex = 73
+        Me.Label13.Text = "Transaktionskosten"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(717, 951)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(62, 25)
+        Me.Label14.TabIndex = 74
+        Me.Label14.Text = "Band"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(1325, 954)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(31, 25)
+        Me.Label15.TabIndex = 75
+        Me.Label15.Text = "%"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2655, 918)
+        Me.ClientSize = New System.Drawing.Size(2655, 1081)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.T_Band)
+        Me.Controls.Add(Me.HS_Band)
+        Me.Controls.Add(Me.Analyse6)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.T_StartPrice)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.T_Trend)
         Me.Controls.Add(Me.WriteCartArrayToFile)
         Me.Controls.Add(Me.T_Percent)
         Me.Controls.Add(Me.Label10)
@@ -752,7 +858,7 @@ Partial Class Form1
         Me.Controls.Add(Me.T_Value)
         Me.Controls.Add(Me.T_Account)
         Me.Controls.Add(Me.T_SD1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.T_State)
         Me.Controls.Add(Me.T_MouseXY)
         Me.Controls.Add(Me.T_StartSharePrice)
         Me.Controls.Add(Me.T_InvestmentStart)
@@ -799,7 +905,7 @@ Partial Class Form1
     Friend WithEvents T_StartSharePrice As TextBox
     Friend WithEvents TransformToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents T_MouseXY As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents T_State As TextBox
     Friend WithEvents T_SD1 As TextBox
     Friend WithEvents T_Account As TextBox
     Friend WithEvents T_Value As TextBox
@@ -851,4 +957,14 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents T_Percent As TextBox
     Friend WithEvents WriteCartArrayToFile As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents T_Trend As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents T_StartPrice As TextBox
+    Friend WithEvents Analyse6 As RadioButton
+    Friend WithEvents T_Band As TextBox
+    Friend WithEvents HS_Band As HScrollBar
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
 End Class

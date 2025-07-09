@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\chart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\chart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\globalvariables.vb||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\globalvariables.vb||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{df72777a-9fad-4a96-a35f-866efd0a1ce4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GlobalVariables.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\GlobalVariables.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\GlobalVariables.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\GlobalVariables.vb",
+              "RelativeToolTip": "WindowsApp1\\Modules\\GlobalVariables.vb",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwHEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-09T14:55:20.724Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,14 +53,14 @@
               "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
               "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb*",
               "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb*",
-              "ViewState": "AgIAACwDAAAAAAAAAAAqwDkDAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAADIDAAAAAAAAAAAAAEoDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-07-04T11:48:03.982Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.vb [Entwurf]",
               "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
               "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
@@ -55,13 +72,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Chart.vb",
               "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb",
               "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Chart.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb*",
-              "RelativeToolTip": "WindowsApp1\\Modules\\Chart.vb*",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAwEsAAAAhAAAAAAAAAA==",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb",
+              "RelativeToolTip": "WindowsApp1\\Modules\\Chart.vb",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAgwPIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-07-04T11:25:13.475Z",
               "EditorCaption": ""

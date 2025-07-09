@@ -84,15 +84,17 @@ ReadHistoryFileErr:
         FileOpen(CsvFile, CsvFileName, OpenMode.Output)
 
         ' Kopfzeile schreiben
-        PrintLine(CsvFile, "myDate;Value;WKN;Name;SMA;Distance;Account;Trend")
+        PrintLine(CsvFile, "idx;myDate;WKN;Name;Value;SMA;Einstiegspreis;Distance;Account;Trend")
 
         For idx = LBound(ChartArray) To UBound(ChartArray)
             PrintLine(CsvFile,
+                idx & ";" &
                 ChartArray(idx).myDate & ";" &
-                ChartArray(idx).Value & ";" &
                 ChartArray(idx).WKN & ";" &
                 ChartArray(idx).Name & ";" &
+                ChartArray(idx).Value & ";" &
                 ChartArray(idx).SMA & ";" &
+                ChartArray(idx).StartSharePrice & ";" &
                 ChartArray(idx).Distance & ";" &
                 ChartArray(idx).Account & ";" &
                 ChartArray(idx).Trend)
@@ -134,6 +136,53 @@ WriteChartArrayToCsvErr:
         DrawEnd(Pic, ColorCoord)
 
 
+        'SWE        '==== Draw SMA ====
+        'SWE
+        'SWE        'idx 0 is the head line
+        'SWE        idx = 1
+        'SWE        RiseOld = -1
+        'SWE        Dim DistanceColor As Color
+        'SWE
+        'SWE        'The nextpart starts with DrawEnd. Color must be empty. Otherwise the previous lines will we overwritten
+        'SWE        DistanceColor = Color.Empty
+        'SWE
+        'SWE
+        'SWE        For idx = 1 To UBound(ChartArray)
+        'SWE            If ChartArray(idx).Distance > 0 Then
+        'SWE                Rise = 1
+        'SWE            Else
+        'SWE                Rise = 2
+        'SWE            End If
+        'SWE            If Rise = RiseOld Then
+        'SWE                ' Same color: Just append point to array
+        'SWE                If Rise = 1 Then
+        'SWE                    DistanceColor = Color.Green
+        'SWE                Else
+        'SWE                    DistanceColor = Color.Blue
+        'SWE                End If
+        'SWE
+        'SWE                DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+        'SWE
+        'SWE            Else
+        'SWE                ' Different color: End current line. Start new line 
+        'SWE                DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+        'SWE                DrawEnd(Pic, DistanceColor)
+        'SWE                DrawStart(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+        'SWE                If Rise = 1 Then
+        'SWE                    DistanceColor = Color.Green
+        'SWE                Else
+        'SWE                    DistanceColor = Color.Blue
+        'SWE                End If
+        'SWE
+        'SWE                DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+        'SWE            End If
+        'SWE
+        'SWE            RiseOld = Rise
+        'SWE
+        'SWE        Next idx
+        'SWE        DrawEnd(Pic, DistanceColor)
+
+
         '==== Draw SMA ====
 
         'idx 0 is the head line
@@ -146,14 +195,14 @@ WriteChartArrayToCsvErr:
 
 
         For idx = 1 To UBound(ChartArray)
-            If ChartArray(idx).Distance > 0 Then
+            If InStr(ChartArray(idx).Trend, "Rise", CompareMethod.Text) > 0 Then
                 Rise = 1
             Else
                 Rise = 2
             End If
             If Rise = RiseOld Then
                 ' Same color: Just append point to array
-                If Rise = 1 Then
+                If InStr(ChartArray(idx).Trend, "Rise", CompareMethod.Text) > 0 Then
                     DistanceColor = Color.Green
                 Else
                     DistanceColor = Color.Blue
@@ -162,15 +211,25 @@ WriteChartArrayToCsvErr:
                 DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
 
             Else
+
                 ' Different color: End current line. Start new line 
                 DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
                 DrawEnd(Pic, DistanceColor)
-                DrawStart(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+
                 If Rise = 1 Then
                     DistanceColor = Color.Green
                 Else
                     DistanceColor = Color.Blue
                 End If
+
+                DrawCircle(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+
+                DrawStart(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
+                'If Rise = 1 Then
+                '    DistanceColor = Color.Green
+                'Else
+                '    DistanceColor = Color.Blue
+                'End If
 
                 DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA, DistanceColor)
             End If
@@ -179,6 +238,27 @@ WriteChartArrayToCsvErr:
 
         Next idx
         DrawEnd(Pic, DistanceColor)
+
+
+        '==== Draw SMA minus 10 % ====
+        Dim Band As Double
+        Band = glbBand ' x% Band  
+
+        idx = 1
+        DrawStart(Pic, CDbl(idx), ChartArray(idx).SMA * (1 - Band), Color.LightGray)
+        For idx = 1 To UBound(ChartArray)
+            DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA * (1 - Band), Color.LightGray)
+        Next idx
+        DrawEnd(Pic, Color.LightGray)
+
+        '==== Draw SMA plus 10 % ====
+        idx = 1
+        DrawStart(Pic, CDbl(idx), ChartArray(idx).SMA * (1 + Band), Color.LightGray)
+        For idx = 1 To UBound(ChartArray)
+            DrawLine(Pic, CDbl(idx), ChartArray(idx).SMA * (1 + Band), Color.LightGray)
+        Next idx
+        DrawEnd(Pic, Color.LightGray)
+
 
 
         '==== Draw account ====
@@ -350,6 +430,9 @@ WriteChartArrayToCsvErr:
         End If
 
         While idx <= UBound(ChartArray)
+
+            ChartArray(idx).State = State
+
             Select Case State
                 Case 0
                     ' no investment before InvestmentStart
@@ -534,120 +617,243 @@ WriteChartArrayToCsvErr:
     End Sub
 
 
-    ''''=====================================================================
-    ''''                       Analyse_04
-    '''' Einstieg: Im Gegensatz zu Analye_01 wird zuerst gewartet, bis
-    ''''           bis der Kurs von unten durch den GS sticht.
-    '''' Wenn der Kurs von unten durch den SMA sticht, wird gekauft.
-    '''' Wenn der Kurs um x% gestiegen ist, wird verkauft
-    '''' Wenn der Kurs von oben unter den SMA fällt, wird auch verkauft.
-    '''' InvestmentStart: Der Index im History file
-    '''' StartAccount: Die Investitionssumme
-    ''''=====================================================================
-    '''Public Sub Analyse_04(InvestmentStart As Integer, StartAccount As Double, PercentageLimit As Double)
-    '''    Dim idx As Integer
-    '''    Dim State As Integer
-    '''    Dim CostFactor As Double
-    '''    Dim Percentage As Double
+    '=====================================================================
+    '                       Analyse_05
+    ' 
+    '=====================================================================
+    Public Sub Analyse_05(InvestmentStart As Integer, StartAccount As Double)
+        Dim idx As Integer
+        Dim State As Integer
+        Dim CostFactor As Double
 
-    '''    CostFactor = 0.9926
-    '''    '    CostFactor = 0.991
+        'CostFactor = 1
+        CostFactor = 0.98
+        '    CostFactor = 0.991
 
-    '''    idx = 0
-    '''    State = 0
+        idx = 0
+        State = 0
 
-    '''    If Not ArrayValid(ChartArray) Then
-    '''        ' Array ist nicht dimensioniert
-    '''        Exit Sub
-    '''    End If
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
 
-    '''    While idx <= UBound(ChartArray)
-    '''        Select Case State
-    '''            Case 0
-    '''                ' no investment before InvestmentStart
-    '''                If idx >= InvestmentStart Then
-    '''                    ChartArray(idx).Account = 0
-    '''                    ChartArray(idx).Trend = "0"
-    '''                    State = 5
-    '''                Else
-    '''                    ChartArray(idx).Account = 0
-    '''                    ChartArray(idx).Trend = "0"
-    '''                End If
+        While idx <= UBound(ChartArray)
 
-    '''            Case 5
-    '''                ' share price under GD now
-    '''                If ChartArray(idx).Distance <= 0 Then
-    '''                    ChartArray(idx).Account = 0
-    '''                    ChartArray(idx).Trend = "5:wait"
-    '''                    State = 10
-    '''                    ' wait until share price under GD
-    '''                Else
-    '''                    ChartArray(idx).Account = 0
-    '''                    ChartArray(idx).Trend = "5: wait"
-    '''                End If
-    '''            Case 10
-    '''                ' wait until share price is over GD again the first time
-    '''                '*** buy now
-    '''                If ChartArray(idx).Distance > 0 Then
-    '''                    StartSharePrice = ChartArray(idx).Value
-    '''                    ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
-    '''                    ' Remove transfer costs
-    '''                    ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
-    '''                    ChartArray(idx).Trend = "10: Rise"
-    '''                    State = 20
-    '''                Else
-    '''                    ChartArray(idx).Account = 0
-    '''                    ChartArray(idx).Trend = "10: wait"
-    '''                End If
-    '''            Case 20
-    '''                Percentage = (ChartArray(idx).Value - StartSharePrice) / StartSharePrice
+            If idx = 5250 Then
+                Dim a As Integer
+                a = idx
+            End If
 
-    '''                ' if share price falls under GD again
-    '''                If ChartArray(idx).Distance <= 0 Then
-    '''                    ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
-    '''                    ' Remove transfer costs
-    '''                    ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
-    '''                    ChartArray(idx).Trend = "20: Hold"
-    '''                    State = 30
-    '''                    'PercentageLimit is reached
-    '''                ElseIf Percentage > PercentageLimit Then
-    '''                    ChartArray(idx).Trend = "25: Hold"
-    '''                    ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
-    '''                    State = 25
-    '''                Else
-    '''                    ' share price stays over GD
-    '''                    ChartArray(idx).Trend = "20: Rise"
-    '''                    ChartArray(idx).Account = (ChartArray(idx).Value / StartSharePrice) * StartAccount
-    '''                End If
-    '''            Case 25
-    '''                ' if share price falls under GD again
-    '''                ChartArray(idx).Trend = "25: Wait"
-    '''                ChartArray(idx).Account = ChartArray(idx - 1).Account
 
-    '''                If ChartArray(idx).Distance <= 0 Then
-    '''                    State = 30
-    '''                End If
-    '''            Case 30
-    '''                    ' if share price raised over GD again
-    '''                    If ChartArray(idx).Distance > 0 Then
-    '''                    ChartArray(idx).Trend = "30: Rise"
-    '''                    '                    ChartArray(idx).Account = ChartArray(idx).Value / StartSharePrice * StartAccount
-    '''                    StartSharePrice = ChartArray(idx).Value
-    '''                    ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
-    '''                    StartAccount = ChartArray(idx).Account
-    '''                    State = 20
-    '''                Else
-    '''                    ' share price stays under GD
-    '''                    ChartArray(idx).Trend = "30: Hold"
-    '''                    ChartArray(idx).Account = ChartArray(idx - 1).Account
-    '''                End If
+            Select Case State
+                Case 0
+                    ' no investment before InvestmentStart
+                    If idx >= InvestmentStart Then
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                        State = 5
+                    Else
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                    End If
 
-    '''        End Select
+                Case 5
+                    ' Kurs anfänglich ist unter dem GD -> zum normalen Ablauf
+                    If ChartArray(idx).Distance <= 0 Then
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5:wait"
+                        State = 10
 
-    '''        idx = idx + 1
-    '''    End While
+                        ' Der Kurs ist über dem GD
+                        ' erst mal warten, bis der Kurs unter den GD fällt
+                    Else
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5: wait"
+                    End If
+                Case 10
+                    ' wait until share price is over GD again the first time
+                    '*** buy now
+                    If ChartArray(idx).Distance > 0 Then
+                        ChartArray(idx).StartSharePrice = ChartArray(idx).Value     'Einstiegskurs
+                        ChartArray(idx).Account = (ChartArray(idx).Value / ChartArray(idx).StartSharePrice) * StartAccount
+                        ' Transaktionskosten
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
+                        ChartArray(idx).Trend = "10: Rise"
+                        State = 20
 
-    '''End Sub
+                        ' Kurs ist unter dem GD -> erst mal warten
+                    Else
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "10: wait"
+                    End If
+                Case 20
+                    ' Hier ist die Aktie gekauft
+                    ChartArray(idx).StartSharePrice = ChartArray(idx - 1).StartSharePrice
+
+                    ' Das Verkaufskriterium ist, dass der Kurs unter GD - x% fällt
+                    If ChartArray(idx).Distance <= -glbBand Then
+                        ChartArray(idx).Account = (ChartArray(idx).Value / ChartArray(idx).StartSharePrice) * StartAccount
+                        ' Transaktionskosten
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
+                        ChartArray(idx).Trend = "20: Hold"
+                        State = 30
+
+                        ' share price stays over GD
+                    Else
+                        ChartArray(idx).Account = (ChartArray(idx).Value / ChartArray(idx).StartSharePrice) * StartAccount
+                        ChartArray(idx).Trend = "20: Rise"
+                    End If
+                Case 30
+                    ' Hier hat man gerade keine Aktien
+
+                    ' if share price raised over GD again
+                    If ChartArray(idx).Distance > 0 Then
+                        '                    ChartArray(idx).Account = ChartArray(idx).Value / StartSharePrice * StartAccount
+                        ChartArray(idx).StartSharePrice = ChartArray(idx).Value
+
+                        ' Transaktionskosten
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        StartAccount = ChartArray(idx).Account
+                        ChartArray(idx).Trend = "30: Rise"
+                        State = 20
+                    Else
+                        ' share price stays under GD
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account
+                        ChartArray(idx).Trend = "30: Hold"
+                    End If
+
+            End Select
+
+            idx = idx + 1
+        End While
+
+    End Sub
+
+    '=====================================================================
+    '                       Analyse_06
+    ' 
+    '=====================================================================
+    Public Sub Analyse_06(InvestmentStart As Integer, StartAccount As Double)
+        Dim idx As Integer
+        Dim State As Integer
+        Dim CostFactor As Double
+
+        'CostFactor = 1
+        CostFactor = 0.98
+        '    CostFactor = 0.991
+
+        idx = 0
+        State = 0
+
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
+
+        While idx <= UBound(ChartArray)
+
+            If idx = 5250 Then
+                Dim a As Integer
+                a = idx
+            End If
+
+
+            Select Case State
+                Case 0
+                    ' no investment before InvestmentStart
+                    If idx >= InvestmentStart Then
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                        State = 5
+                    Else
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "0"
+                    End If
+
+                Case 5
+                    ' Kurs anfänglich ist unter dem GD -> zum normalen Ablauf
+                    If ChartArray(idx).Distance <= 0 Then
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5:wait"
+                        State = 10
+
+                        ' Der Kurs ist über dem GD
+                        ' erst mal warten, bis der Kurs unter den GD fällt
+                    Else
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "5: wait"
+                    End If
+                Case 10
+                    ' wait until share price is over GD again the first time
+                    '*** buy now
+                    If ChartArray(idx).Distance > 0 Then
+                        ChartArray(idx).StartSharePrice = ChartArray(idx).Value     'Einstiegskurs
+                        ChartArray(idx).Account = (ChartArray(idx).Value / ChartArray(idx).StartSharePrice) * StartAccount
+                        ' Transaktionskosten
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
+                        ChartArray(idx).Trend = "10: Rise"
+                        State = 20
+
+                        ' Kurs ist unter dem GD -> erst mal warten
+                    Else
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = 0
+                        ChartArray(idx).Trend = "10: wait"
+                    End If
+                Case 20
+                    ' Hier ist die Aktie gekauft
+                    ChartArray(idx).StartSharePrice = ChartArray(idx - 1).StartSharePrice
+
+                    ' Das Verkaufskriterium ist, dass der Kurs unter GD - x% fällt
+                    If ChartArray(idx).Distance <= -glbBand Then
+                        ChartArray(idx).Account = (ChartArray(idx).Value / ChartArray(idx).StartSharePrice) * StartAccount
+                        ' Transaktionskosten
+                        ChartArray(idx).Account = ChartArray(idx).Account * CostFactor
+                        ChartArray(idx).Trend = "20: Hold"
+                        State = 30
+
+                        ' share price stays over GD
+                    Else
+                        ChartArray(idx).Account = (ChartArray(idx).Value / ChartArray(idx).StartSharePrice) * StartAccount
+                        ChartArray(idx).Trend = "20: Rise"
+                    End If
+                Case 30
+                    ' Hier hat man gerade keine Aktien
+
+                    ' Das Kaufskriterium ist, dass der Kurs unter GD - x% fällt
+                    If ChartArray(idx).Distance > glbBand Then
+                        '                    ChartArray(idx).Account = ChartArray(idx).Value / StartSharePrice * StartAccount
+                        ChartArray(idx).StartSharePrice = ChartArray(idx).Value
+
+                        ' Transaktionskosten
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account * CostFactor
+                        StartAccount = ChartArray(idx).Account
+                        ChartArray(idx).Trend = "30: Rise"
+                        State = 20
+                    Else
+                        ' share price stays under GD
+                        ChartArray(idx).StartSharePrice = 0
+                        ChartArray(idx).Account = ChartArray(idx - 1).Account
+                        ChartArray(idx).Trend = "30: Hold"
+                    End If
+
+            End Select
+
+            idx = idx + 1
+        End While
+
+    End Sub
 
     Public Sub DrawStart(Pic As PictureBox, X As Single, Y As Single, LclColor As Color)
         Dim PicX As Single
@@ -718,13 +924,54 @@ WriteChartArrayToCsvErr:
 
         'Test circle 
         'Dim pen1 As New System.Drawing.Pen(LclColor, 1)
-        'Pic.CreateGraphics.DrawEllipse(pen1, pt1.X, pt1.Y, 10, 10)
+        'Pic.CreateGraphics.DrawEllipse(pen1, pt1.X - 5, pt1.Y - 5, 10, 10)
 
         idx = idx + 1
 
     End Sub
 
+    Public Sub DrawCircle(Pic As PictureBox, X As Single, Y As Single, LclColor As Color)
+        Dim PicX As Single
+        Dim PicY As Single
 
+        Dim pt1 As Point
+        Dim Radius As Integer
+
+        Radius = 2
+
+        PicX = (X * GlbScaleX) + GlbOffX
+        PicY = Form1.PicChart.Height - (Y * GlbScaleY) - GlbOffY
+
+        If PicX > Form1.PicChart.Width + 100 Then
+            PicX = Form1.PicChart.Width + 100
+        End If
+
+        If PicX < -100 Then
+            PicX = -100
+        End If
+
+        If PicY > Form1.PicChart.Height + 100 Then
+            PicY = Form1.PicChart.Height + 100
+        End If
+
+        If PicY < -100 Then
+            PicY = -100
+        End If
+
+
+        pt1.X = PicX
+        pt1.Y = PicY
+
+
+
+        'Draw circle 
+        Dim pen1 As New System.Drawing.Pen(LclColor, 1)
+        Pic.CreateGraphics.DrawEllipse(pen1, pt1.X - Radius, pt1.Y - Radius, Radius * 2, Radius * 2)
+        Pic.CreateGraphics.FillEllipse(New SolidBrush(LclColor), pt1.X - Radius, pt1.Y - Radius, Radius * 2, Radius * 2)
+
+        idx = idx + 1
+
+    End Sub
 
     Public Sub DrawEnd(Pic As PictureBox, LclColor As Color)
 

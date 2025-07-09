@@ -97,7 +97,7 @@ Public Class Form1
         OffsetLast.X = GlbOffX
         OffsetLast.Y = GlbOffY
 
-        Analyse2.Checked = True
+        Analyse5.Checked = True
 
         ComboBox1.Items.Add("Use best user defined SMA")        'Index 3
         ComboBox1.Items.Add("Use best SMA last year")               'Index 0
@@ -283,7 +283,9 @@ Public Class Form1
         ElseIf Analyse4.Checked Then
             Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, Percentage)
         ElseIf Analyse5.Checked Then
-
+            Analyse_05(T_InvestmentStart.Text, T_StartSharePrice.Text)
+        ElseIf Analyse6.Checked Then
+            Analyse_06(T_InvestmentStart.Text, T_StartSharePrice.Text)
         End If
         DispCoordinateSystem(PicChart)
         DisplayChart(PicChart)
@@ -425,6 +427,9 @@ Public Class Form1
                         T_Value.Text = ChartArray(MouseXY.X).Value
                         T_Account.Text = Format(ChartArray(MouseXY.X).Account, "0.00")
                         T_SD1.Text = Format(ChartArray(MouseXY.X).SMA, "0.00")
+                        T_StartPrice.Text = Format(ChartArray(MouseXY.X).StartSharePrice, "0.00")
+                        T_Trend.Text = ChartArray(MouseXY.X).Trend
+                        T_State.Text = ChartArray(MouseXY.X).State
                     End If
                 End If
 
@@ -827,10 +832,28 @@ Public Class Form1
         Percentage = HS_Percent.Value / 1000
     End Sub
 
+    Private Sub HS_Band_Scroll(sender As Object, e As ScrollEventArgs) Handles HS_Band.Scroll
+        T_Band.Text = HS_Band.Value / 10
+        glbBand = HS_Band.Value / 1000
+
+        If Not ArrayValid(ChartArray) Then
+            ' Array ist nicht dimensioniert
+            Exit Sub
+        End If
+
+
+        RefreshChart()
+        T_CurrAccount.Text = ChartArray(UBound(ChartArray)).Account
+
+    End Sub
+
     Private Sub WriteCartArrayToFile_Click(sender As Object, e As EventArgs) Handles WriteCartArrayToFile.Click
         WriteChartArrayToCsv()
     End Sub
 
+    Private Sub PicChart_Click(sender As Object, e As EventArgs) Handles PicChart.Click
+
+    End Sub
 
     ''Private Sub CompleteCompanyWKNISINToolStripMenuItem_Click(sender As Object, e As EventArgs)
     ''    Dim InFileName As String
