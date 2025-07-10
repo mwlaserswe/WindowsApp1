@@ -537,7 +537,7 @@ Public Class Form1
         Dim WKN As String
         Dim CurrentShareInfo As ShareInfo
 
-        Dim dmystr As String
+        Dim LastEntry As ChartItem
 
         'Check if BUY signal...
 
@@ -569,7 +569,7 @@ Public Class Form1
             CompanyName = DataGridView1.Item(column, row).Value
             ReadHistoryFileToChartArray(Fullpath, CompanyName)
 
-            SMALength = CurrentShareInfo._AbsMaxPos
+            'SWE            SMALength = CurrentShareInfo._AbsMaxPos
             T_SMA.Text = SMALength
 
 
@@ -582,12 +582,15 @@ Public Class Form1
             ElseIf Analyse4.Checked Then
                 Analyse_04(T_InvestmentStart.Text, T_StartSharePrice.Text, 0.104)
             ElseIf Analyse5.Checked Then
+                Analyse_05(T_InvestmentStart.Text, T_StartSharePrice.Text)
+            ElseIf Analyse6.Checked Then
+                Analyse_06(T_InvestmentStart.Text, T_StartSharePrice.Text)
 
             End If
             ''DispCoordinateSystem(PicChart)
             ''DisplayChart(PicChart)
 
-            dmystr = ChartArray(UBound(ChartArray)).Trend
+            LastEntry = ChartArray(UBound(ChartArray))
 
             column = spStatus       ' Point to Status columnn 4
             If InStr(ChartArray(UBound(ChartArray)).Trend, "5:wait", CompareMethod.Text) Then
@@ -612,6 +615,20 @@ Public Class Form1
                 DataGridView1.Item(column, row).Style.ForeColor = Color.LightPink
                 DataGridView1.Item(column, row).Value = "30: Hold"
             End If
+
+            ' Kauf oder Verkaufkriterium checken
+            If InStr(ChartArray(UBound(ChartArray) - 1).Trend, "Hold", CompareMethod.Text) _
+                And InStr(ChartArray(UBound(ChartArray)).Trend, "Rise", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.Green
+                DataGridView1.Item(column, row).Value = "BUY"
+            ElseIf InStr(ChartArray(UBound(ChartArray) - 1).Trend, "Rise", CompareMethod.Text) _
+                And InStr(ChartArray(UBound(ChartArray)).Trend, "Hold", CompareMethod.Text) Then
+                DataGridView1.Item(column, row).Style.ForeColor = Color.Red
+                DataGridView1.Item(column, row).Value = "SELL"
+            End If
+
+            ' Kauf
+
 
             column = spAccount      ' Point to Account columnn 5
             DataGridView1.Item(column, row).Value = ChartArray(UBound(ChartArray)).Account
