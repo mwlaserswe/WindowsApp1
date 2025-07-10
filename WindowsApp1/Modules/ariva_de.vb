@@ -21,18 +21,20 @@ Module ariva_de
         'zuerst TempSearchString extrahieren
         Dim TempSearchString As String
         Dim TempValue As Double
-        SearchItem = "<span itemprop=""price"" content"
-        EndString = "</span>"
+        SearchItem = "<div class=""instrument-header-quote"">"
+        EndString = "&nbsp"
         TempSearchString = ExtraxtValue(HtmlCode, SearchItem, EndString)
         TempValue = Zahl(TempSearchString)
 
-        'AktuellerKurs extrahieren
-        SearchItem = TempValue & ".00"
-        EndString = "</span>"
-        AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
-        Dim dmy As Double
+        'SWE       'AktuellerKurs extrahieren
+        'SWE       SearchItem = TempValue & ".00"
+        'SWE       EndString = "</span>"
+        'SWE       AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
 
-        dmy = Zahl(AktuellerKurs)
+        Dim dmy As Double
+        dmy = TempValue
+
+        'SWE        dmy = Zahl(AktuellerKurs)
 
         Read_Ariva = dmy
 

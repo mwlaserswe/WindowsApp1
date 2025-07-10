@@ -16,7 +16,8 @@ Module peketec_de
         Dim PosEnd As Long
         Dim EndString As String
 
-        WebPage = "https://peketec.de/portal/charts/show/key/" & WKN
+        'WebPage = "https://peketec.de/portal/charts/show/key/" & WKN
+        WebPage = "https://www.consorsbank.de/web/Suche/Wertpapier/Alle-Ergebnisse/Aktien?searchQuery=" & WKN
         HtmlCode = GetHTMLCode(WebPage)
         If HtmlCode = ">>>ERROR<<<" Then
             Read_Peketec = -1

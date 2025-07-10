@@ -97,7 +97,7 @@ Public Class Form1
         OffsetLast.X = GlbOffX
         OffsetLast.Y = GlbOffY
 
-        Analyse5.Checked = True
+        Analyse6.Checked = True
 
         ComboBox1.Items.Add("Use best user defined SMA")        'Index 3
         ComboBox1.Items.Add("Use best SMA last year")               'Index 0
@@ -106,7 +106,8 @@ Public Class Form1
         ComboBox1.Items.Add("Use SMA of TextBox")               'Index 0
         ComboBox1.SelectedIndex = 0
 
-        B_Last3Month_Click(Nothing, Nothing)
+        'B_Last3Month_Click(Nothing, Nothing)
+        C_HomeView_Click(Nothing, Nothing)
         Ch_FitY.Checked = True
     End Sub
 
@@ -234,30 +235,40 @@ Public Class Form1
         End If
 
 
-        Select Case ComboBox1.SelectedIndex
-            Case 0
-                ' Use user defined SMA"
-                SMALength = GlbShareInfo.UserDefinitions.UserDefinedSMA
-                If SMALength = 0 Then
-                    SMALength = GlbShareInfo.BestSMA.SMA_LastYear.AbsMaxPos
-                    T_SMA.Text = SMALength
-                End If
-            Case 1
-                ' Use best SMA last year
-                SMALength = GlbShareInfo.BestSMA.SMA_LastYear.AbsMaxPos
-                T_SMA.Text = SMALength
-            Case 2
-                ' Use best SMA since 2000
-                SMALength = GlbShareInfo.BestSMA.SMA_Since2000.AbsMaxPos
-                T_SMA.Text = SMALength
-            Case 3
-                ' Use best SMA since CORONA
-                SMALength = GlbShareInfo.BestSMA.SMA_SinceCorona.AbsMaxPos
-                T_SMA.Text = SMALength
-            Case 4
-                ' Use SMA of TextBox
-                SMALength = T_SMA.Text
-        End Select
+        'SWE        Select Case ComboBox1.SelectedIndex
+        'SWE            Case 0
+        'SWE                ' Use user defined SMA"
+        'SWE                SMALength = GlbShareInfo.UserDefinitions.UserDefinedSMA
+        'SWE                If SMALength = 0 Then
+        'SWE                    SMALength = GlbShareInfo.BestSMA.SMA_LastYear.AbsMaxPos
+        'SWE                    T_SMA.Text = SMALength
+        'SWE                End If
+        'SWE            Case 1
+        'SWE                ' Use best SMA last year
+        'SWE                SMALength = GlbShareInfo.BestSMA.SMA_LastYear.AbsMaxPos
+        'SWE                T_SMA.Text = SMALength
+        'SWE            Case 2
+        'SWE                ' Use best SMA since 2000
+        'SWE                SMALength = GlbShareInfo.BestSMA.SMA_Since2000.AbsMaxPos
+        'SWE                T_SMA.Text = SMALength
+        'SWE            Case 3
+        'SWE                ' Use best SMA since CORONA
+        'SWE                SMALength = GlbShareInfo.BestSMA.SMA_SinceCorona.AbsMaxPos
+        'SWE                T_SMA.Text = SMALength
+        'SWE            Case 4
+        'SWE                ' Use SMA of TextBox
+        'SWE                SMALength = T_SMA.Text
+        'SWE        End Select
+
+
+        ' erst mal einen festen SMA
+        ' erst mal ein festes Band
+        SMALength = 200
+        HS_SMA.Value = SMALength
+        T_SMA.Text = SMALength
+        glbBand = 0.14
+        HS_Band.Value = Int(glbBand * 1000)
+        T_Band.Text = glbBand * 100
 
         column = spSMA      ' Point to spSMA columnn
         DataGridView1.Item(column, row).Value = SMALength

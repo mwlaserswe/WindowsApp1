@@ -2,6 +2,9 @@
 
 Imports System.Net
 Imports System.IO
+Imports System.Net.Http
+Imports System.Security.Policy
+Imports System.Runtime.InteropServices
 Module Util
     Public Function ExtraxtValue(HtmlString As String, SearchItem As String, EndString As String) As String
         Dim GoogleText As String
@@ -20,7 +23,7 @@ Module Util
         If PosStart > 0 Then
             PosStart = PosStart + Len(SearchItem) + 1
             PosEnd = InStr(PosStart, HtmlString, EndString, CompareMethod.Binary)
-            If PosStart > 0 Then
+            If PosStart > 0 And PosEnd > 0 Then
                 ExtraxtValue = Mid$(HtmlString, PosStart, PosEnd - PosStart)
             End If
         End If
@@ -40,7 +43,14 @@ Module Util
         '''strReturn = objHTTP.responseText
         '''objHTTP = Nothing
         '''GetHTMLCode = strReturn
+        '''
+
         Dim hreq As HttpWebRequest = CType(HttpWebRequest.Create(strURL), HttpWebRequest)
+        hreq.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        hreq.Referer = "https://www.google.de/"
+        hreq.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        hreq.CookieContainer = New Net.CookieContainer()
+        hreq = CType(HttpWebRequest.Create(strURL), HttpWebRequest)
         Dim hres As HttpWebResponse = CType(hreq.GetResponse(), HttpWebResponse)
         Dim s As Stream = hres.GetResponseStream()
         Dim sr As New StreamReader(s)
@@ -52,7 +62,7 @@ Module Util
         Exit Function
 
 AccessError:
-        GetHTMLCode = ">>>ERROR<<<"
+        GetHTMLCode = strURL & vbCrLf & ">>>ERROR<<<" & vbCrLf & Err.Description
         AccessErrorCnt = AccessErrorCnt + 1
         '    L_ErrorCnt = AccessErrorCnt
         '    Form1.Timer2.Enabled = False
@@ -521,23 +531,44 @@ OpenError:
 
 
 
-    Public Function GetvalidSharePrice(Arry() As Double) As ShareResult
+    Public Function GetvalidSharePrice(Arry() As Double, Kursliste As List(Of Double)) As ShareResult
         Dim i As Integer
         Dim ErrorString As String
         Dim MyMedian As Double
 
 
-        MyMedian = Median(Arry)
+
+        'SWE        MyMedian = Median(Arry)
+        'SWE        ErrorString = ""
+        'SWE        For i = LBound(Arry) To UBound(Arry)
+        'SWE            If Arry(i) = 0 Then
+        'SWE                ErrorString = ErrorString & "Web[" & i & "]: " & Arry(i) & "  "
+        'SWE            ElseIf Math.Abs(Arry(i) - MyMedian) > (MyMedian * 0.01) Then
+        'SWE                ErrorString = ErrorString & "Web[" & i & "]: " & Arry(i) & "  "
+        'SWE            End If
+        'SWE        Next
+        'SWE
+        'SWE        GetvalidSharePrice.Value = MyMedian
+
+
+
+
+        'erst mal mit wenigen Werten arbeiten
         ErrorString = ""
-        For i = LBound(Arry) To UBound(Arry)
-            If Arry(i) = 0 Then
-                ErrorString = ErrorString & "Web[" & i & "]: " & Arry(i) & "  "
-            ElseIf Math.Abs(Arry(i) - MyMedian) > (MyMedian * 0.01) Then
-                ErrorString = ErrorString & "Web[" & i & "]: " & Arry(i) & "  "
-            End If
+        Dim cnt As Integer
+
+        Dim summe As Double = 0
+        Dim anzahl As Integer = 0
+
+        For Each kurs As Double In Kursliste
+            summe += kurs
+            anzahl += 1
         Next
 
-        GetvalidSharePrice.Value = MyMedian
+        GetvalidSharePrice.Value = summe / anzahl
+
+
+
         GetvalidSharePrice.ErrorString = ErrorString
     End Function
 
@@ -554,14 +585,12 @@ OpenError:
         For i = 0 To UBound(LclArray)
             LclArray(i) = Array(i)
         Next i
-
         BubbleSort(LclArray)
-
-            If LclArray.Length Mod 2 = 1 Then
-                Median = LclArray(LclArray.Length \ 2)
-            Else
-                V1 = LclArray(LclArray.Length \ 2 - 1)
-                V2 = LclArray(LclArray.Length \ 2)
+        If LclArray.Length Mod 2 = 1 Then
+            Median = LclArray(LclArray.Length \ 2)
+        Else
+            V1 = LclArray(LclArray.Length \ 2 - 1)
+            V2 = LclArray(LclArray.Length \ 2)
                 Median = (V1 + V2) / 2
             End If
 

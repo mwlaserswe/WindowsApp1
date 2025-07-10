@@ -19,7 +19,7 @@ Module BoerseStuttgart
         SaveQuelltext(HtmlCode, Application.StartupPath & "\BoerseStuttgartText.HTML")
 
         'AktuellerKurs extrahieren
-        SearchItem = " data-animation=""BLOCK"">"
+        SearchItem = "<span class="
         EndString = "</span>"
         AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
         Dim dmy As Double

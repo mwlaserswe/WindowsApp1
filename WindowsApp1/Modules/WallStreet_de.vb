@@ -22,7 +22,7 @@ Module WallStreet_de
         SaveQuelltext(HtmlCode, Application.StartupPath & "\WallStreet.HTML")
 
         'AktuellerKurs extrahieren
-        SearchItem = "data-push=""3;ls;quotes;9193@22;trade"""
+        SearchItem = "<span data-push=""2;ls;quotes;5666@21@27;t"" "
         EndString = "</span>"
         AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
         Dim dmy As Double

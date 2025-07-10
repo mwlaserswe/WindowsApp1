@@ -7,16 +7,52 @@
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\modules\\util.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\util.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\chart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\chart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\globalvariables.vb||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\globalvariables.vb||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frmreadhistoricfromariva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmreadhistoricfromariva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\classes\\clsxml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\classes\\clsxml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frmtestreadwritexml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmtestreadwritexml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\forms\\frmservicecheckweekday.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmservicecheckweekday.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\forms\\frmreadhistoricfromariva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmreadhistoricfromariva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\modules\\peketec_de.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\peketec_de.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,29 +70,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GlobalVariables.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\GlobalVariables.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\GlobalVariables.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\GlobalVariables.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\GlobalVariables.vb",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAgwHEAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Chart.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Chart.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb",
+              "RelativeToolTip": "WindowsApp1\\Modules\\Chart.vb",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAvwP8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-09T14:55:20.724Z",
+              "WhenOpened": "2025-07-10T13:48:31.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
-              "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb",
-              "ViewState": "AgIAADUDAAAAAAAAAAAAAEoDAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "FrmInfoFiles.vb [Entwurf]",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmInfoFiles.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb [Entwurf]",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmInfoFiles.vb [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-04T11:48:03.982Z",
+              "WhenOpened": "2025-07-10T13:41:46.733Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmInfoFiles.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmInfoFiles.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmInfoFiles.vb",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAzwI0AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T13:40:25.962Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmReadHistoricFromAriva.vb [Entwurf]",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb [Entwurf]",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T13:34:23.048Z",
+              "EditorCaption": " [Entwurf]"
             },
             {
               "$type": "Document",
@@ -67,21 +127,109 @@
               "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb [Entwurf]",
               "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb [Entwurf]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-04T11:47:39.505Z",
+              "WhenOpened": "2025-07-10T13:31:05.176Z",
               "EditorCaption": " [Entwurf]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Chart.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Chart.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Chart.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\Chart.vb",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAgwPIAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb",
+              "ViewState": "AgIAAFMAAAAAAAAAAAApwGMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-04T11:25:13.475Z",
+              "WhenOpened": "2025-07-10T11:14:26.162Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Util.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Util.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Util.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Util.vb",
+              "RelativeToolTip": "WindowsApp1\\Modules\\Util.vb",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAACwBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T11:07:25.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClsXML.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Classes\\ClsXML.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Classes\\ClsXML.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Classes\\ClsXML.vb",
+              "RelativeToolTip": "WindowsApp1\\Classes\\ClsXML.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T13:51:05.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmTestReadWriteXML.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmTestReadWriteXML.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmTestReadWriteXML.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmTestReadWriteXML.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmTestReadWriteXML.vb",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAnwBkAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T13:40:50.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmServiceCheckWeekDay.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmServiceCheckWeekDay.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmServiceCheckWeekDay.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmServiceCheckWeekDay.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmServiceCheckWeekDay.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T12:46:39.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmReadHistoricFromAriva.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "ViewState": "AgIAABQAAAAAAAAAAAAlwCMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T11:54:06.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "peketec_de.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\peketec_de.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\peketec_de.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\peketec_de.vb",
+              "RelativeToolTip": "WindowsApp1\\Modules\\peketec_de.vb",
+              "ViewState": "AgIAAAMAAAAAAAAAAIA7wBgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T11:31:29.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FrmReadTodaysSharePrice.vb [Entwurf]",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb [Entwurf]",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-10T11:18:37.575Z"
             }
           ]
         }

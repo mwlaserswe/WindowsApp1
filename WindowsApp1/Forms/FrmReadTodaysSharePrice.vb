@@ -9,6 +9,8 @@ Public Class FrmReadTodaysSharePrice
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
 
+        Dim KursListe As New List(Of Double)
+
         Dim i As Long
 
         For i = LBound(CompanyListArray) To UBound(CompanyListArray)
@@ -22,31 +24,51 @@ Public Class FrmReadTodaysSharePrice
                 L_ISIN.Text = CompanyListArray(i).ISIN
 
                 ReDim arry(0 To 0)
+                KursListe.Clear()
+
                 arry(0) = Read_Peketec(CompanyListArray(i).WKN)
+                If arry(0) > 0 Then
+                    KursListe.Add(arry(0))
+                End If
                 T_S0.Text = arry(0)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
                 arry(1) = Read_Ariva(CompanyListArray(i).WKN)
+                If arry(1) > 0 Then
+                    KursListe.Add(arry(1))
+                End If
                 T_S1.Text = arry(1)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
                 arry(2) = Read_BoerseStuttgart(CompanyListArray(i).WKN)
+                If arry(2) > 0 Then
+                    KursListe.Add(arry(2))
+                End If
                 T_S2.Text = arry(2)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
                 arry(3) = Read_Comdirect(CompanyListArray(i).WKN)
+                If arry(3) > 0 Then
+                    KursListe.Add(arry(3))
+                End If
                 T_S3.Text = arry(3)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
                 arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
+                If arry(4) > 0 Then
+                    KursListe.Add(arry(4))
+                End If
                 T_S4.Text = arry(4)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
                 arry(5) = Read_BoerseBerlin_de(CompanyListArray(i).WKN)
+                If arry(5) > 0 Then
+                    KursListe.Add(arry(5))
+                End If
                 T_S5.Text = arry(5)
                 Application.DoEvents()
 
-                TodaysSharePrice = GetvalidSharePrice(arry)
+                TodaysSharePrice = GetvalidSharePrice(arry, KursListe)
                 L_SharePrice.Text = TodaysSharePrice.Value
 
                 If TodaysSharePrice.ErrorString <> "" Then
@@ -181,6 +203,8 @@ OpenError:
         Dim arry As Double()
         Dim TodaysSharePrice As ShareResult
 
+        Dim KursListe As New List(Of Double)
+
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
 
@@ -199,31 +223,51 @@ OpenError:
             Application.DoEvents()
 
             ReDim arry(0 To 0)
+            KursListe.Clear()
+
             arry(0) = Read_Peketec(CompanyListArray(i).WKN)
+            If arry(0) > 0 Then
+                KursListe.Add(arry(0))
+            End If
             T_S0.Text = arry(0)
             Application.DoEvents()
             ReDim Preserve arry(0 To UBound(arry) + 1)
             arry(1) = Read_Ariva(CompanyListArray(i).WKN)
+            If arry(1) > 0 Then
+                KursListe.Add(arry(1))
+            End If
             T_S1.Text = arry(1)
             Application.DoEvents()
             ReDim Preserve arry(0 To UBound(arry) + 1)
             arry(2) = Read_BoerseStuttgart(CompanyListArray(i).WKN)
+            If arry(2) > 0 Then
+                KursListe.Add(arry(2))
+            End If
             T_S2.Text = arry(2)
             Application.DoEvents()
             ReDim Preserve arry(0 To UBound(arry) + 1)
             arry(3) = Read_Comdirect(CompanyListArray(i).WKN)
+            If arry(3) > 0 Then
+                KursListe.Add(arry(3))
+            End If
             T_S3.Text = arry(3)
             Application.DoEvents()
             ReDim Preserve arry(0 To UBound(arry) + 1)
             arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
+            If arry(4) > 0 Then
+                KursListe.Add(arry(4))
+            End If
             T_S4.Text = arry(4)
             Application.DoEvents()
             ReDim Preserve arry(0 To UBound(arry) + 1)
             arry(5) = Read_BoerseBerlin_de(CompanyListArray(i).WKN)
+            If arry(5) > 0 Then
+                KursListe.Add(arry(5))
+            End If
             T_S5.Text = arry(5)
             Application.DoEvents()
 
-            TodaysSharePrice = GetvalidSharePrice(arry)
+            TodaysSharePrice = GetvalidSharePrice(arry, KursListe)
             L_SharePrice.Text = TodaysSharePrice.Value
 
             ListBox1.Items.Add(CompanyListArray(i).Name & "  " & CompanyListArray(i).WKN & "  " & TodaysSharePrice.Value)

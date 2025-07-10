@@ -75,7 +75,7 @@ Public Class FrmReadHistoricFromAriva
         Dim HistoricFromAriva As String
         Dim result As Double
 
-        FileName = Application.StartupPath & "\01_History_download_from_ARIVA\" & WKN & ".txt"
+        FileName = Application.StartupPath & "\01_History_download_from_ARIVA\" & "wkn_" & WKN & "_historic.csv"
 
 
         ' Check if Option "Don't download existing files" is active
