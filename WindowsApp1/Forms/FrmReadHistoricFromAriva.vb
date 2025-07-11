@@ -34,7 +34,7 @@ Public Class FrmReadHistoricFromAriva
 
             Application.DoEvents()
             ListBox1.Items.Add(CompListNew(idx).Name)
-            WKN = CompPartialLstArr(idx).WKN
+            WKN = CompListNew(idx).WKN
             SingleReadFromAriva(WKN)
 
         Next idx
@@ -125,6 +125,7 @@ Public Class FrmReadHistoricFromAriva
 
 
     Private Sub B_ReadFile_Click(sender As Object, e As EventArgs) Handles B_ReadFile.Click
+        ListBox1.Items.Clear()
         CompanyFileToArray(Application.StartupPath & "\ISIN-WKN-New.txt", CompListNew)
         CompanyArrayToListbox(ListBox1, CompListNew)
     End Sub
