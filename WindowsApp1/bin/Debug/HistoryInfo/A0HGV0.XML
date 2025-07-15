@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <General>
+    <ID>0</ID>
+    <Name>iShares MSCI World</Name>
+    <WKN>A0HGV0</WKN>
+    <ISIN>IE00B0M62Q58</ISIN>
+  </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/etf/ishares-msci-world-etf-ie00b0m62q58</FinanzenNetWebPage>
+  </WebInfos>
+  <BestSMA>
+    <SMA_LastYear />
+    <SMA_Since2000 />
+    <SMA_SinceCorona />
+  </BestSMA>
+  <UserDefinitions />
+</ShareInfo>

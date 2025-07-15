@@ -1,50 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\",
+  "WorkspaceRootPath": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\finanzen_net.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\finanzen_net.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\boerseberlin_de.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\boerseberlin_de.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\comdirect_de.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\comdirect_de.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\irgendwas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\irgendwas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visualstudio\\windowsapp1\\windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\modules\\boersestuttgart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\boersestuttgart.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\windowsapp1\\modules\\util.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\modules\\util.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\windowsapp1\\forms\\frmtestdatagrid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmtestdatagrid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\windowsapp1\\forms\\frmreadhistoricfromariva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmreadhistoricfromariva.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frmreadtodaysshareprice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\frminfofiles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\classes\\clsxml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\classes\\clsxml.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|d:\\eigene dateien\\projekte privat\\visual studio\\vb-projekt_01\\windowsapp1.git\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{62389BF6-CE4C-43B4-B9AD-8112EE66665B}|WindowsApp1\\WindowsApp1.vbproj|solutionrelative:windowsapp1\\forms\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,149 +41,90 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{df72777a-9fad-4a96-a35f-866efd0a1ce4}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmTestDataGrid.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmTestDataGrid.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmTestDataGrid.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmTestDataGrid.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmTestDataGrid.vb",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwCwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T20:36:39.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Irgendwas.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Irgendwas.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Irgendwas.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Irgendwas.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\Irgendwas.vb",
-              "ViewState": "AgIAABsAAAAAAAAAAAAuwC0AAAAYAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "FrmReadHistoricFromAriva.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadHistoricFromAriva.vb",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAIwIwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T15:04:21.364Z",
+              "WhenOpened": "2025-07-15T20:35:03.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Util.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Modules\\Util.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Util.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Modules\\Util.vb",
+              "RelativeToolTip": "WindowsApp1\\Modules\\Util.vb",
+              "ViewState": "AgIAAIoCAAAAAAAAAAAmwJUCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T20:09:34.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BoerseBerlin_de.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\BoerseBerlin_de.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\BoerseBerlin_de.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\BoerseBerlin_de.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\BoerseBerlin_de.vb",
-              "ViewState": "AgIAADEAAAAAAAAAAAAQwD8AAAAMAAAAAAAAAA==",
+              "Title": "Form1.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\Form1.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\Form1.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwFAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T14:15:22.392Z",
+              "WhenOpened": "2025-07-15T20:09:34.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Comdirect_de.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Comdirect_de.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\Comdirect_de.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\Comdirect_de.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\Comdirect_de.vb",
-              "ViewState": "AgIAADMAAAAAAAAAAAAuwF4AAAAZAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\Form1.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\Form1.vb [Design]",
+              "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T14:08:15.733Z",
+              "WhenOpened": "2025-07-15T20:22:43.973Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmReadTodaysSharePrice.vb",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAQwCEBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-15T20:18:34.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BoerseStuttgart.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\BoerseStuttgart.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\BoerseStuttgart.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\BoerseStuttgart.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\BoerseStuttgart.vb",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAuwFsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T14:03:38.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "finanzen_net.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\finanzen_net.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Modules\\finanzen_net.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Modules\\finanzen_net.vb",
-              "RelativeToolTip": "WindowsApp1\\Modules\\finanzen_net.vb",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAQwFMAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T13:51:19.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmReadTodaysSharePrice.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
+              "Title": "FrmReadTodaysSharePrice.vb [Design]",
+              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
               "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
-              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
-              "ViewState": "AgIAABcAAAAAAAAAAAAEwCMAAAAiAAAAAAAAAA==",
+              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\VisualStudio\\WindowsApp1\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb [Design]",
+              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T13:46:07.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FrmReadTodaysSharePrice.vb [Entwurf]",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb [Entwurf]",
-              "RelativeToolTip": "WindowsApp1\\Forms\\FrmReadTodaysSharePrice.vb [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T13:46:02.754Z",
-              "EditorCaption": " [Entwurf]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmInfoFiles.vb [Entwurf]",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmInfoFiles.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb [Entwurf]",
-              "RelativeToolTip": "WindowsApp1\\Forms\\FrmInfoFiles.vb [Entwurf]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T11:39:11.792Z",
-              "EditorCaption": " [Entwurf]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FrmInfoFiles.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\FrmInfoFiles.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\FrmInfoFiles.vb",
-              "RelativeToolTip": "WindowsApp1\\Forms\\FrmInfoFiles.vb",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAUwJ0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T11:38:53.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Forms\\Form1.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Forms\\Form1.vb",
-              "RelativeToolTip": "WindowsApp1\\Forms\\Form1.vb",
-              "ViewState": "AgIAAPICAAAAAAAAAAAAAAQDAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T11:38:18.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClsXML.vb",
-              "DocumentMoniker": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Classes\\ClsXML.vb",
-              "RelativeDocumentMoniker": "WindowsApp1\\Classes\\ClsXML.vb",
-              "ToolTip": "D:\\Eigene Dateien\\Projekte privat\\Visual Studio\\VB-Projekt_01\\WindowsApp1.git\\WindowsApp1\\Classes\\ClsXML.vb",
-              "RelativeToolTip": "WindowsApp1\\Classes\\ClsXML.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAawBAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-07-15T11:38:04.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T20:18:31.875Z"
             }
           ]
         }

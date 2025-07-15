@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ShareInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <General>
+    <ID>0</ID>
+    <Name>Amundi DAX III</Name>
+    <WKN>LYX0AC</WKN>
+    <ISIN>LU0252633754</ISIN>
+  </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/etf/amundi-dax-iii-etf-lu0252633754</FinanzenNetWebPage>
+  </WebInfos>
+  <BestSMA>
+    <SMA_LastYear />
+    <SMA_Since2000 />
+    <SMA_SinceCorona />
+  </BestSMA>
+  <UserDefinitions />
+</ShareInfo>

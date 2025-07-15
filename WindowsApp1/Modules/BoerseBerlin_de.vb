@@ -63,15 +63,16 @@ Module BoerseBerlin_de
             driver.Manage().Window.Minimize()
             driver.Navigate().GoToUrl(WebPage)
 
-            'Dim wait As New WebDriverWait(driver, TimeSpan.FromSeconds(15))
-            'Dim kursElement As IWebElement = wait.Until(
-            'Function(d)
-            '    Return d.FindElement(By.XPath("//div[contains(@Class,'snapshot__value')]"))
-            'End Function
+            'Du kannst In Selenium einen XPath mit Wildcard oder Teilvergleich verwenden,
+            'um den Wert auch dann zu finden, wenn sich die ID ändert,
+            'z.B.id_175136222_last → irgendeine andere ID die mit id_ beginnt und mit _last am Ende.
+
+
             Dim wait As New WebDriverWait(driver, TimeSpan.FromSeconds(15))
             Dim kursElement As IWebElement = wait.Until(
             Function(d)
                 'Return d.FindElement(By.ClassName("id_175136222_last"))
+                'Return d.FindElement(By.XPath("//span[contains(@class, '_last')]"))
                 Return d.FindElement(By.XPath("//span[contains(@class, '_last')]"))
             End Function
       )

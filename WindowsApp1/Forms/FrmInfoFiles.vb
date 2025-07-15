@@ -171,7 +171,14 @@ Public Class FrmInfoFiles
 
             XML_Filename = Path.Combine(Application.StartupPath, "HistoryInfo", CompPartialLstArr(i).WKN & ".XML")
 
-            ShareInfo = DeserializeFromXmlFile(XML_Filename, ShareInfo.GetType(), Encoding.UTF8)
+            If File.Exists(XML_Filename) Then
+                ShareInfo = DeserializeFromXmlFile(XML_Filename, ShareInfo.GetType(), Encoding.UTF8)
+            Else
+                ShareInfo.General.ID = "0"
+                ShareInfo.General.Name = CompPartialLstArr(i).Name
+                ShareInfo.General.WKN = CompPartialLstArr(i).WKN
+                ShareInfo.General.ISIN = CompPartialLstArr(i).ISIN
+            End If
 
             T_Info1.Text = ShareInfo.General.WKN
             T_Info2.Text = ShareInfo.General.ISIN

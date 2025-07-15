@@ -49,7 +49,12 @@ Module Irgendwas
             Dim wait As New WebDriverWait(driver, TimeSpan.FromSeconds(15))
             Dim kursElement As IWebElement = wait.Until(
     Function(d)
-        Return d.FindElement(By.ClassName("font-400 font-tablet-500 bold"))
+        Try
+            Return d.FindElement(By.XPath("_ngcontent-ng-c1490613999="))
+        Catch ex As NoSuchElementException
+            Console.WriteLine("Kurselement nicht gefunden: " & ex.Message)
+            Return Nothing
+        End Try
     End Function
 )
 

@@ -28,6 +28,12 @@ Public Class FrmReadTodaysSharePrice
                 L_Name.Text = CompanyListArray(i).Name
                 L_WKN.Text = CompanyListArray(i).WKN
                 L_ISIN.Text = CompanyListArray(i).ISIN
+                T_S0.Text = "--"
+                T_S1.Text = "--"
+                T_S2.Text = "--"
+                T_S3.Text = "--"
+                T_S4.Text = "--"
+                T_S5.Text = "--"
 
                 XML_Filename = Path.Combine(Application.StartupPath, "HistoryInfo", CompanyListArray(i).WKN & ".XML")
                 ShareInfo = DeserializeFromXmlFile(XML_Filename, ShareInfo.GetType(), Encoding.UTF8)
@@ -36,8 +42,8 @@ Public Class FrmReadTodaysSharePrice
                 ReDim arry(0 To 0)
                 KursListe.Clear()
 
-                'arry(0) = Read_Finanzen(CompanyListArray(i).Name, ShareInfo)
-                arry(0) = Read_Irgendwas(CompanyListArray(i).Name, ShareInfo)
+                'SWE   arry(0) = Read_Finanzen(CompanyListArray(i).Name, ShareInfo)
+                'arry(0) = Read_Irgendwas(CompanyListArray(i).Name, ShareInfo)
                 'arry(0) = 0
 
                 If arry(0) > 0 Then
@@ -75,7 +81,12 @@ Public Class FrmReadTodaysSharePrice
                 T_S3.Text = arry(3)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
-                arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
+
+                If CompanyListArray(i).Index <> "ETF" Then
+                    arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
+                End If
+
+
                 If arry(4) > 0 Then
                     KursListe.Add(arry(4))
                 End If
@@ -102,50 +113,50 @@ Public Class FrmReadTodaysSharePrice
 
 
     Public Sub ReadCompanyListFile()
-        Dim CompanyListFilename As String
-        Dim CompanyListFile As Integer
-        Dim Zeile As String
-        Dim CompanyListEntities() As String
-        Dim idx As Long
+        '        Dim CompanyListFilename As String
+        '        Dim CompanyListFile As Integer
+        '        Dim Zeile As String
+        '        Dim CompanyListEntities() As String
+        '        Dim idx As Long
 
-        ReDim CompanyListArray(0 To 0)
+        '        ReDim CompanyListArray(0 To 0)
 
 
-        On Error GoTo ReadCompanyListFileErr
+        '        On Error GoTo ReadCompanyListFileErr
 
-        CompanyListFilename = Application.StartupPath & "\ISIN-WKN.txt"
-        CompanyListFile = FreeFile()
+        '        CompanyListFilename = Application.StartupPath & "\ISIN-WKN.txt"
+        '        CompanyListFile = FreeFile()
 
-        FileOpen(CompanyListFile, CompanyListFilename, OpenMode.Input)
+        '        FileOpen(CompanyListFile, CompanyListFilename, OpenMode.Input)
 
-        While Not EOF(CompanyListFile)
-            Zeile = LineInput(CompanyListFile)
-            If Zeile <> "" Then
-                '''ListBox2.Items.Add(Zeile)
-                SepariereString(Zeile, CompanyListEntities, vbTab)
-                idx = UBound(CompanyListArray)
-                CompanyListArray(idx).Name = CompanyListEntities(0)
-                CompanyListArray(idx).WKN = CompanyListEntities(1)
-                CompanyListArray(idx).ISIN = CompanyListEntities(2)
+        '        While Not EOF(CompanyListFile)
+        '            Zeile = LineInput(CompanyListFile)
+        '            If Zeile <> "" Then
+        '                '''ListBox2.Items.Add(Zeile)
+        '                SepariereString(Zeile, CompanyListEntities, vbTab)
+        '                idx = UBound(CompanyListArray)
+        '                CompanyListArray(idx).Name = CompanyListEntities(0)
+        '                CompanyListArray(idx).WKN = CompanyListEntities(1)
+        '                CompanyListArray(idx).ISIN = CompanyListEntities(2)
 
-                ''''Search doubbles
-                '''Dim i As Long
-                '''For i = 0 To UBound(CompanyListArray) - 1
-                '''    If CompanyListArray(i).WKN = CompanyListArray(idx).WKN Then
-                '''        ListBox2.Items.Add(Zeile)
-                '''    End If
-                '''Next i
+        '                ''''Search doubbles
+        '                '''Dim i As Long
+        '                '''For i = 0 To UBound(CompanyListArray) - 1
+        '                '''    If CompanyListArray(i).WKN = CompanyListArray(idx).WKN Then
+        '                '''        ListBox2.Items.Add(Zeile)
+        '                '''    End If
+        '                '''Next i
 
-                ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) + 1)
-            End If
+        '                ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) + 1)
+        '            End If
 
-        End While
-        ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) - 1)
-        FileClose(CompanyListFile)
+        '        End While
+        '        ReDim Preserve CompanyListArray(0 To UBound(CompanyListArray) - 1)
+        '        FileClose(CompanyListFile)
 
-        Exit Sub
-ReadCompanyListFileErr:
-        MsgBox(CompanyListFilename & vbCr & Err.Description, , "xxxxx")
+        '        Exit Sub
+        'ReadCompanyListFileErr:
+        '        MsgBox(CompanyListFilename & vbCr & Err.Description, , "xxxxx")
     End Sub
 
 
@@ -213,7 +224,7 @@ OpenError:
 
 
     Private Sub ReadTodaysSharePrice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ReadCompanyListFile()
+        'ReadCompanyListFile()
     End Sub
 
 
@@ -254,10 +265,10 @@ OpenError:
             ReDim arry(0 To 0)
             KursListe.Clear()
 
-            'arry(0) = Read_Finanzen(CompanyListArray(i).Name, ShareInfo)
-            arry(0) = Read_Irgendwas(CompanyListArray(i).Name, ShareInfo)
+            arry(0) = Read_Finanzen(CompanyListArray(i).Name, ShareInfo)
+            'arry(0) = Read_Irgendwas(CompanyListArray(i).Name, ShareInfo)
             If arry(0) > 0 Then
-                '    KursListe.Add(arry(0))
+                KursListe.Add(arry(0))
             End If
             T_S0.Text = arry(0)
             Application.DoEvents()
@@ -283,7 +294,12 @@ OpenError:
             T_S3.Text = arry(3)
             Application.DoEvents()
             ReDim Preserve arry(0 To UBound(arry) + 1)
-            arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
+
+
+            If CompanyListArray(i).Index <> "ETF" Then
+                arry(4) = Read_FinanzNachrichten(CompanyListArray(i).WKN)
+            End If
+
             If arry(4) > 0 Then
                 KursListe.Add(arry(4))
             End If
