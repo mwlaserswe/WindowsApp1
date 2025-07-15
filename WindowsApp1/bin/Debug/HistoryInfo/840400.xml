@@ -6,6 +6,9 @@
     <WKN>840400</WKN>
     <ISIN>DE0008404005</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Allianz-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,03087099544597</AbsMax>

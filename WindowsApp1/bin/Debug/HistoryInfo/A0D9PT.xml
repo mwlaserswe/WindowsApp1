@@ -6,6 +6,9 @@
     <WKN>A0D9PT</WKN>
     <ISIN>DE000A0D9PT0</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/MTU-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,26284598409033</AbsMax>

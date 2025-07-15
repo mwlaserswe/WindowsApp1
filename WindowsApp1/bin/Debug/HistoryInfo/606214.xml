@@ -6,6 +6,9 @@
     <WKN>606214</WKN>
     <ISIN>DE0006062144</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Covestro-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,0077100431598</AbsMax>

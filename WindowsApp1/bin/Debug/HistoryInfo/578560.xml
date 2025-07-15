@@ -6,6 +6,9 @@
     <WKN>578560</WKN>
     <ISIN>DE0005785604</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Fresenius-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,073302085281</AbsMax>

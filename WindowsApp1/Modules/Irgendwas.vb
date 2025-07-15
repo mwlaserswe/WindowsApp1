@@ -2,40 +2,8 @@
 Imports OpenQA.Selenium
 Imports OpenQA.Selenium.Chrome
 Imports OpenQA.Selenium.Support.UI
-
-Module Comdirect_de
-    Public Function Read_Comdirect(WKN As String) As Double
-        'Dim HtmlCode As String
-        Dim ISIN As String
-
-        Dim WebPage As String
-        'Dim SearchItem As String
-        'Dim EndString As String
-        'Dim AktuellerKurs As String
-
-        ISIN = FindIsinInArray(WKN)
-
-        'WebPage = "https://www.comdirect.de/inf/aktien/" & ISIN
-        'HtmlCode = GetHTMLCode(WebPage)
-        'If HtmlCode = ">>>ERROR<<<" Then
-        '    Read_Comdirect = -1
-        '    'ReadTodaysSharePrice.L_SharePrice = "Error"
-        '    Exit Function
-        'End If
-
-        'SaveQuelltext(HtmlCode, Application.StartupPath & "\Comdirect.HTML")
-
-        ''AktuellerKurs extrahieren
-        'SearchItem = "<span class=""text-size--xxlarge text-weight--medium"""
-        'EndString = "</span>"
-        'AktuellerKurs = ExtraxtValue(HtmlCode, SearchItem, EndString)
-        'Dim dmy As Double
-
-        'dmy = Zahl(AktuellerKurs)
-
-        'Read_Comdirect = dmy
-
-
+Module Irgendwas
+    Public Function Read_Irgendwas(Name As String, ShareInfo As ClsXML.ShareInfo) As Double
         Dim AktuellerKurs As String
 
         Dim options As New ChromeOptions()
@@ -60,8 +28,16 @@ Module Comdirect_de
 
         'Dim WebPage As String = "https://www.finanzen.net/aktien/msci-aktie"
         'Dim WebPage As String = "https://www.finanzen.net/aktien/allianz-aktie"
-        WebPage = "https://www.comdirect.de/inf/aktien/" & ISIN
-        driver.Manage().Window.Minimize()
+        'Dim WebPage As String = "https://www.finanzen.net/aktien/" & Name & "-aktie"
+        Dim WebPage As String = "https://wertpapiere.ing.de/investieren/aktienportrait/" & ShareInfo.General.ISIN
+
+        If WebPage = "" Then
+            Console.WriteLine("Webseite für Finanzen.net ist nicht der XML-Datei definiert.")
+            Read_Irgendwas = -1
+            Return Read_Irgendwas
+        End If
+
+        'driver.Manage().Window.Minimize()
         driver.Navigate().GoToUrl(WebPage)
 
         Try
@@ -72,29 +48,23 @@ Module Comdirect_de
             'End Function
             Dim wait As New WebDriverWait(driver, TimeSpan.FromSeconds(15))
             Dim kursElement As IWebElement = wait.Until(
-            Function(d)
-                Try
-                    Return d.FindElement(By.ClassName("realtime-indicator"))
-                Catch ex As NoSuchElementException
-                    Console.WriteLine("Kurselement nicht gefunden: " & ex.Message)
-                    Return Nothing
-                End Try
-            End Function
-      )
+    Function(d)
+        Return d.FindElement(By.ClassName("font-400 font-tablet-500 bold"))
+    End Function
+)
 
 
 
             AktuellerKurs = kursElement.Text
             Dim dmy As Double = Zahl(AktuellerKurs)
-            Read_Comdirect = dmy
+            Read_Irgendwas = dmy
 
         Catch ex As Exception
             Console.WriteLine("Fehler beim Abrufen des Kurses: " & ex.Message)
-            Read_Comdirect = -1
+            Read_Irgendwas = -1
         Finally
             driver.Quit()
         End Try
-
     End Function
 
 End Module

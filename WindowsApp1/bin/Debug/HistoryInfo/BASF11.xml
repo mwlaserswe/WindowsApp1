@@ -6,6 +6,9 @@
     <WKN>BASF11</WKN>
     <ISIN>DE000BASF111</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/BASF-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,09444684477954</AbsMax>

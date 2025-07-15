@@ -6,6 +6,9 @@
     <WKN>514000</WKN>
     <ISIN>DE0005140008</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Deutsche_Bank-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,27709903289384</AbsMax>

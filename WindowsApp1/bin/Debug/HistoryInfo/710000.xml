@@ -6,6 +6,9 @@
     <WKN>710000</WKN>
     <ISIN>DE0007100000</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Daimler-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,06789557453995</AbsMax>

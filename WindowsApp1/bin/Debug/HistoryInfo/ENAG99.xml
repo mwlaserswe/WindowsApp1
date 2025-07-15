@@ -6,6 +6,9 @@
     <WKN>ENAG99</WKN>
     <ISIN>DE000ENAG999</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/EON-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,08574244545731</AbsMax>

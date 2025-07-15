@@ -6,6 +6,9 @@
     <WKN>823212</WKN>
     <ISIN>DE0008232125</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Lufthansa-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,01056282088818</AbsMax>

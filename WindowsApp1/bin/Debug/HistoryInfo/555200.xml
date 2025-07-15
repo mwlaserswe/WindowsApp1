@@ -6,6 +6,9 @@
     <WKN>555200</WKN>
     <ISIN>DE0005552004</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/DHL-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,07586289487774</AbsMax>

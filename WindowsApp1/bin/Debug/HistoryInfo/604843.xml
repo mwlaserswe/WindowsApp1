@@ -6,6 +6,9 @@
     <WKN>604843</WKN>
     <ISIN>DE0006048432</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Henkel_vz-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,908240139618311</AbsMax>

@@ -56,13 +56,13 @@ Module BoerseBerlin_de
         service.HideCommandPromptWindow = True ' unterbindet das Konsolenfenster
         Dim driver As New ChromeDriver(service, options)
 
-        'Dim WebPage As String = "https://www.finanzen.net/aktien/msci-aktie"
-        'Dim WebPage As String = "https://www.finanzen.net/aktien/allianz-aktie"
-        WebPage = "https://www.boerse-berlin.de/index.php/Aktien?isin=" & ISIN
-        driver.Manage().Window.Minimize()
-        driver.Navigate().GoToUrl(WebPage)
-
         Try
+            'Dim WebPage As String = "https://www.finanzen.net/aktien/msci-aktie"
+            'Dim WebPage As String = "https://www.finanzen.net/aktien/allianz-aktie"
+            WebPage = "https://www.boerse-berlin.de/index.php/Aktien?isin=" & ISIN
+            driver.Manage().Window.Minimize()
+            driver.Navigate().GoToUrl(WebPage)
+
             'Dim wait As New WebDriverWait(driver, TimeSpan.FromSeconds(15))
             'Dim kursElement As IWebElement = wait.Until(
             'Function(d)

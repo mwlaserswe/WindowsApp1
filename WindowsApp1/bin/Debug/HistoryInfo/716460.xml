@@ -6,6 +6,9 @@
     <WKN>716460</WKN>
     <ISIN>DE0007164600</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/SAP-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,02349004149378</AbsMax>

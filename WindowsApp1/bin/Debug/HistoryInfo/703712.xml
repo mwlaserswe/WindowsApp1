@@ -6,6 +6,9 @@
     <WKN>703712</WKN>
     <ISIN>DE0007037129</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/RWE-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,28002801107522</AbsMax>

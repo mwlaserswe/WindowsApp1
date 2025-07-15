@@ -1,4 +1,6 @@
 ﻿Option Explicit On
+Imports System.IO
+Imports System.Text
 
 Public Class FrmReadTodaysSharePrice
 
@@ -6,6 +8,10 @@ Public Class FrmReadTodaysSharePrice
     Private Sub C_ReadSingleShare_Click(sender As Object, e As EventArgs) Handles C_ReadSingleShare.Click
         Dim arry As Double()
         Dim TodaysSharePrice As ShareResult
+        Dim ShareInfo As New ClsXML.ShareInfo
+        Dim XML_Filename As String
+
+
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
 
@@ -23,10 +29,15 @@ Public Class FrmReadTodaysSharePrice
                 L_WKN.Text = CompanyListArray(i).WKN
                 L_ISIN.Text = CompanyListArray(i).ISIN
 
+                XML_Filename = Path.Combine(Application.StartupPath, "HistoryInfo", CompanyListArray(i).WKN & ".XML")
+                ShareInfo = DeserializeFromXmlFile(XML_Filename, ShareInfo.GetType(), Encoding.UTF8)
+
+
                 ReDim arry(0 To 0)
                 KursListe.Clear()
 
-                arry(0) = Read_Finanzen(CompanyListArray(i).Name)
+                'arry(0) = Read_Finanzen(CompanyListArray(i).Name, ShareInfo)
+                arry(0) = Read_Irgendwas(CompanyListArray(i).Name, ShareInfo)
                 'arry(0) = 0
 
                 If arry(0) > 0 Then
@@ -212,6 +223,8 @@ OpenError:
         Dim i As Long
         Dim arry As Double()
         Dim TodaysSharePrice As ShareResult
+        Dim ShareInfo As New ClsXML.ShareInfo
+        Dim XML_Filename As String
 
         Dim KursListe As New List(Of Double)
 
@@ -232,10 +245,17 @@ OpenError:
             T_S5.Text = "--"
             Application.DoEvents()
 
+            XML_Filename = Path.Combine(Application.StartupPath, "HistoryInfo", CompanyListArray(i).WKN & ".XML")
+            If File.Exists(XML_Filename) Then
+                ShareInfo = DeserializeFromXmlFile(XML_Filename, ShareInfo.GetType(), Encoding.UTF8)
+            End If
+
+
             ReDim arry(0 To 0)
             KursListe.Clear()
 
-            arry(0) = Read_Finanzen(CompanyListArray(i).Name)
+            'arry(0) = Read_Finanzen(CompanyListArray(i).Name, ShareInfo)
+            arry(0) = Read_Irgendwas(CompanyListArray(i).Name, ShareInfo)
             If arry(0) > 0 Then
                 '    KursListe.Add(arry(0))
             End If

@@ -6,6 +6,9 @@
     <WKN>555750</WKN>
     <ISIN>DE0005557508</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Deutsche_Telekom-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,93836952011095</AbsMax>

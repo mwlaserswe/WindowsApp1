@@ -6,6 +6,9 @@
     <WKN>766403</WKN>
     <ISIN>DE0007664039</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Volkswagen_vz-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,12611309442045</AbsMax>

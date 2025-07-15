@@ -32,29 +32,31 @@ Partial Class FrmInfoFiles
         Me.T_Search = New System.Windows.Forms.TextBox()
         Me.B_GenerateAllInfoFiles = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.L_NoOfFiles = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(82, 58)
+        Me.Button1.Location = New System.Drawing.Point(12, 21)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(248, 77)
+        Me.Button1.Size = New System.Drawing.Size(248, 90)
         Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "schreibe TEST_INFO_FILE.XML (Volkswagen VZ)"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(82, 175)
+        Me.Button2.Location = New System.Drawing.Point(12, 127)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(248, 79)
         Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Einzelnes History.XML lesen"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'T_Search1
         '
-        Me.T_Search1.Location = New System.Drawing.Point(358, 175)
+        Me.T_Search1.Location = New System.Drawing.Point(287, 126)
         Me.T_Search1.Name = "T_Search1"
         Me.T_Search1.Size = New System.Drawing.Size(261, 31)
         Me.T_Search1.TabIndex = 6
@@ -62,21 +64,21 @@ Partial Class FrmInfoFiles
         '
         'T_Info1
         '
-        Me.T_Info1.Location = New System.Drawing.Point(358, 212)
+        Me.T_Info1.Location = New System.Drawing.Point(287, 163)
         Me.T_Info1.Name = "T_Info1"
         Me.T_Info1.Size = New System.Drawing.Size(261, 31)
         Me.T_Info1.TabIndex = 7
         '
         'T_Info2
         '
-        Me.T_Info2.Location = New System.Drawing.Point(358, 249)
+        Me.T_Info2.Location = New System.Drawing.Point(287, 200)
         Me.T_Info2.Name = "T_Info2"
         Me.T_Info2.Size = New System.Drawing.Size(261, 31)
         Me.T_Info2.TabIndex = 8
         '
         'T_Info3
         '
-        Me.T_Info3.Location = New System.Drawing.Point(358, 286)
+        Me.T_Info3.Location = New System.Drawing.Point(287, 237)
         Me.T_Info3.Name = "T_Info3"
         Me.T_Info3.Size = New System.Drawing.Size(261, 31)
         Me.T_Info3.TabIndex = 9
@@ -116,11 +118,32 @@ Partial Class FrmInfoFiles
         Me.ListBox1.Size = New System.Drawing.Size(484, 554)
         Me.ListBox1.TabIndex = 14
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(12, 286)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(246, 72)
+        Me.Button3.TabIndex = 15
+        Me.Button3.Text = "Erzeuge Finanzen_Net Webpage"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'L_NoOfFiles
+        '
+        Me.L_NoOfFiles.AutoSize = True
+        Me.L_NoOfFiles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.L_NoOfFiles.Location = New System.Drawing.Point(291, 310)
+        Me.L_NoOfFiles.Name = "L_NoOfFiles"
+        Me.L_NoOfFiles.Size = New System.Drawing.Size(79, 27)
+        Me.L_NoOfFiles.TabIndex = 16
+        Me.L_NoOfFiles.Text = "Label1"
+        '
         'FrmInfoFiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1599, 627)
+        Me.Controls.Add(Me.L_NoOfFiles)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.B_GenerateAllInfoFiles)
         Me.Controls.Add(Me.T_Search)
@@ -147,4 +170,6 @@ Partial Class FrmInfoFiles
     Friend WithEvents T_Search As TextBox
     Friend WithEvents B_GenerateAllInfoFiles As Button
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents L_NoOfFiles As Label
 End Class

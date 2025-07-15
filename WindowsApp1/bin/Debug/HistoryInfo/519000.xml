@@ -6,6 +6,9 @@
     <WKN>519000</WKN>
     <ISIN>DE0005190003</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/BMW-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,04719773243154</AbsMax>

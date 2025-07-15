@@ -6,6 +6,10 @@
     <WKN>766400</WKN>
     <ISIN>DE0007664005</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Volkswagen_vz-aktie</FinanzenNetWebPage>
+    <ArivaHistoricDownloadWebPage>https://www.ariva.de/aktien/volkswagen-ag-vz-aktie/kurse/historische-kurse</ArivaHistoricDownloadWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear />
     <SMA_Since2000 />

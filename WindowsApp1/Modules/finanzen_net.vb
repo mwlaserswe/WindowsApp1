@@ -81,7 +81,7 @@ Module finanzen_net
 
     'End Function
 
-    Public Function Read_Finanzen(Name As String) As Double
+    Public Function Read_Finanzen(Name As String, ShareInfo As ClsXML.ShareInfo) As Double
         Dim AktuellerKurs As String
 
         Dim options As New ChromeOptions()
@@ -106,7 +106,15 @@ Module finanzen_net
 
         'Dim WebPage As String = "https://www.finanzen.net/aktien/msci-aktie"
         'Dim WebPage As String = "https://www.finanzen.net/aktien/allianz-aktie"
-        Dim WebPage As String = "https://www.finanzen.net/aktien/" & Name & "-aktie"
+        'Dim WebPage As String = "https://www.finanzen.net/aktien/" & Name & "-aktie"
+        Dim WebPage As String = ShareInfo.WebInfos.FinanzenNetWebPage
+
+        If WebPage = "" Then
+            Console.WriteLine("Webseite für Finanzen.net ist nicht der XML-Datei definiert.")
+            Read_Finanzen = -1
+            Return Read_Finanzen
+        End If
+
         'driver.Manage().Window.Minimize()
         driver.Navigate().GoToUrl(WebPage)
 

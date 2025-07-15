@@ -6,6 +6,9 @@
     <WKN>520000</WKN>
     <ISIN>DE0005200000</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Beiersdorf-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,933593146129357</AbsMax>

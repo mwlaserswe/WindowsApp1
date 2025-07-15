@@ -6,6 +6,9 @@
     <WKN>543900</WKN>
     <ISIN>DE0005439004</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Continental-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,988397365532382</AbsMax>

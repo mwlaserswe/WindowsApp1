@@ -6,6 +6,9 @@
     <WKN>723610</WKN>
     <ISIN>DE0007236101</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Siemens-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,09303729145696</AbsMax>

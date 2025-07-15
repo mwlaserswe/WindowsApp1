@@ -84,6 +84,14 @@ Module BoerseStuttgart
             Dim wait As New WebDriverWait(driver, TimeSpan.FromSeconds(15))
             Dim kursElement As IWebElement = wait.Until(
                 Function(d)
+                    Try
+                        ' Sucht das H3-Element mit der Klasse "text-2xl font-semibold"
+                        ' und dann den inneren <span> mit dem Kurswert.
+                        Return d.FindElement(By.XPath("//h3[@class='text-2xl font-semibold']//span[normalize-space()]"))
+                    Catch ex As NoSuchElementException
+                        Console.WriteLine("Kurselement nicht gefunden: " & ex.Message)
+                        Return Nothing
+                    End Try
                     Return d.FindElement(By.XPath("//h3[@class='text-2xl font-semibold']//span[normalize-space()]"))
                 End Function
             )

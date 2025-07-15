@@ -118,6 +118,9 @@ Public Class FrmInfoFiles
         ShareInfo.General.WKN = "766400"
         ShareInfo.General.ISIN = "DE0007664005"
 
+        ShareInfo.WebInfos.FinanzenNetWebPage = "https://www.finanzen.net/aktien/Volkswagen_vz-aktie"
+        ShareInfo.WebInfos.ArivaHistoricDownloadWebPage = "https://www.ariva.de/aktien/volkswagen-ag-vz-aktie/kurse/historische-kurse"
+
         ShareInfo.UserDefinitions.UserDefinedSMA = "1234"
 
 
@@ -151,10 +154,61 @@ Public Class FrmInfoFiles
 
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ShareInfo As New ClsXML.ShareInfo
+        Dim Company As ShareItem
+        Dim XML_Filename As String
+        Dim i As Long
+
+        If CompPartialLstArr Is Nothing Then
+            MsgBox("Bitte zuerst Firmen in ChartArray legen...")
+            Exit Sub
+        End If
+
+        For i = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
+            Application.DoEvents()
 
 
+            XML_Filename = Path.Combine(Application.StartupPath, "HistoryInfo", CompPartialLstArr(i).WKN & ".XML")
 
+            ShareInfo = DeserializeFromXmlFile(XML_Filename, ShareInfo.GetType(), Encoding.UTF8)
 
+            T_Info1.Text = ShareInfo.General.WKN
+            T_Info2.Text = ShareInfo.General.ISIN
 
+            ShareInfo.WebInfos.FinanzenNetWebPage = "https://www.finanzen.net/aktien/" & CompPartialLstArr(i).Name & "-aktie"
 
+            SerializeToXmlFile(ShareInfo, XML_Filename, Encoding.UTF8)
+        Next i
+
+    End Sub
+
+    Private Sub FrmInfoFiles_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim i As Long
+
+        L_NoOfFiles.Text = CompPartialLstArr.Length
+
+        ListBox1.Items.Clear()
+
+        For i = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
+            ListBox1.Items.Add(CompPartialLstArr(i).Name)
+        Next i
+    End Sub
+
+    Private Sub FrmInfoFiles_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+
+    End Sub
+
+    Private Sub FrmInfoFiles_MouseHover(sender As Object, e As EventArgs) Handles Me.MouseHover
+        Dim i As Long
+
+        L_NoOfFiles.Text = CompPartialLstArr.Length
+
+        ListBox1.Items.Clear()
+
+        For i = LBound(CompPartialLstArr) To UBound(CompPartialLstArr)
+            ListBox1.Items.Add(CompPartialLstArr(i).Name)
+        Next i
+
+    End Sub
 End Class

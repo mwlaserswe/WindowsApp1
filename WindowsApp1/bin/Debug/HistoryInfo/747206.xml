@@ -6,6 +6,9 @@
     <WKN>747206</WKN>
     <ISIN>DE0007472060</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Wirecard-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,955603827619524</AbsMax>

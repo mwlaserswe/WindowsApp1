@@ -6,6 +6,9 @@
     <WKN>A1EWWW</WKN>
     <ISIN>DE000A1EWWW0</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Adidas-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,997598183217479</AbsMax>

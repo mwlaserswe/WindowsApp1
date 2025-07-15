@@ -6,6 +6,9 @@
     <WKN>843002</WKN>
     <ISIN>DE0008430026</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Munich_re-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,1689110808985</AbsMax>

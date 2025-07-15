@@ -6,6 +6,9 @@
     <WKN>A1ML7J</WKN>
     <ISIN>DE000A1ML7J1</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Vonovia-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,02073246659774</AbsMax>

@@ -6,6 +6,9 @@
     <WKN>A2YN90</WKN>
     <ISIN>DE000A2YN900</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/TeamViewer-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,68833992094862</AbsMax>

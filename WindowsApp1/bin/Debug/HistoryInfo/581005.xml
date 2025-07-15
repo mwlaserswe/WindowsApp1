@@ -6,6 +6,9 @@
     <WKN>581005</WKN>
     <ISIN>DE0005810055</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Deutsche_Boerse-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,02856496710077</AbsMax>

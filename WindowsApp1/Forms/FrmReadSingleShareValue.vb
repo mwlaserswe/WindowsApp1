@@ -8,7 +8,7 @@ Public Class FrmReadSingleShareValue
     End Sub
     Private Sub ReadPeketec_Click(sender As Object, e As EventArgs) Handles ReadPeketec.Click
         L_SharePrice.Text = "--"
-        L_SharePrice.Text = Read_Finanzen(T_WKN.Text)
+        L_SharePrice.Text = Read_Finanzen(T_WKN.Text, Nothing)
     End Sub
     Private Sub ReadBoerseStuttgart_Click(sender As Object, e As EventArgs) Handles ReadBoerseStuttgart.Click
         L_SharePrice.Text = "--"

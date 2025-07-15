@@ -6,6 +6,9 @@
     <WKN>604700</WKN>
     <ISIN>DE0006047004</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/HeidelbergCement-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>0,879378246406973</AbsMax>

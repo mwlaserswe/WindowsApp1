@@ -6,6 +6,9 @@
     <WKN>659990</WKN>
     <ISIN>DE0006599905</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Merck-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,23733562685191</AbsMax>

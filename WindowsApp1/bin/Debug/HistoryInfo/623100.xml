@@ -6,6 +6,9 @@
     <WKN>623100</WKN>
     <ISIN>DE0006231004</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Infineon-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,38287635434629</AbsMax>

@@ -6,6 +6,9 @@
     <WKN>BAY001</WKN>
     <ISIN>DE000BAY0017</ISIN>
   </General>
+  <WebInfos>
+    <FinanzenNetWebPage>https://www.finanzen.net/aktien/Bayer-aktie</FinanzenNetWebPage>
+  </WebInfos>
   <BestSMA>
     <SMA_LastYear>
       <AbsMax>1,15009204011568</AbsMax>
