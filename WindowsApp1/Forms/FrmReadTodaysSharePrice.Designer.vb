@@ -140,7 +140,7 @@ Partial Class FrmReadTodaysSharePrice
         Me.T_Search.Name = "T_Search"
         Me.T_Search.Size = New System.Drawing.Size(357, 31)
         Me.T_Search.TabIndex = 25
-        Me.T_Search.Text = "Name, ISISN, WKN"
+        Me.T_Search.Text = "519000"
         '
         'C_ReadSingleShare
         '
@@ -211,7 +211,7 @@ Partial Class FrmReadTodaysSharePrice
         Me.T_S5.Size = New System.Drawing.Size(75, 31)
         Me.T_S5.TabIndex = 43
         '
-        'ReadTodaysSharePrice
+        'FrmReadTodaysSharePrice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -237,7 +237,7 @@ Partial Class FrmReadTodaysSharePrice
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.L_WebPage)
-        Me.Name = "ReadTodaysSharePrice"
+        Me.Name = "FrmReadTodaysSharePrice"
         Me.Text = "Form3"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -26,21 +26,31 @@ Public Class FrmReadTodaysSharePrice
                 ReDim arry(0 To 0)
                 KursListe.Clear()
 
-                arry(0) = Read_Peketec(CompanyListArray(i).WKN)
+                arry(0) = Read_Finanzen(CompanyListArray(i).Name)
+                'arry(0) = 0
+
                 If arry(0) > 0 Then
                     KursListe.Add(arry(0))
                 End If
                 T_S0.Text = arry(0)
                 Application.DoEvents()
+
+
                 ReDim Preserve arry(0 To UBound(arry) + 1)
+
                 arry(1) = Read_Ariva(CompanyListArray(i).WKN)
+                'arry(1) = 0
+
                 If arry(1) > 0 Then
                     KursListe.Add(arry(1))
                 End If
                 T_S1.Text = arry(1)
                 Application.DoEvents()
                 ReDim Preserve arry(0 To UBound(arry) + 1)
+
                 arry(2) = Read_BoerseStuttgart(CompanyListArray(i).WKN)
+                'arry(2) = 0
+
                 If arry(2) > 0 Then
                     KursListe.Add(arry(2))
                 End If
@@ -225,9 +235,9 @@ OpenError:
             ReDim arry(0 To 0)
             KursListe.Clear()
 
-            arry(0) = Read_Peketec(CompanyListArray(i).WKN)
+            arry(0) = Read_Finanzen(CompanyListArray(i).Name)
             If arry(0) > 0 Then
-                KursListe.Add(arry(0))
+                '    KursListe.Add(arry(0))
             End If
             T_S0.Text = arry(0)
             Application.DoEvents()
@@ -294,6 +304,7 @@ OpenError:
         Next j
     End Sub
 
+    Private Sub T_Search_TextChanged(sender As Object, e As EventArgs) Handles T_Search.TextChanged
 
-
+    End Sub
 End Class

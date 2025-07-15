@@ -2,6 +2,9 @@
 
 Imports System.IO
 Imports System.Text
+Imports OpenQA.Selenium
+Imports OpenQA.Selenium.Chrome
+
 Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         FrmChartList.Show()
@@ -882,6 +885,79 @@ Public Class Form1
     Private Sub PicChart_Click(sender As Object, e As EventArgs) Handles PicChart.Click
 
     End Sub
+
+    Private Sub B_WebBrowser_Click(sender As Object, e As EventArgs) Handles B_WebBrowser.Click
+        'https://www.testing-board.com/selenium-webdriver-tutorial-1-grundlagen-testautomatisierung-wordpress-und-basis-testframework/
+        'https://www.selenium.dev/documentation/
+
+        Dim options As New ChromeOptions()
+        options.AddArgument("--whitelisted-ips=")
+        'options.AddArgument("--headless") ' Headless-Modus aktivieren
+        options.AddArgument("--disable-gpu") ' (optional, für Kompatibilität)
+
+
+        ' ChromeDriver-Instanz starten
+        Dim driver As New ChromeDriver(options)
+
+        ' Webseite öffnen
+        driver.Navigate().GoToUrl("https://www.mwlaser.de")
+
+
+
+        ' Warte, bis der Link sichtbar ist (empfohlen)
+        Dim wait As New OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(10))
+        Dim produktUebersichtBtn As IWebElement = wait.Until(
+            Function(d)
+                Return d.FindElement(By.LinkText("Zur Produkt-Übersicht"))
+            End Function
+        )
+
+        ' Button klicken
+        produktUebersichtBtn.Click()
+
+        ' Suchfeld finden (ID prüfen ggf. anpassen)
+        '        Dim suche As IWebElement = driver.FindElement(By.Id("ArivaDe"))
+        'Dim suche As IWebElement = driver.FindElement(By.LinkText("message-component message-button no-children focusable sp_choice_type_11"))
+        'Dim suche As IWebElement = driver.FindElement(By.TagName("Zur Produkt-Übersicht"))
+        'suche.SendKeys("BASF") ' Suchbegriff eingeben
+
+        '' Suche absenden (Enter simulieren)
+        'suche.SendKeys(Keys.Enter)
+
+        '' Optional: Browser offen lassen oder schließen
+        '' driver.Quit()
+    End Sub
+
+    Private Sub B_WebBrowser2_Click(sender As Object, e As EventArgs) Handles B_WebBrowser2.Click
+        Dim options As New ChromeOptions()
+        options.AddArgument("--whitelisted-ips")
+        'options.AddArgument("--headless") ' Headless-Modus aktivieren
+        'options.AddArgument("--disable-gpu") ' (optional, für Kompatibilität)
+
+
+        ' ChromeDriver-Instanz starten
+        Dim driver As New ChromeDriver(options)
+
+        ' Webseite öffnen
+        driver.Navigate().GoToUrl("https://www.mwlaser.de")
+
+
+
+        ' Warte, bis der Link sichtbar ist (empfohlen)
+        Dim wait As New OpenQA.Selenium.Support.UI.WebDriverWait(driver, TimeSpan.FromSeconds(10))
+        Dim produktUebersichtBtn As IWebElement = wait.Until(
+            Function(d)
+                Return d.FindElement(By.LinkText("Zur Produkt-Übersicht"))
+            End Function
+        )
+
+        ' Button klicken
+        produktUebersichtBtn.Click()
+    End Sub
+
+
+
+
 
     ''Private Sub CompleteCompanyWKNISINToolStripMenuItem_Click(sender As Object, e As EventArgs)
     ''    Dim InFileName As String

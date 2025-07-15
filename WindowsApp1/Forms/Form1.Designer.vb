@@ -108,6 +108,10 @@ Partial Class Form1
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.B_WebBrowser = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.B_WebBrowser2 = New System.Windows.Forms.Button()
         CType(Me.PicChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -800,11 +804,51 @@ Partial Class Form1
         Me.Label15.TabIndex = 75
         Me.Label15.Text = "%"
         '
+        'B_WebBrowser
+        '
+        Me.B_WebBrowser.Location = New System.Drawing.Point(1605, 47)
+        Me.B_WebBrowser.Name = "B_WebBrowser"
+        Me.B_WebBrowser.Size = New System.Drawing.Size(256, 45)
+        Me.B_WebBrowser.TabIndex = 77
+        Me.B_WebBrowser.Text = "Test WEB-Browser"
+        Me.B_WebBrowser.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1199, 515)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(256, 51)
+        Me.Button1.TabIndex = 78
+        Me.Button1.Text = "Test WEB-Browser"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1207, 523)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(256, 51)
+        Me.Button2.TabIndex = 79
+        Me.Button2.Text = "Test WEB-Browser"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'B_WebBrowser2
+        '
+        Me.B_WebBrowser2.Location = New System.Drawing.Point(1605, 98)
+        Me.B_WebBrowser2.Name = "B_WebBrowser2"
+        Me.B_WebBrowser2.Size = New System.Drawing.Size(256, 37)
+        Me.B_WebBrowser2.TabIndex = 80
+        Me.B_WebBrowser2.Text = "Test WEB-Browser 2"
+        Me.B_WebBrowser2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2655, 1081)
+        Me.Controls.Add(Me.B_WebBrowser2)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.B_WebBrowser)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
@@ -967,4 +1011,8 @@ Partial Class Form1
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents B_WebBrowser As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents B_WebBrowser2 As Button
 End Class
